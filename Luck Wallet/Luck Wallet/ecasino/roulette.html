@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuckyTime Roulette</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+     
+     body {
+    margin: 0;
+     padding: 0;
+     font-family: 'Cinzel', serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* example */
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+     }
+     @keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+        h1 {
+            margin-bottom: 0.5rem; 
+        }
+
+        .controls {
+        
+        width: 100%; 
+        display: flex; 
+        justify-content: flex-end; 
+        padding-right: 2%; 
+        margin-top: 1rem; /
+        margin-bottom: 1rem;
+        }
+    @media (max-width: 1024px) {
+        .controls {
+            justify-content: center; 
+            padding-right: 0; 
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+       
+        .game-area-wrapper {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1; 
+            width: 100%; 
+            overflow: hidden; 
+            gap: 1rem; 
+            box-sizing: border-box; 
+        }
+
+
+        canvas {
+            background-color: #333; 
+            border: 4px solid #4a5568;
+            border-radius: 9999px; 
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.25);
+            max-width: 48%; 
+            max-height: 100%; 
+            width: auto; 
+            height: auto; 
+            object-fit: contain; 
+            flex-shrink: 0;
+        }
+
+
+        .betting-table {
+            display: grid;
+            grid-template-columns: repeat(14, minmax(0, 1fr)); 
+            gap: 2px;
+            background-color: #0d4a20; 
+            border: 3px solid #1a202c;
+            border-radius: 0.75rem;
+            padding: 0.5rem;
+            max-width: 48%;
+            width: 100%; 
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.25);
+            flex-shrink: 1; 
+            box-sizing: border-box; 
+        }
+
+        .betting-cell {
+            background-color: #1a6d32; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.3rem 0.1rem; 
+            border-radius: 0.25rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.1s;
+            user-select: none; 
+            min-height: 35px; 
+            text-align: center;
+            font-size: 0.75rem;
+        }
+
+        .betting-cell:hover {
+            background-color: #2a8d42;
+            transform: translateY(-1px);
+        }
+
+        .betting-cell.selected {
+            background-color: #fcd34d; 
+            color: #1a202c;
+            box-shadow: inset 0 0 0 2px #d97706;
+        }
+
+        .betting-cell.red { background-color: #dc2626; color: white; }
+        .betting-cell.black { background-color: #1f2937; color: white; }
+        .betting-cell.green { background-color: #10b981; color: white; }
+        .betting-cell.red.selected { background-color: #fcd34d; color: #dc2626; }
+        .betting-cell.black.selected { background-color: #fcd34d; color: #1f2937; }
+        .betting-cell.green.selected { background-color: #fcd34d; color: #10b981; }
+
+        .cell-0 { grid-column: 1 / span 2; grid-row: 1 / span 3; } 
+        .cell-37 { grid-column: 1 / span 2; grid-row: 4 / span 1; } 
+        .cell-38 { grid-column: 1 / span 2; grid-row: 5 / span 1; } 
+        .cell-39 { grid-column: 1 / span 2; grid-row: 6 / span 1; } 
+
+    
+        .number-cell {
+            grid-column: span 1;
+        }
+
+    
+        .two-to-one {
+            grid-column: 13 / span 2; 
+            grid-row: span 1;
+        }
+
+
+        .bottom-bet {
+            grid-column: span 4; 
+            grid-row: 7; 
+            font-size: 0.65rem; 
+        }
+        .bottom-bet.first-12 { grid-column: 3 / span 4; }
+        .bottom-bet.second-12 { grid-column: 7 / span 4; }
+        .bottom-bet.third-12 { grid-column: 11 / span 4; }
+
+       
+        .bottom-bet-half {
+            grid-column: span 2; 
+            grid-row: 8; 
+            font-size: 0.6rem; 
+        }
+        .bottom-bet-half.one-to-18 { grid-column: 3 / span 2; }
+        .bottom-bet-half.even { grid-column: 5 / span 2; }
+        .bottom-bet-half.red-diamond { grid-column: 7 / span 2; }
+        .bottom-bet-half.black-diamond { grid-column: 9 / span 2; }
+        .bottom-bet-half.odd { grid-column: 11 / span 2; }
+        .bottom-bet-half.nineteen-to-36 { grid-column: 13 / span 2; }
+
+      
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .modal-overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background-color: #2d3748;
+            border: 2px solid #4a5568;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+            text-align: center;
+            max-width: 90vw;
+            width: 400px;
+            transform: translateY(-20px);
+            transition: transform 0.3s ease;
+        }
+
+        .modal-overlay.show .modal-content {
+            transform: translateY(0);
+        }
+
+        .modal-content button {
+            margin-top: 1.5rem;
+            padding: 0.75rem 2rem;
+            background-color: #4299e1;
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-size: 1.125rem;
+            font-weight: bold;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+
+        .modal-content button:hover {
+            background-color: #3182ce;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 1024px) {
+            .game-area-wrapper {
+                flex-direction: column; 
+                align-items: center;
+                justify-content: center;
+                gap: 0.5rem;
+            }
+            canvas, .betting-table {
+                max-width: 95%; 
+                max-height: unset; 
+                height: auto;
+            }
+            canvas {
+                margin-bottom: 0.5rem; 
+            }
+            .betting-table {
+                width: 95vw;
+                grid-template-columns: repeat(14, 1fr); 
+                margin-top: 0; 
+            }
+            .betting-cell {
+                padding: 0.2rem;
+                font-size: 0.65rem;
+                min-height: 30px;
+            }
+            .bottom-bet, .bottom-bet-half {
+                font-size: 0.55rem;
+                padding: 0.1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .betting-table {
+                grid-template-columns: repeat(14, minmax(0, 1fr)); 
+                padding: 0.25rem;
+            }
+            .betting-cell {
+                font-size: 0.5rem;
+                min-height: 25px;
+            }
+            .bottom-bet, .bottom-bet-half {
+                font-size: 0.45rem;
+                padding: 0.05rem;
+            }
+            canvas {
+                max-height: 40vh;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 flex flex-col items-center justify-between min-h-screen p-2">
+    <h1 class="text-4xl font-bold text-yellow-400"></h1>
+
+
+    <div class="game-area-wrapper">
+        <canvas id="rouletteCanvas" width="500" height="500"></canvas>
+
+        <div id="bettingTable" class="betting-table">
+            <div class="betting-cell green cell-0" data-bet-type="number" data-bet-value="0">0</div>
+            <div class="betting-cell number-cell red" data-bet-type="number" data-bet-value="3">3</div>
+            <div class="betting-cell number-cell black" data-bet-type="number" data-bet-value="6">6</div>
+            <div class="betting-cell number-cell red" data-bet-type="number" data-bet-value="9">9</div>
+            <div class="betting-cell number-cell red" data-bet-type="number" data-bet-value="12">12</div>
+            <div class="betting-cell number-cell black" data-bet-type="number" data-bet-value="15">15</div>
+            <div class="betting-cell number-cell red" data-bet-type="number" data-bet-value="18">18</div>
+            <div class="betting-cell number-cell red" data-bet-type="number" data-bet-value="21">21</div>
+            <div class="betting-cell number-cell black" data-bet-type="number" data-bet-value="24">24</div>
+            <div class="betting-cell number-cell red" data-bet-type="number" data-bet-value="27">27</div>
+            <div class="betting-cell number-cell black" data-bet-type="number" data-bet-value="30">30</div>
+            <div class="betting-cell number-cell red" data-bet-type="number" data-bet-value="33">33</div>
+            <div class="betting-cell number-cell black" data-bet-type="number" data-bet-value="36">36</div>
+            <div class="betting-cell two-to-one" data-bet-type="column" data-bet-value="col3">2 to 1</div>
+
+            <div class="betting-cell number-cell black" data-bet-type="number" data-bet-value="2">2</div>
+            <div class="betting-cell number-cell red" data-bet-type="number" data-bet-value="5">5</div>
+            <div class="betting-cell number-cell black" data-bet-type="number" data-bet-value="8">8</div>
+            <div class="betting-cell number-cell black" data-bet-type="number" data-bet-value="11">11</div>
+            <div class="betting-cell number-cell red" data-bet-type="number" data-bet-value="14">14</div>
+            <div class="betting-cell number-cell black" data-bet-type="number" data-bet-value="17">17</div>
+            <div class="betting-cell number-cell black" data-bet-type="number" data-bet-value="20">20</div>
+            <div class="betting-cell number-cell red" data-bet-type="number" data-bet-value="23">23</div>
+            <div class="betting-cell number-cell black" data-bet-type="number" data-bet-value="26">26</div>
+            <div class="betting-cell number-cell black" data-bet-type="number" data-bet-value="29">29</div>
+            <div class="betting-cell number-cell red" data-bet-type="number" data-bet-value="32">32</div>
+            <div class="betting-cell number-cell black" data-bet-type="number" data-bet-value="35">35</div>
+            <div class="betting-cell two-to-one" data-bet-type="column" data-bet-value="col2">2 to 1</div>
+
+            <div class="betting-cell number-cell red" data-bet-type="number" data-bet-value="1">1</div>
+            <div class="betting-cell number-cell black" data-bet-type="number" data-bet-value="4">4</div>
+            <div class="betting-cell number-cell red" data-bet-type="number" data-bet-value="7">7</div>
+            <div class="betting-cell number-cell black" data-bet-type="number" data-bet-value="10">10</div>
+            <div class="betting-cell number-cell black" data-bet-type="number" data-bet-value="13">13</div>
+            <div class="betting-cell number-cell red" data-bet-type="number" data-bet-value="16">16</div>
+            <div class="betting-cell number-cell red" data-bet-type="number" data-bet-value="19">19</div>
+            <div class="betting-cell number-cell black" data-bet-type="number" data-bet-value="22">22</div>
+            <div class="betting-cell number-cell red" data-bet-type="number" data-bet-value="25">25</div>
+            <div class="betting-cell number-cell black" data-bet-type="number" data-bet-value="28">28</div>
+            <div class="betting-cell number-cell black" data-bet-type="number" data-bet-value="31">31</div>
+            <div class="betting-cell number-cell red" data-bet-type="number" data-bet-value="34">34</div>
+            <div class="betting-cell two-to-one" data-bet-type="column" data-bet-value="col1">2 to 1</div>
+
+            <div class="betting-cell bottom-bet first-12" data-bet-type="dozen" data-bet-value="1st12">1st 12</div>
+            <div class="betting-cell bottom-bet second-12" data-bet-type="dozen" data-bet-value="2nd12">2nd 12</div>
+            <div class="betting-cell bottom-bet third-12" data-bet-type="dozen" data-bet-value="3rd12">3rd 12</div>
+
+            <div class="betting-cell bottom-bet-half one-to-18" data-bet-type="half" data-bet-value="1-18">1 to 18</div>
+            <div class="betting-cell bottom-bet-half even" data-bet-type="parity" data-bet-value="even">EVEN</div>
+            <div class="betting-cell bottom-bet-half red-diamond red" data-bet-type="color" data-bet-value="red"></div>
+            <div class="betting-cell bottom-bet-half black-diamond black" data-bet-type="color" data-bet-value="black"></div>
+            <div class="betting-cell bottom-bet-half odd" data-bet-type="parity" data-bet-value="odd">ODD</div>
+            <div class="betting-cell bottom-bet-half nineteen-to-36" data-bet-type="half" data-bet-value="19-36">19 to 36</div>
+        </div>
+    </div>
+
+
+    
+    <div class="flex items-center justify-center w-full controls space-x-4">
+        <div class="bg-gray-700 p-3 rounded-lg shadow-lg flex items-center space-x-2">
+            <span class="text-xl font-semibold">Current Bet:</span>
+            <input type="number" id="betAmount" value="10" min="1" class="w-24 p-2 rounded-md bg-gray-800 text-yellow-300 font-bold text-center">
+        </div>
+        <button id="spinButton" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transform transition duration-200 hover:scale-105">
+            Spin
+        </button>
+    </div>
+    
+    <div id="resultsModal" class="modal-overlay">
+        <div class="modal-content">
+            <h2 id="modalTitle" class="text-3xl font-bold mb-4 text-yellow-300">Spin Result</h2>
+            <p id="modalMessage" class="text-xl font-semibold mb-6"></p>
+            <button id="modalCloseButton">OK</button>
+        </div>
+    </div>
+
+    <script type="module">
+        // Canvas setup
+        const canvas = document.getElementById('rouletteCanvas');
+        const ctx = canvas.getContext('2d');
+        const spinButton = document.getElementById('spinButton');
+        const betAmountInput = document.getElementById('betAmount');
+        const bettingTable = document.getElementById('bettingTable');
+        const gameAreaWrapper = document.querySelector('.game-area-wrapper');
+
+        // Modal elements
+        const resultsModal = document.getElementById('resultsModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalMessage = document.getElementById('modalMessage');
+        const modalCloseButton = document.getElementById('modalCloseButton');
+
+        // Game variables
+        let balance = 1000; // IMPORTANT: In a real app, fetch this from the server on page load
+        let currentBets = [];
+        let spinning = false;
+
+        // Roulette wheel numbers and colors (European Roulette)
+        const rouletteNumbers = [
+            { number: 0, color: 'green' },
+            { number: 32, color: 'red' }, { number: 15, color: 'black' }, { number: 19, color: 'red' }, { number: 4, color: 'black' },
+            { number: 21, color: 'red' }, { number: 2, color: 'black' }, { number: 25, color: 'red' }, { number: 17, color: 'black' },
+            { number: 34, color: 'red' }, { number: 6, color: 'black' }, { number: 27, color: 'red' }, { number: 13, color: 'black' },
+            { number: 36, color: 'red' }, { number: 11, color: 'black' }, { number: 30, color: 'red' }, { number: 8, color: 'black' },
+            { number: 23, color: 'red' }, { number: 10, color: 'black' }, { number: 5, color: 'red' }, { number: 24, color: 'black' },
+            { number: 16, color: 'red' }, { number: 33, color: 'black' }, { number: 1, color: 'red' }, { number: 20, color: 'black' },
+            { number: 14, color: 'red' }, { number: 31, color: 'black' }, { number: 9, color: 'red' }, { number: 22, color: 'black' },
+            { number: 18, color: 'red' }, { number: 29, color: 'black' }, { number: 7, color: 'red' }, { number: 28, color: 'black' },
+            { number: 12, color: 'red' }, { number: 35, color: 'black' }, { number: 3, color: 'red' }
+        ];
+
+        const getNumberColor = (num) => {
+            if (num === 0) return 'green';
+            const redNumbers = [1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36];
+            return redNumbers.includes(num) ? 'red' : 'black';
+        };
+
+        let ballRadius = 8;
+        let ballCurrentRadius;
+        let ballAngle = 0;
+        let ballOrbitSpeed = 0;
+        let ballOuterTrackRadius;
+        let ballInnerTrackRadius;
+        let winningIndex = -1;
+
+        const drawWheel = (rotation = 0) => {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2;
+            const outerRadius = Math.min(centerX, centerY) * 0.9;
+            const segmentRadius = outerRadius * 0.8;
+            const innerRadius = segmentRadius * 0.15;
+
+            ballOuterTrackRadius = outerRadius * 0.9;
+            ballInnerTrackRadius = innerRadius + ballRadius + 5; // Ensure ball is visibly above inner circle
+
+            const woodColor1 = '#8B4513';
+            const woodColor2 = '#A0522D';
+            const woodColor3 = '#5A2D0C';
+
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, outerRadius, 0, 2 * Math.PI);
+            ctx.fillStyle = woodColor3;
+            ctx.fill();
+
+            const gradientRadius = outerRadius * 0.95;
+            const woodGradient = ctx.createRadialGradient(centerX, centerY, gradientRadius * 0.8, centerX, centerY, gradientRadius);
+            woodGradient.addColorStop(0, woodColor1);
+            woodGradient.addColorStop(0.5, woodColor2);
+            woodGradient.addColorStop(1, woodColor3);
+
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, gradientRadius, 0, 2 * Math.PI);
+            ctx.fillStyle = woodGradient;
+            ctx.fill();
+            ctx.strokeStyle = '#4a5568';
+            ctx.lineWidth = 3;
+            ctx.stroke();
+
+            ctx.save();
+            ctx.translate(centerX, centerY);
+            ctx.rotate(rotation);
+
+            const segmentAngle = (2 * Math.PI) / rouletteNumbers.length;
+            rouletteNumbers.forEach((segment, index) => {
+                const startAngle = index * segmentAngle;
+                const endAngle = (index + 1) * segmentAngle;
+
+                ctx.beginPath();
+                ctx.arc(0, 0, segmentRadius, startAngle, endAngle);
+                ctx.lineTo(0, 0);
+                ctx.closePath();
+
+                ctx.fillStyle = segment.color === 'red' ? '#dc2626' : (segment.color === 'black' ? '#1f2937' : '#10b981');
+                ctx.fill();
+                ctx.strokeStyle = '#4a5568';
+                ctx.lineWidth = 1;
+                ctx.stroke();
+
+                ctx.save();
+                ctx.rotate(startAngle + segmentAngle / 2);
+                ctx.fillStyle = 'white';
+                ctx.font = `${segmentRadius * 0.08}px Inter`;
+                ctx.textAlign = 'right';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(segment.number.toString(), segmentRadius * 0.9, 0);
+                ctx.restore();
+            });
+
+            ctx.restore();
+
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, innerRadius, 0, 2 * Math.PI);
+            ctx.fillStyle = '#a0a0a0';
+            ctx.fill();
+            ctx.strokeStyle = '#4a5568';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            if (spinning || ballOrbitSpeed > 0.001 || winningIndex !== -1) { // Keep drawing ball if winningIndex is set
+                ctx.beginPath();
+                ctx.arc(centerX + ballCurrentRadius * Math.cos(ballAngle), centerY + ballCurrentRadius * Math.sin(ballAngle), ballRadius, 0, 2 * Math.PI);
+                ctx.fillStyle = 'white';
+                ctx.shadowColor = 'rgba(0,0,0,0.5)';
+                ctx.shadowBlur = 5;
+                ctx.fill();
+                ctx.shadowColor = 'transparent';
+            }
+        };
+
+        let currentRotation = 0;
+        let spinSpeed = 0;
+        let spinningAnimationId = null;
+
+        const animateSpin = () => {
+            currentRotation += spinSpeed;
+            spinSpeed *= 0.98;
+
+            ballAngle += ballOrbitSpeed;
+            ballOrbitSpeed *= 0.985;
+
+            if (ballOrbitSpeed < 0.1 && ballCurrentRadius > ballInnerTrackRadius) {
+                ballCurrentRadius -= 0.5;
+                if (ballCurrentRadius < ballInnerTrackRadius) {
+                    ballCurrentRadius = ballInnerTrackRadius;
+                }
+            }
+
+            drawWheel(currentRotation);
+
+            if (spinSpeed < 0.005 && ballOrbitSpeed < 0.001) {
+                cancelAnimationFrame(spinningAnimationId);
+                // Ball snapping to final position will be handled before calling calculateResult
+
+                // Final alignment of the ball to the center of the winning segment
+                const segmentAngle = (2 * Math.PI) / rouletteNumbers.length;
+                const winningSegmentCenterAngle = (winningIndex * segmentAngle) + (segmentAngle / 2) - currentRotation; // Adjust for wheel rotation
+
+                // Normalize ballAngle to be relative to the (now stopped) wheel
+                let normalizedBallAngle = (ballAngle - currentRotation) % (2 * Math.PI);
+                if (normalizedBallAngle < 0) normalizedBallAngle += 2 * Math.PI;
+
+                // Snap ball to the winning segment's angle
+                // We need to find the correct angle for the ball relative to the wheel's current rotation.
+                // The wheel is drawn with `currentRotation`. The segments are fixed on this rotated wheel.
+                // The ball's `ballAngle` is in absolute canvas space.
+
+                // Target angle for the ball (absolute, considering the final wheel rotation)
+                const targetAbsBallAngle = ((winningIndex * segmentAngle) + (segmentAngle / 2) );
+                ballAngle = targetAbsBallAngle; // Snap ball angle to the center of the winning segment
+                ballCurrentRadius = ballInnerTrackRadius; // Ensure ball is in the inner track
+
+                drawWheel(currentRotation); // Redraw one last time to show final ball position
+
+                // IMPORTANT: Now call calculateResult to send data to server
+                processSpinResult(rouletteNumbers[winningIndex]);
+            } else {
+                spinningAnimationId = requestAnimationFrame(animateSpin);
+            }
+        };
+
+        const spinWheel = () => {
+            if (spinning) return;
+
+            if (currentBets.length === 0) {
+                showModal("No Bets Placed", "Please place a bet before spinning!");
+                return;
+            }
+
+            const totalBetAmount = currentBets.reduce((sum, bet) => sum + bet.amount, 0);
+
+            // Client-side pre-check for funds (server will do the authoritative check)
+            if (balance < totalBetAmount) {
+                showModal("Insufficient Funds", `You need $${totalBetAmount} to place these bets, but you only have $${balance}.<br>(This is a pre-check, server will verify final balance)`);
+                return;
+            }
+
+            spinning = true;
+            spinButton.disabled = true;
+            winningIndex = Math.floor(Math.random() * rouletteNumbers.length);
+
+            spinSpeed = 0.5 + Math.random() * 0.5;
+            ballOrbitSpeed = spinSpeed * (1.2 + Math.random() * 0.3);
+            ballCurrentRadius = ballOuterTrackRadius;
+            ballAngle = Math.random() * 2 * Math.PI;
+
+            animateSpin();
+        };
+
+        // Renamed from calculateResult to processSpinResult to avoid confusion
+        // This function now primarily sends data to the server and handles the response
+        const processSpinResult = async (winningNumberObj) => {
+            const winningNumberDetails = {
+                number: winningNumberObj.number,
+                color: winningNumberObj.color
+            };
+
+            // Prepare data for the server
+            const requestData = {
+                game: 'roulette',
+                bets: currentBets.map(bet => ({ type: bet.type, value: bet.value, amount: bet.amount })), // Send clean bet data
+                winningNumberDetails: winningNumberDetails
+                // The 'bet' (total bet) will be calculated server-side from the 'bets' array
+            };
+
+            try {
+                const response = await fetch('update_balance.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(requestData),
+                });
+
+                if (!response.ok) {
+                    const errorText = await response.text();
+                    throw new Error(`Server error: ${response.status} ${errorText}`);
+                }
+
+                const result = await response.json();
+
+                if (result.success) {
+                    balance = result.newBalance; // Update client-side balance from server
+                    // You might want to update a visual balance display here if you have one:
+                    // updateBalanceDisplay(balance);
+                    showModal("Spin Result", result.message);
+                } else {
+                    // If the server indicates failure (e.g. insufficient funds determined server-side)
+                    // Update balance to what server says it is (could be unchanged if bet was rejected)
+                    if (typeof result.newBalance !== 'undefined') {
+                         balance = result.newBalance;
+                         // updateBalanceDisplay(balance);
+                    }
+                    showModal("Spin Error", result.message || "An issue occurred with the bet processing.");
+                }
+
+            } catch (error) {
+                console.error('Error processing spin result:', error);
+                showModal("Network Error", "Could not connect to the server to process the spin. " + error.message);
+                // Potentially revert UI state or allow retry, but client-side balance might be out of sync
+            } finally {
+                // Clean up UI regardless of success or failure
+                currentBets.forEach(bet => {
+                    if (bet.element) { // Ensure element exists before trying to remove class
+                        bet.element.classList.remove('selected');
+                    }
+                });
+                currentBets = []; // Clear bets for the next round
+                spinning = false;
+                spinButton.disabled = false;
+                winningIndex = -1; // Reset winning index
+                // Redraw wheel in its resting state without the ball necessarily fixed to a number yet,
+                // or let the next drawWheel call handle it.
+                // drawWheel(currentRotation); // Could redraw here to clear any final ball highlight if needed.
+            }
+        };
+
+
+        const showModal = (title, msg) => {
+            modalTitle.textContent = title;
+            modalMessage.innerHTML = msg; // Use innerHTML if your message contains HTML
+            resultsModal.classList.add('show');
+        };
+
+        const hideModal = () => {
+            resultsModal.classList.remove('show');
+        };
+
+        spinButton.addEventListener('click', spinWheel);
+        modalCloseButton.addEventListener('click', hideModal);
+
+        bettingTable.addEventListener('click', (event) => {
+            if (spinning) return; // Don't allow bet changes while spinning
+
+            const cell = event.target.closest('.betting-cell');
+            if (cell) {
+                const betType = cell.dataset.betType;
+                let betValue = cell.dataset.betValue;
+
+                if (betType === 'number') {
+                    betValue = parseInt(betValue);
+                }
+
+                const betAmount = parseInt(betAmountInput.value);
+
+                if (isNaN(betAmount) || betAmount <= 0) {
+                    showModal("Invalid Bet Amount", "Please enter a valid bet amount (greater than 0).");
+                    betAmountInput.focus();
+                    return;
+                }
+
+                const existingBetIndex = currentBets.findIndex(bet => bet.type === betType && bet.value === betValue);
+
+                if (existingBetIndex > -1) {
+                    // Bet exists, remove it
+                    currentBets.splice(existingBetIndex, 1);
+                    cell.classList.remove('selected');
+                } else {
+                    // Add new bet
+                    currentBets.push({ type: betType, value: betValue, amount: betAmount, element: cell });
+                    cell.classList.add('selected');
+                }
+            }
+        });
+
+        // Initial draw
+        // Add a small delay to ensure canvas is ready, especially if there are layout shifts
+        requestAnimationFrame(() => {
+            // Dynamically set canvas size based on its parent or a desired aspect ratio
+            // For simplicity, we'll use its current CSS-defined size or a fixed size.
+            // If you want it responsive to gameAreaWrapper:
+            const wrapperRect = gameAreaWrapper.getBoundingClientRect();
+            const availableWidth = wrapperRect.width * 0.48; // From your CSS max-width
+            const availableHeight = wrapperRect.height;
+
+            // Ensure canvas dimensions are integers
+            canvas.width = Math.floor(Math.min(availableWidth, availableHeight, 500)); // Max 500 or available space
+            canvas.height = canvas.width; // Keep it square
+
+            drawWheel(currentRotation);
+        });
+
+
+        // Optional: Adjust canvas on window resize
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                const wrapperRect = gameAreaWrapper.getBoundingClientRect();
+                const availableWidth = wrapperRect.width * (window.innerWidth <= 1024 ? 0.95 : 0.48);
+                const availableHeight = window.innerWidth <= 1024 ? wrapperRect.height * 0.4 : wrapperRect.height; // Rough estimate for column layout
+
+                let newSize;
+                if (window.innerWidth <= 1024) { // Column layout
+                    newSize = Math.floor(Math.min(availableWidth, availableHeight, canvas.parentElement.clientWidth * 0.9));
+                } else { // Row layout
+                     newSize = Math.floor(Math.min(availableWidth, availableHeight, 500));
+                }
+                canvas.width = newSize;
+                canvas.height = newSize;
+
+                drawWheel(currentRotation); // Redraw with current state
+            }, 250); // Debounce resize event
+        });
+
+
+    </script>
+</body>
+</html>

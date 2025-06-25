@@ -1,0 +1,1309 @@
+[31-May-2025 20:13:07 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[31-May-2025 20:13:07 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[31-May-2025 20:13:07 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[31-May-2025 20:13:07 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[31-May-2025 20:13:11 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[31-May-2025 20:13:11 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[31-May-2025 20:13:11 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[31-May-2025 20:13:11 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[31-May-2025 20:22:01 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[31-May-2025 20:22:01 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[31-May-2025 20:22:01 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[31-May-2025 20:22:01 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[31-May-2025 20:22:08 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[31-May-2025 20:22:08 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[31-May-2025 20:22:08 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[31-May-2025 20:22:08 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[31-May-2025 20:25:07 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[31-May-2025 20:25:07 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[31-May-2025 20:25:07 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[31-May-2025 20:25:07 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[31-May-2025 20:27:00 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[31-May-2025 20:27:00 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[31-May-2025 20:27:00 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[31-May-2025 20:27:00 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[31-May-2025 20:27:14 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[31-May-2025 20:27:14 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[31-May-2025 20:27:14 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[31-May-2025 20:27:14 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[31-May-2025 20:30:02 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[31-May-2025 20:30:02 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[31-May-2025 20:30:02 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[31-May-2025 20:30:02 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[31-May-2025 20:30:09 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[31-May-2025 20:30:09 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[31-May-2025 20:30:09 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[31-May-2025 20:30:09 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[31-May-2025 20:32:25 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[31-May-2025 20:32:25 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[31-May-2025 20:32:25 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[31-May-2025 20:32:25 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 13:54:23 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 13:54:23 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 13:54:23 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 13:54:23 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 13:56:16 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 13:56:16 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 13:56:16 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 13:56:16 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 13:57:36 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 13:57:36 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 13:57:36 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 13:57:36 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 13:59:59 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 13:59:59 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 13:59:59 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 13:59:59 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 14:01:40 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 14:01:40 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 14:01:40 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 14:01:40 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 14:03:05 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 14:03:05 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 14:03:05 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 14:03:05 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 14:05:20 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 14:05:20 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 14:05:20 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 14:05:20 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 14:07:31 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 14:07:31 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 14:07:31 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 14:07:31 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 14:08:23 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 14:08:23 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 14:08:23 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 14:08:23 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 14:10:12 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 14:10:12 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 14:10:12 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 14:10:12 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 14:11:49 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 14:11:49 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 14:11:49 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 14:11:49 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 14:12:38 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 14:12:38 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 14:12:38 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 14:12:38 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 14:13:32 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 14:13:32 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 14:13:33 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 14:13:33 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 15:35:43 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 15:35:43 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 15:35:43 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 15:35:43 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 15:42:09 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 15:42:09 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 15:42:09 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 15:42:09 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 15:46:46 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 15:46:46 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 15:46:46 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 15:46:46 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 15:55:31 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 15:55:31 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 15:55:31 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 15:55:31 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:03:56 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:03:56 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:03:56 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:03:56 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:04:00 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:04:00 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:04:00 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:04:00 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:07:45 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:07:45 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:07:45 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:07:45 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:07:50 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:07:50 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:07:50 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:07:50 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:07:50 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:07:50 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:07:53 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:07:53 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:07:53 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:07:53 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:08:10 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:08:10 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:08:10 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:08:10 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:08:10 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:08:10 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:08:11 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:08:11 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:08:11 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:08:11 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:29:17 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:29:17 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:29:17 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:29:17 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:35:55 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:35:55 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:35:55 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:35:55 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:39:46 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:39:46 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:39:46 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:39:46 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:42:00 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:42:00 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:42:00 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:42:00 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:42:09 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:42:09 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:42:09 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:42:09 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:49:43 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:49:43 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:49:43 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:49:43 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:49:50 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:49:50 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:49:50 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:49:50 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:49:50 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:49:50 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:49:52 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:49:52 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:49:52 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 16:49:52 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:00:41 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:00:41 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:00:41 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:00:41 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:03:28 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:03:28 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:03:28 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:03:28 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:06:40 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:06:40 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:06:40 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:06:40 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:06:44 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:06:44 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:06:44 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:06:44 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:06:44 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:06:44 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:06:47 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:06:47 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:06:47 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:06:47 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:10:07 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:10:07 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:10:07 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:10:07 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:10:10 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:10:10 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:10:10 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:10:10 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:10:10 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:10:10 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:10:10 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:10:10 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:10:11 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:10:11 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:10:11 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:10:11 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:10:15 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:10:15 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:10:15 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:10:15 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:10:30 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:10:30 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:10:30 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:10:30 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:14:27 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:14:27 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:14:27 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:14:27 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:14:37 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:14:37 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:14:37 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:14:37 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:14:39 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:14:39 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:14:39 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:14:39 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:17:51 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:17:51 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:17:51 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:17:51 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:18:04 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:18:04 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:18:04 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:18:04 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:21:24 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:21:24 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:21:24 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:21:24 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:21:31 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:21:31 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:21:31 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:21:31 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:21:44 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:21:44 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:21:44 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:21:44 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:21:46 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:21:46 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:21:46 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:21:46 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:26:24 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:26:24 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:28:29 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:28:29 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:28:29 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:28:29 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:31:04 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:31:04 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:31:04 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:31:04 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:34:13 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:34:13 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:34:13 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:34:13 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:35:13 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:35:13 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:35:13 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:35:13 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:37:43 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:37:43 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:37:43 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:37:43 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:37:53 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:37:53 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:37:53 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:37:53 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:37:58 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:37:58 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:37:58 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:37:58 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:41:36 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:41:36 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:41:36 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:41:36 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:42:07 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:42:07 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:42:07 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:42:07 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:43:55 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:43:55 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:43:55 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:43:55 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:46:56 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:46:56 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:46:56 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:46:56 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:47:08 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:47:08 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:47:08 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:47:08 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:47:20 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:47:20 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:47:20 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:47:20 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:47:47 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:47:47 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:47:47 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:47:47 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:48:09 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:48:09 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:48:09 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:48:09 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:52:04 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:52:04 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:52:04 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:52:04 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:53:22 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:53:22 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:53:22 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:53:22 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:53:31 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:53:31 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:53:31 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:53:31 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:55:32 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:55:32 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:55:32 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:55:32 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:55:43 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:55:43 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:55:43 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:55:43 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:56:45 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:56:45 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:56:45 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:56:45 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:57:06 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:57:06 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:57:06 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:57:06 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php on line 17
+[01-Jun-2025 17:58:06 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:58:06 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:58:06 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:58:06 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:58:30 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:58:30 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:58:30 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 17:58:30 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:01:27 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:01:27 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:01:27 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:01:27 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:01:39 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:01:39 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:01:39 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:01:39 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:01:41 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:01:41 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:01:41 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:01:41 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:02:47 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:02:47 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:02:47 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:02:47 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:06:12 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:06:12 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:06:12 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:06:12 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:19:46 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:19:46 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:19:46 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:19:46 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:19:52 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:19:52 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\claim_ecasino_reward.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:19:59 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:19:59 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:19:59 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:19:59 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:20:02 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:20:02 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\claim_ecasino_reward.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:22:43 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:22:43 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:22:43 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:22:43 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:22:44 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:22:44 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:22:44 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:22:44 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:22:46 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:22:46 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\claim_ecasino_reward.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:22:51 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:22:51 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:22:51 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:22:51 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:26:44 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:26:44 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:26:44 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:26:44 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:26:45 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:26:45 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\claim_ecasino_reward.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:26:58 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:26:58 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:26:58 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:26:58 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:27:00 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[01-Jun-2025 18:27:00 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\claim_ecasino_reward.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[02-Jun-2025 10:28:59 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[02-Jun-2025 10:28:59 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[02-Jun-2025 10:28:59 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[02-Jun-2025 10:28:59 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[02-Jun-2025 10:29:22 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[02-Jun-2025 10:29:22 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[02-Jun-2025 10:29:22 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[02-Jun-2025 10:29:22 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[02-Jun-2025 10:30:06 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[02-Jun-2025 10:30:06 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[02-Jun-2025 10:30:06 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[02-Jun-2025 10:30:06 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[02-Jun-2025 10:36:43 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[02-Jun-2025 10:36:43 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[02-Jun-2025 10:36:43 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[02-Jun-2025 10:36:43 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[02-Jun-2025 10:46:34 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[02-Jun-2025 10:46:34 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[02-Jun-2025 10:46:34 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[02-Jun-2025 10:46:34 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[02-Jun-2025 10:46:35 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[02-Jun-2025 10:46:35 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[02-Jun-2025 10:46:35 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[02-Jun-2025 10:46:35 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[02-Jun-2025 10:46:36 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[02-Jun-2025 10:46:36 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[02-Jun-2025 10:46:36 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[02-Jun-2025 10:46:36 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[02-Jun-2025 10:48:38 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[02-Jun-2025 10:48:38 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[02-Jun-2025 10:48:38 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[02-Jun-2025 10:48:38 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[02-Jun-2025 10:49:04 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[02-Jun-2025 10:49:04 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[02-Jun-2025 10:49:04 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\Luck Wallet\php\debug_helper.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[02-Jun-2025 10:49:04 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\Luck Wallet\php\debug_helper.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\php\db_connect.php:7
+Stack trace:
+#0 C:\xampp\htdocs\Luck Wallet\php\check_daily_bonus.php(16): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\php\db_connect.php on line 7
+[16-Jun-2025 10:12:14 Europe/Berlin] Error in get_balance.php: Database configuration not found

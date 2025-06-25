@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi-Lo Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #282c34;
+            color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .game-container {
+            background-color: #3a404c;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h1 {
+            color: #61dafb;
+            margin-bottom: 25px;
+        }
+
+        .card-display {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 120px;
+            margin-bottom: 25px;
+        }
+
+        .card {
+            width: 80px;
+            height: 110px;
+            background-color: white;
+            border: 2px solid #555;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 2em;
+            font-weight: bold;
+            color: black;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            position: relative;
+            margin: 0 10px;
+        }
+
+        .card.hidden {
+            background-color: #a020f0; /* Purple back for hidden card */
+            color: transparent;
+            font-size: 0;
+            border: 2px solid #d0d0d0;
+            background-image: linear-gradient(135deg, #a020f0 25%, #800080 25%, #800080 50%, #a020f0 50%, #a020f0 75%, #800080 75%, #800080);
+            background-size: 20px 20px;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+        }
+
+        .card .rank {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            font-size: 0.8em;
+        }
+
+        .card .suit {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            font-size: 0.8em;
+        }
+
+        .controls {
+            margin-bottom: 20px;
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #555;
+            background-color: #444;
+            color: #f0f0f0;
+            width: 80px;
+            text-align: center;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #61dafb;
+            color: #282c34;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover:not(:disabled) {
+            background-color: #21a1f1;
+        }
+
+        button:disabled {
+            background-color: #555;
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+
+        .message {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #f0f0f0;
+            min-height: 25px; /* To prevent layout shift */
+        }
+
+        /* Styles for Modals (copied from demo-game.html) */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .modal-content {
+            background: #1f2833;
+            color: #c5c6c7;
+            padding: 24px;
+            border-radius: 12px;
+            width: 90%; max-width: 400px;
+            text-align: left;
+            box-shadow: 0 0 30px rgba(0,0,0,0.8);
+            position: relative;
+        }
+        .modal-content h2 {
+            color: #66fcf1;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+        .modal-content p {
+            margin-top: 12px;
+        }
+        .modal-content .close {
+            position: absolute;
+            top: 12px; right: 12px;
+            font-size: 24px;
+            color: #c5c6c7;
+            cursor: pointer;
+        }
+        /* Specific styles for the new insufficient funds modal */
+        .modal-content.insufficient-funds {
+            background: #331f1f; /* Darker red background */
+            border: 2px solid #ff4d4d; /* Red border */
+        }
+        .modal-content.insufficient-funds h2 {
+            color: #ff4d4d; /* Red heading */
+        }
+        .modal-content.insufficient-funds p {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-top: 15px;
+            color: #f0f0f0;
+        }
+        .modal-content.insufficient-funds .icon {
+            font-size: 3rem;
+            color: #ff4d4d;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>Hi-Lo Card Game</h1>
+
+        <div class="card-display">
+            <div id="currentCard" class="card">
+                <span class="rank"></span>
+                <span class="suit"></span>
+            </div>
+            <div id="nextCard" class="card hidden">
+                <span class="rank"></span>
+                <span class="suit"></span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <input type="number" id="betAmount" value="10" min="1">
+            <button id="guessHigher">Higher</button>
+            <button id="guessLower">Lower</button>
+        </div>
+
+        <p id="gameMessage" class="message">Place your bet and make a guess!</p>
+    </div>
+
+    <div id="insufficientFundsModal" class="modal">
+        <div class="modal-content insufficient-funds">
+            <span class="close" id="insufficientFundsClose">&times;</span>
+            <div class="icon"><i class="fas fa-exclamation-circle"></i></div>
+            <h2>Insufficient Funds!</h2>
+            <p>Your balance is too low to place this bet.</p>
+            <p>Please add more funds to continue playing.</p>
+        </div>
+    </div>
+
+    <script>
+        // Card Deck Data
+        const ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10'];
+        const suits = ['hearts', 'diamonds', 'clubs', 'spades']; // Unicode for suits if needed: ♥ ♦ ♣ ♠
+
+        // DOM Elements
+        const currentCardDisplay = document.getElementById('currentCard');
+        const nextCardDisplay = document.getElementById('nextCard');
+        const betInput = document.getElementById('betAmount');
+        const guessHigherBtn = document.getElementById('guessHigher');
+        const guessLowerBtn = document.getElementById('guessLower');
+        const gameMessageDisplay = document.getElementById('gameMessage');
+
+        // New modal elements
+        const insufficientFundsModal = document.getElementById('insufficientFundsModal');
+        const insufficientFundsClose = document.getElementById('insufficientFundsClose');
+
+        // Game State Variables
+        let currentCard = null; // Will store {r: rank, s: suit, v: value}
+
+        // Helper function to get card value (for Hi-Lo logic)
+        function getCardValue(rank) {
+            return parseInt(rank);
+        }
+
+        // Function to display a card
+        function displayCard(cardElement, cardData) {
+            if (cardData) {
+                const rankSpan = cardElement.querySelector('.rank');
+                const suitSpan = cardElement.querySelector('.suit');
+
+                rankSpan.textContent = cardData.r;
+                suitSpan.textContent = getSuitSymbol(cardData.s);
+                cardElement.style.color = (cardData.s === 'hearts' || cardData.s === 'diamonds') ? 'red' : 'black';
+                cardElement.classList.remove('hidden');
+            } else {
+                cardElement.classList.add('hidden');
+                cardElement.querySelector('.rank').textContent = '';
+                cardElement.querySelector('.suit').textContent = '';
+            }
+        }
+
+        function getSuitSymbol(suit) {
+            switch (suit) {
+                case 'hearts': return '♥';
+                case 'diamonds': return '♦';
+                case 'clubs': return '♣';
+                case 'spades': return '♠';
+                default: return '';
+            }
+        }
+
+        // Initial game setup
+        function initGame() {
+            // Draw a random starting card for the current display
+            const randomRank = ranks[Math.floor(Math.random() * ranks.length)];
+            const randomSuit = suits[Math.floor(Math.random() * suits.length)];
+            currentCard = { r: randomRank, s: randomSuit, v: getCardValue(randomRank) };
+
+            displayCard(currentCardDisplay, currentCard);
+            displayCard(nextCardDisplay, null); // Hide the next card
+            gameMessageDisplay.textContent = "Place your bet and make a guess!";
+
+            // Ensure controls are enabled
+            guessHigherBtn.disabled = false;
+            guessLowerBtn.disabled = false;
+            betInput.disabled = false;
+        }
+
+        // --- Core game logic and server communication ---
+        async function makeGuess(isHigher) {
+            const bet = parseFloat(betInput.value);
+            const choice = isHigher ? 'higher' : 'lower';
+
+            // Disable controls to prevent multiple actions
+            guessHigherBtn.disabled = true;
+            guessLowerBtn.disabled = true;
+            betInput.disabled = true;
+
+            // Hide any open modals
+            insufficientFundsModal.style.display = 'none';
+
+            // Client-side validation before sending to server
+            if (isNaN(bet) || bet <= 0) {
+                gameMessageDisplay.textContent = "Please enter a valid bet amount.";
+                guessHigherBtn.disabled = false;
+                guessLowerBtn.disabled = false;
+                betInput.disabled = false;
+                return;
+            }
+
+            gameMessageDisplay.textContent = "Processing your guess...";
+
+            try {
+                const response = await fetch('update_balance.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        game: 'hi_lo', // Identify the game
+                        bet: bet,
+                        currentCardRank: currentCard.r, // Send current card details to server
+                        currentCardSuit: currentCard.s,
+                        choice: choice
+                    })
+                });
+
+                const data = await response.json();
+                console.log("Hi-Lo Server Response:", data);
+
+                if (!data.success && data.message === 'Insufficient funds.') {
+                    insufficientFundsModal.style.display = 'flex'; // Show custom insufficient funds modal
+                    gameMessageDisplay.textContent = "Your balance is too low."; // Clear game message
+                } else if (data.success) {
+                    // Send new balance to parent window IMMEDIATELY
+                    if (window.parent) {
+                        window.parent.postMessage({ type: 'GAME_OVER', newBalance: data.newBalance }, '*');
+                    }
+
+                    // Update current card display based on what server sent as the current card
+                    currentCard = {
+                        r: data.nextCard.rank,
+                        s: data.nextCard.suit,
+                        v: getCardValue(data.nextCard.rank)
+                    };
+
+                    // Display the new "next" card and update messages instantly (no delay)
+                    const revealedNextCard = {
+                        r: data.revealedCard.rank,
+                        s: data.revealedCard.suit,
+                        v: getCardValue(data.revealedCard.rank)
+                    };
+                    displayCard(nextCardDisplay, revealedNextCard); // Show the card that was revealed
+
+                    gameMessageDisplay.textContent = data.message; // Display win/loss message from server
+                    displayCard(currentCardDisplay, currentCard); // Move revealed card to current position
+                    displayCard(nextCardDisplay, null); // Hide next card for new round
+
+                } else {
+                    // Handle other server errors (e.g., invalid game state)
+                    gameMessageDisplay.textContent = `Error: ${data.message}`;
+                    initGame(); // Re-initialize game if an unexpected error occurs
+                }
+
+            } catch (error) {
+                console.error('Error during Hi-Lo game play:', error);
+                gameMessageDisplay.textContent = "A network error occurred. Please try again.";
+                initGame(); // Reset game on network error
+            } finally {
+                // Re-enable controls
+                guessHigherBtn.disabled = false;
+                guessLowerBtn.disabled = false;
+                betInput.disabled = false;
+            }
+        }
+
+        // Event Listeners
+        guessHigherBtn.addEventListener('click', () => makeGuess(true));
+        guessLowerBtn.addEventListener('click', () => makeGuess(false));
+        insufficientFundsClose.addEventListener('click', () => insufficientFundsModal.style.display = 'none');
+
+        // Initialize the game when the page loads
+        window.onload = initGame;
+    </script>
+</body>
+</html>

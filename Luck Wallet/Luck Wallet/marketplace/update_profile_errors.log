@@ -1,0 +1,310 @@
+[22-Jun-2025 08:50:48 Europe/Berlin] PHP Warning:  require_once(config/db.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Luck Wallet\marketplace\update_profile_picture.php on line 64
+[22-Jun-2025 08:50:48 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'config/db.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Luck Wallet\marketplace\update_profile_picture.php:64
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\marketplace\update_profile_picture.php on line 64
+[22-Jun-2025 09:04:47 Europe/Berlin] --- Starting profile picture upload ---
+[22-Jun-2025 09:04:47 Europe/Berlin] [2025-06-22 09:04:47] Session started: vj4ic9cn0t0256ge7e4ovb0nsl
+[22-Jun-2025 09:04:47 Europe/Berlin] [2025-06-22 09:04:47] Session data: {
+    "user_id": 1,
+    "username": "Neowise",
+    "wallet_address": "LW-68348f25914ec6b9d68bcdfedcd5a"
+}
+[22-Jun-2025 09:04:47 Europe/Berlin] [2025-06-22 09:04:47] POST data: []
+[22-Jun-2025 09:04:47 Europe/Berlin] [2025-06-22 09:04:47] FILES data: {
+    "profile_picture": {
+        "name": "cinnamoroll.png",
+        "type": "image\/png",
+        "tmp_name": "C:\\xampp\\tmp\\phpAA34.tmp",
+        "error": 0,
+        "size": 7258
+    }
+}
+[22-Jun-2025 09:04:47 Europe/Berlin] [2025-06-22 09:04:47] Temporary file exists: {
+    "size": 7258,
+    "temp_name": "C:\\xampp\\tmp\\phpAA34.tmp"
+}
+[22-Jun-2025 09:04:47 Europe/Berlin] [2025-06-22 09:04:47] Detected MIME type: image/png
+[22-Jun-2025 09:04:47 Europe/Berlin] [2025-06-22 09:04:47] Attempting to update database: {
+    "user_id": 1,
+    "image_size": 7258
+}
+[22-Jun-2025 09:04:47 Europe/Berlin] [2025-06-22 09:04:47] Database update result: {
+    "affected_rows": 1,
+    "result": true
+}
+[22-Jun-2025 09:04:47 Europe/Berlin] [2025-06-22 09:04:47] Sending success response: {
+    "success": true,
+    "imageUrl": "get_profile_picture.php?user_id=1&t=1750575887",
+    "timestamp": 1750575887
+}
+[22-Jun-2025 09:04:47 Europe/Berlin] [2025-06-22 09:04:47] Profile picture update completed successfully
+[22-Jun-2025 09:05:08 Europe/Berlin] --- Starting profile picture upload ---
+[22-Jun-2025 09:05:08 Europe/Berlin] [2025-06-22 09:05:08] Session started: vj4ic9cn0t0256ge7e4ovb0nsl
+[22-Jun-2025 09:05:08 Europe/Berlin] [2025-06-22 09:05:08] Session data: {
+    "user_id": 1,
+    "username": "Neowise",
+    "wallet_address": "LW-68348f25914ec6b9d68bcdfedcd5a"
+}
+[22-Jun-2025 09:05:08 Europe/Berlin] [2025-06-22 09:05:08] POST data: []
+[22-Jun-2025 09:05:08 Europe/Berlin] [2025-06-22 09:05:08] FILES data: {
+    "profile_picture": {
+        "name": "cinnamoroll.webp",
+        "type": "image\/webp",
+        "tmp_name": "C:\\xampp\\tmp\\phpFB53.tmp",
+        "error": 0,
+        "size": 22416
+    }
+}
+[22-Jun-2025 09:05:08 Europe/Berlin] [2025-06-22 09:05:08] Temporary file exists: {
+    "size": 22416,
+    "temp_name": "C:\\xampp\\tmp\\phpFB53.tmp"
+}
+[22-Jun-2025 09:05:08 Europe/Berlin] [2025-06-22 09:05:08] Detected MIME type: image/webp
+[22-Jun-2025 09:05:08 Europe/Berlin] [2025-06-22 09:05:08] Profile picture upload error: {
+    "message": "Invalid file type. Only JPG, PNG, and GIF are allowed.",
+    "code": 0,
+    "file": "C:\\xampp\\htdocs\\Luck Wallet\\marketplace\\update_profile_picture.php",
+    "line": 103,
+    "trace": "#0 {main}"
+}
+[22-Jun-2025 09:06:33 Europe/Berlin] --- Starting profile picture upload ---
+[22-Jun-2025 09:06:33 Europe/Berlin] [2025-06-22 09:06:33] Session started: vj4ic9cn0t0256ge7e4ovb0nsl
+[22-Jun-2025 09:06:33 Europe/Berlin] [2025-06-22 09:06:33] Session data: {
+    "user_id": 1,
+    "username": "Neowise",
+    "wallet_address": "LW-68348f25914ec6b9d68bcdfedcd5a"
+}
+[22-Jun-2025 09:06:33 Europe/Berlin] [2025-06-22 09:06:33] POST data: []
+[22-Jun-2025 09:06:33 Europe/Berlin] [2025-06-22 09:06:33] FILES data: {
+    "profile_picture": {
+        "name": "cinnamoroll.webp",
+        "type": "image\/webp",
+        "tmp_name": "C:\\xampp\\tmp\\php4875.tmp",
+        "error": 0,
+        "size": 22416
+    }
+}
+[22-Jun-2025 09:06:33 Europe/Berlin] [2025-06-22 09:06:33] Temporary file exists: {
+    "size": 22416,
+    "temp_name": "C:\\xampp\\tmp\\php4875.tmp"
+}
+[22-Jun-2025 09:06:33 Europe/Berlin] [2025-06-22 09:06:33] Detected MIME type: image/webp
+[22-Jun-2025 09:06:33 Europe/Berlin] [2025-06-22 09:06:33] Attempting to update database: {
+    "user_id": 1,
+    "image_size": 22416
+}
+[22-Jun-2025 09:06:33 Europe/Berlin] [2025-06-22 09:06:33] Database update result: {
+    "affected_rows": 1,
+    "result": true
+}
+[22-Jun-2025 09:06:33 Europe/Berlin] [2025-06-22 09:06:33] Profile picture upload successful: {
+    "name": "cinnamoroll.webp",
+    "type": "image\/webp",
+    "size": 22416,
+    "savedPath": "uploads\/profile_pictures\/profile_1_1750575993.webp"
+}
+[22-Jun-2025 09:06:33 Europe/Berlin] [2025-06-22 09:06:33] Sending success response: {
+    "success": true,
+    "imageUrl": "get_profile_picture.php?user_id=1&t=1750575993",
+    "timestamp": 1750575993,
+    "fileInfo": {
+        "name": "cinnamoroll.webp",
+        "type": "image\/webp",
+        "size": 22416,
+        "savedPath": "uploads\/profile_pictures\/profile_1_1750575993.webp"
+    }
+}
+[22-Jun-2025 09:06:33 Europe/Berlin] [2025-06-22 09:06:33] Profile picture update completed successfully
+[22-Jun-2025 09:09:02 Europe/Berlin] --- Starting profile picture upload ---
+[22-Jun-2025 09:09:02 Europe/Berlin] [2025-06-22 09:09:02] Session started: vj4ic9cn0t0256ge7e4ovb0nsl
+[22-Jun-2025 09:09:02 Europe/Berlin] [2025-06-22 09:09:02] Session data: {
+    "user_id": 1,
+    "username": "Neowise",
+    "wallet_address": "LW-68348f25914ec6b9d68bcdfedcd5a"
+}
+[22-Jun-2025 09:09:02 Europe/Berlin] [2025-06-22 09:09:02] POST data: []
+[22-Jun-2025 09:09:02 Europe/Berlin] [2025-06-22 09:09:02] FILES data: {
+    "profile_picture": {
+        "name": "cinnamoroll.png",
+        "type": "image\/png",
+        "tmp_name": "C:\\xampp\\tmp\\php8E4F.tmp",
+        "error": 0,
+        "size": 7258
+    }
+}
+[22-Jun-2025 09:09:02 Europe/Berlin] [2025-06-22 09:09:02] Temporary file exists: {
+    "size": 7258,
+    "temp_name": "C:\\xampp\\tmp\\php8E4F.tmp"
+}
+[22-Jun-2025 09:09:02 Europe/Berlin] [2025-06-22 09:09:02] Detected MIME type: image/png
+[22-Jun-2025 09:09:02 Europe/Berlin] [2025-06-22 09:09:02] Attempting to update database: {
+    "user_id": 1,
+    "image_size": 7258
+}
+[22-Jun-2025 09:09:02 Europe/Berlin] [2025-06-22 09:09:02] Database update result: {
+    "affected_rows": 1,
+    "result": true
+}
+[22-Jun-2025 09:09:02 Europe/Berlin] [2025-06-22 09:09:02] Profile picture upload successful: {
+    "name": "cinnamoroll.png",
+    "type": "image\/png",
+    "size": 7258,
+    "savedPath": "uploads\/profile_pictures\/profile_1_1750576142.png"
+}
+[22-Jun-2025 09:09:02 Europe/Berlin] [2025-06-22 09:09:02] Sending success response: {
+    "success": true,
+    "imageUrl": "get_profile_picture.php?user_id=1&t=1750576142",
+    "timestamp": 1750576142,
+    "fileInfo": {
+        "name": "cinnamoroll.png",
+        "type": "image\/png",
+        "size": 7258,
+        "savedPath": "uploads\/profile_pictures\/profile_1_1750576142.png"
+    }
+}
+[22-Jun-2025 09:09:02 Europe/Berlin] [2025-06-22 09:09:02] Profile picture update completed successfully
+[22-Jun-2025 09:09:11 Europe/Berlin] --- Starting profile picture upload ---
+[22-Jun-2025 09:09:11 Europe/Berlin] [2025-06-22 09:09:11] Session started: vj4ic9cn0t0256ge7e4ovb0nsl
+[22-Jun-2025 09:09:11 Europe/Berlin] [2025-06-22 09:09:11] Session data: {
+    "user_id": 1,
+    "username": "Neowise",
+    "wallet_address": "LW-68348f25914ec6b9d68bcdfedcd5a"
+}
+[22-Jun-2025 09:09:11 Europe/Berlin] [2025-06-22 09:09:11] POST data: []
+[22-Jun-2025 09:09:11 Europe/Berlin] [2025-06-22 09:09:11] FILES data: {
+    "profile_picture": {
+        "name": "cinnamoroll.webp",
+        "type": "image\/webp",
+        "tmp_name": "C:\\xampp\\tmp\\phpB2EF.tmp",
+        "error": 0,
+        "size": 22416
+    }
+}
+[22-Jun-2025 09:09:11 Europe/Berlin] [2025-06-22 09:09:11] Temporary file exists: {
+    "size": 22416,
+    "temp_name": "C:\\xampp\\tmp\\phpB2EF.tmp"
+}
+[22-Jun-2025 09:09:11 Europe/Berlin] [2025-06-22 09:09:11] Detected MIME type: image/webp
+[22-Jun-2025 09:09:11 Europe/Berlin] [2025-06-22 09:09:11] Attempting to update database: {
+    "user_id": 1,
+    "image_size": 22416
+}
+[22-Jun-2025 09:09:11 Europe/Berlin] [2025-06-22 09:09:11] Database update result: {
+    "affected_rows": 1,
+    "result": true
+}
+[22-Jun-2025 09:09:11 Europe/Berlin] [2025-06-22 09:09:11] Profile picture upload successful: {
+    "name": "cinnamoroll.webp",
+    "type": "image\/webp",
+    "size": 22416,
+    "savedPath": "uploads\/profile_pictures\/profile_1_1750576151.webp"
+}
+[22-Jun-2025 09:09:11 Europe/Berlin] [2025-06-22 09:09:11] Sending success response: {
+    "success": true,
+    "imageUrl": "get_profile_picture.php?user_id=1&t=1750576151",
+    "timestamp": 1750576151,
+    "fileInfo": {
+        "name": "cinnamoroll.webp",
+        "type": "image\/webp",
+        "size": 22416,
+        "savedPath": "uploads\/profile_pictures\/profile_1_1750576151.webp"
+    }
+}
+[22-Jun-2025 09:09:11 Europe/Berlin] [2025-06-22 09:09:11] Profile picture update completed successfully
+[22-Jun-2025 09:17:38 Europe/Berlin] --- Starting profile picture upload ---
+[22-Jun-2025 09:17:38 Europe/Berlin] [2025-06-22 09:17:38] Session started: vj4ic9cn0t0256ge7e4ovb0nsl
+[22-Jun-2025 09:17:38 Europe/Berlin] [2025-06-22 09:17:38] Session data: {
+    "user_id": 1,
+    "username": "Neowise",
+    "wallet_address": "LW-68348f25914ec6b9d68bcdfedcd5a"
+}
+[22-Jun-2025 09:17:38 Europe/Berlin] [2025-06-22 09:17:38] POST data: []
+[22-Jun-2025 09:17:38 Europe/Berlin] [2025-06-22 09:17:38] FILES data: {
+    "profile_picture": {
+        "name": "pokeball.png",
+        "type": "image\/png",
+        "tmp_name": "C:\\xampp\\tmp\\php6CC8.tmp",
+        "error": 0,
+        "size": 16222
+    }
+}
+[22-Jun-2025 09:17:38 Europe/Berlin] [2025-06-22 09:17:38] Temporary file exists: {
+    "size": 16222,
+    "temp_name": "C:\\xampp\\tmp\\php6CC8.tmp"
+}
+[22-Jun-2025 09:17:38 Europe/Berlin] [2025-06-22 09:17:38] Detected MIME type: image/jpeg
+[22-Jun-2025 09:17:38 Europe/Berlin] [2025-06-22 09:17:38] Attempting to update database: {
+    "user_id": 1,
+    "image_size": 16222
+}
+[22-Jun-2025 09:17:38 Europe/Berlin] [2025-06-22 09:17:38] Database update result: {
+    "affected_rows": 1,
+    "result": true
+}
+[22-Jun-2025 09:17:38 Europe/Berlin] [2025-06-22 09:17:38] Profile picture upload successful: {
+    "name": "pokeball.png",
+    "type": "image\/jpeg",
+    "size": 16222,
+    "savedPath": "uploads\/profile_pictures\/profile_1_1750576658.jpg"
+}
+[22-Jun-2025 09:17:38 Europe/Berlin] [2025-06-22 09:17:38] Sending success response: {
+    "success": true,
+    "imageUrl": "get_profile_picture.php?user_id=1&t=1750576658",
+    "timestamp": 1750576658,
+    "fileInfo": {
+        "name": "pokeball.png",
+        "type": "image\/jpeg",
+        "size": 16222,
+        "savedPath": "uploads\/profile_pictures\/profile_1_1750576658.jpg"
+    }
+}
+[22-Jun-2025 09:17:38 Europe/Berlin] [2025-06-22 09:17:38] Profile picture update completed successfully
+[22-Jun-2025 09:19:34 Europe/Berlin] --- Starting profile picture upload ---
+[22-Jun-2025 09:19:34 Europe/Berlin] [2025-06-22 09:19:34] Session started: vj4ic9cn0t0256ge7e4ovb0nsl
+[22-Jun-2025 09:19:34 Europe/Berlin] [2025-06-22 09:19:34] Session data: {
+    "user_id": 1,
+    "username": "Neowise",
+    "wallet_address": "LW-68348f25914ec6b9d68bcdfedcd5a"
+}
+[22-Jun-2025 09:19:34 Europe/Berlin] [2025-06-22 09:19:34] POST data: []
+[22-Jun-2025 09:19:34 Europe/Berlin] [2025-06-22 09:19:34] FILES data: {
+    "profile_picture": {
+        "name": "cinnamoroll.webp",
+        "type": "image\/webp",
+        "tmp_name": "C:\\xampp\\tmp\\php3312.tmp",
+        "error": 0,
+        "size": 22416
+    }
+}
+[22-Jun-2025 09:19:34 Europe/Berlin] [2025-06-22 09:19:34] Temporary file exists: {
+    "size": 22416,
+    "temp_name": "C:\\xampp\\tmp\\php3312.tmp"
+}
+[22-Jun-2025 09:19:34 Europe/Berlin] [2025-06-22 09:19:34] Detected MIME type: image/webp
+[22-Jun-2025 09:19:34 Europe/Berlin] [2025-06-22 09:19:34] Attempting to update database: {
+    "user_id": 1,
+    "image_size": 22416
+}
+[22-Jun-2025 09:19:34 Europe/Berlin] [2025-06-22 09:19:34] Database update result: {
+    "affected_rows": 1,
+    "result": true
+}
+[22-Jun-2025 09:19:34 Europe/Berlin] [2025-06-22 09:19:34] Profile picture upload successful: {
+    "name": "cinnamoroll.webp",
+    "type": "image\/webp",
+    "size": 22416,
+    "savedPath": "uploads\/profile_pictures\/profile_1_1750576774.webp"
+}
+[22-Jun-2025 09:19:34 Europe/Berlin] [2025-06-22 09:19:34] Sending success response: {
+    "success": true,
+    "imageUrl": "get_profile_picture.php?user_id=1&t=1750576774",
+    "timestamp": 1750576774,
+    "fileInfo": {
+        "name": "cinnamoroll.webp",
+        "type": "image\/webp",
+        "size": 22416,
+        "savedPath": "uploads\/profile_pictures\/profile_1_1750576774.webp"
+    }
+}
+[22-Jun-2025 09:19:34 Europe/Berlin] [2025-06-22 09:19:34] Profile picture update completed successfully

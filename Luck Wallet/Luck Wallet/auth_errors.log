@@ -1,0 +1,122 @@
+[2025-06-12 09:59:24] Received request
+Data: Array
+(
+    [method] => POST
+    [content_type] => application/json
+    [raw_input] => {"username":"chelsieseeker@gmail.com","password":"chaelvin","remember":false}
+)
+
+[2025-06-12 09:59:24] Executing query
+Data: Array
+(
+    [sql] => SELECT * FROM users WHERE email = ? OR username = ?
+    [params] => Array
+        (
+            [0] => chelsieseeker@gmail.com
+            [1] => chelsieseeker@gmail.com
+        )
+
+)
+
+[2025-06-12 10:01:51] Received request
+Data: Array
+(
+    [method] => POST
+    [content_type] => application/json
+    [raw_input] => {"username":"chelsieseeker@gmail.com","password":"chaelvin","remember":false}
+)
+
+[2025-06-12 10:01:51] Executing query
+Data: Array
+(
+    [sql] => SELECT * FROM users WHERE email = ?
+    [params] => Array
+        (
+            [0] => chelsieseeker@gmail.com
+        )
+
+)
+
+[2025-06-12 10:01:51] User query result
+Data: Array
+(
+    [found] => 1
+    [user] => Array
+        (
+            [Id] => 14
+            [firstName] => Chaelvin
+            [lastName] => Bolante
+            [email] => chelsieseeker@gmail.com
+            [password] => $2y$10$amO.D0QG1K926IsgU0P/a.6jRkkHKGgQSFyLbO7ebB4SGpSUs9vRS
+            [balance] => 13908.00
+            [date_joined] => 2025-05-26 20:15:01
+        )
+
+)
+
+[2025-06-12 10:01:51] Password verification
+Data: Array
+(
+    [input_hash] => d40644cada7d70d0ea66622cf613e186
+    [stored_hash] => $2y$10$amO.D0QG1K926IsgU0P/a.6jRkkHKGgQSFyLbO7ebB4SGpSUs9vRS
+    [match] => 
+)
+
+[2025-06-12 10:01:51] Password verification failed
+Data: Array
+(
+    [user_id] => unknown
+    [email] => chelsieseeker@gmail.com
+)
+
+[2025-06-12 10:26:10] Received request
+Data: Array
+(
+    [method] => POST
+    [content_type] => application/json
+    [raw_input] => {"username":"chelsieseeker@gmail.com","password":"chaelvin","remember":false}
+)
+
+[2025-06-12 10:26:10] Executing query
+Data: Array
+(
+    [sql] => SELECT * FROM users WHERE email = ?
+    [params] => Array
+        (
+            [0] => chelsieseeker@gmail.com
+        )
+
+)
+
+[2025-06-12 10:26:10] User query result
+Data: Array
+(
+    [found] => 1
+    [user] => Array
+        (
+            [Id] => 14
+            [firstName] => Chaelvin
+            [lastName] => Bolante
+            [email] => chelsieseeker@gmail.com
+            [password] => $2y$10$amO.D0QG1K926IsgU0P/a.6jRkkHKGgQSFyLbO7ebB4SGpSUs9vRS
+            [balance] => 13908.00
+            [date_joined] => 2025-05-26 20:15:01
+        )
+
+)
+
+[2025-06-12 10:26:10] Password verification
+Data: Array
+(
+    [input_hash] => d40644cada7d70d0ea66622cf613e186
+    [stored_hash] => $2y$10$amO.D0QG1K926IsgU0P/a.6jRkkHKGgQSFyLbO7ebB4SGpSUs9vRS
+    [match] => 
+)
+
+[2025-06-12 10:26:10] Password verification failed
+Data: Array
+(
+    [user_id] => unknown
+    [email] => chelsieseeker@gmail.com
+)
+

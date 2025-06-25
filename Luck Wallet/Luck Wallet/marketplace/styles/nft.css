@@ -1,0 +1,1728 @@
+
+/* Wallet Button and Dropdown Styles */
+.wallet-btn {
+    background: linear-gradient(135deg, #4a90e2, #6a11cb);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 40px;
+}
+
+.wallet-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(106, 17, 203, 0.25);
+}
+
+.wallet-address {
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dropd.modal-content {
+    background-color: #1e1e2e; /* Dark background */
+    margin: 5% auto; /* 5% from the top and centered */
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    animation: modalFadeIn 0.3s ease-out;
+    color: #e0e0e0;
+    border: 1px solid #444;
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 10000; /* Higher z-index than the modal background */
+    pointer-events: auto; /* Ensure content can be interacted with */
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #1a1a2e;
+    min-width: 280px;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    overflow: hidden;
+    margin-top: 8px;
+    border: 1px solid #2a2a3c;
+    animation: fadeIn 0.15s ease-out;
+}
+
+
+.dropdown-content a {
+    color: #e0e0e0;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.dropdown-content a:hover {
+    background-color: #252539;
+}
+
+.dropdown-content a .material-icons {
+    font-size: 20px;
+    color: #8a8a9e;
+}
+
+.dropdown-content a[style*="color: #ff6b6b"] .material-icons {
+    color: #ff6b6b;
+}
+
+.connect-wallet {
+    background: linear-gradient(135deg, #4a90e2, #6a11cb);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 40px;
+}
+
+.connect-wallet:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(106, 17, 203, 0.25);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* General Body Setup */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background: radial-gradient(circle at center, #003333 0%, #000000 100%);
+    color: #e0e0e0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Scrollbar Design */
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #00BFBF;
+    border-radius: 10px;
+    border: 3px solid #1a1a1a;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #008080;
+}
+
+/* Sidebar logo container */
+.sidebar-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    padding: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 0;
+    box-sizing: border-box;
+}
+
+.sidebar-logo {
+    max-width: 60px;
+    height: auto;
+    object-fit: contain;
+    margin: 0;
+}
+
+/* Header Styles */
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 80px; /* Space for fixed sidebar */
+    height: 70px; /* Fixed height for the header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #0a0a0a, #004d4d, #0a0a0a);
+    padding: 10px 40px;
+    box-shadow: 0 0 10px rgba(0, 191, 191, 0.4);
+    z-index: 99; /* Below sidebar, above content */
+    box-sizing: border-box;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+    height: 100%;
+}
+
+.header-brand {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.header-logo {
+    display: none;
+}
+
+.mobile-sidebar-toggle-btn {
+    display: none; /* Hidden by default on desktop */
+    background: none;
+    border: none;
+    color: #00BFBF;
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgba(0, 128, 128, 0.2);
+    backdrop-filter: blur(5px);
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 10px;
+}
+
+.mobile-sidebar-toggle-btn:active {
+    transform: scale(0.95);
+}
+
+.header-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #00BFBF;
+    text-shadow: 0 0 5px rgba(0, 191, 191, 0.5);
+    margin: 0;
+    white-space: nowrap;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #222;
+    border-radius: 20px;
+    padding: 8px 15px;
+    transition: all 0.3s ease;
+    width: 300px;
+    max-width: 100%;
+}
+
+.search-bar .search-icon {
+    color: #777;
+    margin-right: 8px;
+}
+
+.search-bar input {
+    background: none;
+    border: none;
+    outline: none;
+    color: #e0e0e0;
+    margin-left: 10px;
+    width: 254px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+}
+
+.search-bar .material-icons {
+    color: #777;
+}
+
+.wallet-dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 1000;
+}
+
+.wallet-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 191, 191, 0.1);
+    border: 1px solid rgba(0, 191, 191, 0.3);
+    border-radius: 8px;
+    padding: 8px 16px;
+    color: #e0e0e0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.wallet-btn:hover {
+    background: rgba(0, 191, 191, 0.2);
+    border-color: #00BFBF;
+}
+
+.wallet-address {
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #1e1e2e;
+    min-width: 280px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 8px 0;
+    margin-top: 8px;
+    border: 1px solid #2a2a3c;
+    z-index: 1001;
+}
+
+.dropdown-content.show {
+    display: block;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+.dropdown-content a {
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {
+    background-color: #2a2a3c;
+}
+
+.dropdown-content .material-icons {
+    margin-right: 12px;
+    font-size: 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.wallet-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #00a3a3, #008080);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+}
+
+.wallet-address-truncated {
+    display: inline-block;
+    max-width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+}
+
+.wallet-button:hover .wallet-address-full {
+    display: inline;
+}
+
+.wallet-address-full {
+    display: none;
+}
+@media (max-width: 768px) {
+    .wallet-button {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+        min-width: auto;
+    }
+    
+    .wallet-dropdown-content {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: auto;
+        border-radius: 16px 16px 0 0;
+        margin: 0;
+        width: 100%;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+    
+    .wallet-dropdown.show {
+        transform: translateY(0);
+    }
+}
+
+/* Left Sidebar Styles */
+.sidebar-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 80px; /* Collapsed width on desktop */
+    background-color: #0d0d0d;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items for collapsed state */
+    z-index: 1000;
+    transition: transform 0.3s ease, width 0.3s ease, align-items 0.3s ease;
+    overflow-y: auto;
+    border-radius: 0;
+    box-shadow: 0 0 10px rgba(0, 191, 191, 0.4);
+    border-right: 1px solid #00BFBF;
+}
+
+/* Sidebar items */
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    color: #e0e0e0;
+    text-decoration: none;
+    padding-left: 24px; /* Padding for expanded state */
+    box-sizing: border-box;
+    white-space: nowrap;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar-item:hover {
+    background-color: rgba(0, 128, 128, 0.3);
+    color: #ffffff;
+}
+
+.sidebar-item.active {
+    background-color: #008080;
+    color: #ffffff;
+}
+
+.sidebar-item .material-icons {
+    font-size: 30px;
+    margin-right: 0px; /* No margin for collapsed state */
+    transition: margin-right 0.3s ease, color 0.3s ease;
+}
+
+.sidebar-text {
+    opacity: 0; /* Hidden for collapsed state */
+    white-space: nowrap;
+    transition: opacity 0.2s ease 0.1s, color 0.3s ease;
+}
+
+.sidebar-left .sidebar-item:hover,
+.sidebar-item.active {
+    background-color: #004d4d;
+    color: #ffffff;
+    text-shadow: 0 0 8px #00BFBF, 0 0 15px #00BFBF;
+}
+
+.sidebar-left .sidebar-item:hover .material-icons,
+.sidebar-item.active .material-icons {
+    color: #ffffff;
+}
+
+/* Main Content Container (to clear fixed header and sidebar) */
+.container {
+    margin-left: 55px; /* Space for fixed sidebar */
+    margin-top: 0px; /* Space for fixed header */
+    width: calc(100% - 30px); /* Remaining width */
+    min-height: calc(100vh - 70px); /* Remaining height */
+    box-sizing: border-box;
+    padding: 20px; /* Overall padding for the content */
+}
+
+
+section {
+    background-color: rgba(0, 30, 30, 0.9);
+    padding: 30px; /* Adjusted padding */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 0; /* Changed from 20px to 0 */
+
+}
+
+/* Add margin to separate sections if needed, for example, for all but the last one */
+section + section {
+    margin-top: 20px; /* Add margin back between sections, not after the last one */
+}
+
+
+h1, h2, h3 {
+    color: #00BFBF;
+    margin-top: -10px;
+}
+
+/* Hero Section - Main Collection Display */
+.hero-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    background-color: rgba(0, 77, 64, 0.9);
+    padding: 40px 30px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.hero-image {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.hero-image img {
+    max-width: 100%;
+    max-height: 280px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    aspect-ratio: 1/1;
+}
+
+.hero-content {
+    flex: 2;
+    min-width: 300px;
+    text-align: left;
+    padding: 20px 0;
+}
+
+.hero-content h1 {
+    font-size: 2.8em;
+    margin: 0 0 15px 0;
+    color: #00BFBF;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-description {
+    font-size: 1.2em;
+    line-height: 1.7;
+    color: #e0e0e0;
+    margin: 0 0 30px 0;
+    max-width: 800px;
+}
+
+.hero-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.hero-stat-item {
+    background-color: #1a1a1a;
+    padding: 15px 25px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.hero-stat-item .value {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #e0e0e0;
+    margin-bottom: 5px;
+}
+
+.hero-stat-item .label {
+    font-size: 0.9em;
+    color: #999;
+}
+
+/* All NFTs Grid Section */
+.all-nfts {
+    text-align: center;
+}
+
+.nft-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+    padding: 0 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* NFT Card Flip Styles */
+.nft-card-small {
+    width: 100%;
+    max-width: 300px;
+    height: 380px;
+    margin: 15px;
+    perspective: 1000px;
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #1a1a1a;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.nft-card-small:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 191, 191, 0.3);
+}
+
+/* Hover effect for the NFT card container */
+.nft-card-small:hover .nft-image {
+    transform: scale(1.05);
+}
+
+/* Card flip container */
+.nft-card-small {
+    perspective: 1000px;
+}
+
+.nft-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* When the card is flipped, rotate it 180 degrees */
+.nft-card-small.flipped .nft-card-inner {
+    transform: rotateY(180deg);
+}
+
+.nft-card-front, .nft-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Hide back of the element when facing away */
+    backface-visibility: hidden;
+    border-radius: 8px;
+    overflow: hidden; /* To ensure content respects border-radius */
+}
+
+.nft-card-front {
+    background-color: rgba(0, 77, 64, 0.9);
+    z-index: 2;
+}
+
+.nft-card-back {
+    background-color: #1a1a1a; /* Darker background for the back */
+    color: #e0e0e0;
+    transform: rotateY(180deg); /* Initially rotated to be hidden */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.nft-card-back p {
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+
+.nft-card-back strong {
+    color: #00BFBF;
+}
+
+.buy-button {
+    background-color: #00BFBF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #008080;
+}
+
+/* Adjustments for the front card image and info to fit the flip */
+.nft-image-container {
+    position: relative;
+    width: 100%;
+    height: 270px; /* Increased height to account for info section */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0d0d0d;
+    padding: 15px;
+    box-sizing: border-box;
+    margin-bottom: 0;
+}
+
+.nft-image {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.nft-card-small:hover .nft-image {
+    transform: scale(1.05);
+}
+
+.nft-collection {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 6px 10px;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+}
+
+.collection-logo {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 8px;
+    border: 2px solid #00BFBF;
+}
+
+.collection-name {
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.nft-id-display {
+    width: 100%;
+    padding: 8px 15px;
+    background: #0d0d0d;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    text-align: center;
+    font-size: 0.9em;
+    color: #00BFBF;
+    font-weight: 500;
+    box-sizing: border-box;
+}
+
+.nft-id-display span {
+    display: inline-block;
+    background: rgba(0, 191, 191, 0.1);
+    padding: 3px 10px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 191, 191, 0.3);
+}
+
+.info {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    background: #1a1a1a;
+    text-align: left;
+    margin: 0;
+}
+
+.info h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.1em;
+    color: #00BFBF;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.info .price {
+    font-size: 1em;
+    color: #e0e0e0;
+    margin: 0;
+    font-weight: 500;
+}
+
+.nft-card-small .info h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 1.2em;
+    color: #00BFBF;
+}
+
+.nft-price {
+    margin-top: 10px;
+}
+
+.price-label {
+    display: block;
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 3px;
+}
+
+.price-amount {
+    font-size: 1.1rem;
+    color: #00BFBF;
+    font-weight: 600;
+}
+
+/* Favorite Button Styles */
+.nft-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+.back-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #333;
+}
+
+.like-button {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #666;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    transition: all 0.2s;
+    font-size: 0.9rem;
+}
+
+.like-button:hover {
+    color: #ff4d4d;
+    background: rgba(255, 77, 77, 0.15);
+}
+
+.like-button.liked {
+    color: #ff4d4d;
+    background: rgba(255, 77, 77, 0.15);
+}
+
+.like-button .material-icons {
+    font-size: 1.1rem;
+}
+
+.buy-now-button,
+.make-offer-button {
+    background: linear-gradient(135deg, #00BFBF, #008080);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 500;
+    transition: all 0.2s;
+    width: 100%;
+    font-size: 0.95rem;
+}
+
+.make-offer-button {
+    background: transparent;
+    border: 1px solid #00BFBF;
+    color: #00BFBF;
+}
+
+.buy-now-button:hover {
+    background: linear-gradient(135deg, #00a3a3, #006666);
+    transform: translateY(-2px);
+}
+
+.make-offer-button:hover {
+    background: rgba(0, 191, 191, 0.1);
+    transform: translateY(-2px);
+}
+
+.buy-now-button .material-icons,
+.make-offer-button .material-icons {
+    font-size: 1.1rem;
+}
+
+.owner-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #333;
+}
+
+.owner-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid #00BFBF;
+}
+
+.owner-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.owner-details .label {
+    font-size: 0.75rem;
+    color: #888;
+    margin-bottom: 2px;
+}
+
+.owner-name {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.nft-description h4 {
+    margin: 0 0 8px 0;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.nft-description p {
+    margin: 0;
+    color: #aaa;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.nft-logo-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 3;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #fff;
+    background: #fff;
+}
+
+.nft-logo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Search Bar Styles */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #222;
+    border-radius: 20px;
+    padding: 8px 15px;
+    transition: all 0.3s ease;
+    width: 300px;
+    max-width: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+.search-bar .search-icon {
+    color: #777;
+    margin-right: 8px;
+    pointer-events: none;
+}
+
+.search-bar input[type="text"] {
+    background: none;
+    border: none;
+    outline: none;
+    color: #e0e0e0;
+    margin-left: 10px;
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    flex: 1;
+    min-width: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0;
+}
+
+.search-bar input[type="text"]::placeholder {
+    color: #777;
+    opacity: 0.8;
+}
+
+/* Search Results Dropdown */
+.search-results {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #1e1e2d;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    max-height: 400px;
+    overflow-y: auto;
+    z-index: 1000;
+    margin-top: 5px;
+    border: 1px solid #2a2a3c;
+    scrollbar-width: thin;
+    scrollbar-color: #3a3a4d #252538;
+}
+
+/* Webkit scrollbar styling for search results */
+.search-results::-webkit-scrollbar {
+    width: 8px;
+}
+
+.search-results::-webkit-scrollbar-track {
+    background: #252538;
+    border-radius: 0 8px 8px 0;
+}
+
+.search-results::-webkit-scrollbar-thumb {
+    background-color: #3a3a4d;
+    border-radius: 4px;
+}
+
+.search-results::-webkit-scrollbar-thumb:hover {
+    background-color: #4a4a5d;
+}
+
+.search-results-container {
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+.search-result-item {
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border-bottom: 1px solid #2a2a3c;
+}
+
+.search-result-item:last-child {
+    border-bottom: none;
+}
+
+.search-result-item:hover {
+    background: #2a2a3c;
+}
+
+.search-result-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: #252538;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.search-result-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.search-result-details {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.search-result-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #e0e0e0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0 0 2px 0;
+}
+
+.search-result-subtitle {
+    font-size: 12px;
+    color: #8a8a9e;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+}
+
+/* No results styling */
+.search-no-results {
+    padding: 20px;
+    text-align: center;
+    color: #8a8a9e;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+}
+
+.search-no-results .material-icons {
+    font-size: 32px;
+    margin-bottom: 8px;
+    color: #4a4a5d;
+}
+
+.search-no-results p {
+    margin: 0;
+    color: #8a8a9e;
+}
+
+.search-result-item p {
+    margin: 2px 0 0;
+    font-size: 12px;
+    color: #8a8a9e;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.no-results {
+    padding: 12px 15px;
+    color: #8a8a9e;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Webkit (Chrome, Safari, Edge) */
+.search-results::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.search-results::-webkit-scrollbar-track {
+    background: #252538;
+    border-radius: 3px;
+}
+
+.search-results::-webkit-scrollbar-thumb {
+    background-color: #3a3a4d;
+    border-radius: 3px;
+    transition: background-color 0.2s;
+}
+
+.search-results::-webkit-scrollbar-thumb:hover {
+    background-color: #4a4a5d;
+}
+
+/* Firefox */
+@supports (scrollbar-color: auto) {
+    .search-results {
+        scrollbar-width: thin;
+        scrollbar-color: #3a3a4d #252538;
+    }
+}
+
+.favorite-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10; /* Increased z-index */
+    color: #fff;
+    transition: all 0.3s ease;
+    padding: 0;
+    outline: none;
+    pointer-events: auto; /* Ensure button is clickable */
+}
+
+.favorite-button .material-icons {
+    font-size: 20px;
+    pointer-events: none; /* Make sure clicks go to the button, not the icon */
+}
+
+.favorite-button:hover {
+    background: rgba(0, 0, 0, 0.7);
+    transform: scale(1.1); /* Slight scale effect on hover */
+}
+
+.favorite-button .material-icons {
+    color: #ccc; /* Default color (light grey) */
+    font-size: 20px;
+    transition: all 0.2s ease;
+}
+
+.favorite-button.favorited .material-icons,
+.favorite-button.favorited:hover .material-icons {
+    color: #FFD700; /* Gold color for favorited */
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.5); /* Glow effect */
+}
+
+/* Ensure the button is above other elements */
+.nft-card-small {
+    position: relative;
+    z-index: 1;
+}
+
+/* NFT Logo Container */
+.nft-logo-container {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
+    width: 40px; /* Size of the circular container */
+    height: 40px; /* Size of the circular container */
+    border-radius: 50%; /* Makes it circular */
+    background-color: rgba(0, 0, 0, 0.7); /* Background for the circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensures image stays within the circle */
+    z-index: 10; /* Above the image */
+    box-shadow: 0 0 5px rgba(0, 191, 191, 0.5); /* Optional subtle glow */
+}
+
+.nft-logo-container img {
+    width: 100%; /* Adjust logo size within the circle */
+    height: 100%; /* Adjust logo size within the circle */
+    object-fit: contain; /* Ensure the logo fits */
+    border-radius: 50%; /* Keep the image circular */
+    margin: 0; /* Override default image margin */
+}
+
+/* Mobile View (up to 1024px) */
+@media (max-width: 1024px) {
+    .mobile-sidebar-toggle-btn {
+        display: flex;
+    }
+    .header {
+        left: 0; /* Header spans full width on mobile */
+        padding: 10px 15px; /* Adjust padding for mobile header */
+    }
+    .header-content {
+        padding: 0; /* Remove inner padding as header handles it */
+    }
+    .header-title {
+        font-size: 1.2rem;
+    }
+    .sidebar-left {
+        transform: translateX(-100%); /* Hidden by default */
+        width: 250px; /* Full width when visible */
+        align-items: flex-start; /* Align text to start */
+    }
+    .sidebar-left.mobile-visible {
+        transform: translateX(0);
+    }
+    .sidebar-left .sidebar-item .material-icons {
+        margin-right: 16px; /* Show margin for icons */
+    }
+    .sidebar-left .sidebar-text {
+        opacity: 1; /* Show text when sidebar is open */
+    }
+    .container {
+        margin-left: 0; /* No margin from sidebar on mobile */
+        margin-top: 70px; /* Still clear header */
+        width: 100%;
+        min-height: calc(100vh - 70px);
+        padding: 15px; /* Adjust container padding for mobile */
+    }
+    .search-bar {
+        width: 200px; /* Smaller width for search bar on mobile */
+        padding: 8px 10px;
+    }
+    .search-bar input {
+        width: 150px; /* Smaller input field */
+    }
+    .connect-wallet {
+        font-size: 0.9em;
+        padding: 8px 15px;
+    }
+    .nft-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 10px;
+    }
+    .header-right {
+        gap: 10px;
+    }
+    .search-bar {
+        width: 40px; /* Icon-only search bar */
+        padding: 8px;
+        overflow: hidden;
+        justify-content: center;
+    }
+    .search-bar input {
+        display: none;
+    }
+    .search-bar .search-icon {
+        margin-right: 0;
+    }
+    .connect-wallet {
+        padding: 6px 12px;
+        font-size: 0.8em;
+    }
+    .nft-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+}
+
+/* Overlay for fading main content */
+.main-content-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    backdrop-filter: blur(3px);
+    pointer-events: none;
+}
+
+.main-content-overlay.active {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 9999; /* Increased z-index to ensure it's on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Darker semi-transparent background */
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+    padding: 20px; /* Add some padding around the modal content */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    pointer-events: auto; /* Ensure the modal can receive events */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #0d0d0d; /* Darker modal content */
+    margin: auto; /* Centered */
+    padding: 0;
+    border: 1px solid #222; /* Darker border */
+    width: 90%; /* Responsive width */
+    max-width: 500px; /* Max width for larger screens */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    /* Added glow effect */
+    box-shadow: 0 0 15px rgba(0, 191, 191, 0.7), 0 0 30px rgba(0, 191, 191, 0.5);
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+/* Modal Header */
+.modal-header {
+    padding: 15px 25px;
+    /* Changed background-color to background-image for gradient */
+    background-image: linear-gradient(to right, #0a0a0a, #008080); /* Darker gradient */
+    color: rgb(255, 255, 255);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.5em;
+    /* Added text-shadow for glow effect */
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white; /* Stronger glow */
+    text-align: center;
+    width: 100%;
+}
+
+/* Close Button */
+.close-button {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #e0e0e0;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #00BFBF; /* Brighter teal on hover */
+    text-decoration: none;
+}
+
+/* Modal Body */
+.modal-body {
+    padding: 25px;
+    color: #e0e0e0;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #e0e0e0;
+    font-size: 0.9em;
+    box-sizing: border-box;
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #1a1a1a;
+    border: 1px solid #444;
+    border-radius: 5px;
+    color: #e0e0e0;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input[type="text"]:focus,
+.input-group input[type="email"]:focus,
+.input-group input[type="password"]:focus {
+    outline: none;
+    border-color: #00BFBF;
+    box-shadow: 0 0 0 2px rgba(0, 191, 191, 0.2);
+}
+
+.login-submit-button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #00BFBF 0%, #008B8B 100%);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.login-submit-button:hover {
+    background: linear-gradient(135deg, #00D1D1 0%, #00A3A3 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 191, 191, 0.3);
+}
+
+/* LuckyTime Login Button */
+.luckytime-login-button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.luckytime-login-button:hover {
+    background: linear-gradient(135deg, #FF8E8E 0%, #FFA573 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+}
+
+.luckytime-login-button .material-icons {
+    font-size: 20px;
+}
+
+/* Divider */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 15px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #444;
+}
+
+.divider:not(:empty)::before {
+    margin-right: 1em;
+}
+
+.divider:not(:empty)::after {
+    margin-left: 1em;
+}
+
+.modal-footer-text {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.modal-footer-text a {
+    color: #00BFBF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.modal-footer-text a:hover {
+    color: #009999;
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .modal-content {
+        margin: 0 16px;
+        max-width: 100%;
+    }
+    
+    .modal-body {
+        padding: 24px 20px;
+    }
+}
+
+
+.wallet-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    border: 1px solid #444;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.wallet-button:hover {
+    background-color: #2a2a2a;
+    border-color: #00BFBF;
+}
+
+.wallet-button img {
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+    filter: brightness(1.5) contrast(1.2);
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 191, 191, 0.5);
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.modal-buttons button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-buttons .confirm-btn {
+    background-color: #00BFBF;
+    color: white;
+    border: none;
+}
+
+.modal-buttons .confirm-btn:hover {
+    background-color: #008080;
+}
+
+.modal-buttons .cancel-btn {
+    background-color: #444;
+    color: white;
+    border: none;
+}
+
+.modal-buttons .cancel-btn:hover {
+    background-color: #555;
+}
+
+
+/* Modal Animation */
+@-webkit-keyframes animatetop {
+    from { top: -300px; opacity: 0 }
+    to { top: 0; opacity: 1 }
+}
+
+@keyframes animatetop {
+    from { top: -300px; opacity: 0 }
+    to { top: 0; opacity: 1 }
+}
+    /* Collection Badge Styling */
+.collection-badge {
+    font-size: 0.6em;
+    background: rgba(0, 191, 191, 0.2);
+    color: #00BFBF;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-left: 12px;
+    vertical-align: middle;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid rgba(0, 191, 191, 0.3);
+}
+
+/* Sort Options Styling */
+.sort-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+    justify-content: flex-end;
+    padding: 0 15px;
+}
+
+.sort-options span {
+    color: #aaa;
+    font-size: 0.9em;
+}
+
+#sortBy {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    border: 1px solid #444;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#sortBy:hover, #sortBy:focus {
+    border-color: #00BFBF;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 191, 191, 0.2);
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    .sort-options {
+        justify-content: space-between;
+        padding: 0;
+    }
+}

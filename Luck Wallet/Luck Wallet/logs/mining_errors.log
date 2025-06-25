@@ -1,0 +1,282 @@
+[25-Jun-2025 16:15:33 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:15:33 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:16:03 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:16:03 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:16:33 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:16:33 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:17:03 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:17:03 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:17:14 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:17:14 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:17:16 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:17:16 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:17:44 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:17:44 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:18:14 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:18:14 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:18:44 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:18:44 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:18:50 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:18:50 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:18:52 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:18:52 Europe/Berlin] All sessions for user 6: Array
+(
+    [0] => Array
+        (
+            [session_id] => 5
+            [user_id] => 6
+            [start_time] => 2025-06-23 14:57:16
+            [end_time] => 2025-06-24 14:57:16
+            [is_completed] => 1
+            [is_claimed] => 1
+            [mined_amount] => 35.00000000
+            [last_update] => 2025-06-25 22:14:36
+        )
+
+)
+
+[25-Jun-2025 16:18:52 Europe/Berlin] No claimable session found for user 6. Check if any sessions are completed and unclaimed.
+[25-Jun-2025 16:18:53 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:19:20 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:19:20 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:19:37 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:19:37 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:19:40 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:19:40 Europe/Berlin] All sessions for user 6: Array
+(
+    [0] => Array
+        (
+            [session_id] => 5
+            [user_id] => 6
+            [start_time] => 2025-06-23 14:57:16
+            [end_time] => 2025-06-24 14:57:16
+            [is_completed] => 1
+            [is_claimed] => 1
+            [mined_amount] => 35.00000000
+            [last_update] => 2025-06-25 22:14:36
+        )
+
+)
+
+[25-Jun-2025 16:19:40 Europe/Berlin] No claimable session found for user 6. Check if any sessions are completed and unclaimed.
+[25-Jun-2025 16:19:40 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:19:59 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:19:59 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:20:30 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:20:30 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:21:00 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:21:00 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:21:30 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:21:30 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:22:00 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:22:00 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:22:30 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:22:30 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:23:00 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:23:00 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:23:04 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:23:04 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:23:07 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:23:07 Europe/Berlin] All sessions for user 6: Array
+(
+    [0] => Array
+        (
+            [session_id] => 5
+            [user_id] => 6
+            [start_time] => 2025-06-23 14:57:16
+            [end_time] => 2025-06-24 14:57:16
+            [is_completed] => 1
+            [is_claimed] => 1
+            [mined_amount] => 35.00000000
+            [last_update] => 2025-06-25 22:14:36
+        )
+
+)
+
+[25-Jun-2025 16:23:07 Europe/Berlin] No claimable session found for user 6. Check if any sessions are completed and unclaimed.
+[25-Jun-2025 16:23:07 Europe/Berlin] isLoggedIn check - User ID in session: 6
+[25-Jun-2025 16:23:22 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:23:22 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:23:24 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:23:24 Europe/Berlin] All sessions for user 1: Array
+(
+    [0] => Array
+        (
+            [session_id] => 1
+            [user_id] => 1
+            [start_time] => 2025-06-22 13:27:25
+            [end_time] => 2025-06-23 13:27:25
+            [is_completed] => 1
+            [is_claimed] => 0
+            [mined_amount] => 0.00000000
+            [last_update] => 2025-06-25 01:40:54
+        )
+
+)
+
+[25-Jun-2025 16:23:24 Europe/Berlin] No claimable session found for user 1. Check if any sessions are completed and unclaimed.
+[25-Jun-2025 16:23:24 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:23:53 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:23:53 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:24:23 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:24:23 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:24:53 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:24:53 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:25:23 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:25:23 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:25:53 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:25:53 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:26:23 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:26:23 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:27:13 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:27:13 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:27:34 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:27:34 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:27:44 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:27:44 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:27:54 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:27:54 Europe/Berlin] All sessions for user 1: Array
+(
+    [0] => Array
+        (
+            [session_id] => 1
+            [user_id] => 1
+            [start_time] => 2025-06-22 13:27:25
+            [end_time] => 2025-06-23 13:27:25
+            [is_completed] => 1
+            [is_claimed] => 0
+            [mined_amount] => 0.00000000
+            [last_update] => 2025-06-25 01:40:54
+        )
+
+)
+
+[25-Jun-2025 16:27:54 Europe/Berlin] [Mining] All sessions for user 1: Array
+(
+    [0] => Array
+        (
+            [session_id] => 1
+            [user_id] => 1
+            [start_time] => 2025-06-22 13:27:25
+            [end_time] => 2025-06-23 13:27:25
+            [is_completed] => 1
+            [is_claimed] => 0
+            [mined_amount] => 0.00000000
+            [last_update] => 2025-06-25 01:40:54
+            [current_db_time] => 2025-06-25 22:27:54
+        )
+
+)
+
+[25-Jun-2025 16:27:54 Europe/Berlin] [Mining] No claimable session found for user 1
+[25-Jun-2025 16:27:54 Europe/Berlin] [Mining] Current DB time: 2025-06-25 22:27:54
+[25-Jun-2025 16:27:54 Europe/Berlin] [Mining] All sessions for user: Array
+(
+    [0] => Array
+        (
+            [session_id] => 1
+            [user_id] => 1
+            [start_time] => 2025-06-22 13:27:25
+            [end_time] => 2025-06-23 13:27:25
+            [is_completed] => 1
+            [is_claimed] => 0
+            [mined_amount] => 0.00000000
+            [last_update] => 2025-06-25 01:40:54
+            [current_db_time] => 2025-06-25 22:27:54
+        )
+
+)
+
+[25-Jun-2025 16:27:54 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:27:54 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:28:15 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:28:15 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:28:44 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:28:44 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:29:15 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:29:15 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:29:45 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:29:45 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:30:15 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:30:15 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:30:45 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:30:45 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:32:13 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:32:13 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:33:13 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:33:13 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:34:13 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:34:13 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:35:13 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:35:13 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:36:13 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:36:13 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:37:13 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:37:13 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:37:23 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:37:23 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:37:26 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:37:26 Europe/Berlin] All sessions for user 1: Array
+(
+    [0] => Array
+        (
+            [session_id] => 1
+            [user_id] => 1
+            [start_time] => 2025-06-22 13:27:25
+            [end_time] => 2025-06-23 13:27:25
+            [is_completed] => 1
+            [is_claimed] => 0
+            [mined_amount] => 0.00000000
+            [last_update] => 2025-06-25 01:40:54
+        )
+
+)
+
+[25-Jun-2025 16:37:26 Europe/Berlin] [Mining] All sessions for user 1: Array
+(
+    [0] => Array
+        (
+            [session_id] => 1
+            [user_id] => 1
+            [start_time] => 2025-06-22 13:27:25
+            [end_time] => 2025-06-23 13:27:25
+            [is_completed] => 1
+            [is_claimed] => 0
+            [mined_amount] => 0.00000000
+            [last_update] => 2025-06-25 01:40:54
+            [current_db_time] => 2025-06-25 22:37:26
+        )
+
+)
+
+[25-Jun-2025 16:37:26 Europe/Berlin] [Mining] No claimable session found for user 1
+[25-Jun-2025 16:37:26 Europe/Berlin] [Mining] Current DB time: 2025-06-25 22:37:26
+[25-Jun-2025 16:37:26 Europe/Berlin] [Mining] All sessions for user: Array
+(
+    [0] => Array
+        (
+            [session_id] => 1
+            [user_id] => 1
+            [start_time] => 2025-06-22 13:27:25
+            [end_time] => 2025-06-23 13:27:25
+            [is_completed] => 1
+            [is_claimed] => 0
+            [mined_amount] => 0.00000000
+            [last_update] => 2025-06-25 01:40:54
+            [current_db_time] => 2025-06-25 22:37:26
+        )
+
+)
+
+[25-Jun-2025 16:37:26 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:37:26 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:37:53 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:37:53 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:38:23 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:38:23 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:38:53 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:38:53 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:39:23 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:39:23 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:39:53 Europe/Berlin] isLoggedIn check - User ID in session: 1
+[25-Jun-2025 16:39:53 Europe/Berlin] isLoggedIn check - User ID in session: 1

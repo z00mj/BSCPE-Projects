@@ -1,0 +1,26 @@
+User Email from session: bealeet@gmail.com
+Balance retrieved from DB for bealeet@gmail.com: 4970.00
+Received POST input: Array
+(
+    [game] => color_game
+    [bet] => 10
+    [chosenColor] => red
+)
+
+Total bet amount calculated: 10
+Current DB Balance before deduction: 4970.00
+Balance after initial deduction: 4960
+Final response: {"success":true,"message":"Dice rolled: blue, green, blue. You matched 0!","newBalance":4960,"serverDiceResults":["blue","green","blue"],"revealedCard":null,"nextCard":null,"winAmount":0}
+User Email from session: bealeet@gmail.com
+Balance retrieved from DB for bealeet@gmail.com: 4960.00
+Received POST input: Array
+(
+    [game] => color_game
+    [bet] => 10
+    [chosenColor] => blue
+)
+
+Total bet amount calculated: 10
+Current DB Balance before deduction: 4960.00
+Balance after initial deduction: 4950
+Final response: {"success":true,"message":"Dice rolled: red, green, green. You matched 0!","newBalance":4950,"serverDiceResults":["red","green","green"],"revealedCard":null,"nextCard":null,"winAmount":0}
