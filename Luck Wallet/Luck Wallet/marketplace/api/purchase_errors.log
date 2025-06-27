@@ -1,0 +1,537 @@
+[16-Jun-2025 17:43:58 Europe/Berlin] Purchase request: Array
+(
+)
+
+[16-Jun-2025 17:43:58 Europe/Berlin] Raw input: {"nftId":"64","price":20000}
+[16-Jun-2025 17:43:58 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant PDO::ATTR_ERRMODE_EXCEPTION in C:\xampp\htdocs\Luck Wallet\marketplace\api\purchase_nft.php:77
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\marketplace\api\purchase_nft.php on line 77
+[16-Jun-2025 17:46:28 Europe/Berlin] Purchase request: Array
+(
+)
+
+[16-Jun-2025 17:46:28 Europe/Berlin] Raw input: {"nftId":"64","price":20000}
+[16-Jun-2025 17:46:28 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant PDO::ATTR_ERRMODE_EXCEPTION in C:\xampp\htdocs\Luck Wallet\marketplace\api\purchase_nft.php:77
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\marketplace\api\purchase_nft.php on line 77
+[16-Jun-2025 17:56:13 Europe/Berlin] Purchase request: Array
+(
+)
+
+[16-Jun-2025 17:56:13 Europe/Berlin] Raw input: {"nftId":"64","price":20000}
+[16-Jun-2025 17:56:13 Europe/Berlin] Executing NFT query: SELECT * FROM nfts WHERE id = ? FOR UPDATE with ID: 64
+[16-Jun-2025 17:56:13 Europe/Berlin] Error in NFT query: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'login.nfts' doesn't exist
+[16-Jun-2025 17:56:13 Europe/Berlin] Purchase error: Error fetching NFT details
+[16-Jun-2025 17:56:13 Europe/Berlin] Error Response (400): Error fetching NFT details
+[16-Jun-2025 17:59:04 Europe/Berlin] Purchase request: Array
+(
+)
+
+[16-Jun-2025 17:59:04 Europe/Berlin] Raw input: {"nftId":"64","price":20000}
+[16-Jun-2025 17:59:04 Europe/Berlin] Executing NFT query: SELECT nft_id as id, name, description, image_url, price_luck as price, current_owner_user_id as owner_id, 
+                     listed_for_sale as for_sale, listing_date as created_at, creator_user_id 
+                     FROM luck_wallet_nfts WHERE nft_id = ? FOR UPDATE with ID: 64
+[16-Jun-2025 17:59:04 Europe/Berlin] Found NFT: {"id":64,"name":null,"description":null,"image_url":"uploads\/nfts\/nft_685037d9c673a.png","price":"20000.00","owner_id":10,"for_sale":1,"created_at":"2025-06-16 23:27:21","creator_user_id":10}
+[16-Jun-2025 17:59:04 Europe/Berlin] Checking luck_wallet_users for buyer ID: 1
+[16-Jun-2025 17:59:04 Europe/Berlin] Found buyer in luck_wallet_users: {"user_id":1,"balance":"101050.00"}
+[16-Jun-2025 17:59:04 Europe/Berlin] Checking balance. Buyer balance: 101050.00, NFT price: 20000
+[16-Jun-2025 17:59:04 Europe/Berlin] NFT owner ID: 10, Buyer ID: 1
+[16-Jun-2025 17:59:04 Europe/Berlin] Updating luck_wallet_users balance for user 1, deducting 20000
+[16-Jun-2025 17:59:04 Europe/Berlin] Balance update affected 1 rows
+[16-Jun-2025 17:59:04 Europe/Berlin] Successfully updated luck_wallet_users balance for user 1
+[16-Jun-2025 17:59:04 Europe/Berlin] Updating seller's (10) balance, adding 20000
+[16-Jun-2025 17:59:04 Europe/Berlin] Seller balance before: {"balance":"300.00"}
+[16-Jun-2025 17:59:04 Europe/Berlin] Seller balance after: {"balance":"20300.00"}
+[16-Jun-2025 17:59:04 Europe/Berlin] Successfully updated seller's balance
+[16-Jun-2025 17:59:04 Europe/Berlin] Transferring NFT 64 from seller 10 to buyer 1
+[16-Jun-2025 17:59:04 Europe/Berlin] Error transferring NFT ownership: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'login.nfts' doesn't exist
+[16-Jun-2025 17:59:04 Europe/Berlin] Purchase error: Error transferring NFT ownership. Please contact support.
+[16-Jun-2025 17:59:04 Europe/Berlin] Error Response (400): Error transferring NFT ownership. Please contact support.
+[16-Jun-2025 18:00:53 Europe/Berlin] Purchase request: Array
+(
+)
+
+[16-Jun-2025 18:00:53 Europe/Berlin] Raw input: {"nftId":"64","price":20000}
+[16-Jun-2025 18:00:53 Europe/Berlin] Executing NFT query: SELECT nft_id as id, name, description, image_url, price_luck as price, current_owner_user_id as owner_id, 
+                     listed_for_sale as for_sale, listing_date as created_at, creator_user_id 
+                     FROM luck_wallet_nfts WHERE nft_id = ? FOR UPDATE with ID: 64
+[16-Jun-2025 18:00:53 Europe/Berlin] Found NFT: {"id":64,"name":null,"description":null,"image_url":"uploads\/nfts\/nft_685037d9c673a.png","price":"20000.00","owner_id":10,"for_sale":1,"created_at":"2025-06-16 23:27:21","creator_user_id":10}
+[16-Jun-2025 18:00:53 Europe/Berlin] Checking luck_wallet_users for buyer ID: 1
+[16-Jun-2025 18:00:53 Europe/Berlin] Found buyer in luck_wallet_users: {"user_id":1,"balance":"101050.00"}
+[16-Jun-2025 18:00:53 Europe/Berlin] Checking balance. Buyer balance: 101050.00, NFT price: 20000
+[16-Jun-2025 18:00:53 Europe/Berlin] NFT owner ID: 10, Buyer ID: 1
+[16-Jun-2025 18:00:53 Europe/Berlin] Updating luck_wallet_users balance for user 1, deducting 20000
+[16-Jun-2025 18:00:53 Europe/Berlin] Balance update affected 1 rows
+[16-Jun-2025 18:00:53 Europe/Berlin] Successfully updated luck_wallet_users balance for user 1
+[16-Jun-2025 18:00:53 Europe/Berlin] Updating seller's (10) balance, adding 20000
+[16-Jun-2025 18:00:53 Europe/Berlin] Seller balance before: {"balance":"300.00"}
+[16-Jun-2025 18:00:53 Europe/Berlin] Seller balance after: {"balance":"20300.00"}
+[16-Jun-2025 18:00:53 Europe/Berlin] Successfully updated seller's balance
+[16-Jun-2025 18:00:53 Europe/Berlin] Transferring NFT 64 from seller 10 to buyer 1
+[16-Jun-2025 18:00:53 Europe/Berlin] Current NFT state: {"owner_id":10,"for_sale":1}
+[16-Jun-2025 18:00:53 Europe/Berlin] NFT update result: success, rows affected: 1
+[16-Jun-2025 18:00:53 Europe/Berlin] Successfully transferred NFT ownership
+[16-Jun-2025 18:00:53 Europe/Berlin] Transaction recording failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'login.transactions' doesn't exist
+[16-Jun-2025 18:00:53 Europe/Berlin] Error Response (500): Failed to complete the transaction. Please try again or contact support.
+[16-Jun-2025 18:08:15 Europe/Berlin] Purchase request: Array
+(
+)
+
+[16-Jun-2025 18:08:15 Europe/Berlin] Raw input: {"nftId":"64","price":20000}
+[16-Jun-2025 18:08:15 Europe/Berlin] Executing NFT query: SELECT nft_id as id, name, description, image_url, price_luck as price, current_owner_user_id as owner_id, 
+                     listed_for_sale as for_sale, listing_date as created_at, creator_user_id 
+                     FROM luck_wallet_nfts WHERE nft_id = ? FOR UPDATE with ID: 64
+[16-Jun-2025 18:08:15 Europe/Berlin] Found NFT: {"id":64,"name":null,"description":null,"image_url":"uploads\/nfts\/nft_685037d9c673a.png","price":"20000.00","owner_id":10,"for_sale":1,"created_at":"2025-06-16 23:27:21","creator_user_id":10}
+[16-Jun-2025 18:08:15 Europe/Berlin] Checking luck_wallet_users for buyer ID: 1
+[16-Jun-2025 18:08:15 Europe/Berlin] Found buyer in luck_wallet_users: {"user_id":1,"balance":"101550.00"}
+[16-Jun-2025 18:08:15 Europe/Berlin] Checking balance. Buyer balance: 101550.00, NFT price: 20000
+[16-Jun-2025 18:08:15 Europe/Berlin] NFT owner ID: 10, Buyer ID: 1
+[16-Jun-2025 18:08:15 Europe/Berlin] Updating luck_wallet_users balance for user 1, deducting 20000
+[16-Jun-2025 18:08:15 Europe/Berlin] Balance update affected 1 rows
+[16-Jun-2025 18:08:15 Europe/Berlin] Successfully updated luck_wallet_users balance for user 1
+[16-Jun-2025 18:08:15 Europe/Berlin] Updating seller's (10) balance, adding 20000
+[16-Jun-2025 18:08:15 Europe/Berlin] Seller balance before: {"balance":"300.00"}
+[16-Jun-2025 18:08:15 Europe/Berlin] Seller balance after: {"balance":"20300.00"}
+[16-Jun-2025 18:08:15 Europe/Berlin] Successfully updated seller's balance
+[16-Jun-2025 18:08:15 Europe/Berlin] Transferring NFT 64 from seller 10 to buyer 1
+[16-Jun-2025 18:08:15 Europe/Berlin] Current NFT state: {"owner_id":10,"for_sale":1}
+[16-Jun-2025 18:08:15 Europe/Berlin] NFT update result: success, rows affected: 1
+[16-Jun-2025 18:08:15 Europe/Berlin] Successfully transferred NFT ownership
+[16-Jun-2025 18:08:15 Europe/Berlin] Transaction recording failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'login.transactions' doesn't exist
+[16-Jun-2025 18:08:15 Europe/Berlin] Error Response (500): Failed to complete the transaction. Please try again or contact support.
+[16-Jun-2025 18:20:46 Europe/Berlin] Purchase request: Array
+(
+)
+
+[16-Jun-2025 18:20:46 Europe/Berlin] Raw input: {"nftId":"64","price":20000}
+[16-Jun-2025 18:20:46 Europe/Berlin] Transaction started
+[16-Jun-2025 18:20:46 Europe/Berlin] Executing NFT query: SELECT nft_id as id, name, description, image_url, price_luck as price, current_owner_user_id as owner_id, 
+                     listed_for_sale as for_sale, listing_date as created_at, creator_user_id 
+                     FROM luck_wallet_nfts WHERE nft_id = ? FOR UPDATE with ID: 64
+[16-Jun-2025 18:20:46 Europe/Berlin] Found NFT: {"id":64,"name":null,"description":null,"image_url":"uploads\/nfts\/nft_685037d9c673a.png","price":"20000.00","owner_id":10,"for_sale":1,"created_at":"2025-06-16 23:27:21","creator_user_id":10}
+[16-Jun-2025 18:20:46 Europe/Berlin] Checking luck_wallet_users for buyer ID: 1
+[16-Jun-2025 18:20:46 Europe/Berlin] Buyer balance query result: {"user_id":1,"balance":"101550.00"}
+[16-Jun-2025 18:20:46 Europe/Berlin] Found buyer in luck_wallet_users: {"user_id":1,"balance":"101550.00"}
+[16-Jun-2025 18:20:46 Europe/Berlin] Buyer current balance: 101550.00, Price: 20000
+[16-Jun-2025 18:20:46 Europe/Berlin] NFT owner ID: 10, Buyer ID: 1
+[16-Jun-2025 18:20:46 Europe/Berlin] Updating luck_wallet_users balance for user 1, deducting 20000
+[16-Jun-2025 18:20:46 Europe/Berlin] Buyer's new balance after deduction: 81550.00
+[16-Jun-2025 18:20:46 Europe/Berlin] Successfully updated luck_wallet_users balance for user 1
+[16-Jun-2025 18:20:46 Europe/Berlin] Updating seller's (10) balance, adding 20000
+[16-Jun-2025 18:20:46 Europe/Berlin] Seller balance before: {"balance":"300.00"}
+[16-Jun-2025 18:20:46 Europe/Berlin] Seller's new balance after addition: 20300.00
+[16-Jun-2025 18:20:46 Europe/Berlin] PHP Warning:  Undefined variable $checkAfterStmt in C:\xampp\htdocs\Luck Wallet\marketplace\api\purchase_nft.php on line 264
+[16-Jun-2025 18:20:46 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function fetch() on null in C:\xampp\htdocs\Luck Wallet\marketplace\api\purchase_nft.php:264
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Luck Wallet\marketplace\api\purchase_nft.php on line 264
+[16-Jun-2025 18:27:24 Europe/Berlin] Purchase request: Array
+(
+)
+
+[16-Jun-2025 18:27:24 Europe/Berlin] Raw input: {"nftId":"64","price":20000}
+[16-Jun-2025 18:27:24 Europe/Berlin] Transaction started
+[16-Jun-2025 18:27:24 Europe/Berlin] Executing NFT query: SELECT nft_id as id, name, description, image_url, price_luck as price, current_owner_user_id as owner_id, 
+                     listed_for_sale as for_sale, listing_date as created_at, creator_user_id 
+                     FROM luck_wallet_nfts WHERE nft_id = ? FOR UPDATE with ID: 64
+[16-Jun-2025 18:27:24 Europe/Berlin] Found NFT: {"id":64,"name":null,"description":null,"image_url":"uploads\/nfts\/nft_685037d9c673a.png","price":"20000.00","owner_id":10,"for_sale":1,"created_at":"2025-06-16 23:27:21","creator_user_id":10}
+[16-Jun-2025 18:27:24 Europe/Berlin] Checking luck_wallet_users for buyer ID: 1
+[16-Jun-2025 18:27:24 Europe/Berlin] Buyer balance query result: {"user_id":1,"balance":"101550.00"}
+[16-Jun-2025 18:27:24 Europe/Berlin] Found buyer in luck_wallet_users: {"user_id":1,"balance":"101550.00"}
+[16-Jun-2025 18:27:24 Europe/Berlin] Buyer current balance: 101550.00, Price: 20000
+[16-Jun-2025 18:27:24 Europe/Berlin] NFT owner ID: 10, Buyer ID: 1
+[16-Jun-2025 18:27:24 Europe/Berlin] Updating luck_wallet_users balance for user 1, deducting 20000
+[16-Jun-2025 18:27:24 Europe/Berlin] Buyer's new balance after deduction: 81550.00
+[16-Jun-2025 18:27:24 Europe/Berlin] Successfully updated luck_wallet_users balance for user 1
+[16-Jun-2025 18:27:24 Europe/Berlin] Updating seller's (10) balance, adding 20000
+[16-Jun-2025 18:27:24 Europe/Berlin] Seller balance before: {"balance":"300.00"}
+[16-Jun-2025 18:27:24 Europe/Berlin] Seller balance after: {"balance":"20300.00"}
+[16-Jun-2025 18:27:24 Europe/Berlin] Successfully updated seller's balance
+[16-Jun-2025 18:27:24 Europe/Berlin] Transferring NFT 64 from seller 10 to buyer 1
+[16-Jun-2025 18:27:24 Europe/Berlin] Current NFT state: {"owner_id":10,"for_sale":1}
+[16-Jun-2025 18:27:24 Europe/Berlin] NFT update result: success, rows affected: 1
+[16-Jun-2025 18:27:24 Europe/Berlin] Successfully transferred NFT ownership
+[16-Jun-2025 18:27:24 Europe/Berlin] Transaction recording failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'login.transactions' doesn't exist
+[16-Jun-2025 18:27:24 Europe/Berlin] Error Response (500): Failed to complete the transaction. Please try again or contact support.
+[16-Jun-2025 18:31:25 Europe/Berlin] Purchase request: Array
+(
+)
+
+[16-Jun-2025 18:31:25 Europe/Berlin] Raw input: {"nftId":"64","price":20000}
+[16-Jun-2025 18:31:25 Europe/Berlin] Transaction started
+[16-Jun-2025 18:31:25 Europe/Berlin] Executing NFT query: SELECT nft_id as id, name, description, image_url, price_luck as price, current_owner_user_id as owner_id, 
+                     listed_for_sale as for_sale, listing_date as created_at, creator_user_id 
+                     FROM luck_wallet_nfts WHERE nft_id = ? FOR UPDATE with ID: 64
+[16-Jun-2025 18:31:25 Europe/Berlin] Found NFT: {"id":64,"name":null,"description":null,"image_url":"uploads\/nfts\/nft_685037d9c673a.png","price":"20000.00","owner_id":10,"for_sale":1,"created_at":"2025-06-16 23:27:21","creator_user_id":10}
+[16-Jun-2025 18:31:25 Europe/Berlin] Checking luck_wallet_users for buyer ID: 1
+[16-Jun-2025 18:31:25 Europe/Berlin] Buyer balance query result: {"user_id":1,"balance":"101550.00"}
+[16-Jun-2025 18:31:25 Europe/Berlin] Found buyer in luck_wallet_users: {"user_id":1,"balance":"101550.00"}
+[16-Jun-2025 18:31:25 Europe/Berlin] Buyer current balance: 101550.00, Price: 20000
+[16-Jun-2025 18:31:25 Europe/Berlin] NFT owner ID: 10, Buyer ID: 1
+[16-Jun-2025 18:31:25 Europe/Berlin] Updating luck_wallet_users balance for user 1, deducting 20000
+[16-Jun-2025 18:31:25 Europe/Berlin] Buyer's new balance after deduction: 81550.00
+[16-Jun-2025 18:31:25 Europe/Berlin] Successfully updated luck_wallet_users balance for user 1
+[16-Jun-2025 18:31:25 Europe/Berlin] Updating seller's (10) balance, adding 20000
+[16-Jun-2025 18:31:25 Europe/Berlin] Seller balance before: {"balance":"300.00"}
+[16-Jun-2025 18:31:25 Europe/Berlin] Seller balance after: {"balance":"20300.00"}
+[16-Jun-2025 18:31:25 Europe/Berlin] Successfully updated seller's balance
+[16-Jun-2025 18:31:25 Europe/Berlin] Transferring NFT 64 from seller 10 to buyer 1
+[16-Jun-2025 18:31:25 Europe/Berlin] Current NFT state: {"owner_id":10,"for_sale":1}
+[16-Jun-2025 18:31:25 Europe/Berlin] NFT update result: success, rows affected: 1
+[16-Jun-2025 18:31:25 Europe/Berlin] Successfully transferred NFT ownership
+[16-Jun-2025 18:31:25 Europe/Berlin] Transaction recording failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nft_id' in 'field list'
+[16-Jun-2025 18:31:25 Europe/Berlin] Error Response (500): Failed to complete the transaction. Please try again or contact support.
+[16-Jun-2025 18:31:40 Europe/Berlin] Purchase request: Array
+(
+)
+
+[16-Jun-2025 18:31:40 Europe/Berlin] Raw input: {"nftId":"64","price":20000}
+[16-Jun-2025 18:31:40 Europe/Berlin] Transaction started
+[16-Jun-2025 18:31:40 Europe/Berlin] Executing NFT query: SELECT nft_id as id, name, description, image_url, price_luck as price, current_owner_user_id as owner_id, 
+                     listed_for_sale as for_sale, listing_date as created_at, creator_user_id 
+                     FROM luck_wallet_nfts WHERE nft_id = ? FOR UPDATE with ID: 64
+[16-Jun-2025 18:31:40 Europe/Berlin] Found NFT: {"id":64,"name":null,"description":null,"image_url":"uploads\/nfts\/nft_685037d9c673a.png","price":"20000.00","owner_id":10,"for_sale":1,"created_at":"2025-06-16 23:27:21","creator_user_id":10}
+[16-Jun-2025 18:31:40 Europe/Berlin] Checking luck_wallet_users for buyer ID: 1
+[16-Jun-2025 18:31:40 Europe/Berlin] Buyer balance query result: {"user_id":1,"balance":"101550.00"}
+[16-Jun-2025 18:31:40 Europe/Berlin] Found buyer in luck_wallet_users: {"user_id":1,"balance":"101550.00"}
+[16-Jun-2025 18:31:40 Europe/Berlin] Buyer current balance: 101550.00, Price: 20000
+[16-Jun-2025 18:31:40 Europe/Berlin] NFT owner ID: 10, Buyer ID: 1
+[16-Jun-2025 18:31:40 Europe/Berlin] Updating luck_wallet_users balance for user 1, deducting 20000
+[16-Jun-2025 18:31:40 Europe/Berlin] Buyer's new balance after deduction: 81550.00
+[16-Jun-2025 18:31:40 Europe/Berlin] Successfully updated luck_wallet_users balance for user 1
+[16-Jun-2025 18:31:40 Europe/Berlin] Updating seller's (10) balance, adding 20000
+[16-Jun-2025 18:31:40 Europe/Berlin] Seller balance before: {"balance":"300.00"}
+[16-Jun-2025 18:31:40 Europe/Berlin] Seller balance after: {"balance":"20300.00"}
+[16-Jun-2025 18:31:40 Europe/Berlin] Successfully updated seller's balance
+[16-Jun-2025 18:31:40 Europe/Berlin] Transferring NFT 64 from seller 10 to buyer 1
+[16-Jun-2025 18:31:40 Europe/Berlin] Current NFT state: {"owner_id":10,"for_sale":1}
+[16-Jun-2025 18:31:40 Europe/Berlin] NFT update result: success, rows affected: 1
+[16-Jun-2025 18:31:40 Europe/Berlin] Successfully transferred NFT ownership
+[16-Jun-2025 18:31:40 Europe/Berlin] Transaction recording failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nft_id' in 'field list'
+[16-Jun-2025 18:31:40 Europe/Berlin] Error Response (500): Failed to complete the transaction. Please try again or contact support.
+[16-Jun-2025 18:33:58 Europe/Berlin] Purchase request: Array
+(
+)
+
+[16-Jun-2025 18:33:58 Europe/Berlin] Raw input: {"nftId":"64","price":20000}
+[16-Jun-2025 18:33:58 Europe/Berlin] Transaction started
+[16-Jun-2025 18:33:58 Europe/Berlin] Executing NFT query: SELECT nft_id as id, name, description, image_url, price_luck as price, current_owner_user_id as owner_id, 
+                     listed_for_sale as for_sale, listing_date as created_at, creator_user_id 
+                     FROM luck_wallet_nfts WHERE nft_id = ? FOR UPDATE with ID: 64
+[16-Jun-2025 18:33:58 Europe/Berlin] Found NFT: {"id":64,"name":null,"description":null,"image_url":"uploads\/nfts\/nft_685037d9c673a.png","price":"20000.00","owner_id":10,"for_sale":1,"created_at":"2025-06-16 23:27:21","creator_user_id":10}
+[16-Jun-2025 18:33:58 Europe/Berlin] Checking luck_wallet_users for buyer ID: 1
+[16-Jun-2025 18:33:58 Europe/Berlin] Buyer balance query result: {"user_id":1,"balance":"101550.00"}
+[16-Jun-2025 18:33:58 Europe/Berlin] Found buyer in luck_wallet_users: {"user_id":1,"balance":"101550.00"}
+[16-Jun-2025 18:33:58 Europe/Berlin] Buyer current balance: 101550.00, Price: 20000
+[16-Jun-2025 18:33:58 Europe/Berlin] NFT owner ID: 10, Buyer ID: 1
+[16-Jun-2025 18:33:58 Europe/Berlin] Updating luck_wallet_users balance for user 1, deducting 20000
+[16-Jun-2025 18:33:58 Europe/Berlin] Buyer's new balance after deduction: 81550.00
+[16-Jun-2025 18:33:58 Europe/Berlin] Successfully updated luck_wallet_users balance for user 1
+[16-Jun-2025 18:33:58 Europe/Berlin] Updating seller's (10) balance, adding 20000
+[16-Jun-2025 18:33:58 Europe/Berlin] Seller balance before: {"balance":"300.00"}
+[16-Jun-2025 18:33:58 Europe/Berlin] Seller balance after: {"balance":"20300.00"}
+[16-Jun-2025 18:33:58 Europe/Berlin] Successfully updated seller's balance
+[16-Jun-2025 18:33:58 Europe/Berlin] Transferring NFT 64 from seller 10 to buyer 1
+[16-Jun-2025 18:33:58 Europe/Berlin] Current NFT state: {"owner_id":10,"for_sale":1}
+[16-Jun-2025 18:33:58 Europe/Berlin] NFT update result: success, rows affected: 1
+[16-Jun-2025 18:33:58 Europe/Berlin] Successfully transferred NFT ownership
+[16-Jun-2025 18:33:58 Europe/Berlin] Purchase successful - NFT: 64, Buyer: 1, Seller: 10, Amount: 20000
+[17-Jun-2025 06:26:24 Europe/Berlin] Purchase request: Array
+(
+)
+
+[17-Jun-2025 06:26:24 Europe/Berlin] Raw input: {"nftId":"143","price":2000}
+[17-Jun-2025 06:26:24 Europe/Berlin] Transaction started
+[17-Jun-2025 06:26:24 Europe/Berlin] Executing NFT query: SELECT nft_id as id, name, description, image_url, price_luck as price, current_owner_user_id as owner_id, 
+                     listed_for_sale as for_sale, listing_date as created_at, creator_user_id 
+                     FROM luck_wallet_nfts WHERE nft_id = ? FOR UPDATE with ID: 143
+[17-Jun-2025 06:26:24 Europe/Berlin] Found NFT: {"id":143,"name":null,"description":null,"image_url":"uploads\/nfts\/nft_6850440463a17.png","price":"2000.00","owner_id":13,"for_sale":1,"created_at":"2025-06-17 00:19:16","creator_user_id":13}
+[17-Jun-2025 06:26:24 Europe/Berlin] Checking luck_wallet_users for buyer ID: 1
+[17-Jun-2025 06:26:24 Europe/Berlin] Buyer balance query result: {"user_id":1,"balance":"81600.00"}
+[17-Jun-2025 06:26:24 Europe/Berlin] Found buyer in luck_wallet_users: {"user_id":1,"balance":"81600.00"}
+[17-Jun-2025 06:26:24 Europe/Berlin] Buyer current balance: 81600.00, Price: 2000
+[17-Jun-2025 06:26:24 Europe/Berlin] NFT owner ID: 13, Buyer ID: 1
+[17-Jun-2025 06:26:24 Europe/Berlin] Updating luck_wallet_users balance for user 1, deducting 2000
+[17-Jun-2025 06:26:24 Europe/Berlin] Buyer's new balance after deduction: 79600.00
+[17-Jun-2025 06:26:24 Europe/Berlin] Successfully updated luck_wallet_users balance for user 1
+[17-Jun-2025 06:26:24 Europe/Berlin] Updating seller's (13) balance, adding 2000
+[17-Jun-2025 06:26:24 Europe/Berlin] Seller balance before: {"balance":"150.00"}
+[17-Jun-2025 06:26:24 Europe/Berlin] Seller balance after: {"balance":"2150.00"}
+[17-Jun-2025 06:26:24 Europe/Berlin] Successfully updated seller's balance
+[17-Jun-2025 06:26:24 Europe/Berlin] Transferring NFT 143 from seller 13 to buyer 1
+[17-Jun-2025 06:26:24 Europe/Berlin] Current NFT state: {"owner_id":13,"for_sale":1}
+[17-Jun-2025 06:26:24 Europe/Berlin] NFT update result: success, rows affected: 1
+[17-Jun-2025 06:26:24 Europe/Berlin] Successfully transferred NFT ownership
+[17-Jun-2025 06:26:24 Europe/Berlin] Purchase successful - NFT: 143, Buyer: 1, Seller: 13, Amount: 2000
+[18-Jun-2025 14:41:54 Europe/Berlin] Purchase request: Array
+(
+)
+
+[18-Jun-2025 14:41:54 Europe/Berlin] Raw input: {"nftId":"310","price":1000}
+[18-Jun-2025 14:41:54 Europe/Berlin] Transaction started
+[18-Jun-2025 14:41:54 Europe/Berlin] Executing NFT query: SELECT nft_id as id, name, description, image_url, price_luck as price, current_owner_user_id as owner_id, 
+                     listed_for_sale as for_sale, listing_date as created_at, creator_user_id 
+                     FROM luck_wallet_nfts WHERE nft_id = ? FOR UPDATE with ID: 310
+[18-Jun-2025 14:41:54 Europe/Berlin] Found NFT: {"id":310,"name":null,"description":null,"image_url":"uploads\/nfts\/nft_6851968bb6b11.gif","price":"1000.00","owner_id":15,"for_sale":1,"created_at":"2025-06-18 00:23:39","creator_user_id":15}
+[18-Jun-2025 14:41:54 Europe/Berlin] Checking luck_wallet_users for buyer ID: 1
+[18-Jun-2025 14:41:54 Europe/Berlin] Buyer balance query result: {"user_id":1,"balance":"80100.00"}
+[18-Jun-2025 14:41:54 Europe/Berlin] Found buyer in luck_wallet_users: {"user_id":1,"balance":"80100.00"}
+[18-Jun-2025 14:41:54 Europe/Berlin] Buyer current balance: 80100.00, Price: 1000
+[18-Jun-2025 14:41:54 Europe/Berlin] NFT owner ID: 15, Buyer ID: 1
+[18-Jun-2025 14:41:54 Europe/Berlin] Updating luck_wallet_users balance for user 1, deducting 1000
+[18-Jun-2025 14:41:54 Europe/Berlin] Buyer's new balance after deduction: 79100.00
+[18-Jun-2025 14:41:54 Europe/Berlin] Successfully updated luck_wallet_users balance for user 1
+[18-Jun-2025 14:41:54 Europe/Berlin] Updating seller's (15) balance, adding 1000
+[18-Jun-2025 14:41:54 Europe/Berlin] Seller balance before: {"balance":"150.00"}
+[18-Jun-2025 14:41:54 Europe/Berlin] Seller balance after: {"balance":"1150.00"}
+[18-Jun-2025 14:41:54 Europe/Berlin] Successfully updated seller's balance
+[18-Jun-2025 14:41:54 Europe/Berlin] Transferring NFT 310 from seller 15 to buyer 1
+[18-Jun-2025 14:41:54 Europe/Berlin] Current NFT state: {"owner_id":15,"for_sale":1}
+[18-Jun-2025 14:41:54 Europe/Berlin] NFT update result: success, rows affected: 1
+[18-Jun-2025 14:41:54 Europe/Berlin] Successfully transferred NFT ownership
+[18-Jun-2025 14:41:54 Europe/Berlin] Purchase successful - NFT: 310, Buyer: 1, Seller: 15, Amount: 1000
+[18-Jun-2025 15:07:59 Europe/Berlin] Purchase request: Array
+(
+)
+
+[18-Jun-2025 15:07:59 Europe/Berlin] Raw input: {"nftId":"135","price":1000}
+[18-Jun-2025 15:07:59 Europe/Berlin] Transaction started
+[18-Jun-2025 15:07:59 Europe/Berlin] Executing NFT query: SELECT nft_id as id, name, description, image_url, price_luck as price, current_owner_user_id as owner_id, 
+                     listed_for_sale as for_sale, listing_date as created_at, creator_user_id 
+                     FROM luck_wallet_nfts WHERE nft_id = ? FOR UPDATE with ID: 135
+[18-Jun-2025 15:07:59 Europe/Berlin] Found NFT: {"id":135,"name":null,"description":null,"image_url":"uploads\/nfts\/nft_685043408b375.png","price":"1000.00","owner_id":8,"for_sale":1,"created_at":"2025-06-17 00:16:00","creator_user_id":8}
+[18-Jun-2025 15:07:59 Europe/Berlin] Checking luck_wallet_users for buyer ID: 1
+[18-Jun-2025 15:07:59 Europe/Berlin] Buyer balance query result: {"user_id":1,"balance":"79150.00"}
+[18-Jun-2025 15:07:59 Europe/Berlin] Found buyer in luck_wallet_users: {"user_id":1,"balance":"79150.00"}
+[18-Jun-2025 15:07:59 Europe/Berlin] Buyer current balance: 79150.00, Price: 1000
+[18-Jun-2025 15:07:59 Europe/Berlin] NFT owner ID: 8, Buyer ID: 1
+[18-Jun-2025 15:07:59 Europe/Berlin] Updating luck_wallet_users balance for user 1, deducting 1000
+[18-Jun-2025 15:07:59 Europe/Berlin] Buyer's new balance after deduction: 78150.00
+[18-Jun-2025 15:07:59 Europe/Berlin] Successfully updated luck_wallet_users balance for user 1
+[18-Jun-2025 15:07:59 Europe/Berlin] Updating seller's (8) balance, adding 1000
+[18-Jun-2025 15:07:59 Europe/Berlin] Seller balance before: {"balance":"1250.00"}
+[18-Jun-2025 15:07:59 Europe/Berlin] Seller balance after: {"balance":"2250.00"}
+[18-Jun-2025 15:07:59 Europe/Berlin] Successfully updated seller's balance
+[18-Jun-2025 15:07:59 Europe/Berlin] Transferring NFT 135 from seller 8 to buyer 1
+[18-Jun-2025 15:07:59 Europe/Berlin] Current NFT state: {"owner_id":8,"for_sale":1}
+[18-Jun-2025 15:07:59 Europe/Berlin] NFT update result: success, rows affected: 1
+[18-Jun-2025 15:07:59 Europe/Berlin] Successfully transferred NFT ownership
+[18-Jun-2025 15:07:59 Europe/Berlin] Purchase successful - NFT: 135, Buyer: 1, Seller: 8, Amount: 1000
+[18-Jun-2025 15:09:30 Europe/Berlin] Purchase request: Array
+(
+)
+
+[18-Jun-2025 15:09:30 Europe/Berlin] Raw input: {"nftId":"133","price":1000}
+[18-Jun-2025 15:09:30 Europe/Berlin] Transaction started
+[18-Jun-2025 15:09:30 Europe/Berlin] Executing NFT query: SELECT nft_id as id, name, description, image_url, price_luck as price, current_owner_user_id as owner_id, 
+                     listed_for_sale as for_sale, listing_date as created_at, creator_user_id 
+                     FROM luck_wallet_nfts WHERE nft_id = ? FOR UPDATE with ID: 133
+[18-Jun-2025 15:09:30 Europe/Berlin] Found NFT: {"id":133,"name":null,"description":null,"image_url":"uploads\/nfts\/nft_685043408aa4c.png","price":"1000.00","owner_id":8,"for_sale":1,"created_at":"2025-06-17 00:16:00","creator_user_id":8}
+[18-Jun-2025 15:09:30 Europe/Berlin] Checking luck_wallet_users for buyer ID: 1
+[18-Jun-2025 15:09:30 Europe/Berlin] Buyer balance query result: {"user_id":1,"balance":"78150.00"}
+[18-Jun-2025 15:09:30 Europe/Berlin] Found buyer in luck_wallet_users: {"user_id":1,"balance":"78150.00"}
+[18-Jun-2025 15:09:30 Europe/Berlin] Buyer current balance: 78150.00, Price: 1000
+[18-Jun-2025 15:09:30 Europe/Berlin] NFT owner ID: 8, Buyer ID: 1
+[18-Jun-2025 15:09:30 Europe/Berlin] Updating luck_wallet_users balance for user 1, deducting 1000
+[18-Jun-2025 15:09:30 Europe/Berlin] Buyer's new balance after deduction: 77150.00
+[18-Jun-2025 15:09:30 Europe/Berlin] Successfully updated luck_wallet_users balance for user 1
+[18-Jun-2025 15:09:30 Europe/Berlin] Updating seller's (8) balance, adding 1000
+[18-Jun-2025 15:09:30 Europe/Berlin] Seller balance before: {"balance":"2250.00"}
+[18-Jun-2025 15:09:30 Europe/Berlin] Seller balance after: {"balance":"3250.00"}
+[18-Jun-2025 15:09:30 Europe/Berlin] Successfully updated seller's balance
+[18-Jun-2025 15:09:30 Europe/Berlin] Transferring NFT 133 from seller 8 to buyer 1
+[18-Jun-2025 15:09:30 Europe/Berlin] Current NFT state: {"owner_id":8,"for_sale":1}
+[18-Jun-2025 15:09:30 Europe/Berlin] NFT update result: success, rows affected: 1
+[18-Jun-2025 15:09:30 Europe/Berlin] Successfully transferred NFT ownership
+[18-Jun-2025 15:09:30 Europe/Berlin] Purchase successful - NFT: 133, Buyer: 1, Seller: 8, Amount: 1000
+[18-Jun-2025 15:16:48 Europe/Berlin] Purchase request: Array
+(
+)
+
+[18-Jun-2025 15:16:48 Europe/Berlin] Raw input: {"nftId":"137","price":1000}
+[18-Jun-2025 15:16:48 Europe/Berlin] Transaction started
+[18-Jun-2025 15:16:48 Europe/Berlin] Executing NFT query: SELECT nft_id as id, name, description, image_url, price_luck as price, current_owner_user_id as owner_id, 
+                     listed_for_sale as for_sale, listing_date as created_at, creator_user_id 
+                     FROM luck_wallet_nfts WHERE nft_id = ? FOR UPDATE with ID: 137
+[18-Jun-2025 15:16:48 Europe/Berlin] Found NFT: {"id":137,"name":null,"description":null,"image_url":"uploads\/nfts\/nft_685043408bdaf.png","price":"1000.00","owner_id":8,"for_sale":1,"created_at":"2025-06-17 00:16:00","creator_user_id":8}
+[18-Jun-2025 15:16:48 Europe/Berlin] Checking luck_wallet_users for buyer ID: 1
+[18-Jun-2025 15:16:48 Europe/Berlin] Buyer balance query result: {"user_id":1,"balance":"77150.00"}
+[18-Jun-2025 15:16:48 Europe/Berlin] Found buyer in luck_wallet_users: {"user_id":1,"balance":"77150.00"}
+[18-Jun-2025 15:16:48 Europe/Berlin] Buyer current balance: 77150.00, Price: 1000
+[18-Jun-2025 15:16:48 Europe/Berlin] NFT owner ID: 8, Buyer ID: 1
+[18-Jun-2025 15:16:48 Europe/Berlin] Updating luck_wallet_users balance for user 1, deducting 1000
+[18-Jun-2025 15:16:48 Europe/Berlin] Buyer's new balance after deduction: 76150.00
+[18-Jun-2025 15:16:48 Europe/Berlin] Successfully updated luck_wallet_users balance for user 1
+[18-Jun-2025 15:16:48 Europe/Berlin] Updating seller's (8) balance, adding 1000
+[18-Jun-2025 15:16:48 Europe/Berlin] Seller balance before: {"balance":"3250.00"}
+[18-Jun-2025 15:16:48 Europe/Berlin] Seller balance after: {"balance":"4250.00"}
+[18-Jun-2025 15:16:48 Europe/Berlin] Successfully updated seller's balance
+[18-Jun-2025 15:16:48 Europe/Berlin] Transferring NFT 137 from seller 8 to buyer 1
+[18-Jun-2025 15:16:48 Europe/Berlin] Current NFT state: {"owner_id":8,"for_sale":1}
+[18-Jun-2025 15:16:48 Europe/Berlin] NFT update result: success, rows affected: 1
+[18-Jun-2025 15:16:48 Europe/Berlin] Successfully transferred NFT ownership
+[18-Jun-2025 15:16:48 Europe/Berlin] Purchase successful - NFT: 137, Buyer: 1, Seller: 8, Amount: 1000
+[18-Jun-2025 15:22:04 Europe/Berlin] Purchase request: Array
+(
+)
+
+[18-Jun-2025 15:22:04 Europe/Berlin] Raw input: {"nftId":"321","price":1000}
+[18-Jun-2025 15:22:04 Europe/Berlin] Transaction started
+[18-Jun-2025 15:22:04 Europe/Berlin] Executing NFT query: SELECT nft_id as id, name, description, image_url, price_luck as price, current_owner_user_id as owner_id, 
+                     listed_for_sale as for_sale, listing_date as created_at, creator_user_id 
+                     FROM luck_wallet_nfts WHERE nft_id = ? FOR UPDATE with ID: 321
+[18-Jun-2025 15:22:04 Europe/Berlin] Found NFT: {"id":321,"name":null,"description":null,"image_url":"uploads\/nfts\/nft_6851970e22242.gif","price":"1000.00","owner_id":15,"for_sale":1,"created_at":"2025-06-18 00:25:50","creator_user_id":15}
+[18-Jun-2025 15:22:04 Europe/Berlin] Checking luck_wallet_users for buyer ID: 1
+[18-Jun-2025 15:22:04 Europe/Berlin] Buyer balance query result: {"user_id":1,"balance":"76150.00"}
+[18-Jun-2025 15:22:04 Europe/Berlin] Found buyer in luck_wallet_users: {"user_id":1,"balance":"76150.00"}
+[18-Jun-2025 15:22:04 Europe/Berlin] Buyer current balance: 76150.00, Price: 1000
+[18-Jun-2025 15:22:04 Europe/Berlin] NFT owner ID: 15, Buyer ID: 1
+[18-Jun-2025 15:22:04 Europe/Berlin] Updating luck_wallet_users balance for user 1, deducting 1000
+[18-Jun-2025 15:22:04 Europe/Berlin] Buyer's new balance after deduction: 75150.00
+[18-Jun-2025 15:22:04 Europe/Berlin] Successfully updated luck_wallet_users balance for user 1
+[18-Jun-2025 15:22:04 Europe/Berlin] Updating seller's (15) balance, adding 1000
+[18-Jun-2025 15:22:04 Europe/Berlin] Seller balance before: {"balance":"1150.00"}
+[18-Jun-2025 15:22:04 Europe/Berlin] Seller balance after: {"balance":"2150.00"}
+[18-Jun-2025 15:22:04 Europe/Berlin] Successfully updated seller's balance
+[18-Jun-2025 15:22:04 Europe/Berlin] Transferring NFT 321 from seller 15 to buyer 1
+[18-Jun-2025 15:22:04 Europe/Berlin] Current NFT state: {"owner_id":15,"for_sale":1}
+[18-Jun-2025 15:22:04 Europe/Berlin] NFT update result: success, rows affected: 1
+[18-Jun-2025 15:22:04 Europe/Berlin] Successfully transferred NFT ownership
+[18-Jun-2025 15:22:04 Europe/Berlin] Purchase successful - NFT: 321, Buyer: 1, Seller: 15, Amount: 1000
+[18-Jun-2025 15:26:00 Europe/Berlin] Purchase request: Array
+(
+)
+
+[18-Jun-2025 15:26:00 Europe/Berlin] Raw input: {"nftId":"327","price":1000}
+[18-Jun-2025 15:26:00 Europe/Berlin] Transaction started
+[18-Jun-2025 15:26:00 Europe/Berlin] Executing NFT query: SELECT nft_id as id, name, description, image_url, price_luck as price, current_owner_user_id as owner_id, 
+                     listed_for_sale as for_sale, listing_date as created_at, creator_user_id 
+                     FROM luck_wallet_nfts WHERE nft_id = ? FOR UPDATE with ID: 327
+[18-Jun-2025 15:26:00 Europe/Berlin] Found NFT: {"id":327,"name":null,"description":null,"image_url":"uploads\/nfts\/nft_6851970e23e48.gif","price":"1000.00","owner_id":15,"for_sale":1,"created_at":"2025-06-18 00:25:50","creator_user_id":15}
+[18-Jun-2025 15:26:00 Europe/Berlin] Checking luck_wallet_users for buyer ID: 1
+[18-Jun-2025 15:26:00 Europe/Berlin] Buyer balance query result: {"user_id":1,"balance":"75150.00"}
+[18-Jun-2025 15:26:00 Europe/Berlin] Found buyer in luck_wallet_users: {"user_id":1,"balance":"75150.00"}
+[18-Jun-2025 15:26:00 Europe/Berlin] Buyer current balance: 75150.00, Price: 1000
+[18-Jun-2025 15:26:00 Europe/Berlin] NFT owner ID: 15, Buyer ID: 1
+[18-Jun-2025 15:26:00 Europe/Berlin] Updating luck_wallet_users balance for user 1, deducting 1000
+[18-Jun-2025 15:26:00 Europe/Berlin] Buyer's new balance after deduction: 74150.00
+[18-Jun-2025 15:26:00 Europe/Berlin] Successfully updated luck_wallet_users balance for user 1
+[18-Jun-2025 15:26:00 Europe/Berlin] Updating seller's (15) balance, adding 1000
+[18-Jun-2025 15:26:00 Europe/Berlin] Seller balance before: {"balance":"2150.00"}
+[18-Jun-2025 15:26:00 Europe/Berlin] Seller balance after: {"balance":"3150.00"}
+[18-Jun-2025 15:26:00 Europe/Berlin] Successfully updated seller's balance
+[18-Jun-2025 15:26:00 Europe/Berlin] Transferring NFT 327 from seller 15 to buyer 1
+[18-Jun-2025 15:26:00 Europe/Berlin] Current NFT state: {"owner_id":15,"for_sale":1}
+[18-Jun-2025 15:26:00 Europe/Berlin] NFT update result: success, rows affected: 1
+[18-Jun-2025 15:26:00 Europe/Berlin] Successfully transferred NFT ownership
+[18-Jun-2025 15:26:00 Europe/Berlin] Purchase successful - NFT: 327, Buyer: 1, Seller: 15, Amount: 1000
+[18-Jun-2025 15:28:47 Europe/Berlin] Purchase request: Array
+(
+)
+
+[18-Jun-2025 15:28:47 Europe/Berlin] Raw input: {"nftId":"319","price":1000}
+[18-Jun-2025 15:28:47 Europe/Berlin] Transaction started
+[18-Jun-2025 15:28:47 Europe/Berlin] Executing NFT query: SELECT nft_id as id, name, description, image_url, price_luck as price, current_owner_user_id as owner_id, 
+                     listed_for_sale as for_sale, listing_date as created_at, creator_user_id 
+                     FROM luck_wallet_nfts WHERE nft_id = ? FOR UPDATE with ID: 319
+[18-Jun-2025 15:28:47 Europe/Berlin] Found NFT: {"id":319,"name":null,"description":null,"image_url":"uploads\/nfts\/nft_6851970e215ec.gif","price":"1000.00","owner_id":15,"for_sale":1,"created_at":"2025-06-18 00:25:50","creator_user_id":15}
+[18-Jun-2025 15:28:47 Europe/Berlin] Checking luck_wallet_users for buyer ID: 1
+[18-Jun-2025 15:28:47 Europe/Berlin] Buyer balance query result: {"user_id":1,"balance":"74150.00"}
+[18-Jun-2025 15:28:47 Europe/Berlin] Found buyer in luck_wallet_users: {"user_id":1,"balance":"74150.00"}
+[18-Jun-2025 15:28:47 Europe/Berlin] Buyer current balance: 74150.00, Price: 1000
+[18-Jun-2025 15:28:47 Europe/Berlin] NFT owner ID: 15, Buyer ID: 1
+[18-Jun-2025 15:28:47 Europe/Berlin] Updating luck_wallet_users balance for user 1, deducting 1000
+[18-Jun-2025 15:28:47 Europe/Berlin] Buyer's new balance after deduction: 73150.00
+[18-Jun-2025 15:28:47 Europe/Berlin] Successfully updated luck_wallet_users balance for user 1
+[18-Jun-2025 15:28:47 Europe/Berlin] Updating seller's (15) balance, adding 1000
+[18-Jun-2025 15:28:47 Europe/Berlin] Seller balance before: {"balance":"3150.00"}
+[18-Jun-2025 15:28:47 Europe/Berlin] Seller balance after: {"balance":"4150.00"}
+[18-Jun-2025 15:28:47 Europe/Berlin] Successfully updated seller's balance
+[18-Jun-2025 15:28:47 Europe/Berlin] Transferring NFT 319 from seller 15 to buyer 1
+[18-Jun-2025 15:28:47 Europe/Berlin] Current NFT state: {"owner_id":15,"for_sale":1}
+[18-Jun-2025 15:28:47 Europe/Berlin] NFT update result: success, rows affected: 1
+[18-Jun-2025 15:28:47 Europe/Berlin] Successfully transferred NFT ownership
+[18-Jun-2025 15:28:47 Europe/Berlin] Purchase successful - NFT: 319, Buyer: 1, Seller: 15, Amount: 1000
+[18-Jun-2025 17:24:50 Europe/Berlin] Purchase request: Array
+(
+)
+
+[18-Jun-2025 17:24:50 Europe/Berlin] Raw input: {"nftId":"355","price":1000}
+[18-Jun-2025 17:24:50 Europe/Berlin] Transaction started
+[18-Jun-2025 17:24:50 Europe/Berlin] Executing NFT query: SELECT nft_id as id, name, description, image_url, price_luck as price, current_owner_user_id as owner_id, 
+                     listed_for_sale as for_sale, listing_date as created_at, creator_user_id 
+                     FROM luck_wallet_nfts WHERE nft_id = ? FOR UPDATE with ID: 355
+[18-Jun-2025 17:24:50 Europe/Berlin] Found NFT: {"id":355,"name":null,"description":null,"image_url":"uploads\/nfts\/nft_685197c74fa2a.gif","price":"1000.00","owner_id":15,"for_sale":1,"created_at":"2025-06-18 00:28:55","creator_user_id":15}
+[18-Jun-2025 17:24:50 Europe/Berlin] Checking luck_wallet_users for buyer ID: 1
+[18-Jun-2025 17:24:50 Europe/Berlin] Buyer balance query result: {"user_id":1,"balance":"73150.00"}
+[18-Jun-2025 17:24:50 Europe/Berlin] Found buyer in luck_wallet_users: {"user_id":1,"balance":"73150.00"}
+[18-Jun-2025 17:24:50 Europe/Berlin] Buyer current balance: 73150.00, Price: 1000
+[18-Jun-2025 17:24:50 Europe/Berlin] NFT owner ID: 15, Buyer ID: 1
+[18-Jun-2025 17:24:50 Europe/Berlin] Updating luck_wallet_users balance for user 1, deducting 1000
+[18-Jun-2025 17:24:50 Europe/Berlin] Buyer's new balance after deduction: 72150.00
+[18-Jun-2025 17:24:50 Europe/Berlin] Successfully updated luck_wallet_users balance for user 1
+[18-Jun-2025 17:24:50 Europe/Berlin] Updating seller's (15) balance, adding 1000
+[18-Jun-2025 17:24:50 Europe/Berlin] Seller balance before: {"balance":"4150.00"}
+[18-Jun-2025 17:24:50 Europe/Berlin] Seller balance after: {"balance":"5150.00"}
+[18-Jun-2025 17:24:50 Europe/Berlin] Successfully updated seller's balance
+[18-Jun-2025 17:24:50 Europe/Berlin] Transferring NFT 355 from seller 15 to buyer 1
+[18-Jun-2025 17:24:50 Europe/Berlin] Current NFT state: {"owner_id":15,"for_sale":1}
+[18-Jun-2025 17:24:50 Europe/Berlin] NFT update result: success, rows affected: 1
+[18-Jun-2025 17:24:50 Europe/Berlin] Successfully transferred NFT ownership
+[18-Jun-2025 17:24:50 Europe/Berlin] Purchase successful - NFT: 355, Buyer: 1, Seller: 15, Amount: 1000
+[22-Jun-2025 19:10:45 Europe/Berlin] Purchase request: Array
+(
+)
+
+[22-Jun-2025 19:10:45 Europe/Berlin] Raw input: {"nftId":"373","price":1000}
+[22-Jun-2025 19:10:45 Europe/Berlin] Transaction started
+[22-Jun-2025 19:10:45 Europe/Berlin] Executing NFT query: SELECT nft_id as id, name, description, image_url, price_luck as price, current_owner_user_id as owner_id, 
+                     listed_for_sale as for_sale, listing_date as created_at, creator_user_id 
+                     FROM luck_wallet_nfts WHERE nft_id = ? FOR UPDATE with ID: 373
+[22-Jun-2025 19:10:45 Europe/Berlin] Found NFT: {"id":373,"name":null,"description":null,"image_url":"uploads\/nfts\/nft_6855e5cc9bfee.png","price":"1000.00","owner_id":8,"for_sale":1,"created_at":"2025-06-21 06:50:52","creator_user_id":8}
+[22-Jun-2025 19:10:45 Europe/Berlin] Checking luck_wallet_users for buyer ID: 1
+[22-Jun-2025 19:10:45 Europe/Berlin] Buyer balance query result: {"user_id":1,"balance":"80564.87"}
+[22-Jun-2025 19:10:45 Europe/Berlin] Found buyer in luck_wallet_users: {"user_id":1,"balance":"80564.87"}
+[22-Jun-2025 19:10:45 Europe/Berlin] Buyer current balance: 80564.87, Price: 1000
+[22-Jun-2025 19:10:45 Europe/Berlin] NFT owner ID: 8, Buyer ID: 1
+[22-Jun-2025 19:10:45 Europe/Berlin] Updating luck_wallet_users balance for user 1, deducting 1000
+[22-Jun-2025 19:10:45 Europe/Berlin] Buyer's new balance after deduction: 79564.87
+[22-Jun-2025 19:10:45 Europe/Berlin] Successfully updated luck_wallet_users balance for user 1
+[22-Jun-2025 19:10:45 Europe/Berlin] Updating seller's (8) balance, adding 1000
+[22-Jun-2025 19:10:45 Europe/Berlin] Seller balance before: {"balance":"1351.00"}
+[22-Jun-2025 19:10:45 Europe/Berlin] Seller balance after: {"balance":"2351.00"}
+[22-Jun-2025 19:10:45 Europe/Berlin] Successfully updated seller's balance
+[22-Jun-2025 19:10:45 Europe/Berlin] Transferring NFT 373 from seller 8 to buyer 1
+[22-Jun-2025 19:10:45 Europe/Berlin] Current NFT state: {"owner_id":8,"for_sale":1}
+[22-Jun-2025 19:10:45 Europe/Berlin] NFT update result: success, rows affected: 1
+[22-Jun-2025 19:10:45 Europe/Berlin] Successfully transferred NFT ownership
+[22-Jun-2025 19:10:45 Europe/Berlin] Purchase successful - NFT: 373, Buyer: 1, Seller: 8, Amount: 1000
+[23-Jun-2025 04:43:07 Europe/Berlin] Purchase request: Array
+(
+)
+
+[23-Jun-2025 04:43:07 Europe/Berlin] Raw input: {"nftId":"370","price":10000}
+[23-Jun-2025 04:43:07 Europe/Berlin] Transaction started
+[23-Jun-2025 04:43:07 Europe/Berlin] Executing NFT query: SELECT nft_id as id, name, description, image_url, price_luck as price, current_owner_user_id as owner_id, 
+                     listed_for_sale as for_sale, listing_date as created_at, creator_user_id 
+                     FROM luck_wallet_nfts WHERE nft_id = ? FOR UPDATE with ID: 370
+[23-Jun-2025 04:43:07 Europe/Berlin] Found NFT: {"id":370,"name":null,"description":null,"image_url":"uploads\/nfts\/nft_6855e5cc9aab4.png","price":"10000.00","owner_id":8,"for_sale":1,"created_at":"2025-06-21 06:50:52","creator_user_id":8}
+[23-Jun-2025 04:43:07 Europe/Berlin] Checking luck_wallet_users for buyer ID: 1
+[23-Jun-2025 04:43:07 Europe/Berlin] Buyer balance query result: {"user_id":1,"balance":"79564.87"}
+[23-Jun-2025 04:43:07 Europe/Berlin] Found buyer in luck_wallet_users: {"user_id":1,"balance":"79564.87"}
+[23-Jun-2025 04:43:07 Europe/Berlin] Buyer current balance: 79564.87, Price: 10000
+[23-Jun-2025 04:43:07 Europe/Berlin] NFT owner ID: 8, Buyer ID: 1
+[23-Jun-2025 04:43:07 Europe/Berlin] Updating luck_wallet_users balance for user 1, deducting 10000
+[23-Jun-2025 04:43:07 Europe/Berlin] Buyer's new balance after deduction: 69564.87
+[23-Jun-2025 04:43:07 Europe/Berlin] Successfully updated luck_wallet_users balance for user 1
+[23-Jun-2025 04:43:07 Europe/Berlin] Updating seller's (8) balance, adding 10000
+[23-Jun-2025 04:43:07 Europe/Berlin] Seller balance before: {"balance":"2351.00"}
+[23-Jun-2025 04:43:07 Europe/Berlin] Seller balance after: {"balance":"12351.00"}
+[23-Jun-2025 04:43:07 Europe/Berlin] Successfully updated seller's balance
+[23-Jun-2025 04:43:07 Europe/Berlin] Transferring NFT 370 from seller 8 to buyer 1
+[23-Jun-2025 04:43:07 Europe/Berlin] Current NFT state: {"owner_id":8,"for_sale":1}
+[23-Jun-2025 04:43:07 Europe/Berlin] NFT update result: success, rows affected: 1
+[23-Jun-2025 04:43:07 Europe/Berlin] Successfully transferred NFT ownership
+[23-Jun-2025 04:43:07 Europe/Berlin] Purchase successful - NFT: 370, Buyer: 1, Seller: 8, Amount: 10000

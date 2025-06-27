@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About - Luck Wallet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+        /* Global HTML and Body Reset */
+        html {
+            background: linear-gradient(to bottom, #000000, #004d4d, #000000);
+            background-attachment: fixed;
+            background-size: 100% auto;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+            font-family: 'Fira Code', sans-serif;
+            color: #e0e0e0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: transparent;
+        }
+        
+        /* Header Styles */
+                        .main-header {
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            height: 4rem;
+            padding: 0 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            position: sticky;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            box-sizing: border-box;
+            border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+        }
+        
+        .header-logo-container {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+        
+        .header-logo {
+            height: 8rem;
+            margin-top: 1rem;
+        }
+        
+        .header-nav {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        .header-nav-link {
+            color: #ffffff;
+            font-weight: 500;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, padding 0.2s ease-in-out;
+            font-size: 1.125rem;
+        }
+        
+        .header-nav-link:hover {
+            color: #ffffff;
+            background-color: rgba(0, 50, 50, 0.5);
+        }
+        
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: white;
+            padding: 0.5rem;
+            z-index: 100;
+        }
+        /* Mobile menu styles */
+        @media (max-width: 768px) {
+            .menu-icon {
+                display: block;
+                position: relative;
+                right: 0;
+                top: 0;
+            }
+            
+            .header-nav {
+                display: none;
+                position: fixed;
+                top: 4rem;
+                left: 0;
+                right: 0;
+                background-color: rgba(0, 20, 20, 0.98);
+                flex-direction: column;
+                padding: 1rem 0;
+                text-align: center;
+                border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                z-index: 49;
+            }
+            
+            .header-nav.active {
+                display: flex;
+            }
+            
+            .header-nav-link {
+                padding: 0.75rem 1rem;
+                margin: 0.25rem 1rem;
+                background: rgba(0, 40, 40, 0.7);
+                border-radius: 0.5rem;
+                font-size: 1.1rem;
+                width: auto;
+                display: inline-block;
+            }
+            
+            .header-nav-link:hover {
+                background-color: rgba(0, 80, 80, 0.7);
+            }
+            
+                            .main-header {
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            height: 4rem;
+            padding: 0 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            position: sticky;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            box-sizing: border-box;
+            border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+        }
+            
+            .header-logo {
+                height: 6rem;
+                margin-top: 0.5rem;
+            }
+        }
+        /* Main Content Wrapper */
+        .main-content-wrapper {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem 1.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+        
+    padding-top: 6rem;
+
+    width: 100%;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    padding: 6rem 2rem 2rem;
+    margin: 0 auto;
+    flex: 1;
+}
+        /* About Section */
+        #about-section {
+            background: rgba(0, 20, 20, 0.5);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            max-width: 100%;
+            box-sizing: border-box;
+            border-radius: 0.75rem;
+            box-shadow: 0 0 20px rgba(0, 230, 230, 0.5);
+            color: #e0e0e0;
+            font-family: 'Fira Code', monospace;
+        }
+        #about-section h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #00ffff;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+        }
+        #about-section h2 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: #33cccc;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+        }
+        #about-section h3 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            color: #00b3b3;
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: rgba(0, 80, 80, 0.3);
+            border-radius: 4px;
+        }
+        #about-section p {
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            color: #e0e0e0;
+            font-size: 1.05rem;
+        }
+        #about-section ul {
+            list-style: disc;
+            padding-left: 1.5rem;
+        }
+        #about-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        #about-section a {
+            color: #00ffff;
+            text-decoration: underline;
+        }
+        #about-section a:hover {
+            color: #33ffff;
+        }
+        /* Footer Styles */
+        .main-footer {
+            background: linear-gradient(135deg, #001a1a 0%, #003333 100%);
+            color: #e0e0e0;
+            padding: 3rem 1.5rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+            text-align: center;
+            padding: 0 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(4, 1fr);
+                text-align: left;
+            }
+            
+            .footer-first-column {
+                align-items: flex-start;
+                text-align: left;
+            }
+            
+            .footer-logo {
+                margin-left: 0;
+            }
+            
+            .footer-description {
+                text-align: left;
+                margin-left: 0;
+            }
+            
+            .social-icons-container {
+                justify-content: flex-start;
+                margin-left: 0;
+            }
+            
+            .main-footer h4 {
+                text-align: left;
+            }
+            
+            .main-footer h4::after {
+                left: 0;
+                transform: none;
+            }
+            
+            .main-footer ul {
+                text-align: left;
+            }
+        }
+        
+        .footer-first-column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .footer-logo {
+            height: 120px;
+            width: auto;
+            margin: 0 auto 1rem;
+            display: block;
+            object-fit: contain;
+        }
+        
+        .footer-description {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #00ffff;
+            margin: 0.5rem 0 1rem;
+            line-height: 1.4;
+            text-align: center;
+        }
+        
+        .social-icons-container {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem auto 2rem;
+            justify-content: center;
+        }
+        
+        .social-icon-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(0, 255, 255, 0.1);
+            color: #00ffff;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 0 10px rgba(0, 230, 230, 0.3);
+        }
+        
+        .social-icon-btn:hover {
+            background-color: #006666;
+            border-color: #00ffff;
+            color: #00ffff;
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+        }
+        
+        .main-footer h4 {
+            color: #00ffff;
+            font-size: 1.125rem;
+            margin: 1.5rem 0 1rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+            text-align: center;
+        }
+        
+        .main-footer h4::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background: linear-gradient(90deg, #00ffff, transparent);
+        }
+        
+        .main-footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        
+        .main-footer ul li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .main-footer ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.9375rem;
+            display: inline-block;
+        }
+        
+        .main-footer ul li a:hover {
+            color: #00ffff;
+            padding-left: 5px;
+        }
+        
+        .footer-bottom-text {
+            text-align: center;
+            padding: 1.5rem 1rem 0;
+            margin: 2rem 1rem 0;
+            border-top: 1px solid rgba(0, 255, 255, 0.1);
+            color: #a0aec0;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-logo-container">
+            <a href="../index.html" class="header-logo-button">
+                <img src="../assets/images/logo.png" alt="LUCK Logo" class="header-logo" />
+            </a>
+        </div>
+        <div class="menu-icon" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav class="header-nav">
+            <a href="../index.html" class="header-nav-link">Home</a>
+            <a href="whitepaper.html" class="header-nav-link">Whitepaper</a>
+            <a href="http://localhost/Luck%20Wallet/ecasino/index.php" class="header-nav-link">LuckyTime</a>
+            <a href="http://localhost/luck%20Wallet/marketplace/marketplace.php" class="header-nav-link">LUCK Marketplace</a>
+            <a href="about.html" class="header-nav-link">About</a>
+        </nav>
+    </header>
+    <div id="main-content-wrapper" class="main-content-wrapper">
+        <section id="about-section" class="section-bg-dark">
+            <h1>About Luck Wallet</h1>
+            <h2>What is Luck Wallet?</h2>
+            <p>
+                <strong>Luck Wallet</strong> is a simulated Web3 platform designed to help you learn crypto, explore NFTs, and play casino-style games—all without using real money. Everything in Luck Wallet is fake, but the experience is real. You’ll earn a mock cryptocurrency called <strong>$LUCK</strong>, trade digital collectibles (NFTs), and manage a fake wallet just like you would in a real Web3 ecosystem.
+            </p>
+            <p>
+                Our goal is to help you understand how crypto works while having fun, competing with friends, and building your own digital empire—without risking a single dollar.
+            </p>
+            <h2>Learn the Basics of Web3</h2>
+            <p>New to crypto? Here's what you need to know:</p>
+            <h3 style="text-align: left;">1. Introduction</h3>
+            <p>
+                A <strong>blockchain</strong> is a digital ledger or record book that is public, transparent, and unchangeable. Instead of being stored on one computer, it’s shared across many, making it decentralized. It powers cryptocurrencies, NFTs, and other Web3 technologies.
+            </p>
+            <h3 style="text-align: left;">2. What is Cryptocurrency?</h3>
+            <p>
+                A <strong>cryptocurrency</strong> is digital money that uses blockchain technology to secure and verify transactions. Examples include Bitcoin and Ethereum. On Luck Wallet, we use a <strong>fake cryptocurrency called $LUCK</strong> for learning and gaming purposes only.
+            </p>
+            <h3 style="text-align: left;">3. What are NFTs?</h3>
+            <p>
+                <strong>NFTs (Non-Fungible Tokens)</strong> are unique digital items (like art, avatars, cards) that you can own and trade. Each one is one-of-a-kind, and its ownership is stored on the blockchain. On Luck Wallet, all NFTs are simulated, so you can practice minting, buying, and selling them.
+            </p>
+            <h3 style="text-align: left;">4. What is a Wallet?</h3>
+            <p>
+                A <strong>crypto wallet</strong> is a tool used to store and manage your cryptocurrencies and NFTs. It has a <strong>public address</strong> (like your username) and a <strong>private key</strong> (like your password). In Luck Wallet, each user gets a <strong>fake wallet address</strong> to simulate real usage.
+            </p>
+            <h3 style="text-align: left;">5. What is a Web3 App?</h3>
+            <p>
+                A <strong>Web3 app</strong> is a decentralized application that interacts with the blockchain. Instead of using traditional login systems, Web3 apps rely on wallet addresses. <strong>Luck Wallet mimics this setup</strong> in a safe, centralized way for learning.
+            </p>
+            <h2>What You Can Do on Luck Wallet</h2>
+            <ul>
+                <li>Manage your $LUCK balance and wallet</li>
+                <li>Claim daily login rewards</li>
+                <li>Use referrals to earn bonus $LUCK</li>
+                <li>Upload, buy, and sell simulated NFTs</li>
+                <li>Play LuckyTime casino games (slots, roulette, etc.)</li>
+                <li>Convert casino winnings into $LUCK</li>
+                <li>Compete on leaderboards and unlock achievements</li>
+            </ul>
+            <h2>Why Luck Wallet?</h2>
+            <p>
+                Real crypto apps can be risky, confusing, or costly for beginners. Luck Wallet offers:
+            </p>
+            <ul>
+                <li>Zero real money required</li>
+                <li>No crypto wallet extensions needed</li>
+                <li>Realistic Web3 experience for students, gamers, and curious minds</li>
+                <li>Safe, fun, and gamified learning environment</li>
+            </ul>
+            <h2>Our Promise</h2>
+            <ul>
+                <li>Free to use</li>
+                <li>Educational</li>
+                <li>Secure and user-friendly</li>
+                <li>Completely mock-based (no real financial transactions)</li>
+            </ul>
+            <h2>Continue Learning</h2>
+            <ul>
+                <li><a href="whitepaper.html">Read the Whitepaper</a></li>
+                <li><a href="http://localhost/luck%20Wallet/marketplace/marketplace.php">Explore the NFT Marketplace</a></li>
+                <li><a href="http://localhost/ecasino/index.php">Try the LuckyTime Casino</a></li>
+                <li><a href="contacts.html">Contact Us for Support</a></li>
+            </ul>
+        </section>
+    </div>
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-first-column">
+                <div class="footer-logo-and-text">
+                    <img src="../assets/images/logo.png" alt="LUCK Logo" class="footer-logo" />
+                </div>
+                <p class="footer-description">Experience<br />Luck Now!</p>
+                <div class="social-icons-container">
+                    <a href="https://www.x.com/" class="social-icon-btn"><i class="fab fa-twitter"></i></a>
+                    <a href="https://telegram.org/" class="social-icon-btn"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="https://www.discord.com/" class="social-icon-btn"><i class="fab fa-discord"></i></a>
+                    <a href="https://www.youtube.com/" class="social-icon-btn"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4>About</h4>
+                <ul>
+                    <li><a href="whitepaper.html">Whitepaper</a></li>
+                    <li><a href="whitepaper.html">Roadmap</a></li>
+                    <li><a href="contacts.html">Contacts</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="../ecasino/index.php">E-Casino</a></li>
+                    <li><a href="http://localhost/luck%20Wallet/marketplace/marketplace.php">NFT Marketplace</a></li>
+                    <li><a href="referral.html">Referral Program</a></li>
+                    <li><a href="../auth/login.php">Dashboard</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="privacy_policy.html">Privacy Policy</a></li>
+                    <li><a href="contacts.html">Terms of Service</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom-text">&copy; 2025 Luck Wallet. All rights reserved.</div>
+    </footer>
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const headerNav = document.querySelector('.header-nav');
+            const menuIcon = menuToggle.querySelector('i');
+            
+            menuToggle.addEventListener('click', function() {
+                headerNav.classList.toggle('active');
+                
+                // Toggle between hamburger and close icon
+                if (headerNav.classList.contains('active')) {
+                    menuIcon.classList.remove('fa-bars');
+                    menuIcon.classList.add('fa-times');
+                } else {
+                    menuIcon.classList.remove('fa-times');
+                    menuIcon.classList.add('fa-bars');
+                }
+            });
+            
+            // Close menu when clicking on a nav link
+            const navLinks = document.querySelectorAll('.header-nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    headerNav.classList.remove('active');
+                    menuIcon.classList.remove('fa-times');
+                    menuIcon.classList.add('fa-bars');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

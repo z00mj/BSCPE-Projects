@@ -1,0 +1,3562 @@
+[2025-06-18 17:08:46] New request: {"method":"GET","query":{"q":"po"},"ip":"::1"}
+[2025-06-18 17:08:46] Searching for collections with query: po
+[2025-06-18 17:08:46] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:08:46] Query Parameters: {"exact_match":"po","query":"po","query_start":"po%","query_contains":"%po%","id_query":"po"}
+[2025-06-18 17:08:46] Found 2 results
+[2025-06-18 17:08:46] Sending response with 2 results
+[2025-06-18 17:08:46] New request: {"method":"GET","query":{"q":"poke"},"ip":"::1"}
+[2025-06-18 17:08:46] Searching for collections with query: poke
+[2025-06-18 17:08:46] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:08:46] Query Parameters: {"exact_match":"poke","query":"poke","query_start":"poke%","query_contains":"%poke%","id_query":"poke"}
+[2025-06-18 17:08:46] Found 1 results
+[2025-06-18 17:08:46] Sending response with 1 results
+[2025-06-18 17:08:52] New request: {"method":"GET","query":{"q":"Po"},"ip":"::1"}
+[2025-06-18 17:08:52] Searching for collections with query: Po
+[2025-06-18 17:08:52] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:08:52] Query Parameters: {"exact_match":"Po","query":"Po","query_start":"Po%","query_contains":"%Po%","id_query":"Po"}
+[2025-06-18 17:08:52] Found 2 results
+[2025-06-18 17:08:52] Sending response with 2 results
+[2025-06-18 17:08:54] New request: {"method":"GET","query":{"q":"Pokemon"},"ip":"::1"}
+[2025-06-18 17:08:54] Searching for collections with query: Pokemon
+[2025-06-18 17:08:54] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:08:54] Query Parameters: {"exact_match":"Pokemon","query":"Pokemon","query_start":"Pokemon%","query_contains":"%Pokemon%","id_query":"Pokemon"}
+[2025-06-18 17:08:54] Found 1 results
+[2025-06-18 17:08:54] Sending response with 1 results
+[2025-06-18 17:09:15] New request: {"method":"GET","query":{"q":"j"},"ip":"::1"}
+[2025-06-18 17:09:15] Searching for collections with query: j
+[2025-06-18 17:09:15] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:09:15] Query Parameters: {"exact_match":"j","query":"j","query_start":"j%","query_contains":"%j%","id_query":"j"}
+[2025-06-18 17:09:15] Found 0 results
+[2025-06-18 17:09:15] Sending response with 0 results
+[2025-06-18 17:09:15] New request: {"method":"GET","query":{"q":"jsda"},"ip":"::1"}
+[2025-06-18 17:09:15] Searching for collections with query: jsda
+[2025-06-18 17:09:15] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:09:15] Query Parameters: {"exact_match":"jsda","query":"jsda","query_start":"jsda%","query_contains":"%jsda%","id_query":"jsda"}
+[2025-06-18 17:09:15] Found 0 results
+[2025-06-18 17:09:15] Sending response with 0 results
+[2025-06-18 17:09:18] New request: {"method":"GET","query":{"q":"D"},"ip":"::1"}
+[2025-06-18 17:09:19] Searching for collections with query: D
+[2025-06-18 17:09:19] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:09:19] Query Parameters: {"exact_match":"D","query":"D","query_start":"D%","query_contains":"%D%","id_query":"D"}
+[2025-06-18 17:09:19] Found 9 results
+[2025-06-18 17:09:19] Sending response with 9 results
+[2025-06-18 17:09:19] New request: {"method":"GET","query":{"q":"Dra"},"ip":"::1"}
+[2025-06-18 17:09:19] Searching for collections with query: Dra
+[2025-06-18 17:09:19] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:09:19] Query Parameters: {"exact_match":"Dra","query":"Dra","query_start":"Dra%","query_contains":"%Dra%","id_query":"Dra"}
+[2025-06-18 17:09:19] Found 1 results
+[2025-06-18 17:09:19] Sending response with 1 results
+[2025-06-18 17:09:21] New request: {"method":"GET","query":{"q":"D"},"ip":"::1"}
+[2025-06-18 17:09:21] Searching for collections with query: D
+[2025-06-18 17:09:21] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:09:21] Query Parameters: {"exact_match":"D","query":"D","query_start":"D%","query_contains":"%D%","id_query":"D"}
+[2025-06-18 17:09:21] Found 9 results
+[2025-06-18 17:09:21] Sending response with 9 results
+[2025-06-18 17:09:23] New request: {"method":"GET","query":{"q":"Drag"},"ip":"::1"}
+[2025-06-18 17:09:23] Searching for collections with query: Drag
+[2025-06-18 17:09:23] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:09:23] Query Parameters: {"exact_match":"Drag","query":"Drag","query_start":"Drag%","query_contains":"%Drag%","id_query":"Drag"}
+[2025-06-18 17:09:23] Found 1 results
+[2025-06-18 17:09:23] Sending response with 1 results
+[2025-06-18 17:09:25] New request: {"method":"GET","query":{"q":"Dragonn"},"ip":"::1"}
+[2025-06-18 17:09:25] Searching for collections with query: Dragonn
+[2025-06-18 17:09:25] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:09:25] Query Parameters: {"exact_match":"Dragonn","query":"Dragonn","query_start":"Dragonn%","query_contains":"%Dragonn%","id_query":"Dragonn"}
+[2025-06-18 17:09:25] Found 0 results
+[2025-06-18 17:09:25] Sending response with 0 results
+[2025-06-18 17:09:27] New request: {"method":"GET","query":{"q":"Dragon"},"ip":"::1"}
+[2025-06-18 17:09:27] Searching for collections with query: Dragon
+[2025-06-18 17:09:27] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:09:27] Query Parameters: {"exact_match":"Dragon","query":"Dragon","query_start":"Dragon%","query_contains":"%Dragon%","id_query":"Dragon"}
+[2025-06-18 17:09:27] Found 1 results
+[2025-06-18 17:09:27] Sending response with 1 results
+[2025-06-18 17:09:27] New request: {"method":"GET","query":{"q":"Drago"},"ip":"::1"}
+[2025-06-18 17:09:27] Searching for collections with query: Drago
+[2025-06-18 17:09:27] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:09:27] Query Parameters: {"exact_match":"Drago","query":"Drago","query_start":"Drago%","query_contains":"%Drago%","id_query":"Drago"}
+[2025-06-18 17:09:27] Found 1 results
+[2025-06-18 17:09:27] Sending response with 1 results
+[2025-06-18 17:09:39] New request: {"method":"GET","query":{"q":"dr"},"ip":"::1"}
+[2025-06-18 17:09:39] Searching for collections with query: dr
+[2025-06-18 17:09:39] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:09:39] Query Parameters: {"exact_match":"dr","query":"dr","query_start":"dr%","query_contains":"%dr%","id_query":"dr"}
+[2025-06-18 17:09:39] Found 1 results
+[2025-06-18 17:09:39] Sending response with 1 results
+[2025-06-18 17:09:46] New request: {"method":"GET","query":{"q":"po"},"ip":"::1"}
+[2025-06-18 17:09:46] Searching for collections with query: po
+[2025-06-18 17:09:46] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:09:46] Query Parameters: {"exact_match":"po","query":"po","query_start":"po%","query_contains":"%po%","id_query":"po"}
+[2025-06-18 17:09:46] Found 2 results
+[2025-06-18 17:09:46] Sending response with 2 results
+[2025-06-18 17:09:46] New request: {"method":"GET","query":{"q":"pok"},"ip":"::1"}
+[2025-06-18 17:09:46] Searching for collections with query: pok
+[2025-06-18 17:09:46] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:09:46] Query Parameters: {"exact_match":"pok","query":"pok","query_start":"pok%","query_contains":"%pok%","id_query":"pok"}
+[2025-06-18 17:09:46] Found 1 results
+[2025-06-18 17:09:46] Sending response with 1 results
+[2025-06-18 17:10:37] New request: {"method":"GET","query":{"q":"poke"},"ip":"::1"}
+[2025-06-18 17:10:37] Searching for collections with query: poke
+[2025-06-18 17:10:37] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:10:37] Query Parameters: {"exact_match":"poke","query":"poke","query_start":"poke%","query_contains":"%poke%","id_query":"poke"}
+[2025-06-18 17:10:37] Found 1 results
+[2025-06-18 17:10:37] Sending response with 1 results
+[2025-06-18 17:12:09] New request: {"method":"GET","query":{"q":"p"},"ip":"::1"}
+[2025-06-18 17:12:09] Searching for collections with query: p
+[2025-06-18 17:12:09] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:12:09] Query Parameters: {"exact_match":"p","query":"p","query_start":"p%","query_contains":"%p%","id_query":"p"}
+[2025-06-18 17:12:09] Found 6 results
+[2025-06-18 17:12:09] Sending response with 6 results
+[2025-06-18 17:12:09] New request: {"method":"GET","query":{"q":"pO"},"ip":"::1"}
+[2025-06-18 17:12:09] Searching for collections with query: pO
+[2025-06-18 17:12:09] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:12:09] Query Parameters: {"exact_match":"pO","query":"pO","query_start":"pO%","query_contains":"%pO%","id_query":"pO"}
+[2025-06-18 17:12:09] Found 2 results
+[2025-06-18 17:12:09] Sending response with 2 results
+[2025-06-18 17:12:10] New request: {"method":"GET","query":{"q":"pOKE"},"ip":"::1"}
+[2025-06-18 17:12:10] Searching for collections with query: pOKE
+[2025-06-18 17:12:10] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:12:10] Query Parameters: {"exact_match":"pOKE","query":"pOKE","query_start":"pOKE%","query_contains":"%pOKE%","id_query":"pOKE"}
+[2025-06-18 17:12:10] Found 1 results
+[2025-06-18 17:12:10] Sending response with 1 results
+[2025-06-18 17:12:10] New request: {"method":"GET","query":{"q":"pOKEMO"},"ip":"::1"}
+[2025-06-18 17:12:10] Searching for collections with query: pOKEMO
+[2025-06-18 17:12:10] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:12:10] Query Parameters: {"exact_match":"pOKEMO","query":"pOKEMO","query_start":"pOKEMO%","query_contains":"%pOKEMO%","id_query":"pOKEMO"}
+[2025-06-18 17:12:10] Found 1 results
+[2025-06-18 17:12:10] Sending response with 1 results
+[2025-06-18 17:12:18] New request: {"method":"GET","query":{"q":"P"},"ip":"::1"}
+[2025-06-18 17:12:18] Searching for collections with query: P
+[2025-06-18 17:12:18] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:12:18] Query Parameters: {"exact_match":"P","query":"P","query_start":"P%","query_contains":"%P%","id_query":"P"}
+[2025-06-18 17:12:18] Found 6 results
+[2025-06-18 17:12:18] Sending response with 6 results
+[2025-06-18 17:12:19] New request: {"method":"GET","query":{"q":"Po"},"ip":"::1"}
+[2025-06-18 17:12:19] Searching for collections with query: Po
+[2025-06-18 17:12:19] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:12:19] Query Parameters: {"exact_match":"Po","query":"Po","query_start":"Po%","query_contains":"%Po%","id_query":"Po"}
+[2025-06-18 17:12:19] Found 2 results
+[2025-06-18 17:12:19] Sending response with 2 results
+[2025-06-18 17:13:59] New request: {"method":"GET","query":{"q":"p"},"ip":"::1"}
+[2025-06-18 17:13:59] Searching for collections with query: p
+[2025-06-18 17:13:59] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:13:59] Query Parameters: {"exact_match":"p","query":"p","query_start":"p%","query_contains":"%p%","id_query":"p"}
+[2025-06-18 17:13:59] Found 6 results
+[2025-06-18 17:13:59] Sending response with 6 results
+[2025-06-18 17:14:00] New request: {"method":"GET","query":{"q":"po"},"ip":"::1"}
+[2025-06-18 17:14:00] Searching for collections with query: po
+[2025-06-18 17:14:00] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:14:00] Query Parameters: {"exact_match":"po","query":"po","query_start":"po%","query_contains":"%po%","id_query":"po"}
+[2025-06-18 17:14:00] Found 2 results
+[2025-06-18 17:14:00] Sending response with 2 results
+[2025-06-18 17:14:01] New request: {"method":"GET","query":{"q":"poke"},"ip":"::1"}
+[2025-06-18 17:14:01] Searching for collections with query: poke
+[2025-06-18 17:14:01] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:14:01] Query Parameters: {"exact_match":"poke","query":"poke","query_start":"poke%","query_contains":"%poke%","id_query":"poke"}
+[2025-06-18 17:14:01] Found 1 results
+[2025-06-18 17:14:01] Sending response with 1 results
+[2025-06-18 17:15:55] New request: {"method":"GET","query":{"q":"po"},"ip":"::1"}
+[2025-06-18 17:15:55] Searching for collections with query: po
+[2025-06-18 17:15:55] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:15:55] Query Parameters: {"exact_match":"po","query":"po","query_start":"po%","query_contains":"%po%","id_query":"po"}
+[2025-06-18 17:15:55] Found 2 results
+[2025-06-18 17:15:55] Sending response with 2 results
+[2025-06-18 17:16:07] New request: {"method":"GET","query":{"q":"d"},"ip":"::1"}
+[2025-06-18 17:16:07] Searching for collections with query: d
+[2025-06-18 17:16:07] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:16:07] Query Parameters: {"exact_match":"d","query":"d","query_start":"d%","query_contains":"%d%","id_query":"d"}
+[2025-06-18 17:16:07] Found 9 results
+[2025-06-18 17:16:07] Sending response with 9 results
+[2025-06-18 17:16:09] New request: {"method":"GET","query":{"q":"dr"},"ip":"::1"}
+[2025-06-18 17:16:09] Searching for collections with query: dr
+[2025-06-18 17:16:09] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:16:09] Query Parameters: {"exact_match":"dr","query":"dr","query_start":"dr%","query_contains":"%dr%","id_query":"dr"}
+[2025-06-18 17:16:09] Found 1 results
+[2025-06-18 17:16:09] Sending response with 1 results
+[2025-06-18 17:16:10] New request: {"method":"GET","query":{"q":"dra"},"ip":"::1"}
+[2025-06-18 17:16:10] Searching for collections with query: dra
+[2025-06-18 17:16:10] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:16:10] Query Parameters: {"exact_match":"dra","query":"dra","query_start":"dra%","query_contains":"%dra%","id_query":"dra"}
+[2025-06-18 17:16:10] Found 1 results
+[2025-06-18 17:16:10] Sending response with 1 results
+[2025-06-18 17:16:12] New request: {"method":"GET","query":{"q":"d"},"ip":"::1"}
+[2025-06-18 17:16:12] Searching for collections with query: d
+[2025-06-18 17:16:12] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:16:12] Query Parameters: {"exact_match":"d","query":"d","query_start":"d%","query_contains":"%d%","id_query":"d"}
+[2025-06-18 17:16:12] Found 9 results
+[2025-06-18 17:16:12] Sending response with 9 results
+[2025-06-18 17:16:14] New request: {"method":"GET","query":{"q":"dra"},"ip":"::1"}
+[2025-06-18 17:16:14] Searching for collections with query: dra
+[2025-06-18 17:16:14] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:16:14] Query Parameters: {"exact_match":"dra","query":"dra","query_start":"dra%","query_contains":"%dra%","id_query":"dra"}
+[2025-06-18 17:16:14] Found 1 results
+[2025-06-18 17:16:14] Sending response with 1 results
+[2025-06-18 17:16:17] New request: {"method":"GET","query":{"q":"dr"},"ip":"::1"}
+[2025-06-18 17:16:17] Searching for collections with query: dr
+[2025-06-18 17:16:17] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:16:17] Query Parameters: {"exact_match":"dr","query":"dr","query_start":"dr%","query_contains":"%dr%","id_query":"dr"}
+[2025-06-18 17:16:17] Found 1 results
+[2025-06-18 17:16:17] Sending response with 1 results
+[2025-06-18 17:16:19] New request: {"method":"GET","query":{"q":"po"},"ip":"::1"}
+[2025-06-18 17:16:19] Searching for collections with query: po
+[2025-06-18 17:16:19] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:16:19] Query Parameters: {"exact_match":"po","query":"po","query_start":"po%","query_contains":"%po%","id_query":"po"}
+[2025-06-18 17:16:19] Found 2 results
+[2025-06-18 17:16:19] Sending response with 2 results
+[2025-06-18 17:16:22] New request: {"method":"GET","query":{"q":"M"},"ip":"::1"}
+[2025-06-18 17:16:23] Searching for collections with query: M
+[2025-06-18 17:16:23] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:16:23] Query Parameters: {"exact_match":"M","query":"M","query_start":"M%","query_contains":"%M%","id_query":"M"}
+[2025-06-18 17:16:23] Found 3 results
+[2025-06-18 17:16:23] Sending response with 3 results
+[2025-06-18 17:16:23] New request: {"method":"GET","query":{"q":"Mo"},"ip":"::1"}
+[2025-06-18 17:16:23] Searching for collections with query: Mo
+[2025-06-18 17:16:23] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:16:23] Query Parameters: {"exact_match":"Mo","query":"Mo","query_start":"Mo%","query_contains":"%Mo%","id_query":"Mo"}
+[2025-06-18 17:16:23] Found 1 results
+[2025-06-18 17:16:23] Sending response with 1 results
+[2025-06-18 17:16:23] New request: {"method":"GET","query":{"q":"Mon"},"ip":"::1"}
+[2025-06-18 17:16:24] Searching for collections with query: Mon
+[2025-06-18 17:16:24] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:16:24] Query Parameters: {"exact_match":"Mon","query":"Mon","query_start":"Mon%","query_contains":"%Mon%","id_query":"Mon"}
+[2025-06-18 17:16:24] Found 1 results
+[2025-06-18 17:16:24] Sending response with 1 results
+[2025-06-18 17:16:25] New request: {"method":"GET","query":{"q":"M"},"ip":"::1"}
+[2025-06-18 17:16:25] Searching for collections with query: M
+[2025-06-18 17:16:25] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:16:25] Query Parameters: {"exact_match":"M","query":"M","query_start":"M%","query_contains":"%M%","id_query":"M"}
+[2025-06-18 17:16:25] Found 3 results
+[2025-06-18 17:16:25] Sending response with 3 results
+[2025-06-18 17:16:27] New request: {"method":"GET","query":{"q":"Mns"},"ip":"::1"}
+[2025-06-18 17:16:27] Searching for collections with query: Mns
+[2025-06-18 17:16:27] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:16:27] Query Parameters: {"exact_match":"Mns","query":"Mns","query_start":"Mns%","query_contains":"%Mns%","id_query":"Mns"}
+[2025-06-18 17:16:27] Found 0 results
+[2025-06-18 17:16:27] Sending response with 0 results
+[2025-06-18 17:16:29] New request: {"method":"GET","query":{"q":"sadk"},"ip":"::1"}
+[2025-06-18 17:16:29] Searching for collections with query: sadk
+[2025-06-18 17:16:29] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:16:29] Query Parameters: {"exact_match":"sadk","query":"sadk","query_start":"sadk%","query_contains":"%sadk%","id_query":"sadk"}
+[2025-06-18 17:16:29] Found 0 results
+[2025-06-18 17:16:29] Sending response with 0 results
+[2025-06-18 17:16:30] New request: {"method":"GET","query":{"q":"sad"},"ip":"::1"}
+[2025-06-18 17:16:30] Searching for collections with query: sad
+[2025-06-18 17:16:30] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:16:30] Query Parameters: {"exact_match":"sad","query":"sad","query_start":"sad%","query_contains":"%sad%","id_query":"sad"}
+[2025-06-18 17:16:30] Found 0 results
+[2025-06-18 17:16:30] Sending response with 0 results
+[2025-06-18 17:16:30] New request: {"method":"GET","query":{"q":"sa"},"ip":"::1"}
+[2025-06-18 17:16:30] Searching for collections with query: sa
+[2025-06-18 17:16:30] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:16:30] Query Parameters: {"exact_match":"sa","query":"sa","query_start":"sa%","query_contains":"%sa%","id_query":"sa"}
+[2025-06-18 17:16:30] Found 1 results
+[2025-06-18 17:16:30] Sending response with 1 results
+[2025-06-18 17:16:32] New request: {"method":"GET","query":{"q":"s"},"ip":"::1"}
+[2025-06-18 17:16:32] Searching for collections with query: s
+[2025-06-18 17:16:32] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:16:32] Query Parameters: {"exact_match":"s","query":"s","query_start":"s%","query_contains":"%s%","id_query":"s"}
+[2025-06-18 17:16:32] Found 9 results
+[2025-06-18 17:16:32] Sending response with 9 results
+[2025-06-18 17:16:34] New request: {"method":"GET","query":{"q":"po"},"ip":"::1"}
+[2025-06-18 17:16:34] Searching for collections with query: po
+[2025-06-18 17:16:34] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:16:34] Query Parameters: {"exact_match":"po","query":"po","query_start":"po%","query_contains":"%po%","id_query":"po"}
+[2025-06-18 17:16:34] Found 2 results
+[2025-06-18 17:16:34] Sending response with 2 results
+[2025-06-18 17:16:37] New request: {"method":"GET","query":{"q":"poke"},"ip":"::1"}
+[2025-06-18 17:16:37] Searching for collections with query: poke
+[2025-06-18 17:16:37] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:16:37] Query Parameters: {"exact_match":"poke","query":"poke","query_start":"poke%","query_contains":"%poke%","id_query":"poke"}
+[2025-06-18 17:16:37] Found 1 results
+[2025-06-18 17:16:37] Sending response with 1 results
+[2025-06-18 17:16:40] New request: {"method":"GET","query":{"q":"W"},"ip":"::1"}
+[2025-06-18 17:16:40] Searching for collections with query: W
+[2025-06-18 17:16:40] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:16:40] Query Parameters: {"exact_match":"W","query":"W","query_start":"W%","query_contains":"%W%","id_query":"W"}
+[2025-06-18 17:16:40] Found 7 results
+[2025-06-18 17:16:40] Sending response with 7 results
+[2025-06-18 17:16:41] New request: {"method":"GET","query":{"q":"Wo"},"ip":"::1"}
+[2025-06-18 17:16:41] Searching for collections with query: Wo
+[2025-06-18 17:16:41] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:16:41] Query Parameters: {"exact_match":"Wo","query":"Wo","query_start":"Wo%","query_contains":"%Wo%","id_query":"Wo"}
+[2025-06-18 17:16:41] Found 6 results
+[2025-06-18 17:16:41] Sending response with 6 results
+[2025-06-18 17:20:22] New request: {"method":"GET","query":{"q":"W"},"ip":"::1"}
+[2025-06-18 17:20:22] Searching for collections with query: W
+[2025-06-18 17:20:22] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:20:22] Query Parameters: {"exact_match":"W","query":"W","query_start":"W%","query_contains":"%W%","id_query":"W"}
+[2025-06-18 17:20:22] Found 7 results
+[2025-06-18 17:20:22] Sending response with 7 results
+[2025-06-18 17:20:22] New request: {"method":"GET","query":{"q":"Wo"},"ip":"::1"}
+[2025-06-18 17:20:22] Searching for collections with query: Wo
+[2025-06-18 17:20:22] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:20:22] Query Parameters: {"exact_match":"Wo","query":"Wo","query_start":"Wo%","query_contains":"%Wo%","id_query":"Wo"}
+[2025-06-18 17:20:22] Found 6 results
+[2025-06-18 17:20:22] Sending response with 6 results
+[2025-06-18 17:20:23] New request: {"method":"GET","query":{"q":"Wor"},"ip":"::1"}
+[2025-06-18 17:20:23] Searching for collections with query: Wor
+[2025-06-18 17:20:23] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:20:23] Query Parameters: {"exact_match":"Wor","query":"Wor","query_start":"Wor%","query_contains":"%Wor%","id_query":"Wor"}
+[2025-06-18 17:20:23] Found 6 results
+[2025-06-18 17:20:23] Sending response with 6 results
+[2025-06-18 17:21:29] New request: {"method":"GET","query":{"q":"s"},"ip":"::1"}
+[2025-06-18 17:21:29] Searching for collections with query: s
+[2025-06-18 17:21:29] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:21:29] Query Parameters: {"exact_match":"s","query":"s","query_start":"s%","query_contains":"%s%","id_query":"s"}
+[2025-06-18 17:21:29] Found 9 results
+[2025-06-18 17:21:29] Sending response with 9 results
+[2025-06-18 17:21:30] New request: {"method":"GET","query":{"q":"sw"},"ip":"::1"}
+[2025-06-18 17:21:30] Searching for collections with query: sw
+[2025-06-18 17:21:30] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:21:30] Query Parameters: {"exact_match":"sw","query":"sw","query_start":"sw%","query_contains":"%sw%","id_query":"sw"}
+[2025-06-18 17:21:30] Found 0 results
+[2025-06-18 17:21:30] Sending response with 0 results
+[2025-06-18 17:21:32] New request: {"method":"GET","query":{"q":"pixe"},"ip":"::1"}
+[2025-06-18 17:21:32] Searching for collections with query: pixe
+[2025-06-18 17:21:32] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:21:32] Query Parameters: {"exact_match":"pixe","query":"pixe","query_start":"pixe%","query_contains":"%pixe%","id_query":"pixe"}
+[2025-06-18 17:21:32] Found 1 results
+[2025-06-18 17:21:32] Sending response with 1 results
+[2025-06-18 17:21:42] New request: {"method":"GET","query":{"q":"1"},"ip":"::1"}
+[2025-06-18 17:21:42] Error in ID search: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'login.collections' doesn't exist
+[2025-06-18 17:21:42] Searching for collections with query: 1
+[2025-06-18 17:21:42] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:21:42] Query Parameters: {"exact_match":"1","query":"1","query_start":"1%","query_contains":"%1%","id_query":"1"}
+[2025-06-18 17:21:42] Found 0 results
+[2025-06-18 17:21:42] Sending response with 0 results
+[2025-06-18 17:21:44] New request: {"method":"GET","query":{"q":"11"},"ip":"::1"}
+[2025-06-18 17:21:44] Error in ID search: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'login.collections' doesn't exist
+[2025-06-18 17:21:44] Searching for collections with query: 11
+[2025-06-18 17:21:44] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:21:44] Query Parameters: {"exact_match":"11","query":"11","query_start":"11%","query_contains":"%11%","id_query":"11"}
+[2025-06-18 17:21:44] Found 1 results
+[2025-06-18 17:21:44] Sending response with 1 results
+[2025-06-18 17:21:46] New request: {"method":"GET","query":{"q":"12"},"ip":"::1"}
+[2025-06-18 17:21:46] Error in ID search: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'login.collections' doesn't exist
+[2025-06-18 17:21:46] Searching for collections with query: 12
+[2025-06-18 17:21:46] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:21:46] Query Parameters: {"exact_match":"12","query":"12","query_start":"12%","query_contains":"%12%","id_query":"12"}
+[2025-06-18 17:21:46] Found 1 results
+[2025-06-18 17:21:46] Sending response with 1 results
+[2025-06-18 17:21:48] New request: {"method":"GET","query":{"q":"8"},"ip":"::1"}
+[2025-06-18 17:21:48] Error in ID search: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'login.collections' doesn't exist
+[2025-06-18 17:21:48] Searching for collections with query: 8
+[2025-06-18 17:21:48] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:21:48] Query Parameters: {"exact_match":"8","query":"8","query_start":"8%","query_contains":"%8%","id_query":"8"}
+[2025-06-18 17:21:48] Found 1 results
+[2025-06-18 17:21:48] Sending response with 1 results
+[2025-06-18 17:22:01] New request: {"method":"GET","query":{"q":"8"},"ip":"::1"}
+[2025-06-18 17:22:01] Error in ID search: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'login.collections' doesn't exist
+[2025-06-18 17:22:01] Searching for collections with query: 8
+[2025-06-18 17:22:01] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:22:01] Query Parameters: {"exact_match":"8","query":"8","query_start":"8%","query_contains":"%8%","id_query":"8"}
+[2025-06-18 17:22:01] Found 1 results
+[2025-06-18 17:22:01] Sending response with 1 results
+[2025-06-18 17:27:39] New request: {"method":"GET","query":{"q":"1"},"ip":"::1"}
+[2025-06-18 17:27:39] Error in ID search: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'login.collections' doesn't exist
+[2025-06-18 17:27:39] Searching for collections with query: 1
+[2025-06-18 17:27:39] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:27:39] Query Parameters: {"exact_match":"1","query":"1","query_start":"1%","query_contains":"%1%","id_query":"1"}
+[2025-06-18 17:27:39] Found 0 results
+[2025-06-18 17:27:39] Sending response with 0 results
+[2025-06-18 17:27:39] New request: {"method":"GET","query":{"q":"10"},"ip":"::1"}
+[2025-06-18 17:27:39] Error in ID search: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'login.collections' doesn't exist
+[2025-06-18 17:27:39] Searching for collections with query: 10
+[2025-06-18 17:27:39] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:27:39] Query Parameters: {"exact_match":"10","query":"10","query_start":"10%","query_contains":"%10%","id_query":"10"}
+[2025-06-18 17:27:39] Found 1 results
+[2025-06-18 17:27:39] Sending response with 1 results
+[2025-06-18 17:54:39] New request: {"method":"GET","query":{"q":"po","_":"1750262079600"},"ip":"::1"}
+[2025-06-18 17:54:39] Searching for collections with query: po
+[2025-06-18 17:54:39] SQL Query: SELECT 
+                    collection_id as id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:54:39] Query Parameters: {"exact_match":"po","query":"po","query_start":"po%","query_contains":"%po%","id_query":"po"}
+[2025-06-18 17:54:39] Found 2 results
+[2025-06-18 17:54:39] Sending response with 2 results
+[2025-06-18 17:54:39] New request: {"method":"GET","query":{"q":"pok","_":"1750262079950"},"ip":"::1"}
+[2025-06-18 17:54:39] Searching for collections with query: pok
+[2025-06-18 17:54:39] SQL Query: SELECT 
+                    collection_id as id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:54:39] Query Parameters: {"exact_match":"pok","query":"pok","query_start":"pok%","query_contains":"%pok%","id_query":"pok"}
+[2025-06-18 17:54:39] Found 1 results
+[2025-06-18 17:54:39] Sending response with 1 results
+[2025-06-18 17:54:40] New request: {"method":"GET","query":{"q":"poke","_":"1750262080315"},"ip":"::1"}
+[2025-06-18 17:54:40] Searching for collections with query: poke
+[2025-06-18 17:54:40] SQL Query: SELECT 
+                    collection_id as id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 17:54:40] Query Parameters: {"exact_match":"poke","query":"poke","query_start":"poke%","query_contains":"%poke%","id_query":"poke"}
+[2025-06-18 17:54:40] Found 1 results
+[2025-06-18 17:54:40] Sending response with 1 results
+[2025-06-18 18:01:38] New request: {"method":"GET","query":{"q":"f"},"ip":"::1"}
+[2025-06-18 18:01:38] Searching for collections with query: f
+[2025-06-18 18:01:38] SQL Query: SELECT 
+                    collection_id as id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 18:01:38] Query Parameters: {"exact_match":"f","query":"f","query_start":"f%","query_contains":"%f%","id_query":"f"}
+[2025-06-18 18:01:38] Found 1 results
+[2025-06-18 18:01:38] Sending response with 1 results
+[2025-06-18 18:01:40] New request: {"method":"GET","query":{"q":"po"},"ip":"::1"}
+[2025-06-18 18:01:41] Searching for collections with query: po
+[2025-06-18 18:01:41] SQL Query: SELECT 
+                    collection_id as id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 18:01:41] Query Parameters: {"exact_match":"po","query":"po","query_start":"po%","query_contains":"%po%","id_query":"po"}
+[2025-06-18 18:01:41] Found 2 results
+[2025-06-18 18:01:41] Sending response with 2 results
+[2025-06-18 18:02:12] New request: {"method":"GET","query":{"q":"po"},"ip":"::1"}
+[2025-06-18 18:02:12] Searching for collections with query: po
+[2025-06-18 18:02:12] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 18:02:12] Query Parameters: {"exact_match":"po","query":"po","query_start":"po%","query_contains":"%po%","id_query":"po"}
+[2025-06-18 18:02:12] Found 2 results
+[2025-06-18 18:02:12] Sending response with 2 results
+[2025-06-18 18:12:05] New request: {"method":"GET","query":{"q":"po"},"ip":"::1"}
+[2025-06-18 18:12:05] Searching for collections with query: po
+[2025-06-18 18:12:05] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 18:12:05] Query Parameters: {"exact_match":"po","query":"po","query_start":"po%","query_contains":"%po%","id_query":"po"}
+[2025-06-18 18:12:05] Found 2 results
+[2025-06-18 18:12:05] Sending response with 2 results
+[2025-06-18 18:12:47] New request: {"method":"GET","query":{"q":"p"},"ip":"::1"}
+[2025-06-18 18:12:47] Searching for collections with query: p
+[2025-06-18 18:12:47] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 18:12:47] Query Parameters: {"exact_match":"p","query":"p","query_start":"p%","query_contains":"%p%","id_query":"p"}
+[2025-06-18 18:12:47] Found 6 results
+[2025-06-18 18:12:47] Sending response with 6 results
+[2025-06-18 18:12:48] New request: {"method":"GET","query":{"q":"w"},"ip":"::1"}
+[2025-06-18 18:12:48] Searching for collections with query: w
+[2025-06-18 18:12:48] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 18:12:48] Query Parameters: {"exact_match":"w","query":"w","query_start":"w%","query_contains":"%w%","id_query":"w"}
+[2025-06-18 18:12:48] Found 7 results
+[2025-06-18 18:12:48] Sending response with 7 results
+[2025-06-18 18:12:48] New request: {"method":"GET","query":{"q":"wor"},"ip":"::1"}
+[2025-06-18 18:12:48] Searching for collections with query: wor
+[2025-06-18 18:12:48] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 18:12:48] Query Parameters: {"exact_match":"wor","query":"wor","query_start":"wor%","query_contains":"%wor%","id_query":"wor"}
+[2025-06-18 18:12:48] Found 6 results
+[2025-06-18 18:12:48] Sending response with 6 results
+[2025-06-18 18:15:07] New request: {"method":"GET","query":{"q":"po"},"ip":"::1"}
+[2025-06-18 18:15:07] Searching for collections with query: po
+[2025-06-18 18:15:07] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 18:15:07] Query Parameters: {"exact_match":"po","query":"po","query_start":"po%","query_contains":"%po%","id_query":"po"}
+[2025-06-18 18:15:07] Found 2 results
+[2025-06-18 18:15:07] Sending response with 2 results
+[2025-06-18 18:18:38] New request: {"method":"GET","query":{"q":"poe"},"ip":"::1"}
+[2025-06-18 18:18:38] Searching for collections with query: poe
+[2025-06-18 18:18:38] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 18:18:38] Query Parameters: {"exact_match":"poe","query":"poe","query_start":"poe%","query_contains":"%poe%","id_query":"poe"}
+[2025-06-18 18:18:38] Found 0 results
+[2025-06-18 18:18:38] Sending response with 0 results
+[2025-06-18 18:18:40] New request: {"method":"GET","query":{"q":"po"},"ip":"::1"}
+[2025-06-18 18:18:40] Searching for collections with query: po
+[2025-06-18 18:18:40] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 18:18:40] Query Parameters: {"exact_match":"po","query":"po","query_start":"po%","query_contains":"%po%","id_query":"po"}
+[2025-06-18 18:18:40] Found 2 results
+[2025-06-18 18:18:40] Sending response with 2 results
+[2025-06-18 18:18:47] New request: {"method":"GET","query":{"q":"poe"},"ip":"::1"}
+[2025-06-18 18:18:47] Searching for collections with query: poe
+[2025-06-18 18:18:47] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 18:18:47] Query Parameters: {"exact_match":"poe","query":"poe","query_start":"poe%","query_contains":"%poe%","id_query":"poe"}
+[2025-06-18 18:18:47] Found 0 results
+[2025-06-18 18:18:47] Sending response with 0 results
+[2025-06-18 18:18:48] New request: {"method":"GET","query":{"q":"po"},"ip":"::1"}
+[2025-06-18 18:18:48] Searching for collections with query: po
+[2025-06-18 18:18:48] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 18:18:48] Query Parameters: {"exact_match":"po","query":"po","query_start":"po%","query_contains":"%po%","id_query":"po"}
+[2025-06-18 18:18:48] Found 2 results
+[2025-06-18 18:18:48] Sending response with 2 results
+[2025-06-18 18:18:48] New request: {"method":"GET","query":{"q":"poke"},"ip":"::1"}
+[2025-06-18 18:18:48] Searching for collections with query: poke
+[2025-06-18 18:18:48] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 18:18:48] Query Parameters: {"exact_match":"poke","query":"poke","query_start":"poke%","query_contains":"%poke%","id_query":"poke"}
+[2025-06-18 18:18:48] Found 1 results
+[2025-06-18 18:18:48] Sending response with 1 results
+[2025-06-18 18:18:54] New request: {"method":"GET","query":{"q":"wor"},"ip":"::1"}
+[2025-06-18 18:18:54] Searching for collections with query: wor
+[2025-06-18 18:18:54] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 18:18:54] Query Parameters: {"exact_match":"wor","query":"wor","query_start":"wor%","query_contains":"%wor%","id_query":"wor"}
+[2025-06-18 18:18:54] Found 6 results
+[2025-06-18 18:18:54] Sending response with 6 results
+[2025-06-18 18:23:22] New request: {"method":"GET","query":{"q":"po"},"ip":"::1"}
+[2025-06-18 18:23:22] Searching for collections with query: po
+[2025-06-18 18:23:22] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 18:23:22] Query Parameters: {"exact_match":"po","query":"po","query_start":"po%","query_contains":"%po%","id_query":"po"}
+[2025-06-18 18:23:22] Found 2 results
+[2025-06-18 18:23:22] Sending response with 2 results
+[2025-06-18 18:23:28] New request: {"method":"GET","query":{"q":"k"},"ip":"::1"}
+[2025-06-18 18:23:28] Searching for collections with query: k
+[2025-06-18 18:23:28] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 18:23:28] Query Parameters: {"exact_match":"k","query":"k","query_start":"k%","query_contains":"%k%","id_query":"k"}
+[2025-06-18 18:23:28] Found 3 results
+[2025-06-18 18:23:28] Sending response with 3 results
+[2025-06-18 18:33:05] New request: {"method":"GET","query":{"q":"Po"},"ip":"::1"}
+[2025-06-18 18:33:05] Searching for collections with query: Po
+[2025-06-18 18:33:05] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 18:33:05] Query Parameters: {"exact_match":"Po","query":"Po","query_start":"Po%","query_contains":"%Po%","id_query":"Po"}
+[2025-06-18 18:33:05] Found 2 results
+[2025-06-18 18:33:05] Sending response with 2 results
+[2025-06-18 18:33:31] New request: {"method":"GET","query":{"q":"p"},"ip":"::1"}
+[2025-06-18 18:33:31] Searching for collections with query: p
+[2025-06-18 18:33:31] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 18:33:31] Query Parameters: {"exact_match":"p","query":"p","query_start":"p%","query_contains":"%p%","id_query":"p"}
+[2025-06-18 18:33:31] Found 6 results
+[2025-06-18 18:33:31] Sending response with 6 results
+[2025-06-18 18:34:58] New request: {"method":"GET","query":{"q":"po"},"ip":"::1"}
+[2025-06-18 18:34:58] Searching for collections with query: po
+[2025-06-18 18:34:58] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 18:34:58] Query Parameters: {"exact_match":"po","query":"po","query_start":"po%","query_contains":"%po%","id_query":"po"}
+[2025-06-18 18:34:58] Found 2 results
+[2025-06-18 18:34:58] Sending response with 2 results
+[2025-06-18 18:35:20] New request: {"method":"GET","query":{"q":"po"},"ip":"::1"}
+[2025-06-18 18:35:20] Searching for collections with query: po
+[2025-06-18 18:35:20] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 18:35:20] Query Parameters: {"exact_match":"po","query":"po","query_start":"po%","query_contains":"%po%","id_query":"po"}
+[2025-06-18 18:35:20] Found 2 results
+[2025-06-18 18:35:20] Sending response with 2 results
+[2025-06-18 18:38:06] New request: {"method":"GET","query":{"q":"po"},"ip":"::1"}
+[2025-06-18 18:38:06] Searching for collections with query: po
+[2025-06-18 18:38:06] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 18:38:06] Query Parameters: {"exact_match":"po","query":"po","query_start":"po%","query_contains":"%po%","id_query":"po"}
+[2025-06-18 18:38:06] Found 2 results
+[2025-06-18 18:38:06] Sending response with 2 results
+[2025-06-18 18:38:10] New request: {"method":"GET","query":{"q":"wo"},"ip":"::1"}
+[2025-06-18 18:38:10] Searching for collections with query: wo
+[2025-06-18 18:38:10] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 18:38:10] Query Parameters: {"exact_match":"wo","query":"wo","query_start":"wo%","query_contains":"%wo%","id_query":"wo"}
+[2025-06-18 18:38:10] Found 6 results
+[2025-06-18 18:38:10] Sending response with 6 results
+[2025-06-18 18:38:10] New request: {"method":"GET","query":{"q":"wor"},"ip":"::1"}
+[2025-06-18 18:38:10] Searching for collections with query: wor
+[2025-06-18 18:38:10] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 18:38:10] Query Parameters: {"exact_match":"wor","query":"wor","query_start":"wor%","query_contains":"%wor%","id_query":"wor"}
+[2025-06-18 18:38:10] Found 6 results
+[2025-06-18 18:38:10] Sending response with 6 results
+[2025-06-18 18:38:20] New request: {"method":"GET","query":{"q":"wor"},"ip":"::1"}
+[2025-06-18 18:38:20] Searching for collections with query: wor
+[2025-06-18 18:38:20] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 18:38:20] Query Parameters: {"exact_match":"wor","query":"wor","query_start":"wor%","query_contains":"%wor%","id_query":"wor"}
+[2025-06-18 18:38:20] Found 6 results
+[2025-06-18 18:38:20] Sending response with 6 results
+[2025-06-18 18:38:21] New request: {"method":"GET","query":{"q":"world"},"ip":"::1"}
+[2025-06-18 18:38:21] Searching for collections with query: world
+[2025-06-18 18:38:21] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 18:38:21] Query Parameters: {"exact_match":"world","query":"world","query_start":"world%","query_contains":"%world%","id_query":"world"}
+[2025-06-18 18:38:21] Found 6 results
+[2025-06-18 18:38:21] Sending response with 6 results
+[2025-06-18 18:38:26] New request: {"method":"GET","query":{"q":"po"},"ip":"::1"}
+[2025-06-18 18:38:26] Searching for collections with query: po
+[2025-06-18 18:38:26] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 18:38:26] Query Parameters: {"exact_match":"po","query":"po","query_start":"po%","query_contains":"%po%","id_query":"po"}
+[2025-06-18 18:38:26] Found 2 results
+[2025-06-18 18:38:26] Sending response with 2 results
+[2025-06-18 18:38:27] New request: {"method":"GET","query":{"q":"por"},"ip":"::1"}
+[2025-06-18 18:38:27] Searching for collections with query: por
+[2025-06-18 18:38:27] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 18:38:27] Query Parameters: {"exact_match":"por","query":"por","query_start":"por%","query_contains":"%por%","id_query":"por"}
+[2025-06-18 18:38:27] Found 1 results
+[2025-06-18 18:38:27] Sending response with 1 results
+[2025-06-18 18:38:29] New request: {"method":"GET","query":{"q":"w"},"ip":"::1"}
+[2025-06-18 18:38:29] Searching for collections with query: w
+[2025-06-18 18:38:29] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 18:38:29] Query Parameters: {"exact_match":"w","query":"w","query_start":"w%","query_contains":"%w%","id_query":"w"}
+[2025-06-18 18:38:29] Found 7 results
+[2025-06-18 18:38:29] Sending response with 7 results
+[2025-06-18 18:38:30] New request: {"method":"GET","query":{"q":"wor"},"ip":"::1"}
+[2025-06-18 18:38:30] Searching for collections with query: wor
+[2025-06-18 18:38:30] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 18:38:30] Query Parameters: {"exact_match":"wor","query":"wor","query_start":"wor%","query_contains":"%wor%","id_query":"wor"}
+[2025-06-18 18:38:30] Found 6 results
+[2025-06-18 18:38:30] Sending response with 6 results
+[2025-06-18 18:38:30] New request: {"method":"GET","query":{"q":"worl"},"ip":"::1"}
+[2025-06-18 18:38:31] Searching for collections with query: worl
+[2025-06-18 18:38:31] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 18:38:31] Query Parameters: {"exact_match":"worl","query":"worl","query_start":"worl%","query_contains":"%worl%","id_query":"worl"}
+[2025-06-18 18:38:31] Found 6 results
+[2025-06-18 18:38:31] Sending response with 6 results
+[2025-06-18 18:38:59] New request: {"method":"GET","query":{"q":"1"},"ip":"::1"}
+[2025-06-18 18:38:59] Error in ID search: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'login.collections' doesn't exist
+[2025-06-18 18:38:59] Searching for collections with query: 1
+[2025-06-18 18:38:59] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 18:38:59] Query Parameters: {"exact_match":"1","query":"1","query_start":"1%","query_contains":"%1%","id_query":"1"}
+[2025-06-18 18:38:59] Found 0 results
+[2025-06-18 18:38:59] Sending response with 0 results
+[2025-06-18 18:39:01] New request: {"method":"GET","query":{"q":"1"},"ip":"::1"}
+[2025-06-18 18:39:01] Error in ID search: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'login.collections' doesn't exist
+[2025-06-18 18:39:01] Searching for collections with query: 1
+[2025-06-18 18:39:01] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 18:39:01] Query Parameters: {"exact_match":"1","query":"1","query_start":"1%","query_contains":"%1%","id_query":"1"}
+[2025-06-18 18:39:01] Found 0 results
+[2025-06-18 18:39:01] Sending response with 0 results
+[2025-06-18 18:39:02] New request: {"method":"GET","query":{"q":"10"},"ip":"::1"}
+[2025-06-18 18:39:02] Error in ID search: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'login.collections' doesn't exist
+[2025-06-18 18:39:02] Searching for collections with query: 10
+[2025-06-18 18:39:02] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 18:39:02] Query Parameters: {"exact_match":"10","query":"10","query_start":"10%","query_contains":"%10%","id_query":"10"}
+[2025-06-18 18:39:02] Found 1 results
+[2025-06-18 18:39:02] Sending response with 1 results
+[2025-06-18 18:41:43] New request: {"method":"GET","query":{"q":"po"},"ip":"::1"}
+[2025-06-18 18:41:43] Searching for collections with query: po
+[2025-06-18 18:41:43] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 18:41:43] Query Parameters: {"exact_match":"po","query":"po","query_start":"po%","query_contains":"%po%","id_query":"po"}
+[2025-06-18 18:41:43] Found 2 results
+[2025-06-18 18:41:43] Sending response with 2 results
+[2025-06-18 18:41:49] New request: {"method":"GET","query":{"q":"w"},"ip":"::1"}
+[2025-06-18 18:41:49] Searching for collections with query: w
+[2025-06-18 18:41:49] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 18:41:49] Query Parameters: {"exact_match":"w","query":"w","query_start":"w%","query_contains":"%w%","id_query":"w"}
+[2025-06-18 18:41:49] Found 7 results
+[2025-06-18 18:41:49] Sending response with 7 results
+[2025-06-18 18:42:00] New request: {"method":"GET","query":{"q":"wor"},"ip":"::1"}
+[2025-06-18 18:42:00] Searching for collections with query: wor
+[2025-06-18 18:42:00] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 18:42:00] Query Parameters: {"exact_match":"wor","query":"wor","query_start":"wor%","query_contains":"%wor%","id_query":"wor"}
+[2025-06-18 18:42:00] Found 6 results
+[2025-06-18 18:42:00] Sending response with 6 results
+[2025-06-18 18:42:37] New request: {"method":"GET","query":{"q":"po"},"ip":"::1"}
+[2025-06-18 18:42:37] Searching for collections with query: po
+[2025-06-18 18:42:37] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 18:42:37] Query Parameters: {"exact_match":"po","query":"po","query_start":"po%","query_contains":"%po%","id_query":"po"}
+[2025-06-18 18:42:37] Found 2 results
+[2025-06-18 18:42:37] Sending response with 2 results
+[2025-06-18 18:42:45] New request: {"method":"GET","query":{"q":"pi"},"ip":"::1"}
+[2025-06-18 18:42:45] Searching for collections with query: pi
+[2025-06-18 18:42:45] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-18 18:42:45] Query Parameters: {"exact_match":"pi","query":"pi","query_start":"pi%","query_contains":"%pi%","id_query":"pi"}
+[2025-06-18 18:42:45] Found 2 results
+[2025-06-18 18:42:45] Sending response with 2 results
+[2025-06-19 02:46:36] New request: {"method":"GET","query":{"q":"pro"},"ip":"::1"}
+[2025-06-19 02:46:36] Searching for collections with query: pro
+[2025-06-19 02:46:36] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-19 02:46:36] Query Parameters: {"exact_match":"pro","query":"pro","query_start":"pro%","query_contains":"%pro%","id_query":"pro"}
+[2025-06-19 02:46:36] Found 0 results
+[2025-06-19 02:46:36] Sending response with 0 results
+[2025-06-19 02:46:37] New request: {"method":"GET","query":{"q":"proce"},"ip":"::1"}
+[2025-06-19 02:46:37] Searching for collections with query: proce
+[2025-06-19 02:46:37] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-19 02:46:37] Query Parameters: {"exact_match":"proce","query":"proce","query_start":"proce%","query_contains":"%proce%","id_query":"proce"}
+[2025-06-19 02:46:37] Found 0 results
+[2025-06-19 02:46:37] Sending response with 0 results
+[2025-06-19 02:46:38] New request: {"method":"GET","query":{"q":"procee"},"ip":"::1"}
+[2025-06-19 02:46:38] Searching for collections with query: procee
+[2025-06-19 02:46:38] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-19 02:46:38] Query Parameters: {"exact_match":"procee","query":"procee","query_start":"procee%","query_contains":"%procee%","id_query":"procee"}
+[2025-06-19 02:46:38] Found 0 results
+[2025-06-19 02:46:38] Sending response with 0 results
+[2025-06-19 02:46:40] New request: {"method":"GET","query":{"q":"p"},"ip":"::1"}
+[2025-06-19 02:46:40] Searching for collections with query: p
+[2025-06-19 02:46:40] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-19 02:46:40] Query Parameters: {"exact_match":"p","query":"p","query_start":"p%","query_contains":"%p%","id_query":"p"}
+[2025-06-19 02:46:40] Found 6 results
+[2025-06-19 02:46:40] Sending response with 6 results
+[2025-06-19 02:46:41] New request: {"method":"GET","query":{"q":"pokem"},"ip":"::1"}
+[2025-06-19 02:46:41] Searching for collections with query: pokem
+[2025-06-19 02:46:41] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-19 02:46:41] Query Parameters: {"exact_match":"pokem","query":"pokem","query_start":"pokem%","query_contains":"%pokem%","id_query":"pokem"}
+[2025-06-19 02:46:41] Found 1 results
+[2025-06-19 02:46:41] Sending response with 1 results
+[2025-06-19 02:46:41] New request: {"method":"GET","query":{"q":"pokemi"},"ip":"::1"}
+[2025-06-19 02:46:41] Searching for collections with query: pokemi
+[2025-06-19 02:46:41] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-19 02:46:41] Query Parameters: {"exact_match":"pokemi","query":"pokemi","query_start":"pokemi%","query_contains":"%pokemi%","id_query":"pokemi"}
+[2025-06-19 02:46:41] Found 0 results
+[2025-06-19 02:46:41] Sending response with 0 results
+[2025-06-19 02:46:43] New request: {"method":"GET","query":{"q":"pokem"},"ip":"::1"}
+[2025-06-19 02:46:43] Searching for collections with query: pokem
+[2025-06-19 02:46:43] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-19 02:46:43] Query Parameters: {"exact_match":"pokem","query":"pokem","query_start":"pokem%","query_contains":"%pokem%","id_query":"pokem"}
+[2025-06-19 02:46:43] Found 1 results
+[2025-06-19 02:46:43] Sending response with 1 results
+[2025-06-19 02:46:43] New request: {"method":"GET","query":{"q":"pokemo"},"ip":"::1"}
+[2025-06-19 02:46:43] Searching for collections with query: pokemo
+[2025-06-19 02:46:43] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-19 02:46:43] Query Parameters: {"exact_match":"pokemo","query":"pokemo","query_start":"pokemo%","query_contains":"%pokemo%","id_query":"pokemo"}
+[2025-06-19 02:46:43] Found 1 results
+[2025-06-19 02:46:43] Sending response with 1 results
+[2025-06-19 02:46:43] New request: {"method":"GET","query":{"q":"pokemon"},"ip":"::1"}
+[2025-06-19 02:46:43] Searching for collections with query: pokemon
+[2025-06-19 02:46:43] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-19 02:46:43] Query Parameters: {"exact_match":"pokemon","query":"pokemon","query_start":"pokemon%","query_contains":"%pokemon%","id_query":"pokemon"}
+[2025-06-19 02:46:43] Found 1 results
+[2025-06-19 02:46:43] Sending response with 1 results
+[2025-06-19 04:47:30] New request: {"method":"GET","query":{"q":"W"},"ip":"::1"}
+[2025-06-19 04:47:30] Searching for collections with query: W
+[2025-06-19 04:47:30] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-19 04:47:30] Query Parameters: {"exact_match":"W","query":"W","query_start":"W%","query_contains":"%W%","id_query":"W"}
+[2025-06-19 04:47:30] Found 7 results
+[2025-06-19 04:47:30] Sending response with 7 results
+[2025-06-19 04:47:32] New request: {"method":"GET","query":{"q":"P"},"ip":"::1"}
+[2025-06-19 04:47:32] Searching for collections with query: P
+[2025-06-19 04:47:32] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-19 04:47:32] Query Parameters: {"exact_match":"P","query":"P","query_start":"P%","query_contains":"%P%","id_query":"P"}
+[2025-06-19 04:47:32] Found 6 results
+[2025-06-19 04:47:32] Sending response with 6 results
+[2025-06-19 04:47:34] New request: {"method":"GET","query":{"q":"l"},"ip":"::1"}
+[2025-06-19 04:47:34] Searching for collections with query: l
+[2025-06-19 04:47:34] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-19 04:47:34] Query Parameters: {"exact_match":"l","query":"l","query_start":"l%","query_contains":"%l%","id_query":"l"}
+[2025-06-19 04:47:34] Found 9 results
+[2025-06-19 04:47:34] Sending response with 9 results
+[2025-06-19 04:47:36] New request: {"method":"GET","query":{"q":"A"},"ip":"::1"}
+[2025-06-19 04:47:36] Searching for collections with query: A
+[2025-06-19 04:47:36] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-19 04:47:36] Query Parameters: {"exact_match":"A","query":"A","query_start":"A%","query_contains":"%A%","id_query":"A"}
+[2025-06-19 04:47:36] Found 10 results
+[2025-06-19 04:47:36] Sending response with 10 results
+[2025-06-19 04:48:30] New request: {"method":"GET","query":{"q":"All"},"ip":"::1"}
+[2025-06-19 04:48:30] Searching for collections with query: All
+[2025-06-19 04:48:30] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-19 04:48:30] Query Parameters: {"exact_match":"All","query":"All","query_start":"All%","query_contains":"%All%","id_query":"All"}
+[2025-06-19 04:48:30] Found 0 results
+[2025-06-19 04:48:30] Sending response with 0 results
+[2025-06-19 04:48:31] New request: {"method":"GET","query":{"q":"All="},"ip":"::1"}
+[2025-06-19 04:48:31] Searching for collections with query: All=
+[2025-06-19 04:48:31] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-19 04:48:31] Query Parameters: {"exact_match":"All=","query":"All=","query_start":"All=%","query_contains":"%All=%","id_query":"All="}
+[2025-06-19 04:48:31] Found 0 results
+[2025-06-19 04:48:31] Sending response with 0 results
+[2025-06-19 04:48:32] New request: {"method":"GET","query":{"q":"Al"},"ip":"::1"}
+[2025-06-19 04:48:32] Searching for collections with query: Al
+[2025-06-19 04:48:32] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-19 04:48:32] Query Parameters: {"exact_match":"Al","query":"Al","query_start":"Al%","query_contains":"%Al%","id_query":"Al"}
+[2025-06-19 04:48:32] Found 0 results
+[2025-06-19 04:48:32] Sending response with 0 results
+[2025-06-19 04:48:33] New request: {"method":"GET","query":{"q":"A"},"ip":"::1"}
+[2025-06-19 04:48:33] Searching for collections with query: A
+[2025-06-19 04:48:33] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-19 04:48:33] Query Parameters: {"exact_match":"A","query":"A","query_start":"A%","query_contains":"%A%","id_query":"A"}
+[2025-06-19 04:48:33] Found 10 results
+[2025-06-19 04:48:33] Sending response with 10 results
+[2025-06-19 14:04:17] New request: {"method":"GET","query":{"q":"po"},"ip":"::1"}
+[2025-06-19 14:04:17] Searching for collections with query: po
+[2025-06-19 14:04:17] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-19 14:04:17] Query Parameters: {"exact_match":"po","query":"po","query_start":"po%","query_contains":"%po%","id_query":"po"}
+[2025-06-19 14:04:17] Found 2 results
+[2025-06-19 14:04:17] Sending response with 2 results
+[2025-06-19 18:02:01] New request: {"method":"GET","query":{"q":"Po"},"ip":"::1"}
+[2025-06-19 18:02:01] Searching for collections with query: Po
+[2025-06-19 18:02:01] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-19 18:02:01] Query Parameters: {"exact_match":"Po","query":"Po","query_start":"Po%","query_contains":"%Po%","id_query":"Po"}
+[2025-06-19 18:02:01] Found 2 results
+[2025-06-19 18:02:01] Sending response with 2 results
+[2025-06-19 18:02:10] New request: {"method":"GET","query":{"q":"Pok"},"ip":"::1"}
+[2025-06-19 18:02:10] Searching for collections with query: Pok
+[2025-06-19 18:02:10] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-19 18:02:10] Query Parameters: {"exact_match":"Pok","query":"Pok","query_start":"Pok%","query_contains":"%Pok%","id_query":"Pok"}
+[2025-06-19 18:02:10] Found 1 results
+[2025-06-19 18:02:10] Sending response with 1 results
+[2025-06-19 18:02:12] New request: {"method":"GET","query":{"q":"Poke"},"ip":"::1"}
+[2025-06-19 18:02:12] Searching for collections with query: Poke
+[2025-06-19 18:02:12] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-19 18:02:12] Query Parameters: {"exact_match":"Poke","query":"Poke","query_start":"Poke%","query_contains":"%Poke%","id_query":"Poke"}
+[2025-06-19 18:02:12] Found 1 results
+[2025-06-19 18:02:12] Sending response with 1 results
+[2025-06-19 18:02:12] New request: {"method":"GET","query":{"q":"Po"},"ip":"::1"}
+[2025-06-19 18:02:12] Searching for collections with query: Po
+[2025-06-19 18:02:12] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-19 18:02:12] Query Parameters: {"exact_match":"Po","query":"Po","query_start":"Po%","query_contains":"%Po%","id_query":"Po"}
+[2025-06-19 18:02:12] Found 2 results
+[2025-06-19 18:02:12] Sending response with 2 results
+[2025-06-19 18:34:20] New request: {"method":"GET","query":{"q":"po"},"ip":"::1"}
+[2025-06-19 18:34:20] Searching for collections with query: po
+[2025-06-19 18:34:20] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-19 18:34:20] Query Parameters: {"exact_match":"po","query":"po","query_start":"po%","query_contains":"%po%","id_query":"po"}
+[2025-06-19 18:34:20] Found 2 results
+[2025-06-19 18:34:20] Sending response with 2 results
+[2025-06-20 02:39:13] New request: {"method":"GET","query":{"q":"poke"},"ip":"::1"}
+[2025-06-20 02:39:13] Searching for collections with query: poke
+[2025-06-20 02:39:13] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-20 02:39:13] Query Parameters: {"exact_match":"poke","query":"poke","query_start":"poke%","query_contains":"%poke%","id_query":"poke"}
+[2025-06-20 02:39:13] Found 1 results
+[2025-06-20 02:39:13] Sending response with 1 results
+[2025-06-20 02:41:01] New request: {"method":"GET","query":{"q":"poke"},"ip":"::1"}
+[2025-06-20 02:41:01] Searching for collections with query: poke
+[2025-06-20 02:41:01] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-20 02:41:01] Query Parameters: {"exact_match":"poke","query":"poke","query_start":"poke%","query_contains":"%poke%","id_query":"poke"}
+[2025-06-20 02:41:01] Found 1 results
+[2025-06-20 02:41:01] Sending response with 1 results
+[2025-06-20 02:48:08] New request: {"method":"GET","query":{"q":"poke"},"ip":"::1"}
+[2025-06-20 02:48:08] Searching for collections with query: poke
+[2025-06-20 02:48:08] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-20 02:48:08] Query Parameters: {"exact_match":"poke","query":"poke","query_start":"poke%","query_contains":"%poke%","id_query":"poke"}
+[2025-06-20 02:48:08] Found 1 results
+[2025-06-20 02:48:08] Sending response with 1 results
+[2025-06-20 11:52:37] New request: {"method":"GET","query":{"q":"po"},"ip":"::1"}
+[2025-06-20 11:52:37] Searching for collections with query: po
+[2025-06-20 11:52:37] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-20 11:52:37] Query Parameters: {"exact_match":"po","query":"po","query_start":"po%","query_contains":"%po%","id_query":"po"}
+[2025-06-20 11:52:37] Found 2 results
+[2025-06-20 11:52:37] Sending response with 2 results
+[2025-06-22 05:13:39] New request: {"method":"GET","query":{"q":"P"},"ip":"::1"}
+[2025-06-22 05:13:39] Searching for collections with query: P
+[2025-06-22 05:13:39] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-22 05:13:39] Query Parameters: {"exact_match":"P","query":"P","query_start":"P%","query_contains":"%P%","id_query":"P"}
+[2025-06-22 05:13:39] Found 6 results
+[2025-06-22 05:13:39] Sending response with 6 results
+[2025-06-22 05:13:39] New request: {"method":"GET","query":{"q":"Po"},"ip":"::1"}
+[2025-06-22 05:13:39] Searching for collections with query: Po
+[2025-06-22 05:13:39] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-22 05:13:39] Query Parameters: {"exact_match":"Po","query":"Po","query_start":"Po%","query_contains":"%Po%","id_query":"Po"}
+[2025-06-22 05:13:39] Found 2 results
+[2025-06-22 05:13:39] Sending response with 2 results
+[2025-06-22 05:19:45] New request: {"method":"GET","query":{"q":"poke"},"ip":"::1"}
+[2025-06-22 05:19:45] Searching for collections with query: poke
+[2025-06-22 05:19:45] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-22 05:19:45] Query Parameters: {"exact_match":"poke","query":"poke","query_start":"poke%","query_contains":"%poke%","id_query":"poke"}
+[2025-06-22 05:19:45] Found 1 results
+[2025-06-22 05:19:45] Sending response with 1 results
+[2025-06-22 05:19:55] New request: {"method":"GET","query":{"q":"po"},"ip":"::1"}
+[2025-06-22 05:19:55] Searching for collections with query: po
+[2025-06-22 05:19:55] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-22 05:19:55] Query Parameters: {"exact_match":"po","query":"po","query_start":"po%","query_contains":"%po%","id_query":"po"}
+[2025-06-22 05:19:55] Found 2 results
+[2025-06-22 05:19:55] Sending response with 2 results
+[2025-06-22 05:19:56] New request: {"method":"GET","query":{"q":"poke"},"ip":"::1"}
+[2025-06-22 05:19:56] Searching for collections with query: poke
+[2025-06-22 05:19:56] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-22 05:19:56] Query Parameters: {"exact_match":"poke","query":"poke","query_start":"poke%","query_contains":"%poke%","id_query":"poke"}
+[2025-06-22 05:19:56] Found 1 results
+[2025-06-22 05:19:56] Sending response with 1 results
+[2025-06-22 08:04:04] New request: {"method":"GET","query":{"q":"po"},"ip":"::1"}
+[2025-06-22 08:04:04] Searching for collections with query: po
+[2025-06-22 08:04:04] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-22 08:04:04] Query Parameters: {"exact_match":"po","query":"po","query_start":"po%","query_contains":"%po%","id_query":"po"}
+[2025-06-22 08:04:04] Found 2 results
+[2025-06-22 08:04:04] Sending response with 2 results
+[2025-06-22 09:31:25] New request: {"method":"GET","query":{"q":"po"},"ip":"::1"}
+[2025-06-22 09:31:25] Searching for collections with query: po
+[2025-06-22 09:31:25] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-22 09:31:25] Query Parameters: {"exact_match":"po","query":"po","query_start":"po%","query_contains":"%po%","id_query":"po"}
+[2025-06-22 09:31:25] Found 2 results
+[2025-06-22 09:31:25] Sending response with 2 results
+[2025-06-22 09:33:12] New request: {"method":"GET","query":{"q":"poe"},"ip":"::1"}
+[2025-06-22 09:33:12] Searching for collections with query: poe
+[2025-06-22 09:33:12] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-22 09:33:12] Query Parameters: {"exact_match":"poe","query":"poe","query_start":"poe%","query_contains":"%poe%","id_query":"poe"}
+[2025-06-22 09:33:12] Found 0 results
+[2025-06-22 09:33:12] Sending response with 0 results
+[2025-06-22 09:33:13] New request: {"method":"GET","query":{"q":"po"},"ip":"::1"}
+[2025-06-22 09:33:13] Searching for collections with query: po
+[2025-06-22 09:33:13] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-22 09:33:13] Query Parameters: {"exact_match":"po","query":"po","query_start":"po%","query_contains":"%po%","id_query":"po"}
+[2025-06-22 09:33:13] Found 2 results
+[2025-06-22 09:33:13] Sending response with 2 results
+[2025-06-22 09:33:14] New request: {"method":"GET","query":{"q":"poke"},"ip":"::1"}
+[2025-06-22 09:33:14] Searching for collections with query: poke
+[2025-06-22 09:33:14] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-22 09:33:14] Query Parameters: {"exact_match":"poke","query":"poke","query_start":"poke%","query_contains":"%poke%","id_query":"poke"}
+[2025-06-22 09:33:14] Found 1 results
+[2025-06-22 09:33:14] Sending response with 1 results
+[2025-06-22 18:20:27] New request: {"method":"GET","query":{"q":"s"},"ip":"::1"}
+[2025-06-22 18:20:27] Searching for collections with query: s
+[2025-06-22 18:20:27] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-22 18:20:27] Query Parameters: {"exact_match":"s","query":"s","query_start":"s%","query_contains":"%s%","id_query":"s"}
+[2025-06-22 18:20:27] Found 10 results
+[2025-06-22 18:20:27] Sending response with 10 results
+[2025-06-22 18:20:30] New request: {"method":"GET","query":{"q":"a"},"ip":"::1"}
+[2025-06-22 18:20:30] Searching for collections with query: a
+[2025-06-22 18:20:30] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-22 18:20:30] Query Parameters: {"exact_match":"a","query":"a","query_start":"a%","query_contains":"%a%","id_query":"a"}
+[2025-06-22 18:20:30] Found 10 results
+[2025-06-22 18:20:30] Sending response with 10 results
+[2025-06-22 18:46:12] New request: {"method":"GET","query":{"q":"po"},"ip":"::1"}
+[2025-06-22 18:46:12] Searching for collections with query: po
+[2025-06-22 18:46:12] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-22 18:46:12] Query Parameters: {"exact_match":"po","query":"po","query_start":"po%","query_contains":"%po%","id_query":"po"}
+[2025-06-22 18:46:12] Found 2 results
+[2025-06-22 18:46:12] Sending response with 2 results
+[2025-06-22 18:59:52] New request: {"method":"GET","query":{"q":"p"},"ip":"::1"}
+[2025-06-22 18:59:52] Searching for collections with query: p
+[2025-06-22 18:59:52] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-22 18:59:52] Query Parameters: {"exact_match":"p","query":"p","query_start":"p%","query_contains":"%p%","id_query":"p"}
+[2025-06-22 18:59:52] Found 6 results
+[2025-06-22 18:59:52] Sending response with 6 results
+[2025-06-22 18:59:52] New request: {"method":"GET","query":{"q":"po"},"ip":"::1"}
+[2025-06-22 18:59:52] Searching for collections with query: po
+[2025-06-22 18:59:52] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-22 18:59:52] Query Parameters: {"exact_match":"po","query":"po","query_start":"po%","query_contains":"%po%","id_query":"po"}
+[2025-06-22 18:59:52] Found 2 results
+[2025-06-22 18:59:52] Sending response with 2 results
+[2025-06-22 18:59:53] New request: {"method":"GET","query":{"q":"poke"},"ip":"::1"}
+[2025-06-22 18:59:53] Searching for collections with query: poke
+[2025-06-22 18:59:53] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-22 18:59:53] Query Parameters: {"exact_match":"poke","query":"poke","query_start":"poke%","query_contains":"%poke%","id_query":"poke"}
+[2025-06-22 18:59:53] Found 1 results
+[2025-06-22 18:59:53] Sending response with 1 results
+[2025-06-22 19:13:33] New request: {"method":"GET","query":{"q":"W"},"ip":"::1"}
+[2025-06-22 19:13:33] Searching for collections with query: W
+[2025-06-22 19:13:33] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-22 19:13:33] Query Parameters: {"exact_match":"W","query":"W","query_start":"W%","query_contains":"%W%","id_query":"W"}
+[2025-06-22 19:13:33] Found 7 results
+[2025-06-22 19:13:33] Sending response with 7 results
+[2025-06-22 19:13:34] New request: {"method":"GET","query":{"q":"Wor"},"ip":"::1"}
+[2025-06-22 19:13:34] Searching for collections with query: Wor
+[2025-06-22 19:13:34] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-22 19:13:34] Query Parameters: {"exact_match":"Wor","query":"Wor","query_start":"Wor%","query_contains":"%Wor%","id_query":"Wor"}
+[2025-06-22 19:13:34] Found 6 results
+[2025-06-22 19:13:34] Sending response with 6 results
+[2025-06-22 19:13:40] New request: {"method":"GET","query":{"q":"mage"},"ip":"::1"}
+[2025-06-22 19:13:40] Searching for collections with query: mage
+[2025-06-22 19:13:40] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-22 19:13:40] Query Parameters: {"exact_match":"mage","query":"mage","query_start":"mage%","query_contains":"%mage%","id_query":"mage"}
+[2025-06-22 19:13:40] Found 1 results
+[2025-06-22 19:13:40] Sending response with 1 results
+[2025-06-23 04:38:30] New request: {"method":"GET","query":{"q":"po"},"ip":"::1"}
+[2025-06-23 04:38:30] Searching for collections with query: po
+[2025-06-23 04:38:30] SQL Query: SELECT 
+                    collection_id as collection_id,
+                    name as collection_name,
+                    COALESCE(logo_url, 'assets/images/placeholder-logo.png') as logo_url,
+                    description
+                FROM luck_wallet_nft_collections 
+                WHERE 
+                    LOWER(name) LIKE LOWER(:query) OR 
+                    LOWER(name) LIKE LOWER(:query_start) OR
+                    LOWER(name) LIKE LOWER(:query_contains) OR
+                    collection_id = :id_query
+                ORDER BY 
+                    CASE 
+                        WHEN LOWER(name) = LOWER(:exact_match) THEN 1
+                        WHEN LOWER(name) LIKE LOWER(:query_start) THEN 2
+                        WHEN LOWER(name) LIKE LOWER(:query_contains) THEN 3
+                        ELSE 4
+                    END
+                LIMIT 10
+[2025-06-23 04:38:30] Query Parameters: {"exact_match":"po","query":"po","query_start":"po%","query_contains":"%po%","id_query":"po"}
+[2025-06-23 04:38:30] Found 3 results
+[2025-06-23 04:38:30] Sending response with 3 results

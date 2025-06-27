@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Picture Upload Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .profile-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            cursor: pointer;
+            border: 2px solid #ddd;
+        }
+        .upload-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #00BFBF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .upload-btn:hover {
+            background-color: #009999;
+        }
+        #fileInput {
+            display: none;
+        }
+        .status {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .success {
+            background-color: #dff0d8;
+            color: #3c763d;
+        }
+        .error {
+            background-color: #f2dede;
+            color: #a94442;
+        }
+    </style>
+</head>
+<body>
+    <h1>Profile Picture Upload Test</h1>
+    
+    <div class="profile-container">
+        <img id="profileImage" src="assets/images/default-avatar.png" alt="Profile" class="profile-image">
+        <input type="file" id="fileInput" accept="image/*">
+        <div>
+            <button class="upload-btn" id="uploadBtn">Choose Image</button>
+        </div>
+    </div>
+    
+    <div id="status" class="status"></div>
+    
+    <div>
+        <h3>Debug Info:</h3>
+        <pre id="debugInfo"></pre>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const profileImage = document.getElementById('profileImage');
+            const fileInput = document.getElementById('fileInput');
+            const uploadBtn = document.getElementById('uploadBtn');
+            const statusDiv = document.getElementById('status');
+            const debugInfo = document.getElementById('debugInfo');
+            
+            // Click the file input when the upload button is clicked
+            uploadBtn.addEventListener('click', function() {
+                fileInput.click();
+            });
+            
+            // Handle file selection
+            fileInput.addEventListener('change', function(e) {
+                const file = e.target.files[0];
+                if (!file) return;
+                
+                // Validate file type
+                const validTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
+                if (!validTypes.includes(file.type)) {
+                    showStatus('Please select a valid image file (JPEG, PNG, GIF, or WebP)', 'error');
+                    return;
+                }
+                
+                // Validate file size (max 5MB)
+                if (file.size > 5 * 1024 * 1024) {
+                    showStatus('Image size should be less than 5MB', 'error');
+                    return;
+                }
+                
+                // Show loading state
+                const originalSrc = profileImage.src;
+                profileImage.src = 'assets/images/loading.gif';
+                statusDiv.textContent = 'Uploading...';
+                statusDiv.className = 'status';
+                
+                // Create form data
+                const formData = new FormData();
+                formData.append('profile_image', file);
+                
+                // Debug info
+                debugInfo.textContent = 'Sending request to update_profile_picture.php...\n';
+                
+                // Send the file to the server
+                fetch('update_profile_picture.php', {
+                    method: 'POST',
+                    body: formData,
+                    credentials: 'same-origin'  // Include session cookies
+                })
+                .then(response => {
+                    debugInfo.textContent += 'Response status: ' + response.status + ' ' + response.statusText + '\n';
+                    if (!response.ok) {
+                        return response.text().then(text => {
+                            debugInfo.textContent += 'Error response: ' + text + '\n';
+                            throw new Error(text || 'Upload failed with status ' + response.status);
+                        });
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    debugInfo.textContent += 'Response data: ' + JSON.stringify(data, null, 2) + '\n';
+                    
+                    if (data && data.success) {
+                        // Update the profile picture with cache-busting query parameter
+                        const timestamp = new Date().getTime();
+                        const imageUrl = data.image_url + (data.image_url.includes('?') ? '&' : '?') + 't=' + timestamp;
+                        profileImage.src = imageUrl;
+                        showStatus('Profile picture updated successfully!', 'success');
+                    } else {
+                        throw new Error(data && data.message ? data.message : 'Failed to update profile picture');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error uploading profile picture:', error);
+                    debugInfo.textContent += 'Error: ' + error.message + '\n';
+                    profileImage.src = originalSrc;
+                    showStatus('Error: ' + (error.message || 'Failed to upload image'), 'error');
+                });
+            });
+            
+            function showStatus(message, type) {
+                statusDiv.textContent = message;
+                statusDiv.className = 'status ' + (type || '');
+            }
+        });
+    </script>
+</body>
+</html>

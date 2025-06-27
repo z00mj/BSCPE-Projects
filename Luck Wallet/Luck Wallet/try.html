@@ -1,0 +1,1966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>LUCK Marketplace</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+    /* General Body and Container Setup */
+    html, body { /* Ensures html and body take full viewport height for fixed footer */
+        height: 100%;
+    }
+    body {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        background: radial-gradient(circle at center, #003333 0%, #000000 100%);
+        color: #e0e0e0;
+        display: flex;
+        min-height: 100%;
+        padding: 0 0 0 80px;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        transition: padding 0.3s ease;
+    }
+
+    /* Sidebar logo container */
+    .sidebar-logo-container {
+        display: flex;
+        justify-content: center; /* Center the logo within its container */
+        align-items: center;
+        width: 100%; /* Ensure it takes full width of the sidebar */
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        margin-bottom: 15px;
+    }
+    
+    .sidebar-logo {
+        max-width: 120px;
+        height: auto;
+    }
+    
+    /* Mobile search toggle - Hidden by default as search bar is now inline */
+    .mobile-search-toggle {
+        display: none; /* Changed to none as search bar is now always inline */
+        background: none;
+        border: none;
+        color: #00BFBF;
+        padding: 8px;
+        width: 40px;
+        height: 40px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: rgba(0, 128, 128, 0.2);
+        backdrop-filter: blur(5px);
+        font-size: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .mobile-search-toggle:active,
+    .mobile-menu-btn:active {
+        transform: scale(0.95);
+    }
+    
+    @media (max-width: 1024px) {
+        .header {
+            padding: 10px 20px; /* Reduce padding on smaller screens */
+        }
+        
+        .header-content {
+            padding: 0 10px; /* Reduce inner padding */
+            padding-right: 20px; /* Add padding to the right for spacing */
+        }
+        
+        .header-title {
+            font-size: 1.2rem;
+        }
+        
+        /* Removed fixed positioning for search bar on mobile, it's now inline */
+        .search-bar {
+            /* display: none; - Removed, search bar is now always inline */
+            position: static; /* Ensure it's not fixed */
+            width: auto; /* Allow content-based width */
+            max-width: unset;
+            margin: 0;
+            padding: 8px 15px; /* Revert to default padding or adjust as needed */
+            box-shadow: none; /* Remove mobile-specific box shadow */
+            z-index: auto; /* Remove mobile-specific z-index */
+        }
+        
+        .search-bar.mobile-visible {
+            display: flex; /* Keep this if you want to explicitly control visibility with this class */
+            transform: none; /* Remove transform for inline display */
+        }
+        
+        .mobile-search-toggle {
+            display: none; /* Ensure it's hidden */
+        }
+        
+        .connect-wallet {
+            font-size: 0.9rem;
+            padding: 8px 15px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .header-content {
+            padding: 5px 0;
+            padding-right: 15px; /* Adjust padding for screens <= 768px */
+        }
+        
+        .header-logo {
+            height: 32px;
+        }
+        
+        .header-title {
+            font-size: 1.1rem;
+            display: block; /* Ensure title is always visible */
+        }
+        
+        .connect-wallet {
+            /* Removed display: none; - now always visible */
+            font-size: 0.8rem; /* Make it smaller to fit */
+            padding: 6px 10px; /* Adjust padding */
+        }
+        
+        .header-right {
+            gap: 5px; /* Reduce gap to fit elements better */
+        }
+
+        .search-bar {
+            width: 120px; /* Smaller width for search bar on mobile */
+            padding: 6px 10px;
+        }
+
+        .search-bar input {
+            width: 80px; /* Smaller input field */
+            margin-left: 5px; /* Adjust margin */
+        }
+        
+        .mobile-search-toggle {
+            display: none; /* Hide connect wallet on mobile */
+        }
+    }
+
+    @media (max-width: 680px) {
+        .search-bar {
+            width: 40px; /* Make search bar only an icon width */
+            padding: 8px; /* Adjust padding to center icon */
+            overflow: hidden; /* Hide overflow content */
+            justify-content: center; /* Center the icon */
+            flex-shrink: 0; /* Prevent it from shrinking more */
+        }
+
+        .search-bar input {
+            display: none; /* Hide the input field */
+        }
+
+        .search-bar .search-icon {
+            margin-right: 0; /* Remove margin for icon-only display */
+        }
+
+        /* Styles for search bar when expanded on mobile (below 680px) */
+        .search-bar.expanded-mobile {
+            width: calc(100% - 100px); /* Adjust width to make space for connect wallet */
+            padding: 8px 15px;
+            justify-content: flex-start; /* Align content to start */
+        }
+        .search-bar.expanded-mobile input {
+            display: block; /* Show the input field */
+            width: auto; /* Let it grow */
+            flex-grow: 1; /* Allow it to take available space */
+        }
+        .search-bar.expanded-mobile .search-icon {
+            margin-right: 8px; /* Re-add margin */
+        }
+        /* Optionally hide connect wallet when search bar is expanded on very small screens */
+        .search-bar.expanded-mobile + .connect-wallet {
+            display: none;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .header {
+            padding: 10px 10px;
+        }
+        
+        .header-content {
+            padding: 0 5px;
+        }
+        
+        .header-logo {
+            height: 28px;
+        }
+        
+        .header-title {
+            font-size: 1rem;
+        }
+        
+        .header-brand {
+            gap: 10px;
+        }
+        .header-right {
+            gap: 5px;
+        }
+        /* Search bar becomes icon-only already at 680px, no need to re-define here unless different size */
+        .connect-wallet {
+            font-size: 0.7rem;
+            padding: 4px 8px;
+        }
+    }
+
+    /* Removed .search-bar.mobile-visible specific fixed positioning as it's now inline */
+    /*
+    .search-bar.mobile-visible {
+        display: flex !important;
+        position: absolute;
+        top: 70px;
+        left: 10px;
+        right: 10px;
+        z-index: 1000;
+        background: #222;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+    @keyframes slideDown {
+        from { opacity: 0; transform: translate(-50%, -20px); }
+        to { opacity: 1; transform: translate(-50%, 0); }
+    }
+    */
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 300px; /* Always 300px for right sidebar */
+        grid-template-rows: 70px 1fr;
+        gap: 20px;
+        width: 100%;
+        max-width: 100%;
+        height: calc(100vh - 20px);
+        position: relative;
+    }
+
+    /* Header Styles */
+    .header {
+        grid-column: 1 / -1;
+        background: linear-gradient(to right, #0a0a0a, #004d4d, #0a0a0a);
+        padding: 10px 40px; /* Increased side padding */
+        box-shadow: 0 0 10px rgba(0, 191, 191, 0.4);
+        z-index: 99;
+        position: relative;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .header-content {
+        /* Removed max-width and margin: 0 auto; to allow it to stretch fully */
+        display: flex;
+        justify-content: space-between; /* Pushes items to the edges */
+        align-items: center;
+        width: 100%; /* Ensure it takes full width */
+        padding: 0 20px; /* Add inner padding that defines the edge spacing */
+    }
+
+    .header-brand {
+        display: flex;
+        align-items: center;
+        /* Removed gap as there's only one item now (the title) */
+        margin: 0; /* Ensure no extra margin pushes it inwards */
+        padding: 0;
+    }
+
+    /* .header-logo style rule no longer directly applies as the element is removed */
+    .header-logo {
+        display: none; /* Hide the logo to effectively remove it */
+    }
+
+    /* New style for the burger icon button */
+    .mobile-sidebar-toggle-btn {
+        display: none; /* Hidden by default on desktop */
+        background: none;
+        border: none;
+        color: #00BFBF;
+        padding: 8px;
+        width: 40px;
+        height: 40px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: rgba(0, 128, 128, 0.2);
+        backdrop-filter: blur(5px);
+        font-size: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-right: 10px; /* Space between burger and title */
+    }
+
+    .mobile-sidebar-toggle-btn:active {
+        transform: scale(0.95);
+    }
+
+    .header-title {
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #00BFBF;
+        text-shadow: 0 0 5px rgba(0, 191, 191, 0.5);
+        margin: 0; /* Ensure no extra margin pushes it inwards */
+        white-space: nowrap;
+    }
+
+    .header-right {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin: 0; /* Ensure no extra margin pushes it inwards */
+        padding: 0;
+    }
+
+    .search-bar {
+        display: flex;
+        align-items: center;
+        background-color: #222;
+        border-radius: 20px;
+        padding: 8px 15px;
+        transition: all 0.3s ease;
+        width: 300px;
+        max-width: 100%;
+    }
+    
+    .search-bar .search-icon {
+        color: #777;
+        margin-right: 8px;
+    }
+
+    .search-bar input {
+        background: none;
+        border: none;
+        outline: none;
+        color: #e0e0e0;
+        margin-left: 10px;
+        width: 250px;
+    }
+
+    .search-bar .material-icons {
+        color: #777; /* Slightly darker icon */
+    }
+
+    .connect-wallet {
+        background-color: #008080; /* Darker teal for button */
+        color: white;
+        border: none;
+        border-radius: 20px;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-weight: bold;
+        /* Removed margin-right: 35px; to push it to the edge */
+        transition: background-color 0.3s ease;
+    }
+
+    .connect-wallet:hover {
+        background-color: #005f5f; /* Even darker on hover */
+    }
+
+    /* Left Sidebar Styles */
+    .sidebar-left {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 250px;
+        background-color: #0d0d0d;
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        z-index: 1000;
+        transition: transform 0.3s ease, width 0.3s ease, align-items 0.3s ease;
+        transform: translateX(-100%);
+        overflow-y: auto;
+        border-radius: 0;
+        box-shadow: 0 0 10px rgba(0, 191, 191, 0.4);
+        border-right: 1px solid #00BFBF;
+    }
+    
+    .sidebar-left.mobile-visible {
+        transform: translateX(0);
+        width: 250px; /* Ensure full width when mobile-visible */
+        align-items: flex-start; /* Ensure items are aligned to start */
+    }
+    
+    /* Sidebar items */
+    .sidebar-item {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 60px;
+        color: #e0e0e0;
+        text-decoration: none;
+        padding: 0 24px;
+        box-sizing: border-box;
+        white-space: nowrap;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    .sidebar-item:hover {
+        background-color: rgba(0, 128, 128, 0.3);
+        color: #ffffff;
+    }
+    
+    .sidebar-item.active {
+        background-color: #008080;
+        color: #ffffff;
+    }
+    
+    .sidebar-item .material-icons {
+        font-size: 30px;
+        margin-right: 16px;
+        transition: margin-right 0.3s ease, color 0.3s ease;
+    }
+    
+    .sidebar-text {
+        white-space: nowrap;
+        transition: opacity 0.2s ease 0.1s, color 0.3s ease;
+    }
+    
+    .sidebar-left .sidebar-item:hover,
+    .sidebar-item.active {
+        background-color: #004d4d;
+        color: #ffffff;
+        text-shadow: 0 0 8px #00BFBF, 0 0 15px #00BFBF;
+    }
+    
+    .sidebar-left .sidebar-item:hover .material-icons,
+    .sidebar-item.active .material-icons {
+        color: #ffffff;
+    }
+    
+    @media (min-width: 1025px) {
+        .sidebar-left {
+            width: 80px;
+            transform: translateX(0);
+            align-items: center;
+        }
+        
+        .sidebar-left:hover {
+            width: 250px;
+            align-items: flex-start;
+        }
+        
+        .sidebar-left .sidebar-text {
+            opacity: 0;
+        }
+        
+        .sidebar-left:hover .sidebar-text {
+            opacity: 1;
+        }
+        
+        .sidebar-left .sidebar-item .material-icons {
+            margin-right: 0;
+        }
+        
+        .sidebar-left:hover .sidebar-item .material-icons {
+            margin-right: 16px;
+        }
+
+        /* Ensure sidebar logo container is visible on desktop hover */
+        .sidebar-left:hover .sidebar-logo-container {
+            display: flex;
+        }
+    }
+    
+    /* Media query to ensure sidebar logo container is visible when sidebar is open */
+    @media (max-width: 1024px) {
+        .sidebar-left.mobile-visible .sidebar-logo-container {
+            display: flex; /* Show the logo container when sidebar is open */
+        }
+        .sidebar-logo-container {
+            display: none; /* Hide by default on mobile if sidebar is not open */
+        }
+    }
+
+    .sidebar-logo {
+        width: 90px;
+        height: auto;
+        margin-bottom: 20px;
+        margin-top: -25px;
+    }
+
+    /* Main Content Area */
+    .main-content {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        overflow-y: auto;
+        padding-right: 10px;
+        padding-left: 15px;
+    }
+
+    .main-content::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .main-content::-webkit-scrollbar-track {
+        background: #1a1a1a; /* Darker scrollbar track */
+        border-radius: 4px;
+    }
+
+    .main-content::-webkit-scrollbar-thumb {
+        background: #006666; /* Darker scrollbar thumb */
+        border-radius: 4px;
+    }
+
+    section {
+        background-color: rgba(0, 30, 30, 0.9); /* Darker section background */
+        padding: 20px; /* Default padding for sections */
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 191, 191, 0.3); /* Slightly less glow for sections */
+        margin-bottom: 20px;
+        margin-left: 10px;
+
+    }
+
+    h2 {
+        color: #00BFBF; /* Keep accent color */
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    /* --- Slideshow Specific Styles --- */
+    .featured-collections {
+        padding: 0; /* Remove padding specifically for the slideshow section */
+    }
+
+    .slideshow-container {
+        position: relative;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        border-radius: 8px;
+        background-color: rgba(0, 40, 40, 0.9); /* Darker slideshow background */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slideshow-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: none;
+        transition: opacity 1s ease-in-out;
+        opacity: 0;
+        position: absolute;
+    }
+
+    .slideshow-image.active {
+        display: block;
+        opacity: 1;
+    }
+
+    /* Scroll Container for sections with cards */
+    .scroll-container {
+        position: relative; /* Needed for absolute positioning of buttons */
+        padding: 0 40px; /* Space for buttons */
+    }
+
+    .collections-grid {
+        display: flex;
+        overflow-x: hidden; /* Hide the scrollbar */
+        padding-bottom: 15px;
+    }
+
+    .collection-card {
+        flex: 0 0 auto;
+        width: 300px;
+        margin-right: 20px;
+        background-color: rgba(0, 40, 40, 0.9); /* Darker card background */
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        cursor: pointer; /* Add cursor pointer to indicate clickability */
+    }
+
+    .collection-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .card-details {
+        padding: 15px;
+    }
+
+    .card-details h3 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        color: white; /* Changed to white */
+    }
+
+    .card-details p {
+        font-size: 14px;
+        color: white; /* Changed to white */
+    }
+
+    /* Scroll Buttons */
+    .scroll-button {
+        position: absolute;
+        top: 50%; /* Center vertically */
+        transform: translateY(-50%);
+        background-color: rgba(0, 150, 150, 0.4); /* Darker teal for buttons */
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        font-size: 24px;
+        z-index: 10;
+        transition: background-color 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .scroll-button:hover {
+        background-color: #58c5c5; /* Lighter teal on hover */
+    }
+
+    .scroll-button.left {
+        left: -10px;
+    }
+
+    .scroll-button.right {
+        right: -10px;
+    }
+
+    /* Right Sidebar Styles */
+    .sidebar-right {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        background-color: #0d0d0d; /* Darker right sidebar */
+        padding: 20px;
+        padding-top: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 191, 191, 0.4); /* Subtle teal glow */
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 270  px; /* Fixed width */
+        overflow: hidden; /* Ensure content doesn't spill out */
+        max-height: 556px; /* Adjusted to make the sidebar a specific height to fit 10 buttons */
+    }
+
+    .sidebar-right .sidebar-header-content,
+    .sidebar-right .sidebar-collection-title,
+    .sidebar-right .sidebar-time-filters {
+        display: block; /* Ensure these are always visible */
+    }
+
+    .sidebar-right .collection-list {
+        display: flex; /* Changed to flex for wrapping buttons */
+        flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+        justify-content: center; /* Center buttons horizontally */
+        width: 100%;
+        overflow-y: hidden; /* Still allow internal scrolling if needed */
+        max-height: calc(100% - 70px); /* Adjust max-height to fit within the new sidebar height (or use fixed px like 450px if needed) */
+        padding: 10px 0; /* Add some padding */
+    }
+
+
+    .sidebar-collection-title {
+        margin: 0;
+        color: #e0e0e0;
+        font-size: 18px;
+        font-weight: bold;
+        padding-bottom: 10px;
+        width: 100%; /* Ensure title takes full width */
+        margin-left: 100px;
+    }
+
+    /* Updated .collection-item-button for square layout with logo */
+    .collection-item-button {
+        background-color: transparent; /* Keep transparent, image will fill */
+        color: #e0e0e0;
+        border: none;
+        padding: 0; /* Remove padding to let image fill */
+        width: 100px; /* Set a fixed width to make it square and smaller */
+        height: 90px; /* Set a fixed height to make it square and smaller */
+        display: flex; /* Use flexbox for centering content */
+        flex-direction: column; /* Stack logo and text vertically */
+        align-items: center; /* Center horizontally */
+        justify-content: center; /* Center vertically */
+        cursor: pointer;
+        font-size: 13px; /* Adjust font size to fit */
+        transition: background-color 0.3s ease, color 0.3s ease;
+        box-sizing: border-box;
+        white-space: normal; /* Allow text to wrap if necessary */
+        overflow: hidden; /* Hide overflow from image */
+        text-overflow: ellipsis; /* Still useful for very long text */
+        margin: 5px; /* Add margin around buttons for spacing */
+        border-radius: 8px; /* Optional: subtle rounded corners for the square button */
+        box-shadow: 0 0 5px rgba(0, 191, 191, 0.2); /* Subtle glow for buttons */
+        position: relative; /* Needed for absolute positioning of logo/text */
+    }
+
+    .collection-item-button:hover {
+        background-color: rgba(0, 40, 40, 0.9); /* Subtle background on hover */
+        color: #e0e0e0;
+        text-shadow: 0 0 5px #00BFBF, 0 0 10px #00BFBF;
+    }
+
+    .collection-item-button.active {
+        background-color: rgba(0, 30, 30, 0.9);
+        color: #00BFBF;
+    }
+
+    /* NEW CSS RULES FOR LOGO AND TEXT WITHIN SQUARE BUTTONS */
+    .category-logo {
+        width: 100%; /* Make logo fill the button */
+        height: 100%; /* Make logo fill the button */
+        object-fit: cover; /* Ensures image covers the area */
+        border-radius: 0; /* REMOVE CIRCULAR DESIGN */
+        position: absolute; /* Position absolutely to fill button */
+        top: 0;
+        left: 0;
+        z-index: 1; /* Place image behind text */
+    }
+
+    .category-text {
+        text-align: center;
+        font-weight: bold;
+        position: absolute; /* Position text over the image */
+        bottom: 0; /* Align to the bottom */
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for readability */
+        padding: 5px 0; /* Padding for the text background */
+        color: white; /* Ensure text is visible */
+        z-index: 2; /* Place text above the image */
+        font-size: 12px; /* Slightly smaller font for text */
+    }
+
+    .price-change {
+        font-weight: bold;
+        margin-left: 5px;
+    }
+
+    .price-change.positive {
+        color: #4CAF50;
+    }
+
+    .price-change.negative {
+        color: #F44336;
+    }
+
+    /* Mobile NFT List Styles */
+    .mobile-nft-list {
+        display: none; /* Hidden by default on desktop */
+        background-color: rgba(0, 30, 30, 0.9);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 191, 191, 0.3);
+        margin: 0 10px 20px 10px;
+    }
+
+    .mobile-nft-list h2 {
+        color: #00BFBF;
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+
+    .mobile-nft-list .collection-card {
+        flex: 0 0 150px;
+        margin-right: 10px;
+        background-color: rgba(0, 40, 40, 0.9);
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        transition: transform 0.2s ease;
+    }
+
+    .mobile-nft-list .collection-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .mobile-nft-list .collection-card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .mobile-nft-list .card-details {
+        padding: 10px;
+    }
+
+    .mobile-nft-list .card-details h3 {
+        margin: 0 0 5px 0;
+        font-size: 0.9em;
+        color: white;
+    }
+
+    .mobile-nft-list .card-details p {
+        margin: 0;
+        font-size: 0.8em;
+        color: #e0e0e0;
+    }
+
+    /* Mobile View (up to 1024px) */
+    @media (max-width: 1024px) {
+        body {
+            padding-left: 0;
+        }
+        
+        /* Hide the old mobile menu button (sidebar logo) */
+        .sidebar-logo-container {
+            display: none; /* Hidden by default when sidebar is collapsed */
+        }
+
+        /* Show the new burger icon button */
+        .mobile-sidebar-toggle-btn {
+            display: flex; 
+        }
+
+        /* Adjust header-brand for mobile so the burger is aligned */
+        .header-brand {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; /* Align to the start (left) */
+        }
+
+        .mobile-search-toggle {
+            display: none; /* Mobile search toggle is now hidden */
+        }
+        
+        .search-bar {
+            /* Removed fixed positioning and related mobile styles, it's now inline */
+            position: static;
+            width: auto;
+            max-width: unset;
+            margin: 0;
+            padding: 8px 15px;
+            box-shadow: none;
+            z-index: auto;
+        }
+        
+        /* Sidebar styles for mobile */
+        .sidebar-left {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .sidebar-left.mobile-visible {
+            transform: translateX(0);
+            width: 250px; /* Force full width on mobile when open */
+            align-items: flex-start; /* Align items to start so text is visible */
+        }
+
+        .sidebar-left.mobile-visible .sidebar-logo-container {
+            display: flex; /* Show the logo container when sidebar is open */
+        }
+        
+        .sidebar-left.mobile-visible .sidebar-text {
+            opacity: 1; /* Make text visible */
+        }
+
+        .sidebar-left.mobile-visible .sidebar-item .material-icons {
+            margin-right: 16px; /* Add margin to icons for spacing with text */
+        }
+        
+        /* Hide desktop sidebar */
+        .sidebar-right {
+            display: none !important;
+        }
+        
+        /* Show mobile NFT list */
+        .mobile-nft-list {
+            display: block;
+        }
+        
+        /* Adjust grid layout */
+        .container {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto;
+            height: auto;
+            min-height: 100vh;
+        }
+        
+        /* Adjust header for mobile */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            padding: 10px 15px;
+        }
+        
+        /* Adjust main content for mobile */
+        .main-content {
+            margin-top: 70px;
+            padding: 15px;
+            padding-bottom: 100px; /* Space for fixed footer */
+        }
+        
+        /* Adjust section margins for mobile */
+        section {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        
+        .main-content {
+            grid-column: 1;
+            grid-row: 2;
+        }
+    }
+    
+    /* Desktop View (1025px and up) */
+    @media (min-width: 1025px) {
+        /* Hide mobile NFT list on desktop */
+        .mobile-nft-list {
+            display: none !important;
+        }
+        
+        /* Show desktop sidebar */
+        .sidebar-right {
+            display: block !important;
+        }
+
+        /* Ensure sidebar logo container is visible on desktop */
+        .sidebar-logo-container {
+            display: flex; /* Show the logo container on desktop */
+        }
+    }
+
+    /* Overlay for fading main content */
+    .main-content-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 999;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        backdrop-filter: blur(3px);
+        pointer-events: none;
+    }
+
+    .main-content-overlay.active {
+        display: block;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    /* Removed mobile search bar animation as it's now inline */
+    /*
+    .search-bar.mobile-visible {
+        display: flex !important;
+        position: fixed;
+        top: 70px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        max-width: 500px;
+        z-index: 1000;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        animation: slideDown 0.3s ease-out;
+    }
+    @keyframes slideDown {
+        from { opacity: 0; transform: translate(-50%, -20px); }
+        to { opacity: 1; transform: translate(-50%, 0); }
+    }
+    */
+
+/* Style for the individual slide container */
+.single-slide-item {
+    position: absolute; /* Allows overlays to be positioned relative to it */
+    width: 100%;
+    height: 100%;
+    display: flex; /* Helps center content if needed */
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 1s ease-in-out;
+}
+
+.single-slide-item.active {
+    opacity: 1; /* Visible when active */
+    display: flex; /* Ensure it shows up */
+}
+
+/* Ensure the image within the slide also takes full space */
+.single-slide-item .slideshow-image {
+    position: absolute; /* Take out of flow, allows text overlay */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Or contain, depending on your preference */
+    z-index: 1; /* Make sure image is behind text */
+    display: block; /* Images are always 'block' within this structure */
+    opacity: 1; /* Always visible when the parent slide is active */
+}
+
+/* Style for the text container */
+.slideshow-text-overlay {
+    position: absolute;
+    /* Adjust these values to position the text where you want it */
+    bottom: 20px; /* Example: 20px from the bottom */
+    left: 20px; /* Example: 20px from the left */
+    right: 20px; /* Adjust width, or use width property */
+    color: white; /* Text color */
+    background: rgba(0, 0, 0, 0.8); /* Darker semi-transparent background for readability */
+    padding: 15px 20px;
+    border-radius: 8px;
+    text-align: left; /* Align text within the overlay */
+    z-index: 2; /* Make sure text is above the image */
+    max-width: 70%; /* Adjust as needed */
+}
+
+.slideshow-text-overlay h2 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #00BFBF; /* Accent color for title */
+    font-size: 2em; /* Larger font for title */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Optional text shadow */
+}
+
+.slideshow-text-overlay p {
+    margin: 0;
+    font-size: 1.1em;
+    color: white; /* Changed to white */
+}
+/* Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top (higher than other content) */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Darker modal background */
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #0d0d0d; /* Darker modal content */
+    margin: auto; /* Centered */
+    padding: 0;
+    border: 1px solid #222; /* Darker border */
+    width: 90%; /* Responsive width */
+    max-width: 500px; /* Max width for larger screens */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    /* Added glow effect */
+    box-shadow: 0 0 15px rgba(0, 191, 191, 0.7), 0 0 30px rgba(0, 191, 191, 0.5);
+}
+
+/* Modal Header */
+.modal-header {
+    padding: 15px 25px;
+    /* Changed background-color to background-image for gradient */
+    background-image: linear-gradient(to right, #0a0a0a, #008080); /* Darker gradient */
+    color: rgb(255, 255, 255);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.5em;
+    /* Added text-shadow for glow effect */
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white; /* Stronger glow */
+}
+
+/* Close Button */
+.close-button {
+    color: #e0e0e0;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #00BFBF; /* Brighter teal on hover */
+    text-decoration: none;
+}
+
+/* Modal Body */
+.modal-body {
+    padding: 25px;
+    color: #e0e0e0;
+}
+
+.modal-body form {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #e0e0e0;
+}
+
+.input-group input[type="text"],
+.input-group input[type="password"] {
+    width: calc(100% - 20px); /* Account for padding */
+    padding: 10px;
+    border: 1px solid #222; /* Darker border */
+    border-radius: 4px;
+    background-color: #1a1a1a; /* Darker input background */
+    color: #e0e0e0;
+    font-size: 1em;
+}
+
+.login-submit-button {
+    background-color: #008080; /* Darker accent color */
+    color: #121212;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    width: 100%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.login-submit-button:hover {
+    background-color: #006666; /* Slightly darker on hover */
+    color: white;
+}
+
+.modal-footer-text {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+.modal-footer-text a {
+    color: #00BFBF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.modal-footer-text a:hover {
+    color: #009999;
+    text-decoration: underline;
+}
+
+.wallet-options {
+    margin-top: 30px;
+    border-top: 1px solid #222; /* Darker border */
+    padding-top: 20px;
+    text-align: center;
+}
+
+.wallet-options h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #e0e0e0;
+    font-size: 1.1em;
+}
+
+.wallet-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    background-color: #1a1a1a; /* Darker to contrast with bright logo */
+    color: #e0e0e0;
+    border: 1px solid #444; /* Darker border */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.wallet-button:hover {
+    background-color: #2a2a2a; /* Darker hover */
+    border-color: #00BFBF;
+}
+
+.wallet-button img {
+    width: 28px; /* Slightly larger */
+    height: 28px; /* Slightly larger */
+    margin-right: 10px;
+    /* Make the logo more visible */
+    filter: brightness(1.5) contrast(1.2); /* Brighten and add contrast */
+    border-radius: 50%; /* Make it circular */
+    box-shadow: 0 0 5px rgba(0, 191, 191, 0.5); /* Small glow for the logo */
+}
+
+/* Modal Animation */
+@-webkit-keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+
+</style>
+
+</head>
+<body>
+    <div class="main-content-overlay" id="mainContentOverlay"></div>
+    <aside class="sidebar-left" id="sidebarLeft">
+        <a href="#" class="sidebar-logo-container" id="mobileMenuBtn">
+            <img src="logo.png" alt="LUCK WALLET" class="sidebar-logo">
+        </a>
+        <a href="#" class="sidebar-item active"><span class="material-icons">home</span> <span class="sidebar-text">Home</span></a>
+        <a href="#" class="sidebar-item"><span class="material-icons">person</span> <span class="sidebar-text">Profile</span></a>
+        <a href="#" class="sidebar-item"><span class="material-icons">image</span> <span class="sidebar-text">NFTs</span></a>
+    </aside>
+
+    <div class="container" id="main-container">
+        <header class="header">
+            <div class="header-content">
+                <div class="header-brand">
+                    <!-- NEW BURGER ICON BUTTON FOR MOBILE -->
+                    <button class="mobile-sidebar-toggle-btn" id="mobileSidebarToggleBtn">
+                        <span class="material-icons">menu</span>
+                    </button>
+                    <h1 class="header-title">LUCK WALLET</h1>
+                </div>
+                <div class="header-right">
+                    <div class="search-bar" id="searchBar">
+                        <span class="material-icons search-icon">search</span>
+                        <input type="text" placeholder="Search collections...">
+                    </div>
+                    <button class="connect-wallet" id="connectWalletBtn">Connect Wallet</button>
+                    <!-- Mobile search toggle removed as search bar is now always inline -->
+                    <!-- <button class="mobile-search-toggle" id="mobileSearchToggle">
+                        <span class="material-icons">search</span>
+                    </button> -->
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="featured-collections">
+    <div class="slideshow-container" id="featured-slideshow">
+        <!-- Each slide is now wrapped in a 'single-slide-item' div -->
+        <div class="single-slide-item">
+            <img class="slideshow-image" src="slideshow/pixel-lads-hero.png" alt="Featured NFT 1">
+            <div class="slideshow-text-overlay">
+                 <h2>Pixel Lads</h2>
+                 <p>Collect one-of-a-kind pixel art NFTs and join a dynamic digital community.</p>
+            </div>
+        </div>
+
+        <div class="single-slide-item">
+            <img class="slideshow-image" src="slideshow/dragonville-hero.png" alt="Featured NFT 2">
+            <div class="slideshow-text-overlay">
+                 <h2>DragonVille</h2>
+                 <p>Collect unique pixel art dragons and join a legendary digital realm.</p>
+            </div>
+        </div>
+
+        <div class="single-slide-item">
+            <img class="slideshow-image" src="slideshow/gearheadz-hero.png" alt="Featured NFT 3">
+            <div class="slideshow-text-overlay">
+                 <h2>GearHeadz</h2>
+                 <p>Details for NFT 3.</p>
+            </div>
+        </div>
+
+        <div class="single-slide-item">
+            <!-- Placeholder image for demonstration, replace with actual image path -->
+            <img class="slideshow-image" src="https://placehold.co/800x300/4a4a4a/e0e0e0?text=Featured+NFT+4" alt="Featured NFT 4">
+            <div class="slideshow-text-overlay">
+                 <h2>purr-traits</h2>
+                 <p>Description for NFT 4.</p>
+            </div>
+        </div>
+
+        <div class="single-slide-item">
+            <img class="slideshow-image" src="slideshow/tinypaws-hero.png" alt="Featured NFT 5">
+            <div class="slideshow-text-overlay">
+                 <h2>tiny paws</h2>
+                 <p>Description for NFT 5.</p>
+            </div>
+        </div>
+
+        <div class="single-slide-item">
+            <img class="slideshow-image" src="slideshow/pixlrei-hero.png" alt="Featured NFT 6">
+            <div class="slideshow-text-overlay">
+                 <h2>Pixl.Rei</h2>
+                 <p>Description for NFT 6.</p>
+            </div>
+        </div>
+
+        <div class="single-slide-item">
+            <!-- Placeholder image for demonstration, replace with actual image path -->
+            <img class="slideshow-image" src="https://placehold.co/800x300/4a4a4a/e0e0e0?text=Featured+NFT+7" alt="Featured NFT 7">
+            <div class="slideshow-text-overlay">
+                 <h2>Featured NFT 7 Title</h2>
+                 <p>Description for NFT 7.</p>
+            </div>
+        </div>
+
+        <div class="single-slide-item">
+            <!-- Placeholder image for demonstration, replace with actual image path -->
+            <img class="slideshow-image" src="https://placehold.co/800x300/4a4a4a/e0e0e0?text=Featured+NFT+8" alt="Featured NFT 8">
+            <div class="slideshow-text-overlay">
+                 <h2>Featured NFT 8 Title</h2>
+                 <p>Description for NFT 8.</p>
+            </div>
+        </div>
+
+        <div class="single-slide-item">
+            <!-- Placeholder image for demonstration, replace with actual image path -->
+            <img class="slideshow-image" src="https://placehold.co/800x300/4a4a4a/e0e0e0?text=Featured+NFT+9" alt="Featured NFT 9">
+            <div class="slideshow-text-overlay">
+                 <h2>Featured NFT 9 Title</h2>
+                 <p>Description for NFT 9.</p>
+            </div>
+        </div>
+
+        <div class="single-slide-item">
+            <!-- Placeholder image for demonstration, replace with actual image path -->
+            <img class="slideshow-image" src="https://placehold.co/800x300/4a4a4a/e0e0e0?text=Featured+NFT+10" alt="Featured NFT 10">
+            <div class="slideshow-text-overlay">
+                 <h2>Featured NFT 10 Title</h2>
+                 <p>Description for NFT 10.</p>
+            </div>
+        </div>
+
+        </div>
+</section>
+
+            <section class="featured-nfts">
+                <h2>Featured NFTs</h2>
+                <div class="scroll-container">
+                    <button class="scroll-button left" onclick="scrollCards('featured-nfts-grid', -1)"><span class="material-icons">chevron_left</span></button>
+                    <div class="collections-grid" id="featured-nfts-grid">
+                        <div class="collection-card">
+                            <img src="https://placehold.co/300x200/4CAF50/e0e0e0?text=Featured+NFT+1" alt="Featured NFT 1">
+                            <div class="card-details">
+                                <h3>Featured NFT Title 1</h3>
+                                <p>Floor price: 0.15 ETH <span class="price-change positive">+5.2%</span></p>
+                            </div>
+                        </div>
+                        <div class="collection-card">
+                            <img src="https://placehold.co/300x200/F44336/e0e0e0?text=Featured+NFT+2" alt="Featured NFT 2">
+                            <div class="card-details">
+                                <h3>Featured NFT Title 2</h3>
+                                <p>Floor price: 0.8 ETH <span class="price-change negative">-2.1%</span></p>
+                            </div>
+                        </div>
+                        <div class="collection-card">
+                            <img src="https://placehold.co/300x200/FFC107/e0e0e0?text=Featured+NFT+3" alt="Featured NFT 3">
+                            <div class="card-details">
+                                <h3>Featured NFT Title 3</h3>
+                                <p>Floor price: 1.2 ETH <span class="price-change positive">+8.9%</span></p>
+                            </div>
+                        </div>
+                        <div class="collection-card">
+                            <img src="https://placehold.co/300x200/9C27B0/e0e0e0?text=Featured+NFT+4" alt="Featured NFT 4">
+                            <div class="card-details">
+                                <h3>Featured NFT Title 4</h3>
+                                <p>Floor price: 0.05 ETH <span class="price-change negative">-1.0%</span></p>
+                            </div>
+                        </div>
+                        <div class="collection-card">
+                            <img src="https://placehold.co/300x200/9C27B0/e0e0e0?text=Featured+NFT+4" alt="Featured NFT 4">
+                            <div class="card-details">
+                                <h3>Featured NFT Title 4</h3>
+                                <p>Floor price: 0.05 ETH <span class="price-change negative">-1.0%</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="scroll-button right" onclick="scrollCards('featured-nfts-grid', 1)"><span class="material-icons">chevron_right</span></button>
+                </div>
+            </section>
+
+            <!-- Mobile NFT List (visible only on small screens) -->
+            <section class="mobile-nft-list" id="mobile-nft-list">
+                <h2>NFT List</h2>
+                <div class="scroll-container">
+                    <button class="scroll-button left" onclick="scrollCards('mobile-nft-grid', -1)"><span class="material-icons">chevron_left</span></button>
+                    <div class="collections-grid" id="mobile-nft-grid">
+                        <div class="collection-card" onclick="document.querySelector('.collection-item-button').click()">
+                            <img src="logos/pixel-lads-logo.png" alt="PixelLads Logo">
+                            <div class="card-details">
+                                <h3>PixelLads</h3>
+                                <p>Floor: 0.15 ETH <span class="price-change positive">+5.2%</span></p>
+                            </div>
+                        </div>
+                        <div class="collection-card" onclick="document.querySelectorAll('.collection-item-button')[1].click()">
+                            <img src="logos/dragonville-logo.png" alt="DragonVille Logo">
+                            <div class="card-details">
+                                <h3>DragonVille</h3>
+                                <p>Floor: 0.25 ETH <span class="price-change positive">+2.1%</span></p>
+                            </div>
+                        </div>
+                        <div class="collection-card" onclick="document.querySelectorAll('.collection-item-button')[2].click()">
+                            <img src="logos/gearheadz-logo.png" alt="GearHeadz Logo">
+                            <div class="card-details">
+                                <h3>GearHeadz</h3>
+                                <p>Floor: 0.18 ETH <span class="price-change negative">-1.5%</span></p>
+                            </div>
+                        </div>
+                        <div class="collection-card" onclick="document.querySelectorAll('.collection-item-button')[3].click()">
+                            <img src="path/to/purr-traits-logo.png" alt="Purr-Traits Logo">
+                            <div class="card-details">
+                                <h3>Purr-Traits</h3>
+                                <p>Floor: 0.22 ETH <span class="price-change positive">+3.2%</span></p>
+                            </div>
+                        </div>
+                        <div class="collection-card" onclick="document.querySelectorAll('.collection-item-button')[4].click()">
+                            <img src="logos/tinypaws-logo.png" alt="Tiny Paws Logo">
+                            <div class="card-details">
+                                <h3>Tiny Paws</h3>
+                                <p>Floor: 0.12 ETH <span class="price-change positive">+1.8%</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="scroll-button right" onclick="scrollCards('mobile-nft-grid', 1)"><span class="material-icons">chevron_right</span></button>
+                </div>
+            </section>
+
+            <section class="recent-collections">
+                <h2>Recent Collection</h2>
+                <div class="scroll-container">
+                    <button class="scroll-button left" onclick="scrollCards('recent-collections-grid', -1)"><span class="material-icons">chevron_left</span></button>
+                    <div class="collections-grid" id="recent-collections-grid">
+                        <div class="collection-card">
+                            <img src="https://placehold.co/300x200/00BFBF/e0e0e0?text=Recent+NFT+1" alt="Recent NFT 1">
+                            <div class="card-details">
+                                <h3>Recent NFT Title 1</h3>
+                                <p>Floor price: 0.2 ETH <span class="price-change positive">+1.5%</span></p>
+                            </div>
+                        </div>
+                        <div class="collection-card">
+                            <img src="https://placehold.co/300x200/008080/e0e0e0?text=Recent+NFT+2" alt="Recent NFT 2">
+                            <div class="card-details">
+                                <h3>Recent NFT Title 2</h3>
+                                <p>Floor price: 0.08 ETH <span class="price-change negative">-0.5%</span></p>
+                            </div>
+                        </div>
+                        <div class="collection-card">
+                            <img src="https://placehold.co/300x200/006666/e0e0e0?text=Recent+NFT+3" alt="Recent NFT 3">
+                            <div class="card-details">
+                                <h3>Recent NFT Title 3</h3>
+                                <p>Floor price: 1.0 ETH <span class="price-change positive">+3.0%</span></p>
+                            </div>
+                        </div>
+                        <div class="collection-card">
+                            <img src="https://placehold.co/300x200/1a1a1a/e0e0e0?text=Recent+NFT+4" alt="Recent NFT 4">
+                            <div class="card-details">
+                                <h3>Recent NFT Title 4</h3>
+                                <p>Floor price: 0.3 ETH <span class="price-change positive">+0.8%</span></p>
+                            </div>
+                        </div>
+                        <div class="collection-card">
+                            <img src="https://placehold.co/300x200/2a2a2a/e0e0e0?text=Recent+NFT+5" alt="Recent NFT 5">
+                            <div class="card-details">
+                                <h3>Recent NFT Title 5</h3>
+                                <p>Floor price: 0.02 ETH <span class="price-change negative">-0.2%</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="scroll-button right" onclick="scrollCards('recent-collections-grid', 1)"><span class="material-icons">chevron_right</span></button>
+                </div>
+            </section>
+
+            <section class="nft-101">
+                <h2>NFT 101</h2>
+                <div class="scroll-container">
+                    <button class="scroll-button left" onclick="scrollCards('nft-101-grid', -1)"><span class="material-icons">chevron_left</span></button>
+                    <div class="collections-grid" id="nft-101-grid">
+                        <div class="collection-card" onclick="window.open('https://example.com/what-is-nft', '_blank');">
+                            <img src="101/what-is-nft.png" alt="What is NFT?">
+                            <div class="card-details">
+                                <h3>What is NFT?</h3>
+                            </div>
+                        </div>
+                        <div class="collection-card" onclick="window.open('https://example.com/what-is-crypto-wallet', '_blank');">
+                            <img src="101/what-is-crypto-wallet.png" alt="What is a crypto wallet?">
+                            <div class="card-details">
+                                <h3>What is a crypto wallet?</h3>
+                            </div>
+                        </div>
+                        <div class="collection-card" onclick="window.open('https://example.com/how-to-buy-nft', '_blank');">
+                            <img src="101/how-to-buy-nft.png" alt="How to buy an NFT">
+                            <div class="card-details">
+                                <h3>How to buy an NFT?</h3>
+                            </div>
+                        </div>
+                        <div class="collection-card" onclick="window.open('https://example.com/what-is-minting', '_blank');">
+                            <img src="101/what-is-minting.png" alt="What is minting?">
+                            <div class="card-details">
+                                <h3>What is minting?</h3>
+                            </div>
+                        </div>
+                        <div class="collection-card" onclick="window.open('https://example.com/stay-protected-web3', '_blank');">
+                            <img src="101/stay-protected-web3.png" alt="How to stay protected in Web3">
+                            <div class="card-details">
+                                <h3>How to stay protected in Web3</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="scroll-button right" onclick="scrollCards('nft-101-grid', 1)"><span class="material-icons">chevron_right</span></button>
+                </div>
+            </section>
+            
+        </main>
+
+        <aside class="sidebar-right" id="sidebar-right">
+            <div class="sidebar-right-top-filters">
+                 <h3 class="sidebar-collection-title">NFT List</h3>
+            </div>
+            <div class="collection-list">
+                <button class="collection-item-button">
+                    <img src="logos/pixel-lads-logo.png" alt="PixelLads Logo" class="category-logo">
+
+                </button>
+                <button class="collection-item-button">
+                    <img src="logos/dragonville-logo.png" alt="DragonVille Logo" class="category-logo">
+
+                </button>
+                <button class="collection-item-button">
+                    <img src="logos/gearheadz-logo.png" alt="GearHeadz Logo" class="category-logo">
+
+                </button>
+                <button class="collection-item-button">
+                    <img src="path/to/purr-traits-logo.png" alt="purr-traits Logo" class="category-logo">
+
+                </button>
+                <button class="collection-item-button">
+                    <img src="logos/tinypaws-logo.png" alt="Tiny Paws Logo" class="category-logo">
+
+                </button>
+                <button class="collection-item-button">
+                    <img src="logos/pixlrei.png" alt="Mutant Ape Yacht Club Logo" class="category-logo">
+
+                </button>
+                <button class="collection-item-button">
+                    <img src="path/to/cool-cats-logo.png" alt="Cool Cats Logo" class="category-logo">
+
+                </button>
+                <button class="collection-item-button">
+                    <img src="path/to/voxies-logo.png" alt="Voxies Logo" class="category-logo">
+
+                </button>
+                <button class="collection-item-button">
+                    <img src="path/to/solana-monkey-logo.png" alt="Solana Monkey Business Logo" class="category-logo">
+
+                </button>
+                <button class="collection-item-button">
+                    <img src="path/to/extra-button-logo.png" alt="Extra Category Logo" class="category-logo">
+
+                </button>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Login Modal Structure -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close-button">&times;</span>
+                <h2>Connect Wallet / Login</h2>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="input-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="login-submit-button">Login</button>
+                </form>
+                <p class="modal-footer-text">Don't have an account? <a href="#" id="signupLink">Sign Up</a></p>
+                <p class="modal-footer-text"><a href="#" id="forgotPasswordLink">Forgot Password?</a></p>
+                <div class="wallet-options">
+                    <h3>Or connect with:</h3>
+                    <button class="wallet-button">
+                        <img src="logo.png" alt="MetaMask Icon">
+                        Luck Wallet
+                    </button>
+            
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        let slideshowInterval; // Variable to hold the interval ID
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all DOM elements needed for mobile functionality
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn'); // This was the sidebar logo
+            const sidebarLeft = document.querySelector('.sidebar-left');
+            const mobileSearchToggle = document.getElementById('mobileSearchToggle');
+            const searchBar = document.getElementById('searchBar'); /* Get by ID for clarity */
+            const searchInput = searchBar.querySelector('input'); // Get input inside search bar
+            const overlay = document.querySelector('.main-content-overlay');
+            const sidebarItems = document.querySelectorAll('.sidebar-item');
+            const sidebarLeftItemIcons = document.querySelectorAll('.sidebar-item .material-icons'); // Corrected selector for icons
+            const mainContentOverlay = document.querySelector('.main-content-overlay');
+            const connectWalletBtn = document.getElementById("connectWalletBtn");
+            const modal = document.getElementById("loginModal");
+            const closeButton = document.getElementsByClassName("close-button")[0];
+
+            // NEW: Get the mobile sidebar toggle button
+            const mobileSidebarToggleBtn = document.getElementById('mobileSidebarToggleBtn');
+
+            let isTransitioning = false;
+            const TRANSITION_DURATION = 300; // Match this with CSS transition duration
+
+            // Function to toggle mobile menu visibility
+            function toggleMobileMenu() {
+                if (isTransitioning) return; // Prevent rapid clicks during transition
+                
+                isTransitioning = true;
+                const isOpening = !sidebarLeft.classList.contains('mobile-visible');
+                
+                if (isOpening) {
+                    // Close search if open
+                    searchBar.classList.remove('expanded-mobile'); /* Ensure search bar is not expanded */
+                    sidebarLeft.classList.add('mobile-visible');
+                    overlay.classList.add('active');
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+                } else {
+                    sidebarLeft.classList.remove('mobile-visible');
+                    overlay.classList.remove('active');
+                    document.body.style.overflow = ''; // Re-enable scrolling
+                }
+                
+                // Allow time for CSS transition to complete before re-enabling clicks
+                setTimeout(() => {
+                    isTransitioning = false;
+                }, TRANSITION_DURATION);
+            }
+
+            // Function to toggle search bar visibility and expansion
+            function toggleSearchBarExpansion() {
+                // Only allow expansion/collapse if screen width is 680px or less
+                if (window.innerWidth <= 680) {
+                    if (isTransitioning) return; // Prevent rapid clicks during transition
+                    
+                    isTransitioning = true;
+                    const isExpanded = searchBar.classList.contains('expanded-mobile');
+                    
+                    if (!isExpanded) {
+                        // Expand search bar
+                        // Close sidebar if open
+                        sidebarLeft.classList.remove('mobile-visible');
+                        searchBar.classList.add('expanded-mobile');
+                        overlay.classList.add('active');
+                        document.body.style.overflow = 'hidden'; // Prevent scrolling
+                        
+                        if (searchInput) {
+                            setTimeout(() => {
+                                searchInput.focus();
+                                searchInput.select();
+                            }, 300);
+                        }
+                    } else {
+                        // Collapse search bar
+                        searchBar.classList.remove('expanded-mobile');
+                        overlay.classList.remove('active');
+                        document.body.style.overflow = ''; // Re-enable scrolling
+                        if (searchInput) {
+                            searchInput.value = ''; // Clear input on collapse
+                            searchInput.blur(); // Remove focus
+                        }
+                    }
+                    
+                    setTimeout(() => {
+                        isTransitioning = false;
+                    }, TRANSITION_DURATION);
+                } else {
+                    // For screens larger than 680px, search bar is always visible, no expansion needed
+                    // You might want to remove focus if user clicks the icon again on desktop
+                    if (searchInput === document.activeElement) {
+                        searchInput.blur();
+                    } else {
+                        searchInput.focus();
+                    }
+                }
+            }
+
+
+            // Function to close all mobile menus (sidebar and search bar)
+            function closeAllMenus() {
+                if (isTransitioning) return; // Prevent rapid clicks during transition
+                
+                isTransitioning = true;
+                if (overlay) overlay.classList.remove('active');
+                if (sidebarLeft) sidebarLeft.classList.remove('mobile-visible');
+                if (searchBar) searchBar.classList.remove('expanded-mobile'); /* Collapse search bar */
+                document.body.style.overflow = ''; // Re-enable scrolling
+                
+                // Remove focus from any focused elements
+                if (document.activeElement) {
+                    document.activeElement.blur();
+                }
+                
+                // Allow time for CSS transition to complete before re-enabling clicks
+                setTimeout(() => {
+                    isTransitioning = false;
+                }, TRANSITION_DURATION);
+            }
+
+            // Event listener for the NEW mobile sidebar toggle button
+            if (mobileSidebarToggleBtn && sidebarLeft) {
+                mobileSidebarToggleBtn.addEventListener('click', toggleMobileMenu);
+            }
+
+            // Event listener for search bar (or its icon) to toggle expansion
+            if (searchBar) {
+                searchBar.addEventListener('click', function(event) {
+                    // Prevent propagation to overlay if clicking inside search bar
+                    event.stopPropagation();
+                    toggleSearchBarExpansion();
+                });
+                // Prevent form submission if the search icon is clicked
+                searchBar.querySelector('.search-icon').addEventListener('click', function(event) {
+                    event.preventDefault();
+                });
+            }
+
+
+            // Close menus when clicking the overlay
+            if (overlay) {
+                overlay.addEventListener('click', closeAllMenus);
+            }
+
+            // Handle sidebar item clicks for both mobile and desktop
+            sidebarItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault(); // Prevent default anchor behavior
+                    
+                    // Remove 'active' class from all sidebar items and add it to the clicked one
+                    sidebarItems.forEach(i => i.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Close menu on mobile after an item is clicked
+                    if (window.innerWidth <= 1024) {
+                        closeAllMenus();
+                    }
+                });
+            });
+
+            // Handle right sidebar general filter buttons active state (for time filters like Top, Trending, 1d)
+            const filterButtonsSmall = document.querySelectorAll('.filter-button-small');
+            filterButtonsSmall.forEach(button => {
+                button.addEventListener('click', () => {
+                    filterButtonsSmall.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    console.log(`Filter selected: ${button.textContent}`);
+                });
+            });
+
+            // Handle collection item buttons active state in the right sidebar
+            const collectionItemButtons = document.querySelectorAll('.collection-item-button');
+            collectionItemButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    collectionItemButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    // In a real application, you might filter the displayed NFTs here
+                    console.log(`Collection item selected: ${button.textContent}`);
+                });
+            });
+
+            // Left sidebar hover functionality - only for desktop
+            // This expands the sidebar on hover and adds an overlay to the main content
+            if (window.innerWidth > 1024 && sidebarLeft) {
+                sidebarLeft.addEventListener('mouseover', () => {
+                    sidebarLeft.style.width = '250px'; // Expand left sidebar
+                    
+                    // Adjust icon margin for expanded view
+                    if (sidebarLeftItemIcons) {
+                        sidebarLeftItemIcons.forEach(icon => {
+                            icon.style.marginRight = '10px';
+                        });
+                    }
+
+                    // Activate overlay to dim main content
+                    if (mainContentOverlay) {
+                        mainContentOverlay.classList.add('active');
+                    }
+                    if (mobileMenuBtn) { // Show logo on desktop hover
+                        mobileMenuBtn.style.display = 'flex';
+                    }
+                });
+
+                sidebarLeft.addEventListener('mouseout', () => {
+                    sidebarLeft.style.width = '80px'; // Collapse left sidebar
+                    
+                    // Revert icon margin for collapsed view
+                    if (sidebarLeftItemIcons) {
+                        sidebarLeftItemIcons.forEach(icon => {
+                            icon.style.marginRight = '0px';
+                        });
+                    }
+                    // Deactivate overlay
+                    if (mainContentOverlay) {
+                        mainContentOverlay.classList.remove('active');
+                    }
+                    if (mobileMenuBtn) { // Hide logo on desktop collapse
+                        mobileMenuBtn.style.display = 'none';
+                    }
+                });
+            }
+
+            // Initialize slideshow and start automatic playback
+            showSlides(slideIndex);
+            startSlideshow();
+
+            // When the "Connect Wallet" button is clicked, display the modal
+            if (connectWalletBtn) { // Check if the button exists before attaching event listener
+                connectWalletBtn.onclick = function() {
+                    modal.style.display = "flex"; // Use flex to center the modal content
+                }
+            }
+
+            // When the user clicks on the 'x' (close) button, hide the modal
+            if (closeButton) { // Check if the close button exists
+                closeButton.onclick = function() {
+                    modal.style.display = "none";
+                }
+            }
+
+            // When the user clicks anywhere outside of the modal content, hide the modal
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+
+            // Handle login form submission (for demonstration purposes)
+            document.querySelector('#loginModal form').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent actual form submission
+                // In a real application, you would send data to a server for authentication here.
+                // After successful login, you might close the modal: modal.style.display = "none";
+                
+                // Instead of alert(), you could show a custom message box or update UI
+                console.log('Login attempt! (This is a demo, no actual login)'); 
+            });
+
+            // Handle "Sign Up" link click (for demonstration)
+            document.getElementById('signupLink').addEventListener('click', function(event) {
+                event.preventDefault();
+                // In a real application, you would navigate to a sign-up page or show a sign-up form.
+                console.log('Redirecting to Sign Up page (demo)');
+            });
+
+            // Handle "Forgot Password" link click (for demonstration)
+            document.getElementById('forgotPasswordLink').addEventListener('click', function(event) {
+                event.preventDefault();
+                // In a real application, you would navigate to a forgot password page or show a reset form.
+                console.log('Redirecting to Forgot Password page (demo)');
+            });
+
+            // Handle clicks on wallet connection buttons (for demonstration)
+            document.querySelectorAll('.wallet-button').forEach(button => {
+                button.addEventListener('click', function() {
+                    // In a real application, you would initiate wallet connection logic here.
+                    // Instead of alert(), you could show a custom message or update UI
+                    console.log('Connecting to ' + this.textContent.trim() + ' (demo)');
+                });
+            });
+        }); /* End of DOMContentLoaded */
+
+        // Function to start the automatic slideshow
+        function startSlideshow() {
+            // Clear any existing interval to prevent multiple intervals running concurrently
+            clearInterval(slideshowInterval);
+            // Set a new interval for automatic slide changes (e.g., every 3 seconds)
+            slideshowInterval = setInterval(() => {
+                plusSlides(1); // Call plusSlides to advance to the next slide
+            }, 3000); // Change image every 3 seconds
+        }
+
+        // Function to advance or go back in the slideshow
+        function plusSlides(n) {
+            showSlides(slideIndex += n); // Update slideIndex and call showSlides
+            // The interval handles the automatic advancement, so no need to restart it here.
+        }
+
+        // Main slideshow logic to display a specific slide
+        function showSlides(n) {
+            let i; // Loop counter
+            // Get all slide elements
+            let slides = document.getElementsByClassName("single-slide-item");
+            
+            // If no slides are found, exit the function
+            if (slides.length === 0) return; 
+
+            // Handle looping for slide index:
+            // If current slide index goes beyond the last slide, reset to the first slide (index 0).
+            if (n >= slides.length) { 
+                slideIndex = 0; 
+            }
+            // If current slide index goes below the first slide, set it to the last slide.
+            if (n < 0) { 
+                slideIndex = slides.length - 1; 
+            }
+
+            // Hide all slides by removing the 'active' class
+            for (i = 0; i < slides.length; i++) {
+                slides[i].classList.remove('active'); 
+            }
+
+            // Show the current slide by adding the 'active' class
+            slides[slideIndex].classList.add('active'); 
+        }
+    
+        // Function to scroll cards horizontally within a given container
+        function scrollCards(containerId, direction) {
+            const container = document.getElementById(containerId);
+            if (container) {
+                let scrollAmount;
+                // Determine scroll amount based on the container (mobile NFT grid has smaller cards)
+                if (containerId === 'mobile-nft-grid') {
+                    scrollAmount = 160 * direction; // 150px card width + 10px margin
+                } else {
+                    scrollAmount = 320 * direction; // Default 300px card width + 20px margin
+                }
+                
+                // Perform the smooth scroll
+                container.scrollBy({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    </script>
+</body>
+</html>

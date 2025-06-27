@@ -1,0 +1,2002 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <title>Luck Wallet</title>
+   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSC6Wr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Global HTML and Body Reset */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden;
+            height: 100%; /* Ensure html and body take full height */
+        }
+
+        /* Apply a SINGLE continuous linear gradient to HTML */
+        html {
+            background: linear-gradient(to bottom, #000000, #004d4d, #000000); /* Single continuous gradient */
+            background-attachment: fixed; /* Ensures the background stays in place while scrolling */
+            background-size: 100% auto; /* Adjust size based on content height */
+        }
+
+        /* Base styles */
+        body {
+            font-family: 'Fira Code', sans-serif;
+            color: #e0e0e0;
+            min-height: 100vh; /* Ensure body covers at least viewport height */
+            display: flex;
+            flex-direction: column;
+            background-color: transparent; /* Make body transparent to show html background */
+        }
+
+        /* Header Styles */
+        .main-header {
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            height: 4rem;
+            padding: 0 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            position: sticky;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            box-sizing: border-box;
+            border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+        }
+
+        .header-logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: auto;
+            position: relative;
+            height: auto;
+        }
+
+        .header-logo-button {
+            display: block;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .header-logo {
+            height: 8rem;
+            margin-right: 0;
+            margin-top: 1rem;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+            transform: translateX(-20px);
+        }
+
+        .header-nav-link {
+            color: #ffffff;
+            font-weight: 500;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, padding 0.2s ease-in-out;
+            font-size: 1.125rem;
+        }
+
+        .header-nav-link:hover {
+            color: #ffffff;
+            background-color: rgba(0, 50, 50, 0.5);
+        }
+
+        /* Mobile menu toggle button */
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: white;
+            padding: 0.5rem;
+            z-index: 100;
+        }
+
+        /* Mobile specific header/nav */
+        @media (max-width: 768px) {
+            html {
+                font-size: 14px; /* Slightly smaller base font size for mobile */
+            }
+            
+            .menu-icon {
+                display: block;
+                position: absolute;
+                right: 1rem;
+                top: 1rem;
+            }
+            
+            .header-nav {
+                display: none;
+                position: fixed;
+                top: 4rem;
+                left: 0;
+                right: 0;
+                background-color: rgba(0, 20, 20, 0.98);
+                flex-direction: column;
+                padding: 1rem 0;
+                text-align: center;
+                border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                z-index: 999;
+                margin: 0;
+                gap: 0.5rem;
+            }
+            
+            .header-nav.active {
+                display: flex;
+            }
+            
+            .header-nav-link {
+                color: #ffffff;
+                font-weight: 500;
+                text-decoration: none;
+                padding: 0.75rem 1rem;
+                margin: 0.25rem 1rem;
+                border-radius: 0.25rem;
+                font-size: 1.125rem;
+                transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+                background-color: transparent;
+            }
+            
+            .header-nav-link:hover {
+                color: #ffffff;
+                background-color: rgba(0, 50, 50, 0.5);
+            }
+            
+            .header-logo {
+                height: 6rem;
+                margin-top: 0.5rem;
+            }
+        }
+
+        @media (max-width: 1023px) {
+            .main-header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 4rem;
+                padding: 0 1rem;
+            }
+            
+            .menu-icon {
+                display: block;
+                position: absolute;
+                right: 1rem;
+                top: 1rem;
+                z-index: 100;
+                color: white;
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
+            
+            .header-nav {
+                display: none;
+                position: fixed;
+                top: 4rem;
+                left: 0;
+                right: 0;
+                background-color: rgba(0, 20, 20, 0.98);
+                flex-direction: column;
+                padding: 1rem 0;
+                text-align: center;
+                border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                z-index: 999;
+                margin: 0;
+                transform: none;
+            }
+            
+            .header-nav.active {
+                display: flex;
+            }
+            
+            .header-nav-link {
+                padding: 0.75rem 1rem;
+                margin: 0.25rem 1rem;
+                background: rgba(0, 40, 40, 0.7);
+                border-radius: 0.5rem;
+                font-size: 1.1rem;
+            }
+            
+            .header-logo {
+                height: 6rem;
+                margin-top: 0.5rem;
+            }
+            
+            .hero-text-content {
+                padding: 0 1rem;
+                margin-bottom: 10%;
+                text-align: center;
+            }
+            
+            .hero-buttons {
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+            }
+            
+            .btn-primary-cyberpunk {
+                width: 100%;
+                max-width: 200px;
+                margin: 0 auto;
+            }
+            .header-logo-container {
+                width: 100%;
+                justify-content: flex-start;
+                align-items: center;
+            }
+            .header-nav {
+                flex-direction: column;
+                width: 100%;
+                gap: 0.5rem;
+                margin-top: 1rem;
+                justify-content: flex-start;
+                margin-left: 0;
+                margin-right: 0;
+                transform: translateX(0);
+            }
+            .header-nav-link {
+                width: 100%;
+                text-align: center;
+                padding: 0.5rem 0;
+                background-color: rgba(0, 0, 0, 0.2);
+                border-radius: 0.375rem;
+            }
+            .btn-primary-cyberpunk {
+                width: 100%;
+                margin-top: 1rem;
+                text-align: center;
+            }
+        }
+
+        /* Hero Section Styles - Now semi-transparent to show HTML background */
+        .hero-gradient-cyberpunk {
+            background: rgba(0, 0, 0, 0.4); /* Changed to semi-transparent */
+            color: #e0e0e0;
+            padding: 2rem 1rem;
+            text-align: center;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            box-sizing: border-box;
+            min-height: calc(100vh - 4rem);
+            overflow-x: hidden;
+        }
+
+        @media (min-width: 768px) {
+            .hero-gradient-cyberpunk {
+                grid-template-columns: 1fr 1fr;
+                padding: 3rem 3rem;
+                text-align: center;
+            }
+        }
+
+        /* Hero Text Content */
+        .hero-text-content {
+            text-align: center;
+            margin: 0 auto 20%;
+            padding: 0 1rem;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+        @media (min-width: 768px) {
+            .hero-text-content {
+                padding: 0 2rem;
+                max-width: 800px;
+            }
+        }
+
+        /* Hero Text Sizing */
+        .hero-gradient-cyberpunk h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            line-height: 1.25;
+            margin-bottom: 1rem;
+            animation: fadeInFromTop 0.8s ease-out forwards;
+            opacity: 0;
+            text-align: left;
+        }
+        @media (min-width: 640px) {
+            .hero-gradient-cyberpunk h1 { font-size: 2.25rem; }
+        }
+        @media (min-width: 768px) {
+            .hero-gradient-cyberpunk h1 { font-size: 2.75rem; }
+        }
+
+        .hero-gradient-cyberpunk p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+            animation: fadeIn 0.8s ease-out 0.2s forwards;
+            opacity: 0;
+            text-align: left;
+        }
+        @media (min-width: 640px) {
+            .hero-gradient-cyberpunk p { font-size: 1.1rem; }
+        }
+        @media (min-width: 768px) {
+            .hero-gradient-cyberpunk p { font-size: 1.25rem; }
+        }
+
+        /* Hero Buttons */
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            animation: fadeIn 0.8s ease-out 0.4s forwards;
+            opacity: 0;
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+        @media (min-width: 640px) {
+            .hero-buttons {
+                flex-direction: row;
+                gap: 1.5rem;
+            }
+        }
+        @media (min-width: 768px) {
+            .hero-buttons {
+                justify-content: flex-start;
+            }
+        }
+
+        /* Hero Image */
+        .hero-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            margin-bottom: 10%;
+        }
+        .hero-image-container img {
+            max-width: 60%;
+            height: auto;
+            border-radius: 1rem;
+            box-shadow: 0 0 20px rgba(0, 230, 230, 0.5);
+            border: 1px solid #00e6e6;
+        }
+
+        /* Buttons */
+        .btn-primary-cyberpunk {
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(to right, #008080, #00b3b3);
+            color: white;
+            font-weight: 600;
+            border-radius: 9999px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            width: auto;
+            min-width: 140px;
+            box-sizing: border-box;
+        }
+        .btn-primary-cyberpunk:hover {
+            background: linear-gradient(to right, #006666, #008c8c);
+            transform: scale(1.05);
+        }
+
+        .btn-secondary-cyberpunk {
+            padding: 0.75rem 2rem;
+            background-color: transparent;
+            color: #00e6e6;
+            font-weight: 600;
+            border-radius: 9999px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid #00e6e6;
+            transition: all 0.3s ease-in-out;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-secondary-cyberpunk:hover {
+            background-color: #004d4d;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        /* General Section Styles - Now semi-transparent to show HTML background */
+        .section-bg-dark {
+            background: rgba(0, 0, 0, 0.4); /* Changed to semi-transparent */
+            padding: 2.5rem 1.5rem;
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            scroll-margin-top: 6rem;
+        }
+        .section-bg-dark h2 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        @media (min-width: 640px) {
+            .section-bg-dark h2 { font-size: 2.5rem; }
+        }
+        @media (min-width: 768px) {
+            .section-bg-dark { padding: 4rem 3rem; }
+        }
+
+        /* Carousel */
+        .carousel-wrapper {
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .carousel-container {
+            width: 100%;
+            position: relative;
+            padding: 2rem 1rem;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .grid-3-cols {
+            display: flex;
+            gap: 1.5rem;
+            position: relative;
+            left: 0;
+            will-change: transform;
+            align-items: center;
+            transition: transform 0.3s ease;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        /* Hide any content that overflows the viewport */
+        .carousel-wrapper {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .carousel-wrapper::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Make images responsive */
+        .grid-3-cols img {
+            width: 220px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+            border: 1px solid #00e6e6;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            flex: 0 0 auto;
+            box-sizing: border-box;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .carousel-container {
+                padding: 1.5rem 1rem;
+            }
+            .grid-3-cols img {
+                width: 180px;
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .carousel-container {
+                padding: 1rem 1rem;
+            }
+            .grid-3-cols img {
+                width: 140px;
+                height: 200px;
+            }
+        }
+
+        /* Carousel Navigation Buttons */
+        .carousel-button {
+            background: rgba(0, 230, 230, 0.3);
+            color: white;
+            border: 1px solid #00e6e6;
+            padding: 0.75rem 0.5rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-size: 1.5rem;
+            font-weight: bold;
+            line-height: 1;
+            transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+            z-index: 10;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-shadow: 0 0 5px rgba(0, 230, 230, 0.5);
+        }
+        .carousel-button:hover {
+            background: rgba(0, 230, 230, 0.5);
+            border-color: #00ffff;
+            text-shadow: 0 0 8px rgba(0, 255, 255, 0.7);
+        }
+        .carousel-button.prev { left: 0.5rem; }
+        .carousel-button.next { right: 0.5rem; }
+
+        /* Styles for images inside carousel */
+        .grid-3-cols img {
+            width: 220px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+            border: 1px solid #00e6e6;
+            flex-shrink: 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Responsive image sizing */
+        @media (max-width: 1024px) {
+            .grid-3-cols img {
+                width: 200px;
+                height: 280px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .grid-3-cols img {
+                width: 180px;
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .grid-3-cols img {
+                width: 160px;
+                height: 220px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid-3-cols img {
+                width: 140px;
+                height: 200px;
+            }
+        }
+
+        /* Hover effects for larger screens */
+        @media (hover: hover) and (min-width: 768px) {
+            .grid-3-cols img:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 20px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -4px rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        /* Ecosystem & Developers Sections - Now semi-transparent to show HTML background */
+        .bg-gray-900-custom {
+            background: rgba(0, 0, 0, 0.4); /* Changed to semi-transparent */
+            padding: 2.5rem 1.5rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            gap: 3rem;
+            scroll-margin-top: 6rem;
+        }
+        @media (min-width: 768px) {
+            .bg-gray-900-custom { padding: 4rem 3rem; }
+        }
+        .content-grid-2-cols {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+            max-width: 72rem;
+            margin: 0 auto;
+        }
+        @media (min-width: 768px) {
+            .content-grid-2-cols { grid-template-columns: repeat(2, 1fr); }
+        }
+        .text-content-left { text-align: left; }
+        @media (min-width: 768px) { .text-content-left.order-2-md { order: 2; } }
+        .text-content-left h3 { font-size: 1.5rem; font-weight: 600; color: white; margin-bottom: 1rem; }
+        .text-content-left p { color: #33cccc; margin-bottom: 1.5rem; line-height: 1.625; }
+        .text-content-left ul {
+            list-style: disc;
+            padding-left: 1.25rem;
+            color: #66e6e6;
+            margin-bottom: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .image-content-right .image {
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+            border: 1px solid #00e6e6;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        @media (min-width: 768px) { .image-content-right.order-1-md { order: 1; } }
+
+        /* New styles for Ecosystem Flexbox items */
+        .ecosystem-flex-container .flex-item {
+            opacity: 0;
+            transform: translateY(40px) scale(0.95);
+            filter: blur(3px);
+            transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        
+        .ecosystem-flex-container .flex-item.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            filter: blur(0);
+            box-shadow: 0 15px 30px rgba(0, 230, 230, 0.2);
+        }
+        
+        .ecosystem-flex-container .flex-item.visible:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 230, 230, 0.3);
+        }
+        
+        .ecosystem-flex-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            max-width: 72rem;
+            width: 100%;
+            margin-bottom: 3rem;
+            align-items: center;
+            justify-content: center;
+        }
+        @media (min-width: 768px) {
+            .ecosystem-flex-container {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                align-items: stretch;
+            }
+        }
+
+        .flex-item {
+            background: rgba(0, 0, 0, 0.8); /* Changed to semi-transparent */
+            padding: 2rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+            border: 1px solid #00e6e6;
+            text-align: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 400px;
+            box-sizing: border-box;
+            transition: box-shadow 0.3s ease-in-out;
+            flex-grow: 0;
+            flex-shrink: 0;
+            margin-top: 8%;
+        }
+        .flex-item:hover {
+            box-shadow:
+                0 0 8px #00ffff,
+                0 0 16px #00e6e6;
+        }
+
+        @media (min-width: 768px) {
+            .flex-item {
+                flex-basis: calc(33.33% - (2rem * 2 / 3));
+            }
+        }
+
+        @media (max-width: 767px) {
+            .flex-item {
+                width: 100%;
+                max-width: 90%;
+                min-height: 350px;
+            }
+        }
+
+        .icon-circle-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            background-color: #004d4d;
+            border-radius: 50%;
+            border: 2px solid #00e6e6;
+            box-shadow: 0 0 15px rgba(0, 230, 230, 0.5);
+            margin-bottom: 1rem;
+        }
+
+        .icon-circle-container .fas,
+        .icon-circle-container .fab {
+            color: #e0e0e0;
+            font-size: 3em;
+        }
+
+        .flex-item h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: #00e6e6;
+        }
+
+        .flex-item p {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #e0e0e0;
+        }
+
+        /* Call to Action Section - Now semi-transparent to show HTML background */
+        .call-to-action-section {
+            background: rgba(0, 0, 0, 0.4); /* Changed to semi-transparent */
+            color: white;
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+        @media (min-width: 768px) {
+            .call-to-action-section { padding: 4rem 3rem; }
+        }
+        .call-to-action-section h2 { font-size: 2.25rem; font-weight: 700; margin-bottom: 1.5rem; }
+        @media (min-width: 640px) { .call-to-action-section h2 { font-size: 2.5rem; } }
+        .call-to-action-section p { font-size: 1.125rem; margin-bottom: 2rem; opacity: 0.9; }
+        .call-to-action-buttons { display: flex; flex-direction: column; justify-content: center; gap: 1rem; }
+        @media (min-width: 640px) { .call-to-action-buttons { flex-direction: row; gap: 1.5rem; } }
+        .btn-secondary-white-bordered {
+            padding: 0.75rem 2rem;
+            background-color: transparent;
+            color: white;
+            font-weight: 600;
+            border-radius: 9999px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid white;
+            transition: all 0.3s ease-in-out;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-secondary-white-bordered:hover { background-color: rgba(0, 50, 50, 0.5); transform: scale(1.05); }
+
+        /* Footer Styles */
+        .main-footer {
+            background: linear-gradient(135deg, #001a1a 0%, #003333 100%);
+            color: #e0e0e0;
+            padding: 3rem 1.5rem 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        .footer-first-column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-logo {
+            height: 100px;
+            margin: 0 auto;
+            display: block;
+            object-fit: contain;
+        }
+        
+        .footer-description {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #00ffff;
+            margin: 0.5rem 0 1rem;
+            line-height: 1.4;
+            text-align: center;
+        }
+        
+        .social-icons-container {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem auto;
+            justify-content: center;
+        }
+        
+        .social-icon-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(0, 255, 255, 0.1);
+            color: #00ffff;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 0 10px rgba(0, 230, 230, 0.3);
+        }
+
+        .social-icon-btn:hover {
+            background-color: #006666;
+            border-color: #00ffff;
+            color: #00ffff;
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+        }
+        
+        .main-footer h4 {
+            color: #00ffff;
+            font-size: 1.125rem;
+            margin: 1.5rem 0 1rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+            text-align: center;
+        }
+        
+        .main-footer h4::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background: linear-gradient(90deg, #00ffff, transparent);
+        }
+        
+        .main-footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        
+        .main-footer ul li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .main-footer ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.9375rem;
+            display: inline-block;
+        }
+        
+        .main-footer ul li a:hover {
+            color: #00ffff;
+            padding-left: 5px;
+        }
+        
+        .footer-bottom-text {
+            text-align: center;
+            padding: 1.5rem 1rem 0;
+            margin: 2rem 1rem 0;
+            border-top: 1px solid rgba(0, 255, 255, 0.1);
+            color: #a0aec0;
+            font-size: 0.875rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(0, 255, 255, 0.1);
+            color: #a0aec0;
+            font-size: 0.875rem;
+        }
+        
+
+
+
+        /* Animations */
+        @keyframes fadeInFromTop {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes heroFloat {
+            0% { transform: translateY(0px) scale(1); box-shadow: 0 0 20px rgba(0, 230, 230, 0.5); }
+            50% { transform: translateY(-8px) scale(1.01); box-shadow: 0 0 30px rgba(0, 255, 255, 0.8); }
+            100% { transform: translateY(0px) scale(1); box-shadow: 0 0 20px rgba(0, 230, 230, 0.5); }
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                text-align: left;
+            }
+            
+            .footer-first-column {
+                align-items: flex-start;
+                text-align: left;
+            }
+            
+            .footer-logo {
+                margin-left: 0;
+            }
+            
+            .footer-description {
+                text-align: left;
+                margin-left: 0;
+            }
+            
+            .social-icons-container {
+                justify-content: flex-start;
+                margin-left: 0;
+            }
+            
+            .main-footer h4 {
+                text-align: left;
+            }
+            
+            .main-footer h4::after {
+                left: 0;
+                transform: none;
+            }
+            
+            .main-footer ul {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-logo-container">
+            <a href="index.html" class="header-logo-button">
+                <img src="assets/images/logo.png" alt="LUCK Logo" class="header-logo">
+            </a>
+            <div class="menu-icon" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        <nav class="header-nav" id="mainNav">
+            <a href="index.html" class="header-nav-link">Home</a>
+            <a href="pages/whitepaper.html" class="header-nav-link">Whitepaper</a>
+            <a href="http://localhost/Luck%20Wallet/ecasino/index.php" class="header-nav-link">LuckyTime</a>
+            <a href="http://localhost/luck%20Wallet/marketplace/marketplace.php" class="header-nav-link">LUCK Marketplace</a>
+            <a href="pages/about.html" class="header-nav-link">About</a>
+        </nav>
+    </header>
+
+    <div id="main-content-wrapper" class="main-content-wrapper">
+        <style>
+            .main-content-wrapper {
+                flex: 1;
+                width: 100%;
+                max-width: 100%;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                position: relative;
+                z-index: 1;
+            }
+            
+            section {
+                width: 100%;
+                margin: 0;
+                padding: 3rem 1.5rem;
+                box-sizing: border-box;
+            }
+            
+            .max-w-6xl {
+                max-width: 72rem;
+                margin: 0 auto;
+                width: 100%;
+                padding: 0 1.5rem;
+                box-sizing: border-box;
+            }
+            
+            .hero-gradient-cyberpunk {
+                padding: 6rem 1.5rem 4rem;
+                margin: 0;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            
+            @media (max-width: 768px) {
+                section {
+                    padding: 2rem 1rem;
+                }
+                
+                .hero-gradient-cyberpunk {
+                    padding: 5rem 1rem 3rem;
+                }
+            }
+        </style>
+        <section class="hero-gradient-cyberpunk" style="margin: 0; padding: 6rem 0 4rem;">
+            <div class="hero-text-content">
+                <h1>
+                    Fake it 'til you make it... with $LUCK!
+                </h1>
+                <p>
+                    Learn how crypto works in a fully simulated ecosystem.
+                </p>
+                <div class="hero-buttons">
+                    <a href="http://localhost/Luck%20Wallet/auth/login.php" class="btn-primary-cyberpunk">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <img src="assets/images/hero.png" alt="Cybernetic Network Grid" class="image" id="heroImage">
+            </div>
+        </section>
+
+        <section id="ecosystem" class="bg-gray-900-custom" style="margin: 0; padding: 4rem 0;">
+            <div class="max-w-6xl mx-auto text-center">
+                <div class="ecosystem-flex-container">
+                    <div class="flex-item">
+                        <div class="icon-circle-container">
+                            <i class="fas fa-handshake" aria-hidden="true"></i> </div>
+                        <h3>Where Your Game Winnings Become Crypto</h3>
+                        <p>In this simulated ecosystem, your success in casino-style games, played with mock coins, directly translates into $LUCK cryptocurrency within a safe, educational Web3 environment. This allows you to learn about crypto and decentralized finance by converting your virtual winnings into a simulated digital asset, all without real-world gambling risks.</p>
+                    </div>
+                    <div class="flex-item">
+                        <div class="icon-circle-container">
+                            <i class="fab fa-btc" aria-hidden="true"></i> </div>
+                        <h3>No real gambling, all real learning</h3>
+                        <p>This platform is designed purely for educational purposes, allowing users to engage with casino-style games using mock currency. It offers a risk-free environment where individuals can learn about game mechanics, cryptocurrency, and Web3 principles without any actual financial exposure.</p>
+                    </div>
+                    <div class="flex-item">
+                        <div class="icon-circle-container">
+                            <i class="fas fa-database" aria-hidden="true"></i> </div>
+                        <h3>Win Games, Win Crypto Knowledge.</h3>
+                        <p>Our E-Casino is built for fun and education. Try your luck on casino-style games, then turn those mock coins into $Luck and explore the world of simulated Web3. Through this engaging process, participants build real-world crypto literacy in a completely safe environment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="section-bg-dark" style="margin: 0; padding: 4rem 0;">
+            <div class="max-w-6xl mx-auto text-center">
+                <h2>Featured Games</h2>
+                <div class="carousel-container">
+                    <div class="grid-3-cols">
+                        <img src="assets/images/cg.png" alt="Card Image 1">
+                        <img src="assets/images/hilo.png" alt="Card Image 2">
+                        <img src="assets/images/roulette.png" alt="Card Image 3">
+                        <img src="assets/images/bcrt.png" alt="Card Image 4">
+                        <img src="assets/images/mines.webp" alt="Card Image 5">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="developers" class="section-bg-dark" style="margin: 0; padding: 4rem 0;">
+            <div class="max-w-6xl mx-auto text-center">
+                <h2>Experience $LUCK Now!</h2>
+                <p class="section-subtitle" style="color: #a0aec0; max-width: 800px; margin: 1rem auto 3rem; font-size: 1.1rem; line-height: 1.6; text-align: center;">
+                    Experience the power of Luck Wallet through these key features
+                </p>
+                
+                <div class="features-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 4rem; width: 100%; padding: 0 2rem; box-sizing: border-box; max-width: 100%; margin: 0 auto;">
+                    <!-- Collection Feature -->
+                    <div class="feature-item" style="background: rgba(0, 30, 30, 0.5); border-radius: 12px; padding: 2.5rem; transition: transform 0.3s ease, box-shadow 0.3s ease; width: 100%; box-sizing: border-box; height: 100%;">
+                        <div class="video-preview" style="position: relative; border-radius: 8px; overflow: hidden; margin: 0 auto 1.75rem; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); max-width: 600px;">
+                            <video class="feature-video" muted loop playsinline style="width: 100%; display: none; border-radius: 6px;">
+                                <source src="assets/videos/collection.mp4" type="video/mp4">
+                            </video>
+                            <img src="assets/images/Collections.png" class="static-thumb" alt="NFT Collection Preview" style="width: 100%; display: block; border-radius: 6px;">
+                            <div class="play-icon" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 2.5rem; opacity: 0.8; pointer-events: none; transition: opacity 0.3s ease;">▶️</div>
+                        </div>
+                        <h3 style="color: #00e6e6; margin-bottom: 0.75rem; font-size: 1.4rem;">NFT Collection</h3>
+                        <p style="color: #a0aec0; margin: 0; line-height: 1.5;">Browse and manage your NFT collection with our intuitive gallery view. Showcase your digital assets with ease.</p>
+                    </div>
+                    
+                    <!-- Send Feature -->
+                    <div class="feature-item" style="background: rgba(0, 30, 30, 0.5); border-radius: 12px; padding: 2.5rem; transition: transform 0.3s ease, box-shadow 0.3s ease; width: 100%; box-sizing: border-box; height: 100%;">
+                        <div class="video-preview" style="position: relative; border-radius: 8px; overflow: hidden; margin: 0 auto 1.75rem; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); max-width: 600px;">
+                            <video class="feature-video" muted loop playsinline style="width: 100%; display: none; border-radius: 6px;">
+                                <source src="assets/videos/send.mp4" type="video/mp4">
+                            </video>
+                            <img src="assets/images/Send.png" class="static-thumb" alt="Send Tokens Preview" style="width: 100%; display: block; border-radius: 6px;">
+                            <div class="play-icon" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 2.5rem; opacity: 0.8; pointer-events: none; transition: opacity 0.3s ease;">▶️</div>
+                        </div>
+                        <h3 style="color: #00e6e6; margin-bottom: 0.75rem; font-size: 1.4rem;">Send Tokens</h3>
+                        <p style="color: #a0aec0; margin: 0; line-height: 1.5;">Quickly and securely send tokens to any address with our streamlined transaction interface.</p>
+                    </div>
+                    
+                    <!-- Convert Feature -->
+                    <div class="feature-item" style="background: rgba(0, 30, 30, 0.5); border-radius: 12px; padding: 2.5rem; transition: transform 0.3s ease, box-shadow 0.3s ease; width: 100%; box-sizing: border-box; height: 100%;">
+                        <div class="video-preview" style="position: relative; border-radius: 8px; overflow: hidden; margin: 0 auto 1.75rem; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); max-width: 600px;">
+                            <video class="feature-video" muted loop playsinline style="width: 100%; display: none; border-radius: 6px;">
+                                <source src="assets/videos/convert.mp4" type="video/mp4">
+                            </video>
+                            <img src="assets/images/Convert.png" class="static-thumb" alt="Convert Tokens Preview" style="width: 100%; display: block; border-radius: 6px;">
+                            <div class="play-icon" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 2.5rem; opacity: 0.8; pointer-events: none; transition: opacity 0.3s ease;">▶️</div>
+                        </div>
+                        <h3 style="color: #00e6e6; margin-bottom: 0.75rem; font-size: 1.4rem;">Convert Tokens</h3>
+                        <p style="color: #a0aec0; margin: 0; line-height: 1.5;">Easily swap between different tokens with our built-in conversion tool and competitive rates.</p>
+                    </div>
+                    
+                    <!-- Mine Feature -->
+                    <div class="feature-item" style="background: rgba(0, 30, 30, 0.5); border-radius: 12px; padding: 2.5rem; transition: transform 0.3s ease, box-shadow 0.3s ease; width: 100%; box-sizing: border-box; height: 100%;">
+                        <div class="video-preview" style="position: relative; border-radius: 8px; overflow: hidden; margin: 0 auto 1.75rem; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); max-width: 600px;">
+                            <video class="feature-video" muted loop playsinline style="width: 100%; display: none; border-radius: 6px;">
+                                <source src="assets/videos/mining.mp4" type="video/mp4">
+                            </video>
+                            <img src="assets/images/Mining.png" class="static-thumb" alt="Mine Tokens Preview" style="width: 100%; display: block; border-radius: 6px;">
+                            <div class="play-icon" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 2.5rem; opacity: 0.8; pointer-events: none; transition: opacity 0.3s ease;">▶️</div>
+                        </div>
+                        <h3 style="color: #00e6e6; margin-bottom: 0.75rem; font-size: 1.4rem;">Mine Tokens</h3>
+                        <p style="color: #a0aec0; margin: 0; line-height: 1.5;">Earn rewards by participating in our mining network. Start mining with just one click.</p>
+                    </div>
+                </div>
+                
+                <!-- Single Modal for all videos -->
+                <div id="video-modal">
+                    <span class="close-modal">&times;</span>
+                    <video id="modal-video" controls playsinline></video>
+                </div>
+                
+                <style>
+                    /* Staggered fade-in animation */
+                    @keyframes fadeInUp {
+                        from {
+                            opacity: 0;
+                            transform: translateY(20px);
+                        }
+                        to {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                    }
+                    
+                    /* Single modal for all videos */
+                    #video-modal {
+                        display: none;
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background: rgba(0, 0, 0, 0.9);
+                        z-index: 1000;
+                        align-items: center;
+                        justify-content: center;
+                        opacity: 0;
+                        transition: opacity 0.3s ease;
+                    }
+                    
+                    #video-modal.visible {
+                        display: flex;
+                        opacity: 1;
+                    }
+                    
+                    #video-modal video {
+                        width: 60vw;
+                        max-width: 800px;
+                        max-height: 45vh;
+                        border: 2px solid #00e6e6;
+                        border-radius: 8px;
+                        background: #000;
+                    }
+                    
+                    .close-modal {
+                        position: absolute;
+                        top: 10px;
+                        right: 10px;
+                        color: white;
+                        font-size: 1.5rem;
+                        cursor: pointer;
+                        z-index: 1002;
+                        background: rgba(0, 0, 0, 0.7);
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border: 1px solid #00e6e6;
+                        transition: all 0.2s ease;
+                    }
+                    
+                    .close-modal:hover {
+                        background: rgba(255, 0, 0, 0.7);
+                        transform: scale(1.1);
+                    }
+                    
+                    .feature-item {
+                        opacity: 0;
+                        transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1), transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+                        width: 100%;
+                        box-sizing: border-box;
+                        will-change: transform, opacity;
+                    }
+                    
+                    .feature-item:nth-child(1) {
+                        transform: translateX(-80px);
+                        transition-delay: 0.3s;
+                    }
+                    
+                    .feature-item:nth-child(2) {
+                        transform: translateX(80px);
+                        transition-delay: 0.5s;
+                    }
+                    
+                    .feature-item:nth-child(3) {
+                        transform: translateX(-80px);
+                        transition-delay: 0.7s;
+                    }
+                    
+                    .feature-item:nth-child(4) {
+                        transform: translateX(80px);
+                        transition-delay: 0.9s;
+                    }
+                    
+                    .feature-item.visible {
+                        opacity: 1;
+                        transform: translateX(0) !important;
+                    }
+                    
+                    .video-preview {
+                        position: relative;
+                        border-radius: 8px;
+                        overflow: hidden;
+                        margin: 0 auto 1.75rem;
+                        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+                        max-width: 600px;
+                        cursor: pointer;
+                        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+                        transform-origin: center;
+                    }
+                    
+                    .video-modal-overlay {
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background: rgba(0, 0, 0, 0.9);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        z-index: 1000;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: opacity 0.3s ease;
+                    }
+                    
+                    .video-modal-overlay.visible {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                    
+                    .video-preview.playing {
+                        position: relative;
+                        width: 90vw;
+                        max-width: 1200px;
+                        height: 80vh;
+                        max-height: 80vh;
+                        margin: 0 auto;
+                        z-index: 1001;
+                        background: #000;
+                        border: 2px solid #00e6e6;
+                        border-radius: 8px;
+                        overflow: hidden;
+                        transform: scale(0.95);
+                        opacity: 0;
+                        transition: transform 0.3s ease, opacity 0.3s ease;
+                    }
+                    
+                    .video-preview.playing.visible {
+                        transform: scale(1);
+                        opacity: 1;
+                    }
+                    
+                    .video-preview.playing video {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                    
+                    .video-preview:hover:not(.playing) {
+                        transform: scale(1.02);
+                        z-index: 10;
+                        box-shadow: 0 5px 15px rgba(0, 230, 230, 0.2);
+                        transition: transform 0.3s ease, box-shadow 0.3s ease;
+                    }
+                    
+                    .static-thumb {
+                        width: 100%;
+                        display: block;
+                        border-radius: 6px;
+                        transition: transform 0.3s ease;
+                    }
+                    
+                    .video-preview:hover .static-thumb {
+                        transform: scale(1.03);
+                        transition: transform 0.3s ease;
+                    }
+                    
+                    @media (max-width: 1200px) {
+                        .features-grid {
+                            grid-template-columns: 1fr;
+                            max-width: 800px;
+                            gap: 3rem;
+                            padding: 0 2rem;
+                        }
+                        .feature-item {
+                            padding: 2rem !important;
+                            max-width: 100%;
+                        }
+                    }
+                    
+                    @media (max-width: 768px) {
+                        .features-grid {
+                            padding: 0 1.5rem;
+                            gap: 2.5rem;
+                        }
+                        
+                        .feature-item {
+                            padding: 1.75rem !important;
+                            min-width: 100%;
+                        }
+                    }
+                    
+                    .feature-item:hover {
+                        transform: translateY(-5px) !important; /* Add !important to override animation */
+                        box-shadow: 0 10px 25px rgba(0, 230, 230, 0.15);
+                    }
+                    
+                    .video-preview .play-icon {
+                        opacity: 0;
+                        transition: opacity 0.3s ease;
+                    }
+                    
+                    .video-preview:hover .play-icon {
+                        opacity: 0.8;
+                    }
+                </style>
+                
+                <script>
+                    // Animation on scroll functionality
+                    document.addEventListener('DOMContentLoaded', function() {
+                        // Animate features when they come into view
+                        const featureItems = document.querySelectorAll('.feature-item');
+                        const featureObserver = new IntersectionObserver((entries) => {
+                            entries.forEach(entry => {
+                                if (entry.isIntersecting) {
+                                    entry.target.classList.add('visible');
+                                } else {
+                                    entry.target.classList.remove('visible');
+                                }
+                            });
+                        }, {
+                            threshold: 0.1,
+                            rootMargin: '0px 0px -50px 0px'
+                        });
+                        
+                        // Add staggered delay with longer duration
+                        featureItems.forEach((item, index) => {
+                            const delay = index * 0.2; // Increased delay between items
+                            item.style.transition = `opacity 1s cubic-bezier(0.4, 0, 0.2, 1) ${delay}s, transform 1s cubic-bezier(0.4, 0, 0.2, 1) ${delay}s`;
+                            featureObserver.observe(item);
+                        });
+                        
+                        // Video hover functionality
+                        const videoPreviews = document.querySelectorAll('.video-preview');
+                        
+                        videoPreviews.forEach(preview => {
+                            const video = preview.querySelector('video');
+                            const thumb = preview.querySelector('.static-thumb');
+                            const playIcon = preview.querySelector('.play-icon');
+                            
+                            // Preload videos when they come into view
+                            const observer = new IntersectionObserver((entries) => {
+                                entries.forEach(entry => {
+                                    if (entry.isIntersecting) {
+                                        video.load();
+                                        observer.unobserve(entry.target);
+                                    }
+                                });
+                            }, { threshold: 0.1 });
+                            observer.observe(preview);
+                            
+                            // Video event handlers
+                            const handlePlay = () => {
+                                if (playIcon) playIcon.style.opacity = '0';
+                            };
+                            
+                            const handlePause = () => {
+                                if (playIcon) playIcon.style.opacity = '0.8';
+                            };
+                            
+                            video.addEventListener('play', handlePlay);
+                            video.addEventListener('pause', handlePause);
+                            video.addEventListener('ended', handlePause);
+                            
+                            // Show/hide play icon on hover
+                            preview.addEventListener('mouseenter', () => {
+                                if (video.paused && playIcon) {
+                                    playIcon.style.opacity = '0.8';
+                                }
+                            });
+                            
+                            preview.addEventListener('mouseleave', () => {
+                                if (video.paused && playIcon) {
+                                    playIcon.style.opacity = '0';
+                                }
+                            });
+                            
+                            // Get or create the single modal
+                            const modal = document.getElementById('video-modal');
+                            const modalVideo = document.getElementById('modal-video');
+                            const closeModal = document.querySelector('.close-modal');
+                            let currentVideo = null;
+                            
+                            // Play button click handler
+                            if (playIcon) {
+                                playIcon.style.cursor = 'pointer';
+                                playIcon.style.pointerEvents = 'auto';
+                                
+                                playIcon.addEventListener('click', (e) => {
+                                    e.stopPropagation();
+                                    
+                                    // Set the video source
+                                    const videoSource = video.querySelector('source').src;
+                                    modalVideo.innerHTML = `<source src="${videoSource}" type="video/mp4">`;
+                                    
+                                    // Show modal and play video
+                                    modal.classList.add('visible');
+                                    document.body.style.overflow = 'hidden';
+                                    
+                                    // Load and play the video
+                                    modalVideo.load();
+                                    modalVideo.play().catch(e => console.log('Video play failed:', e));
+                                    
+                                    // Store reference to current video
+                                    currentVideo = { video, thumb, playIcon };
+                                    
+                                    // Hide the play icon in the original preview
+                                    if (playIcon) playIcon.style.opacity = '0';
+                                });
+                            }
+                            
+                            // Close modal function
+                            const closeVideoModal = () => {
+                                if (modalVideo) {
+                                    modalVideo.pause();
+                                    modalVideo.currentTime = 0;
+                                }
+                                modal.classList.remove('visible');
+                                document.body.style.overflow = '';
+                                
+                                // Reset the original preview if it exists
+                                if (currentVideo) {
+                                    currentVideo.video.pause();
+                                    currentVideo.video.currentTime = 0;
+                                    currentVideo.video.style.display = 'none';
+                                    currentVideo.thumb.style.display = 'block';
+                                    if (currentVideo.playIcon) currentVideo.playIcon.style.opacity = '0.8';
+                                    currentVideo = null;
+                                }
+                            };
+                            
+                            // Close modal events
+                            closeModal.addEventListener('click', closeVideoModal);
+                            
+                            // Close when clicking outside video
+                            modal.addEventListener('click', (e) => {
+                                if (e.target === modal) {
+                                    closeVideoModal();
+                                }
+                            });
+                            
+                            // Close with Escape key
+                            document.addEventListener('keydown', (e) => {
+                                if (e.key === 'Escape' && modal.classList.contains('visible')) {
+                                    closeVideoModal();
+                                }
+                            });
+                            
+                            // Click outside to close video
+                            preview.addEventListener('click', (e) => {
+                                if (video.style.display === 'block' && !e.target.classList.contains('play-icon')) {
+                                    video.pause();
+                                    video.currentTime = 0;
+                                    video.style.display = 'none';
+                                    thumb.style.display = 'block';
+                                    preview.classList.remove('playing');
+                                    document.body.style.overflow = ''; // Re-enable scrolling
+                                    if (playIcon) playIcon.style.opacity = '0.8';
+                                }
+                            });
+                            
+                            // Pause video when it ends
+                            video.addEventListener('ended', () => {
+                                video.currentTime = 0;
+                                video.style.display = 'none';
+                                thumb.style.display = 'block';
+                                preview.classList.remove('playing');
+                                document.body.style.overflow = ''; // Re-enable scrolling
+                                if (playIcon) playIcon.style.opacity = '0.8';
+                            });
+                            
+                            // Cleanup
+                            return () => {
+                                video.removeEventListener('play', handlePlay);
+                                video.removeEventListener('pause', handlePause);
+                                video.removeEventListener('ended', handlePause);
+                            };
+                        });
+                    });
+                </script>
+            </div>
+        </section>
+
+        <style>
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            .marketplace-item {
+                transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                position: relative;
+                overflow: hidden;
+                opacity: 0;
+                transform: translateY(30px);
+                animation: fadeInUp 0.8s forwards;
+                animation-fill-mode: both;
+            }
+            .marketplace-item:nth-child(1) { animation-delay: 0.2s; }
+            .marketplace-item:nth-child(2) { animation-delay: 0.4s; }
+            .marketplace-item:nth-child(3) { animation-delay: 0.6s; }
+            .marketplace-item.visible {
+                opacity: 1;
+            }
+            .marketplace-item:hover {
+                transform: translateY(-10px) scale(1.02);
+                box-shadow: 0 10px 25px rgba(0, 230, 230, 0.2);
+                z-index: 10;
+            }
+            .marketplace-item::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+                transition: 0.5s;
+                z-index: 1;
+            }
+            .marketplace-item:hover::before {
+                left: 100%;
+            }
+            .marketplace-item .nft-image {
+                transition: all 0.5s ease;
+            }
+            .marketplace-item:hover .nft-image {
+                transform: scale(1.05);
+            }
+            .btn-buy-now {
+                position: relative;
+                overflow: hidden;
+                z-index: 1;
+                transition: all 0.3s ease;
+            }
+            .btn-buy-now::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0%;
+                height: 100%;
+                background: rgba(255,255,255,0.2);
+                transition: all 0.3s ease;
+                z-index: -1;
+            }
+            .btn-buy-now:hover::before {
+                width: 100%;
+            }
+        </style>
+        <section id="marketplace" class="marketplace-section" style="margin: 0; padding: 4rem 0; background: rgba(0, 20, 20, 0.7);">
+            <script>
+                // Function to animate marketplace items
+                function animateMarketplaceItems() {
+                    const section = document.querySelector('#marketplace');
+                    const items = section.querySelectorAll('.marketplace-item');
+                    
+                    // Reset animations
+                    items.forEach(item => {
+                        item.style.animation = 'none';
+                        item.offsetHeight; // Trigger reflow
+                        item.style.animation = '';
+                        item.style.opacity = '0';
+                        item.style.transform = 'translateY(30px)';
+                    });
+                    
+                    // Apply staggered animations
+                    setTimeout(() => {
+                        items.forEach((item, index) => {
+                            item.style.animation = `fadeInUp 0.8s ${0.2 * index}s forwards`;
+                        });
+                    }, 50);
+                }
+
+                // Animate on page load with initial delay
+                document.addEventListener('DOMContentLoaded', function() {
+                    // Initial animation with 1 second delay
+                    setTimeout(() => {
+                        animateMarketplaceItems();
+                    }, 1000);
+                    
+                    // Also animate when section comes into view
+                    const observer = new IntersectionObserver((entries) => {
+                        let hasAnimated = false;
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting && !hasAnimated) {
+                                hasAnimated = true;
+                                // No delay for scroll-triggered animations
+                                animateMarketplaceItems();
+                            } else if (!entry.isIntersecting) {
+                                hasAnimated = false;
+                            }
+                        });
+                    }, { threshold: 0.1 });
+                    
+                    observer.observe(document.querySelector('#marketplace'));
+                });
+            </script>
+            <div class="max-w-6xl mx-auto text-center">
+                <h2>LUCK Marketplace</h2>
+                <p class="section-subtitle" style="color: #a0aec0; max-width: 800px; margin: 1rem auto 3rem; font-size: 1.1rem; line-height: 1.6;">
+                    Discover, collect, and trade unique digital assets in our decentralized marketplace
+                </p>
+                
+                <div class="marketplace-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem; padding: 0 1.5rem;">
+                    <!-- Featured NFT 1 -->
+                    <div class="marketplace-item" style="background: rgba(30, 10, 0, 0.5); border-radius: 12px; overflow: hidden; border: 1px solid #ff6b35; animation-delay: 0.1s;">
+                        <div class="nft-image" style="height: 250px; overflow: hidden; position: relative;">
+                            <img src="marketplace/uploads/dragons/Castigue.png" alt="Castigue the Dragon" style="width: 100%; height: 100%; object-fit: contain; background: #1a0a00;">
+                        </div>
+                        <div style="padding: 1.25rem;">
+                            <h3 style="color: #ff6b35; margin: 0 0 0.25rem; font-size: 1.25rem;">DragonVille</h3>
+                            <p style="color: #e0c0b0; margin: 0 0 0.5rem; font-size: 0.875rem; font-family: monospace;">NFT ID: #64</p>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;">
+                                <span style="color: #ff6b35; font-weight: 600; font-size: 1.125rem;">20,000 $LUCK</span>
+                                <a href="http://localhost/Luck%20Wallet/marketplace/collection.php?collection_id=3" class="btn-buy-now" style="padding: 0.5rem 1.25rem; font-size: 0.875rem; border: 2px solid #ff6b35; color: #ff6b35; border-radius: 6px; font-weight: 600; transition: all 0.3s ease; position: relative; overflow: hidden;">
+                                    <span style="position: relative; z-index: 2;">Buy Now</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Featured NFT 2 -->
+                    <div class="marketplace-item" style="background: rgba(0, 30, 30, 0.5); border-radius: 12px; overflow: hidden; border: 1px solid #00e6e6; animation-delay: 0.2s;">
+                        <div class="nft-image" style="height: 250px; overflow: hidden; position: relative;">
+                            <img src="marketplace/uploads/pokemon/articuno.webp" alt="Articuno NFT" style="width: 100%; height: 100%; object-fit: contain; background: #0a1a2a;">
+                        </div>
+                        <div style="padding: 1.25rem;">
+                            <h3 style="color: #4cc9f0; margin: 0 0 0.25rem; font-size: 1.25rem;">Pokemon</h3>
+                            <p style="color: #a0aec0; margin: 0 0 0.5rem; font-size: 0.875rem; font-family: monospace;">NFT ID: #229</p>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;">
+                                <span style="color: #4cc9f0; font-weight: 600; font-size: 1.125rem;">5,000 $LUCK</span>
+                                <a href="http://localhost/Luck%20Wallet/marketplace/collection.php?collection_id=10" class="btn-buy-now" style="padding: 0.5rem 1.25rem; font-size: 0.875rem; border: 2px solid #4cc9f0; color: #4cc9f0; border-radius: 6px; font-weight: 600; transition: all 0.3s ease; position: relative; overflow: hidden;">
+                                    <span style="position: relative; z-index: 2;">Buy Now</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Featured NFT 3 -->
+                    <div class="marketplace-item" style="background: rgba(10, 0, 30, 0.5); border-radius: 12px; overflow: hidden; border: 1px solid #9d4edd; animation-delay: 0.3s;">
+                        <div class="nft-image" style="height: 250px; overflow: hidden; position: relative;">
+                            <img src="marketplace/uploads/World%20War%20Heroes/MAGE/AzureHerald.gif" alt="Azure Herald" style="width: 100%; height: 100%; object-fit: contain; background: #0a0a1a; image-rendering: pixelated;">
+                        </div>
+                        <div style="padding: 1.25rem;">
+                            <h3 style="color: #9d4edd; margin: 0 0 0.25rem; font-size: 1.25rem;">WorldWar Heroes - Mage</h3>
+                            <p style="color: #d0b0ff; margin: 0 0 0.5rem; font-size: 0.875rem; font-family: monospace;">NFT ID: #320</p>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;">
+                                <span style="color: #9d4edd; font-weight: 600; font-size: 1.125rem;">1,000 $LUCK</span>
+                                <a href="http://localhost/Luck%20Wallet/marketplace/collection.php?collection_id=13" class="btn-buy-now" style="padding: 0.5rem 1.25rem; font-size: 0.875rem; border: 2px solid #9d4edd; color: #9d4edd; border-radius: 6px; font-weight: 600; transition: all 0.3s ease; position: relative; overflow: hidden;">
+                                    <span style="position: relative; z-index: 2;">Buy Now</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 3rem;">
+                    <div class="text-center" style="width: 100%; margin-top: 3rem;">
+                    <a href="http://localhost/luck%20Wallet/marketplace/marketplace.php" class="btn-primary-cyberpunk" style="display: inline-flex; align-items: center; gap: 0.5rem; margin: 0 auto; padding: 0.75rem 1.5rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; transition: all 0.3s ease; position: relative; overflow: hidden; background: linear-gradient(45deg, #00e6e6, #00a8ff); border: none; color: #0a0a20; box-shadow: 0 0 15px rgba(0, 230, 230, 0.5);">
+                        Explore Full Marketplace
+                        <i class="fas fa-arrow-right" style="transition: transform 0.3s ease;"></i>
+                        <span class="btn-hover-effect" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255, 255, 255, 0.15); transform: translateX(-100%) skewX(-15deg); transition: transform 0.5s ease;"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-first-column">
+                <div class="footer-logo-and-text">
+                    <img src="assets/images/logo.png" alt="LUCK Logo" class="footer-logo">
+                </div>
+                <p class="footer-description">Experience<br>Luck Now!</p>
+                <div class="social-icons-container">
+                    <a href="https://www.x.com/" class="social-icon-btn"><i class="fab fa-twitter"></i></a>
+                    <a href="https://telegram.org/" class="social-icon-btn"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="https://www.discord.com/" class="social-icon-btn"><i class="fab fa-discord"></i></a>
+                    <a href="https://www.youtube.com/" class="social-icon-btn"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4>About</h4>
+                <ul>
+                    <li><a href="pages/whitepaper.html">Whitepaper</a></li>
+                    <li><a href="pages/whitepaper.html">Roadmap</a></li>
+                    <li><a href="pages/contacts.html">Contacts</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="ecasino/index.php">E-Casino</a></li>
+                    <li><a href="http://localhost/luck%20Wallet/marketplace/marketplace.php">NFT Marketplace</a></li>
+                    <li><a href="pages/referral.html">Referral Program</a></li>
+                    <li><a href="auth/login.php">Dashboard</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="pages/privacy_policy.html">Privacy Policy</a></li>
+                    <li><a href="pages/terms_service.html">Terms of Service</a></li>
+                    <li><a href="pages/disclaimer.html">Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom-text"> 2025 Luck Wallet. All rights reserved.</div>
+    </footer>
+    </div>
+
+    <script>
+        // Mobile menu toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const nav = document.querySelector('.header-nav');
+            const menuIcon = document.querySelector('.menu-icon i');
+            const body = document.body;
+            
+            function toggleMenu() {
+                nav.classList.toggle('active');
+                menuIcon.classList.toggle('fa-bars');
+                menuIcon.classList.toggle('fa-times');
+                body.classList.toggle('no-scroll', nav.classList.contains('active'));
+            }
+            
+            if (menuToggle) {
+                menuToggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    toggleMenu();
+                });
+                
+                // Close menu when clicking on a link
+                document.querySelectorAll('.header-nav-link').forEach(link => {
+                    link.addEventListener('click', () => {
+                        nav.classList.remove('active');
+                        menuIcon.classList.add('fa-bars');
+                        menuIcon.classList.remove('fa-times');
+                        document.body.classList.remove('no-scroll');
+                    });
+                });
+                
+                // Close menu when clicking outside
+                document.addEventListener('click', function(event) {
+                    if (!event.target.closest('.header-nav') && !event.target.closest('.menu-icon')) {
+                        nav.classList.remove('active');
+                        menuIcon.classList.add('fa-bars');
+                        menuIcon.classList.remove('fa-times');
+                        document.body.classList.remove('no-scroll');
+                    }
+                });
+                
+                // Prevent clicks inside the menu from closing it
+                nav.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                });
+            }
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    } else {
+                        const targetElement = document.querySelector(targetId);
+                        if (targetElement) {
+                            window.scrollTo({
+                                top: targetElement.offsetTop,
+                                behavior: 'smooth'
+                            });
+                        }                    }
+                });
+            });
+        });
+
+        // --- JavaScript for Carousel Animation ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const carouselInner = document.querySelector('.grid-3-cols');
+            const images = Array.from(carouselInner.children);
+
+            const numOriginalImages = images.length;
+
+            while (carouselInner.children.length > numOriginalImages) {
+                carouselInner.removeChild(carouselInner.lastChild);
+            }
+
+            for (let i = 0; i < numOriginalImages * 2; i++) {
+                carouselInner.appendChild(images[i % numOriginalImages].cloneNode(true));
+            }
+
+            let position = 0;
+            let imageAndGapWidth = 0;
+
+            const firstImage = carouselInner.firstElementChild;
+            if (firstImage) {
+                const imageWidth = firstImage.offsetWidth;
+                const gap = parseFloat(getComputedStyle(carouselInner).gap);
+                imageAndGapWidth = imageWidth + gap;
+            }
+
+            const scrollSpeed = 0.2;
+
+            function animateCarousel() {
+                position -= scrollSpeed;
+                carouselInner.style.transform = `translateX(${position}px)`;
+
+                if (imageAndGapWidth > 0 && Math.abs(position) >= (numOriginalImages * imageAndGapWidth)) {
+                    position = 0;
+                }
+
+                requestAnimationFrame(animateCarousel);
+            }
+
+            if (imageAndGapWidth > 0) {
+                animateCarousel();
+            } else {
+                console.error("Could not calculate image dimensions. Carousel animation aborted.");
+            }
+        });
+
+        // Initialize ecosystem animations
+        function initEcosystemAnimations() {
+            const ecosystemSection = document.getElementById('ecosystem');
+            if (!ecosystemSection) return;
+            
+            const flexItems = document.querySelectorAll('.ecosystem-flex-container .flex-item');
+            let animationTimeout;
+            
+            const animateItems = () => {
+                // Clear any existing timeouts to prevent multiple animations
+                clearTimeout(animationTimeout);
+                
+                // First, reset all items to initial state
+                flexItems.forEach(item => {
+                    item.style.transition = 'none';
+                    item.classList.remove('visible');
+                    // Force reflow
+                    void item.offsetHeight;
+                    item.style.transition = 'all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1)';
+                });
+                
+                // Initial delay before starting animations (500ms)
+                animationTimeout = setTimeout(() => {
+                    // Add pulse effect to the section
+                    const section = document.getElementById('ecosystem');
+                    section.style.transition = 'box-shadow 0.5s ease-out';
+                    section.style.boxShadow = '0 0 30px rgba(0, 230, 230, 0.5)';
+                    
+                    // Animate items in sequence with staggered delay
+                    flexItems.forEach((item, index) => {
+                        animationTimeout = setTimeout(() => {
+                            item.classList.add('visible');
+                        }, 300 * index); // 300ms delay between items
+                    });
+                    
+                    // Remove pulse effect after animation
+                    setTimeout(() => {
+                        section.style.boxShadow = 'none';
+                    }, 500);
+                }, 500); // Initial 500ms delay before any animation starts
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateItems();
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            observer.observe(ecosystemSection);
+            
+            // Initial animation
+            animateItems();
+            
+            // Return cleanup function
+            return () => {
+                clearTimeout(animationTimeout);
+                observer.disconnect();
+            };
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- JavaScript for Hero Image Animation ---
+            const heroImage = document.getElementById('heroImage');
+            if (heroImage) {
+                heroImage.classList.add('animate-float');
+            }
+            
+            // Initialize ecosystem animations
+            initEcosystemAnimations();
+        });
+    </script>
+</body>
+</html>
