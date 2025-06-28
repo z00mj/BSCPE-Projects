@@ -1,0 +1,248 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter/Inter-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter/Inter-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 10%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(20, 5%, 15%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 15%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(0, 0%, 20%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(20, 5.9%, 25%);
+  --input: hsl(20, 5.9%, 25%);
+  --primary: hsl(25, 100%, 50%);
+  --primary-foreground: hsl(0, 0%, 0%);
+  --secondary: hsl(0, 0%, 20%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(0, 0%, 20%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(25, 100%, 50%);
+  --radius: 0.5rem;
+  
+  /* Casino specific colors */
+  --casino-orange: hsl(25, 100%, 50%);
+  --casino-black: hsl(0, 0%, 10%);
+  --casino-dark: hsl(0, 0%, 20%);
+  --casino-gold: hsl(51, 100%, 50%);
+  --casino-red: hsl(16, 100%, 55%);
+}
+
+.dark {
+  --background: hsl(0, 0%, 10%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(0, 0%, 15%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(0, 0%, 15%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(0, 0%, 20%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(25, 100%, 50%);
+  --primary-foreground: hsl(0, 0%, 0%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html, body {
+    background: hsl(0, 0%, 10%) !important;
+    color: hsl(0, 0%, 98%) !important;
+  }
+
+  body {
+    font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    @apply font-sans antialiased bg-background text-foreground;
+    background: hsl(var(--casino-black));
+    color: hsl(0, 0%, 98%);
+  }
+}
+
+@layer components {
+  .casino-gradient {
+    background: linear-gradient(135deg, hsl(var(--casino-orange)) 0%, hsl(var(--casino-red)) 100%);
+  }
+  
+  .casino-card {
+    @apply bg-card border border-border rounded-xl transition-all duration-300;
+    background: hsl(var(--casino-dark));
+    border-color: hsl(var(--casino-orange) / 0.3);
+  }
+  
+  .casino-card:hover {
+    border-color: hsl(var(--casino-orange));
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255, 107, 0, 0.2);
+  }
+  
+  .casino-button {
+    @apply inline-flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors;
+    background: hsl(var(--casino-orange));
+    color: hsl(0, 0%, 0%);
+  }
+  
+  .casino-button:hover {
+    background: hsl(var(--casino-red));
+  }
+  
+  .casino-button-secondary {
+    @apply inline-flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors;
+    background: hsl(var(--casino-dark));
+    border: 1px solid hsl(var(--casino-orange) / 0.3);
+    color: hsl(0, 0%, 98%);
+  }
+  
+  .casino-button-secondary:hover {
+    border-color: hsl(var(--casino-orange));
+    background: hsl(var(--casino-orange));
+    color: hsl(0, 0%, 0%);
+  }
+  
+  .status-badge {
+    @apply px-2 py-1 rounded-full text-xs font-medium;
+  }
+  
+  .status-active {
+    @apply bg-green-100 text-green-800;
+  }
+  
+  .status-pending {
+    @apply bg-yellow-100 text-yellow-800;
+  }
+  
+  .status-suspended {
+    @apply bg-orange-100 text-orange-800;
+  }
+  
+  .status-banned {
+    @apply bg-red-100 text-red-800;
+  }
+  
+  .status-approved {
+    @apply bg-green-100 text-green-800;
+  }
+  
+  .status-rejected {
+    @apply bg-red-100 text-red-800;
+  }
+}
+
+nav {
+  background: #18181b !important; /* or your preferred color */
+  z-index: 50;
+}
+
+/* Animations */
+@keyframes spin-wheel {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(1440deg); }
+}
+
+@keyframes coin-flip {
+  0% { transform: rotateY(0deg); }
+  50% { transform: rotateY(90deg); }
+  100% { transform: rotateY(180deg); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 5px hsl(var(--casino-orange)); }
+  50% { box-shadow: 0 0 20px hsl(var(--casino-orange)), 0 0 30px hsl(var(--casino-orange)); }
+}
+
+@keyframes win-glow {
+  0%, 100% { box-shadow: 0 0 10px 2px gold; }
+  50% { box-shadow: 0 0 30px 8px gold; }
+}
+
+@keyframes slot-spin {
+  0% { filter: brightness(1.5) blur(2px); }
+  80% { filter: brightness(1.2) blur(1px); }
+  100% { filter: brightness(1) blur(0); }
+}
+
+.spin-wheel {
+  animation: spin-wheel 3s ease-out;
+}
+
+.flip-coin {
+  animation: coin-flip 1s ease-in-out;
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s infinite;
+}
+
+.winning-symbol {
+  animation: win-glow 1s infinite;
+}
+
+.animate-slot-spin {
+  animation: slot-spin 0.8s cubic-bezier(.4,0,.2,1);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--casino-black));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--casino-orange));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--casino-red));
+}
+
+/* Force input, textarea, and select fields to have black text and white background */
+input,
+textarea,
+select {
+  color: #111 !important;
+  background: #fff !important;
+  caret-color: #111 !important;
+}
+
+/* Optional: For disabled or readonly fields, keep them readable */
+input:disabled,
+textarea:disabled,
+select:disabled,
+input[readonly],
+textarea[readonly],
+select[readonly] {
+  color: #888 !important;
+  background: #f5f5f5 !important;
+}
