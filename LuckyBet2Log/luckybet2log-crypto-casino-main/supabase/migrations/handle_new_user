@@ -1,0 +1,31 @@
+
+DECLARE
+    base_username TEXT;
+    final_username TEXT;
+    counter INTEGER := 0;
+BEGIN
+    -- Get the base username from metadata or email
+    base_username := COALESCE(NEW.raw_user_meta_data ->> 'username', split_part(NEW.email, '@', 1));
+    final_username := base_username;
+    
+    -- Check if username already exists and append number if needed
+    WHILE EXISTS (SELECT 1 FROM public.profiles WHERE username = final_username) LOOP
+        counter := counter + 1;
+        final_username := base_username || counter::TEXT;
+    END LOOP;
+    
+    -- Insert the profile with unique username
+    INSERT INTO public.profiles (user_id, username, wallet_id)
+    VALUES (
+        NEW.id,
+        final_username,
+        'wallet_' || substr(NEW.id::text, 1, 8)
+    );
+    
+    RETURN NEW;
+EXCEPTION
+    WHEN OTHERS THEN
+        -- Log the error and still return NEW to not block registration
+        RAISE LOG 'Error creating profile for user %: %', NEW.id, SQLERRM;
+        RETURN NEW;
+END;

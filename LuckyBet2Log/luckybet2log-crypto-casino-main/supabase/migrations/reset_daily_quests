@@ -1,0 +1,6 @@
+
+BEGIN
+    -- This function can be called daily to clean up old quest data if needed
+    -- For now, we keep historical data for analytics
+    NULL;
+END;

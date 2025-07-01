@@ -1,0 +1,44 @@
+
+DECLARE
+    quest_exists INTEGER;
+    easy_quest_id INTEGER;
+    medium_quest_id INTEGER;
+    hard_quest_id INTEGER;
+BEGIN
+    -- Check if user already has quests for today
+    SELECT COUNT(*) INTO quest_exists
+    FROM daily_quests
+    WHERE user_id = p_user_id AND date = CURRENT_DATE;
+
+    -- If no quests exist for today, assign new ones
+    IF quest_exists = 0 THEN
+        -- Get one quest from each difficulty tier randomly
+        SELECT id INTO easy_quest_id
+        FROM quest_definitions 
+        WHERE difficulty_tier = 'easy' 
+        ORDER BY RANDOM() 
+        LIMIT 1;
+
+        SELECT id INTO medium_quest_id
+        FROM quest_definitions 
+        WHERE difficulty_tier = 'medium' 
+        ORDER BY RANDOM() 
+        LIMIT 1;
+
+        SELECT id INTO hard_quest_id
+        FROM quest_definitions 
+        WHERE difficulty_tier = 'hard' 
+        ORDER BY RANDOM() 
+        LIMIT 1;
+
+        -- Insert the selected quests
+        INSERT INTO daily_quests (user_id, quest_definition_id, date)
+        VALUES 
+            (p_user_id, easy_quest_id, CURRENT_DATE),
+            (p_user_id, medium_quest_id, CURRENT_DATE),
+            (p_user_id, hard_quest_id, CURRENT_DATE);
+
+        -- Check balance-based quests immediately after assignment
+        PERFORM check_balance_quests(p_user_id);
+    END IF;
+END;

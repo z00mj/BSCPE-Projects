@@ -1,0 +1,33 @@
+
+DECLARE
+    completed_count INTEGER;
+    quest_record RECORD;
+BEGIN
+    -- Count how many quests are completed today
+    SELECT COUNT(*) INTO completed_count
+    FROM daily_quests
+    WHERE user_id = p_user_id
+    AND date = CURRENT_DATE
+    AND is_completed = TRUE;
+
+    -- Update any quests that depend on quest completion
+    FOR quest_record IN (
+        SELECT dq.id, qd.task_type, qd.target_value
+        FROM daily_quests dq
+        JOIN quest_definitions qd ON dq.quest_definition_id = qd.id
+        WHERE dq.user_id = p_user_id
+        AND dq.date = CURRENT_DATE
+        AND dq.is_completed = FALSE
+        AND qd.task_type = 'complete_quest'
+    ) LOOP
+        IF completed_count >= quest_record.target_value THEN
+            UPDATE daily_quests
+            SET progress = quest_record.target_value, is_completed = TRUE
+            WHERE id = quest_record.id;
+        ELSE
+            UPDATE daily_quests
+            SET progress = completed_count
+            WHERE id = quest_record.id;
+        END IF;
+    END LOOP;
+END;

@@ -1,0 +1,17 @@
+
+BEGIN
+    -- Update user's PHP balance
+    UPDATE profiles
+    SET php_balance = COALESCE(php_balance, 0) + p_amount
+    WHERE user_id = p_user_id;
+    
+    -- Track the deposit activity for quest progress
+    INSERT INTO user_activities (user_id, activity_type, activity_value, metadata)
+    VALUES (p_user_id, 'deposit', p_amount, jsonb_build_object('status', p_status));
+    
+    -- Update quest progress for deposit-related quests
+    PERFORM update_quest_progress(p_user_id, 'deposit', p_amount, NULL, jsonb_build_object('status', p_status));
+    
+    -- Check balance-based quests after deposit
+    PERFORM check_balance_quests(p_user_id);
+END;
