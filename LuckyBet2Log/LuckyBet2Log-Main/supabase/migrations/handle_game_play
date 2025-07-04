@@ -1,0 +1,9 @@
+
+BEGIN
+    -- Track the play activity for quest progress
+    INSERT INTO user_activities (user_id, activity_type, activity_value, game_type, metadata)
+    VALUES (p_user_id, 'play_game', 1, p_game_type, jsonb_build_object('timestamp', NOW()));
+    
+    -- Update quest progress for play-related quests
+    PERFORM update_quest_progress(p_user_id, 'play_game', 1, p_game_type, jsonb_build_object('timestamp', NOW()));
+END;

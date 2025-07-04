@@ -1,0 +1,60 @@
+
+DECLARE
+    total_reward DECIMAL := 0;
+    quest_ids UUID[] := ARRAY[]::UUID[];
+    quest_record RECORD;
+    reward_amount DECIMAL;
+    result JSON;
+    completed_count INTEGER;
+BEGIN
+    -- Check if user has completed all 3 quests today
+    SELECT array_agg(dq.id), COUNT(*) INTO quest_ids, completed_count
+    FROM daily_quests dq
+    WHERE dq.user_id = p_user_id
+    AND dq.date = CURRENT_DATE
+    AND dq.is_completed = TRUE;
+
+    -- Ensure exactly 3 quests are completed
+    IF completed_count != 3 THEN
+        RAISE EXCEPTION 'All 3 daily quests must be completed before claiming rewards';
+    END IF;
+
+    -- Check if rewards already claimed today
+    PERFORM 1 FROM quest_rewards_claimed
+    WHERE user_id = p_user_id AND date = CURRENT_DATE;
+
+    IF FOUND THEN
+        RAISE EXCEPTION 'Rewards already claimed today';
+    END IF;
+
+    -- Calculate total reward based on difficulty tiers
+    total_reward := 0;
+    FOR quest_record IN (
+        SELECT qd.difficulty_tier, qd.reward_min, qd.reward_max
+        FROM daily_quests dq
+        JOIN quest_definitions qd ON dq.quest_definition_id = qd.id
+        WHERE dq.user_id = p_user_id
+        AND dq.date = CURRENT_DATE
+        AND dq.is_completed = TRUE
+    ) LOOP
+        -- Random reward within tier range
+        reward_amount := quest_record.reward_min + (RANDOM() * (quest_record.reward_max - quest_record.reward_min));
+        total_reward := total_reward + reward_amount;
+    END LOOP;
+
+    -- Update user's ITLOG balance using exact schema column name
+    UPDATE profiles
+    SET itlog_tokens = COALESCE(itlog_tokens, 0) + total_reward
+    WHERE user_id = p_user_id;
+
+    -- Record the reward claim
+    INSERT INTO quest_rewards_claimed (user_id, date, total_reward, quest_ids)
+    VALUES (p_user_id, CURRENT_DATE, total_reward, quest_ids);
+
+    result := json_build_object(
+        'total_reward', total_reward,
+        'quest_ids', quest_ids
+    );
+
+    RETURN result;
+END;

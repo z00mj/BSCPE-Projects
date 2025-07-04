@@ -1,0 +1,12 @@
+
+BEGIN
+  UPDATE profiles 
+  SET 
+    php_balance = php_balance + p_php_change,
+    coins = coins + p_coins_change,
+    itlog_tokens = itlog_tokens + p_itlog_change,
+    updated_at = NOW()
+  WHERE user_id = p_user_id;
+  
+  RETURN FOUND;
+END;

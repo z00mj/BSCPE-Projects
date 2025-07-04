@@ -1,0 +1,12 @@
+
+BEGIN
+    -- Track the win activity for quest progress
+    INSERT INTO user_activities (user_id, activity_type, activity_value, game_type, metadata)
+    VALUES (p_user_id, 'win_game', p_win_amount, p_game_type, jsonb_build_object('timestamp', NOW()));
+    
+    -- Update quest progress for win-related quests
+    PERFORM update_quest_progress(p_user_id, 'win_game', p_win_amount, p_game_type, jsonb_build_object('timestamp', NOW()));
+    
+    -- Check balance-based quests after win
+    PERFORM check_balance_quests(p_user_id);
+END;

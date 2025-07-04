@@ -1,0 +1,341 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Pokemon-Style Pixel Perfect Rendering */
+.pixel-perfect {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* Pokemon Garden Styles */
+.pokemon-garden {
+  background: linear-gradient(180deg, #87CEEB 0%, #4A9749 100%);
+  border: 4px solid #2D5016;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.3);
+}
+
+.pokemon-card {
+  background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
+  border: 4px solid #ffeb3b;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+.pokemon-garden-card {
+  background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
+  border: 6px solid #8bc34a;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+}
+
+.pokemon-pet-card {
+  background: linear-gradient(180deg, #e3f2fd 0%, #bbdefb 100%);
+  border: 3px solid #2196f3;
+  box-shadow: 0 4px 16px rgba(33, 150, 243, 0.3);
+}
+
+.pokemon-title {
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+  letter-spacing: 1px;
+}
+
+.pokemon-instruction {
+  font-family: 'Courier New', monospace;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+/* Pokemon Sprite Animations */
+.pokemon-sprite {
+  transition: transform 0.3s ease;
+  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.6));
+}
+
+.pokemon-pet-sprite {
+  width: 32px;
+  height: 32px;
+  image-rendering: pixelated;
+  transition: transform 0.2s ease;
+}
+
+.pokemon-pet-sprite:hover {
+  transform: scale(1.2);
+}
+
+.pokemon-inventory-sprite {
+  width: 64px;
+  height: 64px;
+  image-rendering: pixelated;
+  border: 2px solid #333;
+  background: #fff;
+  border-radius: 4px;
+}
+
+/* Pokemon Nameplate */
+.pokemon-nameplate {
+  font-family: 'Courier New', monospace;
+  font-size: 10px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #1976d2 0%, #1565c0 100%);
+  border: 2px solid #0d47a1;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  white-space: nowrap;
+}
+
+/* Pokemon Movement Indicator */
+.pokemon-indicator {
+  animation: pokemon-flash 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes pokemon-flash {
+  0% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0.5; transform: scale(0.8); }
+}
+
+/* Pokemon Action Buttons */
+.pokemon-action-btn {
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  image-rendering: pixelated;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.pokemon-action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+}
+
+.pokemon-action-btn:active {
+  transform: translateY(0px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Pokemon Remove Button */
+.pokemon-remove-btn button {
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  background: linear-gradient(90deg, #d32f2f 0%, #c62828 100%);
+  border: 2px solid #b71c1c;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+/* Pokemon Boost Cards */
+.pokemon-boost-card {
+  background: linear-gradient(135deg, #0d47a1 0%, #1565c0 100%);
+  border: 3px solid #ffeb3b;
+  box-shadow: 0 4px 12px rgba(255, 235, 59, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.pokemon-boost-card:hover {
+  transform: scale(1.05);
+}
+
+/* Pokemon Walking Animation */
+@keyframes pokemon-walk {
+  0%, 100% { transform: translateY(0px); }
+  25% { transform: translateY(-1px); }
+  75% { transform: translateY(1px); }
+}
+
+.pokemon-walking {
+  animation: pokemon-walk 0.6s ease-in-out infinite;
+}
+
+/* Pokemon Idle Animation */
+@keyframes pokemon-idle {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+.pokemon-idle {
+  animation: pokemon-idle 3s ease-in-out infinite;
+}
+
+/* Pokemon Garden Elements */
+@keyframes pokemon-sparkle {
+  0%, 100% { opacity: 0.6; transform: scale(1) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1.2) rotate(180deg); }
+}
+
+@keyframes pokemon-bounce {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.pokemon-sparkle {
+  animation: pokemon-sparkle 2s ease-in-out infinite;
+}
+
+.pokemon-bounce {
+  animation: pokemon-bounce 1.5s ease-in-out infinite;
+}
+
+/* Pokemon Text Effects */
+@keyframes pokemon-glow {
+  0%, 100% { text-shadow: 2px 2px 4px rgba(0,0,0,0.8); }
+  50% { text-shadow: 2px 2px 4px rgba(0,0,0,0.8), 0 0 20px rgba(255, 235, 59, 0.8); }
+}
+
+.pokemon-glow {
+  animation: pokemon-glow 2s ease-in-out infinite;
+}
+
+/* Pokemon Grid Layout */
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  image-rendering: pixelated;
+}
+
+/* Pokemon Loading Animation */
+@keyframes pokemon-loading {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.pokemon-loading {
+  animation: pokemon-loading 1s linear infinite;
+}
+
+/* Pokemon Rarity Colors */
+.rarity-common { background: linear-gradient(90deg, #9e9e9e 0%, #757575 100%); }
+.rarity-uncommon { background: linear-gradient(90deg, #4caf50 0%, #388e3c 100%); }
+.rarity-rare { background: linear-gradient(90deg, #2196f3 0%, #1976d2 100%); }
+.rarity-legendary { background: linear-gradient(90deg, #9c27b0 0%, #7b1fa2 100%); }
+.rarity-mythical { background: linear-gradient(90deg, #ff9800 0%, #f57c00 100%); }
+
+/* Pokemon Sound Effects (Visual) */
+@keyframes pokemon-hit {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.95); filter: brightness(1.2); }
+  100% { transform: scale(1); }
+}
+
+.pokemon-hit {
+  animation: pokemon-hit 0.2s ease-in-out;
+}
+
+/* Pokemon Garden Weather Effects */
+@keyframes pokemon-rain {
+  0% { transform: translateY(-10px); opacity: 0; }
+  10% { opacity: 0.6; }
+  90% { opacity: 0.6; }
+  100% { transform: translateY(400px); opacity: 0; }
+}
+
+@keyframes pokemon-wind {
+  0%, 100% { transform: rotate(-1deg); }
+  50% { transform: rotate(1deg); }
+}
+
+.pokemon-rain {
+  animation: pokemon-rain 1s linear infinite;
+}
+
+.pokemon-wind {
+  animation: pokemon-wind 3s ease-in-out infinite;
+}
+
+/* Pokemon UI Elements */
+.pokemon-button-primary {
+  background: linear-gradient(90deg, #4caf50 0%, #45a049 100%);
+  border: 3px solid #2e7d32;
+  color: white;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: all 0.2s ease;
+}
+
+.pokemon-button-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+.pokemon-button-secondary {
+  background: linear-gradient(90deg, #ff9800 0%, #f57c00 100%);
+  border: 3px solid #e65100;
+  color: white;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: all 0.2s ease;
+}
+
+.pokemon-button-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px var(--glow-color), 0 0 10px var(--glow-color), 0 0 15px var(--glow-color);
+  }
+  50% {
+    box-shadow: 0 0 10px var(--glow-color), 0 0 20px var(--glow-color), 0 0 30px var(--glow-color);
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0) rotate(0deg); }
+  25% { transform: translateX(-2px) rotate(-1deg); }
+  75% { transform: translateX(2px) rotate(1deg); }
+}
+
+@keyframes gentle-wobble {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-1deg) translateY(-1px); }
+  75% { transform: rotate(1deg) translateY(-1px); }
+}
+
+@keyframes crack-appear {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}

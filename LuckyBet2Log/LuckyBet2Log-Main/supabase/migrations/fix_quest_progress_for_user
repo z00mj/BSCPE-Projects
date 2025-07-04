@@ -1,0 +1,131 @@
+
+DECLARE
+    quest_record RECORD;
+    current_php_balance DECIMAL;
+    current_itlog_balance DECIMAL;
+    today_date DATE := CURRENT_DATE;
+    progress_value DECIMAL;
+BEGIN
+    -- Get current balances from profiles using exact schema column names
+    SELECT COALESCE(php_balance, 0), COALESCE(itlog_tokens, 0) 
+    INTO current_php_balance, current_itlog_balance
+    FROM profiles
+    WHERE user_id = p_user_id;
+
+    -- Loop through all active quests for today
+    FOR quest_record IN (
+        SELECT dq.id, dq.quest_definition_id, qd.task_type, qd.target_value
+        FROM daily_quests dq
+        JOIN quest_definitions qd ON dq.quest_definition_id = qd.id
+        WHERE dq.user_id = p_user_id 
+        AND dq.date = today_date
+        AND dq.is_completed = FALSE
+    ) LOOP
+        progress_value := 0;
+
+        CASE quest_record.task_type
+            -- Check deposits for today
+            WHEN 'deposit' THEN
+                SELECT COALESCE(SUM(amount), 0) INTO progress_value
+                FROM deposits
+                WHERE user_id = p_user_id
+                AND status = 'approved'
+                AND DATE(created_at) = today_date;
+
+            -- Check ITLOG balance
+            WHEN 'itlog_balance' THEN
+                progress_value := current_itlog_balance;
+
+            -- Check PHP balance
+            WHEN 'maintain_balance' THEN
+                progress_value := current_php_balance;
+
+            -- Check completed quests
+            WHEN 'complete_quest' THEN
+                SELECT COUNT(*) INTO progress_value
+                FROM daily_quests
+                WHERE user_id = p_user_id
+                AND date = today_date
+                AND is_completed = TRUE;
+
+            -- Check daily winnings
+            WHEN 'daily_winnings' THEN
+                SELECT COALESCE(SUM(activity_value), 0) INTO progress_value
+                FROM user_activities
+                WHERE user_id = p_user_id
+                AND activity_type = 'win_game'
+                AND DATE(created_at) = today_date;
+
+            -- Check total bets
+            WHEN 'total_bets' THEN
+                SELECT COALESCE(SUM(activity_value), 0) INTO progress_value
+                FROM user_activities
+                WHERE user_id = p_user_id
+                AND activity_type = 'place_bet'
+                AND DATE(created_at) = today_date;
+
+            -- Check different games played
+            WHEN 'different_games' THEN
+                SELECT COUNT(DISTINCT game_type) INTO progress_value
+                FROM user_activities
+                WHERE user_id = p_user_id
+                AND activity_type = 'play_game'
+                AND DATE(created_at) = today_date;
+
+            -- Check all games played
+            WHEN 'all_games' THEN
+                SELECT COUNT(DISTINCT game_type) INTO progress_value
+                FROM user_activities
+                WHERE user_id = p_user_id
+                AND activity_type = 'play_game'
+                AND DATE(created_at) = today_date
+                AND game_type IN ('mines', 'wheel-of-fortune', 'fortune-reels', 'blackjack', 'dice-roll');
+
+            -- Check farming claims
+            WHEN 'claim_farming' THEN
+                SELECT COUNT(*) INTO progress_value
+                FROM user_activities
+                WHERE user_id = p_user_id
+                AND activity_type = 'claim_farming'
+                AND DATE(created_at) = today_date;
+
+            -- Check wins
+            WHEN 'win_games' THEN
+                SELECT COUNT(*) INTO progress_value
+                FROM user_activities
+                WHERE user_id = p_user_id
+                AND activity_type = 'win_game'
+                AND DATE(created_at) = today_date;
+
+            -- Check game plays
+            WHEN 'play_game' THEN
+                SELECT COUNT(*) INTO progress_value
+                FROM user_activities
+                WHERE user_id = p_user_id
+                AND activity_type = 'play_game'
+                AND DATE(created_at) = today_date;
+
+            ELSE
+                progress_value := 0;
+        END CASE;
+
+        -- Update quest progress
+        IF progress_value >= quest_record.target_value THEN
+            UPDATE daily_quests
+            SET progress = quest_record.target_value, is_completed = TRUE
+            WHERE id = quest_record.id;
+
+            -- Track quest completion if not already tracked
+            INSERT INTO user_activities (user_id, activity_type, activity_value, metadata)
+            VALUES (p_user_id, 'complete_quest', 1, jsonb_build_object('quest_id', quest_record.id))
+            ON CONFLICT DO NOTHING;
+        ELSE
+            UPDATE daily_quests
+            SET progress = progress_value
+            WHERE id = quest_record.id;
+        END IF;
+    END LOOP;
+
+    -- After updating all quests, check quest completion dependencies
+    PERFORM check_quest_completion_dependencies(p_user_id);
+END;

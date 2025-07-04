@@ -1,0 +1,685 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 262 83% 58%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 262 83% 58%;
+    --radius: 0.75rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+    --card: 224 71% 4%;
+    --card-foreground: 213 31% 91%;
+    --popover: 224 71% 4%;
+    --popover-foreground: 213 31% 91%;
+    --primary: 262 83% 58%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 215 28% 17%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 215 28% 17%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+    --accent: 215 28% 17%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 215 28% 17%;
+    --input: 215 28% 17%;
+    --ring: 262 83% 58%;
+    --sidebar-background: 224 71% 4%;
+    --sidebar-foreground: 213 31% 91%;
+    --sidebar-primary: 262 83% 58%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 215 28% 17%;
+    --sidebar-accent-foreground: 213 31% 91%;
+    --sidebar-border: 215 28% 17%;
+    --sidebar-ring: 262 83% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  /* Modern Glow Effects */
+
+
+  /* Enhanced ITLOG Token */
+  .itlog-token {
+    background: linear-gradient(135deg, #fbbf24, #f59e0b, #d97706, #fbbf24);
+    background-size: 300% 300%;
+    animation: gradient-shift 4s ease infinite;
+    box-shadow: 0 4px 20px rgba(251, 191, 36, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  /* Modern Glassmorphism */
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-dark {
+    background: rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  /* Enhanced Neon Border */
+  .neon-border {
+    position: relative;
+    border: 2px solid transparent;
+    background: linear-gradient(var(--background), var(--background)) padding-box,
+                linear-gradient(45deg, #8b5cf6, #fbbf24, #22c55e, #8b5cf6) border-box;
+    background-size: 300% 300%;
+    animation: neon-border-shift 3s ease infinite;
+  }
+
+  @keyframes neon-border-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  /* Modern Gradient Backgrounds */
+  .gradient-bg {
+    background: linear-gradient(135deg, 
+      hsl(var(--background)) 0%, 
+      hsl(var(--primary) / 0.05) 50%, 
+      hsl(var(--background)) 100%);
+  }
+
+  .gradient-bg-hero {
+    background: linear-gradient(135deg, 
+      hsl(var(--background)) 0%, 
+      hsl(var(--primary) / 0.1) 25%,
+      hsl(var(--accent) / 0.05) 50%,
+      hsl(var(--primary) / 0.1) 75%, 
+      hsl(var(--background)) 100%);
+  }
+
+  /* Enhanced Mobile-First Design */
+  .mobile-container {
+    @apply px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16;
+  }
+
+  /* Enhanced Navigation Styles */
+  .nav-container {
+    @apply w-full max-w-none;
+  }
+
+  .nav-wrapper {
+    @apply flex items-center justify-between w-full min-h-[4rem];
+  }
+
+  .nav-desktop {
+    @apply hidden lg:flex items-center space-x-1 xl:space-x-2 flex-1 justify-center;
+  }
+
+  .nav-link {
+    @apply group flex items-center space-x-2 px-3 py-2 xl:px-4 xl:py-3 rounded-xl 
+           transition-all duration-300 text-sm xl:text-base font-medium whitespace-nowrap;
+  }
+
+  .nav-link-active {
+    @apply bg-gradient-to-r from-purple-600/20 to-blue-600/20 text-white shadow-lg;
+  }
+
+  .nav-link-inactive {
+    @apply text-muted-foreground hover:text-white hover:bg-white/5;
+  }
+
+  .mobile-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8;
+  }
+
+  .mobile-card {
+    @apply p-4 sm:p-6 md:p-8 rounded-2xl;
+  }
+
+  .mobile-text {
+    @apply text-sm sm:text-base md:text-lg leading-relaxed;
+  }
+
+  .mobile-title {
+    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold;
+  }
+
+  .mobile-hero {
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black;
+  }
+
+  .mobile-subtitle {
+    @apply text-base sm:text-lg md:text-xl lg:text-2xl font-medium;
+  }
+
+  /* Enhanced Touch Targets */
+  .touch-target {
+    @apply min-h-[48px] min-w-[48px] flex items-center justify-center;
+  }
+
+  /* Safe Area Support */
+  .safe-area-pb {
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+
+  .safe-area-pt {
+    padding-top: max(1rem, env(safe-area-inset-top));
+  }
+
+  /* Modern Spacing System */
+  .responsive-spacing {
+    @apply space-y-4 sm:space-y-6 md:space-y-8 lg:space-y-12;
+  }
+
+  .responsive-margin {
+    @apply my-6 sm:my-8 md:my-12 lg:my-16;
+  }
+
+  .responsive-padding {
+    @apply py-6 sm:py-8 md:py-12 lg:py-16;
+  }
+
+  /* Enhanced Buttons */
+  .modern-button {
+    @apply min-h-[48px] px-6 py-3 text-sm sm:text-base font-semibold rounded-xl 
+           transition-all duration-300 ease-out transform hover:scale-105 
+           active:scale-95 shadow-lg hover:shadow-xl;
+  }
+
+  .button-primary {
+    @apply bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 
+           text-white border-0;
+  }
+
+  .button-secondary {
+    @apply glass border border-white/20 text-foreground hover:bg-white/10;
+  }
+
+  .button-gold {
+    @apply bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 
+           text-black font-bold;
+  }
+
+  /* Enhanced Game Grid */
+  .game-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10;
+  }
+
+  /* Modern Card Design */
+  .modern-card {
+    @apply glass rounded-2xl p-6 sm:p-8 transition-all duration-500 ease-out 
+           hover:scale-105 hover:shadow-2xl border border-white/10 backdrop-blur-xl;
+  }
+
+  .game-card {
+    @apply modern-card cursor-pointer overflow-hidden
+           hover:border-primary/50;
+  }
+
+  /* Casino Game Specific Styles */
+  .casino-game-container {
+    @apply min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900;
+    background-image: 
+      radial-gradient(at 40% 20%, rgba(120, 119, 198, 0.3) 0px, transparent 50%),
+      radial-gradient(at 80% 0%, rgba(255, 154, 158, 0.3) 0px, transparent 50%),
+      radial-gradient(at 0% 50%, rgba(255, 201, 102, 0.3) 0px, transparent 50%);
+  }
+
+  .casino-game-card {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl 
+           shadow-2xl transition-all duration-300 hover:bg-white/10 hover:border-white/20;
+  }
+
+  .casino-game-header {
+    @apply text-center mb-8 px-4;
+  }
+
+  .casino-game-title {
+    @apply text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 bg-clip-text text-transparent 
+           bg-gradient-to-r from-white via-purple-200 to-purple-400;
+  }
+
+  .casino-game-subtitle {
+    @apply text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto;
+  }
+
+  .casino-control-panel {
+    @apply space-y-4 sm:space-y-6;
+  }
+
+  .casino-balance-card {
+    @apply casino-game-card p-6 text-center;
+  }
+
+  .casino-balance-label {
+    @apply text-sm text-gray-400 mb-2;
+  }
+
+  .casino-balance-amount {
+    @apply text-2xl sm:text-3xl font-bold text-emerald-400;
+  }
+
+  .casino-luck-boost-card {
+    @apply casino-game-card p-6 text-center bg-gradient-to-r from-emerald-500/10 to-green-500/10 
+           border-emerald-500/30;
+  }
+
+  .casino-luck-icon {
+    @apply w-16 h-16 bg-emerald-500 rounded-full flex items-center justify-center mx-auto mb-3 
+           shadow-lg shadow-emerald-500/50;
+  }
+
+  .casino-settings-card {
+    @apply casino-game-card p-6;
+  }
+
+  .casino-settings-title {
+    @apply text-xl font-bold mb-6 text-white;
+  }
+
+  .casino-input-group {
+    @apply space-y-3;
+  }
+
+  .casino-input-label {
+    @apply text-sm font-medium text-gray-300 block;
+  }
+
+  .casino-select {
+    @apply w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white 
+           focus:ring-2 focus:ring-purple-500 focus:border-transparent backdrop-blur-sm;
+  }
+
+  .casino-primary-button {
+    @apply w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 
+           text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 
+           transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl;
+  }
+
+  .casino-secondary-button {
+    @apply w-full bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-700 hover:to-green-700 
+           text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 
+           transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl;
+  }
+
+  .casino-danger-button {
+    @apply w-full bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 
+           text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 
+           transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl;
+  }
+
+  .casino-game-area {
+    @apply casino-game-card p-8 mb-6;
+  }
+
+  .casino-game-area-title {
+    @apply text-2xl font-bold text-center mb-6 text-white;
+  }
+
+  .casino-stats-card {
+    @apply casino-game-card p-6;
+  }
+
+  .casino-stats-title {
+    @apply text-lg font-bold mb-4 text-white;
+  }
+
+  .casino-stat-row {
+    @apply flex justify-between items-center py-2 text-sm;
+  }
+
+  .casino-stat-label {
+    @apply text-gray-300;
+  }
+
+  .casino-stat-value {
+    @apply font-semibold text-emerald-400;
+  }
+
+  .casino-info-card {
+    @apply casino-game-card p-6 text-center bg-gradient-to-r from-amber-500/10 to-orange-500/10 
+           border-amber-500/30;
+  }
+
+  .casino-info-icon {
+    @apply w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 
+           bg-gradient-to-r from-amber-500 to-orange-500 shadow-lg shadow-amber-500/50;
+  }
+
+  .casino-payout-card {
+    @apply casino-game-card p-6;
+  }
+
+  .casino-payout-title {
+    @apply text-lg font-bold mb-4 text-white;
+  }
+
+  .casino-payout-row {
+    @apply flex justify-between items-center py-2 text-sm border-b border-white/10 last:border-b-0;
+  }
+
+  .casino-payout-symbols {
+    @apply text-base;
+  }
+
+  .casino-payout-multiplier {
+    @apply font-bold text-emerald-400;
+  }
+
+  /* Mobile Responsive Utilities */
+  .mobile-text {
+    @apply text-lg sm:text-xl lg:text-2xl;
+  }
+
+  .mobile-button {
+    @apply text-sm sm:text-base py-3 sm:py-4 px-4 sm:px-6;
+  }
+
+  .mobile-spacing {
+    @apply space-y-4 sm:space-y-6 lg:space-y-8;
+  }
+
+  .mobile-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8;
+  }
+
+  .responsive-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .responsive-grid {
+    @apply grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10;
+  }
+
+  .responsive-game-grid {
+    @apply lg:col-span-2 mobile-spacing;
+  }
+
+  .responsive-control-panel {
+    @apply mobile-spacing;
+  }
+
+  /* Page Transitions */
+  .page-enter {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .page-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  }
+
+  .page-exit {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .page-exit-active {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  }
+
+  /* Enhanced Typography */
+  .text-gradient {
+    background: linear-gradient(135deg, #8b5cf6 0%, #f59e0b 50%, #ef4444 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Ensure gradient text is visible */
+  .bg-gradient-to-r {
+    background-size: 200% 200%;
+  }
+
+  .text-transparent {
+    color: transparent !important;
+  }
+
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 bg-clip-text text-transparent;
+  }
+
+  /* Modern Scrollbar */
+  .modern-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .modern-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .modern-scrollbar::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary) / 0.3);
+    border-radius: 4px;
+  }
+
+  .modern-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary) / 0.5);
+  }
+
+  /* Loading Animations */
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 40px rgba(139, 92, 246, 0.6);
+    }
+  }
+
+  /* Modern Status Indicators */
+  .status-online {
+    @apply relative;
+  }
+
+  .status-online::after {
+    content: '';
+    @apply absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full border-2 border-background;
+    animation: pulse 2s infinite;
+  }
+
+  /* Enhanced Hover Effects */
+  .hover-lift {
+    @apply transition-all duration-300 ease-out hover:transform hover:-translate-y-2 hover:shadow-2xl;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 ease-out hover:shadow-lg;
+  }
+
+  .hover-glow:hover {
+    box-shadow: 0 0 30px hsl(var(--primary) / 0.3);
+  }
+}
+
+/* Custom Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes bounce-gentle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes float-slow {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.1;
+  }
+  25% { 
+    transform: translateY(-30px) rotate(90deg);
+    opacity: 0.3;
+  }
+  50% { 
+    transform: translateY(-60px) rotate(180deg);
+    opacity: 0.1;
+  }
+  75% { 
+    transform: translateY(-30px) rotate(270deg);
+    opacity: 0.3;
+  }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  }
+  50% { 
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.6), 0 0 60px rgba(255, 215, 0, 0.4);
+  }
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fade-in {
+  from { 
+    opacity: 0; 
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in {
+  from { 
+    opacity: 0; 
+    transform: translateX(20px);
+  }
+  to { 
+    opacity: 1; 
+    transform: translateX(0);
+  }
+}
+
+@keyframes glow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-bounce-gentle {
+  animation: bounce-gentle 4s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 12s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 3s ease infinite;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out;
+}
+
+.animate-slide-in {
+  animation: slide-in 0.5s ease-out;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.animate-delay-0 { animation-delay: 0s; }
+.animate-delay-1000 { animation-delay: 1s; }
+.animate-delay-2000 { animation-delay: 2s; }
+
+/* Dark mode specific enhancements */
+.dark .glass {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dark .modern-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
