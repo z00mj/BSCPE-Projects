@@ -1,0 +1,52 @@
+when open
+
+open  terminal
+cd my-token
+npx hardhat node
+
+then open another terminal
+npx hardhat run scripts/deploy.cjs --network localhost
+
+open metamask
+add new network 
+
+then import contract
+0x5FbDB2315678afecb367f032d93F642f64180aa3
+
+http://localhost/ecasinosite/bitluck/index.php
+database name: ecasinosite
+
+account;
+shielaonsana4@gmail.com
+Newpass123
+
+open terminal
+    cd my-token
+    npx hardhat node
+
+open  another terminal
+    cd my-token
+    npx hardhat run scripts/deploy.cjs --network localhost
+
+go to metamask
+    add custom network
+    Network  Name: Hardhat Localhost
+    Default RPC URL: http://127.0.0.1:8545
+    Chain ID: 31337
+    Curreny symbol: ETH 
+
+    choose the hardhat localhost
+    
+    add account ot hardware wallet
+        private key
+        ac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
+
+        import tokens
+        0x5FbDB2315678afecb367f032d93F642f64180aa3
+
+    add another account again
+        private key
+        59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d
+
+        import token
+        0x5FbDB2315678afecb367f032d93F642f64180aa3
