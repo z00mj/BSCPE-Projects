@@ -1,0 +1,501 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --ring: 240 4.9% 83.9%;
+  --radius: 0.5rem;
+  
+  /* WhaleX Custom Colors */
+  --ocean-50: hsl(198, 100%, 97%);
+  --ocean-100: hsl(198, 100%, 94%);
+  --ocean-200: hsl(198, 100%, 86%);
+  --ocean-300: hsl(198, 100%, 76%);
+  --ocean-400: hsl(198, 100%, 64%);
+  --ocean-500: hsl(199, 89%, 48%);
+  --ocean-600: hsl(200, 98%, 39%);
+  --ocean-700: hsl(201, 100%, 32%);
+  --ocean-800: hsl(201, 100%, 27%);
+  --ocean-900: hsl(202, 100%, 24%);
+  --ocean-950: hsl(215, 61%, 8%);
+  
+  --gold-50: hsl(48, 100%, 96%);
+  --gold-100: hsl(48, 96%, 89%);
+  --gold-200: hsl(48, 97%, 77%);
+  --gold-300: hsl(46, 97%, 65%);
+  --gold-400: hsl(43, 96%, 56%);
+  --gold-500: hsl(38, 92%, 50%);
+  --gold-600: hsl(32, 95%, 44%);
+  --gold-700: hsl(26, 91%, 37%);
+  --gold-800: hsl(23, 83%, 31%);
+  --gold-900: hsl(22, 78%, 26%);
+  --gold-950: hsl(51, 100%, 50%);
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --ring: 240 4.9% 83.9%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: theme('fontFamily.sans');
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .whale-gradient {
+    background: linear-gradient(135deg, hsl(215, 61%, 8%) 0%, hsl(223, 84%, 22%) 50%, hsl(200, 98%, 39%) 100%);
+  }
+  
+  .gold-gradient {
+    background: linear-gradient(135deg, hsl(51, 100%, 50%) 0%, hsl(38, 92%, 50%) 50%, hsl(32, 95%, 44%) 100%);
+  }
+  
+  .ocean-bg {
+    background: linear-gradient(to bottom right, hsl(215, 61%, 8%), hsl(202, 100%, 24%), hsl(201, 100%, 27%));
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  .animate-wave {
+    animation: wave 3s ease-in-out infinite;
+  }
+  
+  .animate-spin-slow {
+    animation: spin 3s linear infinite;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shake-and-glow {
+  0%, 100% {
+    transform: translateX(0);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-2px);
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.8);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(2px);
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
+  }
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 20px hsl(51, 100%, 50%); }
+  to { 
+    box-shadow: 0 0 30px hsl(51, 100%, 50%), 0 0 40px hsl(51, 100%, 50%); 
+  }
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(5deg); }
+}
+
+/* Custom text colors */
+.text-ocean-400 { color: hsl(198, 100%, 64%); }
+.text-ocean-500 { color: hsl(199, 89%, 48%); }
+.text-ocean-950 { color: hsl(215, 61%, 8%); }
+.text-gold-400 { color: hsl(43, 96%, 56%); }
+.text-gold-500 { color: hsl(38, 92%, 50%); }
+.text-gold-950 { color: hsl(51, 100%, 50%); }
+
+/* Custom background colors */
+.bg-ocean-400 { background-color: hsl(198, 100%, 64%); }
+.bg-ocean-500 { background-color: hsl(199, 89%, 48%); }
+.bg-ocean-600 { background-color: hsl(200, 98%, 39%); }
+.bg-ocean-700 { background-color: hsl(201, 100%, 32%); }
+.bg-ocean-800 { background-color: hsl(201, 100%, 27%); }
+.bg-ocean-900 { background-color: hsl(202, 100%, 24%); }
+.bg-ocean-950 { background-color: hsl(215, 61%, 8%); }
+.bg-gold-400 { background-color: hsl(43, 96%, 56%); }
+.bg-gold-500 { background-color: hsl(38, 92%, 50%); }
+.bg-gold-600 { background-color: hsl(32, 95%, 44%); }
+.bg-gold-950 { background-color: hsl(51, 100%, 50%); }
+
+/* Custom border colors */
+.border-ocean-500 { border-color: hsl(199, 89%, 48%); }
+.border-ocean-700 { border-color: hsl(201, 100%, 32%); }
+.border-gold-500 { border-color: hsl(38, 92%, 50%); }
+
+/* Rajdhani font for display text */
+.font-display {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+/* Game specific styles */
+.slot-reel {
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.slot-reel.spinning {
+  animation: spin 0.1s linear infinite;
+}
+
+.dice-roll {
+  transition: transform 0.3s ease-in-out;
+}
+
+.dice-roll:hover {
+  transform: rotateX(180deg);
+}
+
+.card-flip {
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card-flip.flipped {
+  transform: rotateY(180deg);
+}
+
+.crash-line {
+  stroke: hsl(51, 100%, 50%);
+  stroke-width: 3;
+  fill: none;
+}
+
+.crash-area {
+  fill: url(#crashGradient);
+  opacity: 0.3;
+}
+
+/* Cloud drift animations for scattered clouds */
+@keyframes cloudDrift1 {
+  0% {
+    transform: translateX(0px) translateY(0px);
+    opacity: 0.7;
+  }
+  25% {
+    transform: translateX(10px) translateY(-5px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateX(-5px) translateY(8px);
+    opacity: 0.8;
+  }
+  75% {
+    transform: translateX(8px) translateY(-3px);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+    opacity: 0.7;
+  }
+}
+
+@keyframes cloudDrift2 {
+  0% {
+    transform: translateX(0px) translateY(0px);
+    opacity: 0.6;
+  }
+  33% {
+    transform: translateX(-8px) translateY(6px);
+    opacity: 0.8;
+  }
+  66% {
+    transform: translateX(12px) translateY(-4px);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+    opacity: 0.6;
+  }
+}
+
+@keyframes cloudDrift3 {
+  0% {
+    transform: translateX(0px) translateY(0px);
+    opacity: 0.5;
+  }
+  20% {
+    transform: translateX(6px) translateY(10px);
+    opacity: 0.7;
+  }
+  40% {
+    transform: translateX(-10px) translateY(-2px);
+    opacity: 0.9;
+  }
+  60% {
+    transform: translateX(4px) translateY(7px);
+    opacity: 0.3;
+  }
+  80% {
+    transform: translateX(-6px) translateY(-5px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+    opacity: 0.5;
+  }
+}
+
+/* Downward falling cloud animations for when rocket launches */
+@keyframes cloudFallDown1 {
+  0% {
+    transform: translateY(0px);
+    opacity: 0.7;
+  }
+  25% {
+    transform: translateY(50px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(100px);
+    opacity: 0.8;
+  }
+  75% {
+    transform: translateY(150px);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(200px);
+    opacity: 0.1;
+  }
+}
+
+@keyframes cloudFallDown2 {
+  0% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.6;
+  }
+  30% {
+    transform: translateY(60px) translateX(-10px);
+    opacity: 0.8;
+  }
+  60% {
+    transform: translateY(120px) translateX(8px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(180px) translateX(-5px);
+    opacity: 0.1;
+  }
+}
+
+@keyframes cloudFallDown3 {
+  0% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.5;
+  }
+  20% {
+    transform: translateY(40px) translateX(8px);
+    opacity: 0.7;
+  }
+  40% {
+    transform: translateY(80px) translateX(-6px);
+    opacity: 0.9;
+  }
+  70% {
+    transform: translateY(140px) translateX(4px);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(190px) translateX(-3px);
+    opacity: 0.1;
+  }
+}
+
+/* Text visibility improvements */
+.crash-text-shadow {
+  text-shadow: 
+    2px 2px 4px rgba(0, 0, 0, 0.8),
+    -1px -1px 2px rgba(0, 0, 0, 0.6),
+    1px -1px 2px rgba(0, 0, 0, 0.6),
+    -1px 1px 2px rgba(0, 0, 0, 0.6),
+    0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Neon Jackpot Styles */
+.jackpot-container {
+  position: fixed;
+  top: 120px;
+  right: 20px;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.jackpot-glow {
+  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.6))
+          drop-shadow(0 0 20px rgba(255, 215, 0, 0.4))
+          drop-shadow(0 0 30px rgba(255, 215, 0, 0.3));
+  animation: jackpotPulse 3s ease-in-out infinite;
+}
+
+.jackpot-text-neon {
+  text-shadow: 
+    0 0 5px rgba(255, 215, 0, 0.8),
+    0 0 10px rgba(255, 215, 0, 0.6),
+    0 0 15px rgba(255, 215, 0, 0.4),
+    0 0 20px rgba(255, 215, 0, 0.3);
+  animation: textNeonGlow 2.5s ease-in-out infinite alternate;
+}
+
+.jackpot-text-neon-enhanced {
+  text-shadow: 
+    0 0 8px rgba(255, 215, 0, 1),
+    0 0 16px rgba(255, 215, 0, 0.8),
+    0 0 24px rgba(255, 215, 0, 0.6),
+    0 0 32px rgba(255, 215, 0, 0.4),
+    2px 2px 4px rgba(0, 0, 0, 0.9);
+  animation: textNeonGlowEnhanced 2s ease-in-out infinite alternate;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.jackpot-text-neon-white {
+  text-shadow: 
+    0 0 8px rgba(255, 255, 255, 1),
+    0 0 16px rgba(255, 255, 255, 0.8),
+    0 0 24px rgba(255, 255, 255, 0.6),
+    0 0 32px rgba(255, 215, 0, 0.4),
+    2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.jackpot-amount-neon {
+  text-shadow: 
+    0 0 3px rgba(255, 255, 255, 0.9),
+    0 0 8px rgba(255, 215, 0, 0.8),
+    0 0 12px rgba(255, 215, 0, 0.6),
+    0 0 16px rgba(255, 215, 0, 0.4),
+    2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.treasure-chest-glow {
+  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.5))
+          drop-shadow(0 0 16px rgba(255, 215, 0, 0.3));
+}
+
+.moby-token-glow {
+  filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.6))
+          drop-shadow(0 0 12px rgba(255, 215, 0, 0.4));
+}
+
+@keyframes jackpotPulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.6))
+            drop-shadow(0 0 20px rgba(255, 215, 0, 0.4))
+            drop-shadow(0 0 30px rgba(255, 215, 0, 0.3));
+  }
+  50% {
+    transform: scale(1.02);
+    filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.8))
+            drop-shadow(0 0 25px rgba(255, 215, 0, 0.6))
+            drop-shadow(0 0 35px rgba(255, 215, 0, 0.4));
+  }
+}
+
+@keyframes textNeonGlow {
+  from {
+    text-shadow: 
+      0 0 5px rgba(255, 215, 0, 0.8),
+      0 0 10px rgba(255, 215, 0, 0.6),
+      0 0 15px rgba(255, 215, 0, 0.4),
+      0 0 20px rgba(255, 215, 0, 0.3);
+  }
+  to {
+    text-shadow: 
+      0 0 8px rgba(255, 215, 0, 1),
+      0 0 15px rgba(255, 215, 0, 0.8),
+      0 0 20px rgba(255, 215, 0, 0.6),
+      0 0 25px rgba(255, 215, 0, 0.4);
+  }
+}
+
+@keyframes textNeonGlowEnhanced {
+  from {
+    text-shadow: 
+      0 0 8px rgba(255, 215, 0, 1),
+      0 0 16px rgba(255, 215, 0, 0.8),
+      0 0 24px rgba(255, 215, 0, 0.6),
+      0 0 32px rgba(255, 215, 0, 0.4),
+      2px 2px 4px rgba(0, 0, 0, 0.9);
+    border-color: rgba(255, 215, 0, 0.3);
+  }
+  to {
+    text-shadow: 
+      0 0 12px rgba(255, 215, 0, 1),
+      0 0 20px rgba(255, 215, 0, 0.9),
+      0 0 28px rgba(255, 215, 0, 0.7),
+      0 0 36px rgba(255, 215, 0, 0.5),
+      2px 2px 6px rgba(0, 0, 0, 1);
+    border-color: rgba(255, 215, 0, 0.5);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .jackpot-container {
+    top: 100px;
+    right: 15px;
+    transform: scale(0.85);
+  }
+}
